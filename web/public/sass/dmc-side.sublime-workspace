@@ -1,0 +1,564 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"padd",
+				"padding-base-horizontal"
+			],
+			[
+				"paddin",
+				"padding"
+			],
+			[
+				"mini",
+				"min-height"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"no",
+				"none"
+			],
+			[
+				"text",
+				"text-decoration-color"
+			],
+			[
+				"gra",
+				"gray-lighter"
+			],
+			[
+				"fo",
+				"font-weight"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"margi",
+				"margin"
+			],
+			[
+				"margin",
+				"margin"
+			],
+			[
+				"marg",
+				"margin"
+			],
+			[
+				"price",
+				"price-text"
+			],
+			[
+				"gray",
+				"gray-dark"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"margin-",
+				"margin-right"
+			],
+			[
+				"bran",
+				"brand-alternate"
+			],
+			[
+				"pad",
+				"padding-base-horizontal"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"padding-large",
+				"padding-large-vertical"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"n",
+				"normal"
+			],
+			[
+				"form",
+				"form-control"
+			],
+			[
+				"padding-base",
+				"padding-base-vertical"
+			],
+			[
+				"load",
+				"load-product"
+			],
+			[
+				"pull",
+				"pull-right"
+			],
+			[
+				"pull-",
+				"pull-left"
+			],
+			[
+				"brand",
+				"brand-warning"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"font-size",
+				"font-size-base"
+			],
+			[
+				"item",
+				"item-body"
+			],
+			[
+				"lig",
+				"light"
+			],
+			[
+				"bo",
+				"both"
+			],
+			[
+				"padding",
+				"padding-top"
+			],
+			[
+				"col",
+				"col-md-9"
+			],
+			[
+				"font-s",
+				"font-style"
+			],
+			[
+				"bordre",
+				"border-top"
+			],
+			[
+				"tex",
+				"text-align-last"
+			],
+			[
+				"let",
+				"left"
+			],
+			[
+				"ri",
+				"right"
+			],
+			[
+				"wel",
+				"well-sm"
+			],
+			[
+				"ma",
+				"margin-bottom"
+			],
+			[
+				"fotn",
+				"font-size"
+			],
+			[
+				"max-",
+				"max-width"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"re",
+				"relative"
+			],
+			[
+				"clear",
+				"clearfix"
+			],
+			[
+				"ex",
+				"extend"
+			],
+			[
+				"border",
+				"border-color"
+			],
+			[
+				"paddi",
+				"padding-right"
+			],
+			[
+				"ligth",
+				"lighter"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"warnin",
+				"warning"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"ligten",
+				"lighten"
+			],
+			[
+				"up",
+				"uppercase"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 347.0,
+		"selected_items":
+		[
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"package control :ins",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Add Repository"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"sass",
+				"SassBeautify"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Volumes/Macintosh HD/htdocs/front.openmarket.travel/maquetacion/sass/base",
+		"/Volumes/Macintosh HD/htdocs/front.openmarket.travel/maquetacion/sass/components",
+		"/Volumes/Macintosh HD/htdocs/front.openmarket.travel/maquetacion/sass/layout",
+		"/Volumes/Macintosh HD/htdocs/front.openmarket.travel/maquetacion/sass/pages",
+		"/Volumes/Macintosh HD/htdocs/front.openmarket.travel/maquetacion/sass/themes",
+		"/Volumes/Macintosh HD/htdocs/front.openmarket.travel/maquetacion/sass/vendors",
+		"/Volumes/Macintosh HD/htdocs/front.openmarket.travel/maquetacion/sass/vendors/fontawesome"
+	],
+	"file_history":
+	[
+		"/Volumes/Macintosh HD/htdocs/front.openmarket.travel/maquetacion/sass/main.scss",
+		"/Volumes/Macintosh HD/htdocs/front.openmarket.travel/maquetacion/sass/vendors/fontawesome/_icons.scss",
+		"/Volumes/Macintosh HD/htdocs/front.openmarket.travel/maquetacion/sass/pages/_dmc-msg-quote.scss",
+		"/Volumes/Macintosh HD/htdocs/front.openmarket.travel/maquetacion/sass/components/_omt-panels.scss",
+		"/Volumes/Macintosh HD/htdocs/front.openmarket.travel/maquetacion/sass/bootstrap.scss",
+		"/Volumes/Macintosh HD/htdocs/front.openmarket.travel/maquetacion/sass/layout/_omt-forms.scss",
+		"/Volumes/Macintosh HD/htdocs/front.openmarket.travel/maquetacion/sass/pages/_dmc-quoted.scss",
+		"/Volumes/Macintosh HD/htdocs/front.openmarket.travel/maquetacion/sass/pages/_dmc-load-program.scss",
+		"/Volumes/Macintosh HD/htdocs/front.openmarket.travel/maquetacion/sass/pages/_dmc-sell-booking.scss",
+		"/Volumes/Macintosh HD/htdocs/front.openmarket.travel/maquetacion/sass/components/_omt-labels.scss",
+		"/Users/mac/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/mac/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Volumes/Macintosh HD/htdocs/front.openmarket.travel/maquetacion/sass/pages/_product-view.scss",
+		"/Volumes/Macintosh HD/htdocs/front.openmarket.travel/maquetacion/sass/helpers/_variables.scss",
+		"/Volumes/Macintosh HD/htdocs/front.openmarket.travel/maquetacion/sass/components/_panels.scss",
+		"/Volumes/Macintosh HD/htdocs/front.openmarket.travel/maquetacion/sass/components/_omt_labels.scss",
+		"/Volumes/Macintosh HD/htdocs/front.openmarket.travel/maquetacion/sass/pages/_dmc_req_quote.scss",
+		"/Volumes/Macintosh HD/htdocs/front.openmarket.travel/maquetacion/sass/pages/_dmc_quoted.scss",
+		"/Volumes/Macintosh HD/htdocs/front.openmarket.travel/maquetacion/sass/pages/_dmc_account.scss",
+		"/Volumes/Macintosh HD/htdocs/front.openmarket.travel/maquetacion/sass/pages/_product_view.scss",
+		"/Volumes/Macintosh HD/htdocs/front.openmarket.travel/maquetacion/sass/pages/_dmc_dashboard.scss",
+		"/Volumes/Macintosh HD/htdocs/front.openmarket.travel/maquetacion/sass/components/_omt_list-group.scss",
+		"/Volumes/Macintosh HD/htdocs/front.openmarket.travel/maquetacion/sass/components/_omt_panels.scss",
+		"/Volumes/Macintosh HD/htdocs/front.openmarket.travel/maquetacion/sass/layout/_omt_input-groups.scss",
+		"/Volumes/Macintosh HD/htdocs/front.openmarket.travel/maquetacion/sass/layout/_omt_forms.scss",
+		"/Volumes/Macintosh HD/htdocs/front.openmarket.travel/maquetacion/sass/base/_omt_type.scss",
+		"/Volumes/Macintosh HD/htdocs/front.openmarket.travel/maquetacion/sass/components/_breadcrumbs.scss",
+		"/Users/mac/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/mac/Library/Application Support/Sublime Text 3/Packages/SassBeautify/SassBeautify.sublime-settings",
+		"/Volumes/Macintosh HD/Drive OMT/desarrollo/maquetacion/sass/components/_omt_alerts.scss",
+		"/Volumes/Macintosh HD/Drive OMT/desarrollo/maquetacion/sass/base/_omt_type.scss",
+		"/Volumes/Macintosh HD/Drive OMT/desarrollo/maquetacion/sass/pages/_product_view.scss",
+		"/Volumes/Macintosh HD/Drive OMT/desarrollo/maquetacion/sass/components/_omt_labels.scss",
+		"/Volumes/Macintosh HD/Drive OMT/desarrollo/maquetacion/sass/components/_omt_popovers.scss",
+		"/Volumes/Macintosh HD/Drive OMT/desarrollo/maquetacion/sass/pages/_dmc_load_program.scss",
+		"/Volumes/Macintosh HD/Drive OMT/desarrollo/maquetacion/sass/base/_type.scss",
+		"/Volumes/Macintosh HD/Drive OMT/desarrollo/maquetacion/sass/layout/_footer.scss",
+		"/Volumes/Macintosh HD/Drive OMT/desarrollo/maquetacion/sass/components/_labels.scss",
+		"/Volumes/Macintosh HD/Drive OMT/desarrollo/maquetacion/sass/layout/_forms.scss",
+		"/Volumes/Macintosh HD/Drive OMT/desarrollo/maquetacion/sass/components/_omt_badges.scss",
+		"/Volumes/Macintosh HD/Drive OMT/desarrollo/maquetacion/sass/components/_badges.scss",
+		"/Volumes/Macintosh HD/Drive OMT/desarrollo/maquetacion/sass/bootstrap.scss",
+		"/Volumes/Macintosh HD/Drive OMT/desarrollo/maquetacion/sass/main.scss",
+		"/Volumes/Macintosh HD/Drive OMT/desarrollo/maquetacion/sass/components/_buttons.scss",
+		"/Volumes/Macintosh HD/Drive OMT/desarrollo/maquetacion/sass/components/_omt_buttons.scss",
+		"/Volumes/Macintosh HD/Drive OMT/desarrollo/maquetacion/sass/helpers/mixins/_forms.scss",
+		"/Volumes/Macintosh HD/Drive OMT/desarrollo/maquetacion/sass/layout/_body.scss",
+		"/Volumes/Macintosh HD/Drive OMT/desarrollo/maquetacion/sass/helpers/mixins/_vendor-prefixes.scss",
+		"/Volumes/Macintosh HD/Drive OMT/desarrollo/maquetacion/sass/vendors/fontawesome/_variables.scss",
+		"/Volumes/Macintosh HD/Drive OMT/desarrollo/maquetacion/sass/pages/_dmc_dashboard.scss",
+		"/Volumes/Macintosh HD/Drive OMT/desarrollo/maquetacion/sass/layout/_navbar.scss",
+		"/Volumes/Macintosh HD/Drive OMT/desarrollo/maquetacion/sass/themes/_admin_dmc.scss",
+		"/Volumes/Macintosh HD/Drive OMT/desarrollo/maquetacion/sass/layout/_header.scss",
+		"/Volumes/Macintosh HD/Drive OMT/desarrollo/maquetacion/sass/components/_breadcrumbs.scss",
+		"/Volumes/Macintosh HD/Drive OMT/desarrollo/maquetacion/sass/components/_panels.scss",
+		"/Volumes/Macintosh HD/Drive OMT/desarrollo/maquetacion/sass/helpers/mixins/_labels.scss",
+		"/Volumes/Macintosh HD/Drive OMT/desarrollo/maquetacion/sass/base/_typography.scss",
+		"/Volumes/Macintosh HD/Drive OMT/desarrollo/maquetacion/template.html",
+		"/Volumes/Macintosh HD/Drive OMT/desarrollo/maquetacion/sass/helpers/mixins/_buttons.scss",
+		"/Volumes/Macintosh HD/Drive OMT/desarrollo/maquetacion/index.html"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			".label-day",
+			".steps",
+			"new-program",
+			".day-thumb",
+			"item-body",
+			".panel-title",
+			"original-req",
+			"$panel-heading-padding",
+			".panel-heading",
+			"day-tit",
+			"not-",
+			"pencil",
+			".list-group-item",
+			"quoted",
+			"input-group-btn",
+			"active-extra",
+			"center",
+			"activ-item",
+			"itinerary",
+			".product-list",
+			"availability-calendar",
+			"@extend .panel;",
+			".panel",
+			".breadcrumb",
+			"$body-bg-dmc",
+			"section.price",
+			".bg-warning",
+			"summary",
+			"foote",
+			"share",
+			"lable-item",
+			"\n.#{$",
+			"list-group-item-heading",
+			".item",
+			".request-list .item",
+			"excla",
+			".alert",
+			"add-tag-control",
+			"form-helper",
+			"excla",
+			"dmc-rating",
+			"admin-dmc",
+			"page-header",
+			"line",
+			"available-pop",
+			"dummy-calendar-pop",
+			"page-header",
+			"times",
+			"check-circle ",
+			"paddin",
+			"star",
+			"clou",
+			"form-cont",
+			"help",
+			"questio",
+			"margin",
+			"plus",
+			"calendar",
+			"arrow-left",
+			"placeholder",
+			"foot",
+			"nav",
+			"$font-size-mid",
+			"tag",
+			"globe",
+			"panel-collapse",
+			"fa-file-text-o",
+			"sign-out",
+			"fa-sign-out",
+			"input-lg",
+			"Large input",
+			"label",
+			"select",
+			"$navbar-default-bg",
+			"color",
+			"$font-size-large",
+			"border-radius",
+			"radius",
+			"//@",
+			"butt",
+			"$border-radius-base"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 51.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "dmc-side.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 372.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

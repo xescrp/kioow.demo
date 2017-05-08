@@ -1,0 +1,91 @@
+#toast-container {
+  position: fixed;
+  top: 50px;
+  left: 0; right: 0;
+  margin: 0 auto;
+  z-index: 100;
+}
+
+.toast {
+  display: table!important;
+  position: relative;
+  width: 390px;
+  @media (max-width: 400px) {width: 100%;}
+  opacity: 0.87;
+  @extend .trans-l;
+  @extend .invert-text;
+  @include center-block;
+  @extend .trans-l;
+  &:hover {opacity: 1; @extend .trans-xs; cursor: pointer; .toast-close-button {opacity: 1;} }
+  &.toast-warning {
+    background-color: $brand-warning;
+    .fa {@extend .fa-warning;}
+  }
+  &.toast-error {
+    background-color: $brand-danger;
+    .fa {@extend .fa-times;}
+  }
+  &.toast-success {
+    background-color: $brand-success;
+    .fa {@extend .fa-check;}
+  }
+  &.toast-wait {
+    background-color: $brand-alternate;
+    .fa {@extend .fa-cog; @extend .fa-spin;}
+  }
+  &.toast-info {
+    background-color: $brand-info;
+    .fa {@extend .fa-info;}
+  }
+}
+
+.toast-icon {
+  display: table-cell;
+  vertical-align: middle;
+  background-color: rgba(black, 0.25);
+  width: 58px;
+  i {font-size: $font-size-h3;}
+}
+
+.toast-body {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.toast-message {
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.toast-close-button {
+  position: absolute;
+  background-color: rgba(black, 0.3);
+  font-size: 20px;
+  outline: none;
+  border: none;
+  width: 30px;
+  height: 30px;
+  right: 0; top: 0;
+  opacity: 0;
+  cursor: pointer;
+  &:hover {background-color: rgba(black, 0.5);}
+}
+ /*
+  * AngularJS-Toaster
+  * Version 0.3
+ */
+#toast-container > div.ng-enter, #toast-container > div.ng-leave { 
+    @extend .trans-xl;
+} 
+
+#toast-container > div.ng-enter.ng-enter-active, 
+#toast-container > div.ng-leave {
+    opacity: 0.8;    
+    @include translate(0px,0px);
+}
+
+#toast-container > div.ng-leave.ng-leave-active,
+#toast-container > div.ng-enter {
+    opacity: 0;
+    @include translate(0px,-40px);
+}

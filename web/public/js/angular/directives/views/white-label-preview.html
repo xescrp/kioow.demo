@@ -1,0 +1,52 @@
+<article data-title="Marca Blanca" class="browser">
+    <iframe ng-src="{{ vm.getUrl() | trustURL }}"></iframe>
+</article>
+
+<style>
+    .browser {
+        margin-top: 20px;
+        border: 2px solid #ccc;
+        border-top: 26px solid #ccc;
+        border-radius: 5px;
+        width: 100%;
+        height: 0;
+        position: relative;
+        display: block;
+        padding-bottom: 56%;
+    }
+
+    .browser::before {
+        color: #333;
+        content: attr(data-title);
+        display: block;
+        position: absolute;
+        top: -23px;
+        left: 5px;
+        font-size: 14px
+    }
+
+    .browser::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -19px;
+        right: 5px;
+        background: #f55;
+        border-radius: 50%;
+        width: 12px;
+        height: 12px
+    }
+
+    .browser iframe {
+        border: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        width: 250%;
+        height: 250%;
+        transform: scale(0.4);
+        transform-origin: 0 0;
+        border-radius: 0 0 5px 5px;
+    }
+</style>

@@ -1,0 +1,21 @@
+{
+    "name": "yourttoo.connector",
+    "version": "2.1.7",
+    "description": "yourttoo.connector",
+    "main": "index.js",
+    "author": {
+        "name": "Xisco Rossello",
+        "email": "xisco@openmarket.travel"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://xiscorossello@bitbucket.org/xiscorossello/yttoo.libs.git"
+    },
+    "dependencies": {
+        "multer": "1.1.0",
+        "request": "2.67.0",
+        "socket.io": "1.3.7",
+        "socket.io-client": "1.3.7",
+        "underscore": "1.8.3"
+  }
+}

@@ -1,0 +1,16 @@
+﻿
+<h2>Dates, Availability and Prices</h2>
+
+<div ng-repeat="program in programs track by $index" ng-show="$index == selectedindexcategory">
+    <!--ng-include="calendartemplate"-->
+    <h4>Program: {{programs[selectedindexcategory].title_es || programs[selectedindexcategory].title}} ({{programs[selectedindexcategory].categoryname.label_es || programs[selectedindexcategory].categoryname.label_en}})</h4>
+    <programcalendarworklet dmcproduct="program"></programcalendarworklet>
+</div>
+<div  class="row text-center">
+    <h4 class="notranslate">Release</h4>
+    <div class="form-group col-xs-2 col-xs-offset-5">
+        <label class="control-label" for="release">Days</label> <i uib-tooltip="Enter the number of days before your tour can no longer accept new bookings. For example, if you want to prevent any incoming bookings 15 days before, set a cut-off time of 15 days" 
+                                                                   class="fa fa-info-circle"></i>
+        <select ng-model="programs[selectedindexcategory].release" class="form-control " id="release" ng-options="i as i for i in releasedays"></select>
+    </div>
+</div>

@@ -1,0 +1,107 @@
+15% pagado
+"payStatus" : [ 
+        {
+            "payment" : 15,
+            "nextPaymentDate" : "2016-01-22T11:00:00.000Z",
+            "paymentMethod" : "transfer",
+            "date" : "2015-12-16T13:12:23.275Z",
+            "_id" : "5671632d30ade44435b4c3d4",
+            "receiptNumber" : "paga15",
+            "validateDate": "2015-12-16T10:54:29.588Z",
+            "amount" : {
+                "value" : 0,
+                "exchange" : {
+                    "value" : 150,
+                    "currency" : {
+                        "label" : "Euro",
+                        "symbol" : "€",
+                        "value" : "EUR"
+                    }
+                }
+            }
+        }, 
+        {
+            "paymentMethod" : "transfer",
+            "payment" : 85,
+            "_id" : "5671632d30ade44435b4c3d3",
+            "amount" : {
+                "value" : 0,
+                "exchange" : {
+                    "value" : 850,
+                    "currency" : {
+                        "label" : "Euro",
+                        "symbol" : "€",
+                        "value" : "EUR"
+                    }
+                }
+            }
+        }
+    ],
+
+85% pagado
+"payStatus" : [ 
+        {
+            "payment" : 15,
+            "nextPaymentDate" : "2016-01-22T11:00:00.000Z",
+            "paymentMethod" : "transfer",
+            "date" : "2015-12-16T13:12:23.275Z",
+            "_id" : "5671632d30ade44435b4c3d4",
+            "receiptNumber" : "paga15",
+            "validateDate": "2015-12-16T10:54:29.588Z",
+            "amount" : {
+                "value" : 0,
+                "exchange" : {
+                    "value" : 150,
+                    "currency" : {
+                        "label" : "Euro",
+                        "symbol" : "€",
+                        "value" : "EUR"
+                    }
+                }
+            }
+        }, 
+        {
+            "paymentMethod" : "transfer",
+            "payment" : 85,
+            "_id" : "5671632d30ade44435b4c3d3",
+            "receiptNumber" : "paga85",
+            "validateDate": "2015-12-16T10:54:29.588Z",
+            "amount" : {
+                "value" : 0,
+                "exchange" : {
+                    "value" : 850,
+                    "currency" : {
+                        "label" : "Euro",
+                        "symbol" : "€",
+                        "value" : "EUR"
+                    }
+                }
+            }
+        }
+    ],
+
+
+100% pagado
+"payStatus" : [ 
+        {
+            "payment" : 100,
+            "nextPaymentDate" : null,
+            "paymentMethod" : "transfer",
+            "date" : "2015-12-10T10:54:29.588Z",
+            "_id" : "567142db30ade44435b4c3b2",
+            "receiptNumber" : "paga100",
+            "validateDate": "2015-12-16T10:54:29.588Z",
+            "amount" : {
+                "value" : 1000,
+                "exchange" : {
+                    "value" : 1000,
+                    "currency" : {
+                        "label" : "Euro",
+                        "symbol" : "€",
+                        "value" : "EUR"
+                    }
+                }
+            }
+        }
+    ],
+

@@ -1,0 +1,126 @@
+//hero
+.yto-landing-hero {
+	background-color: $brand-alternate;
+	filter: none !important;
+	position: relative;
+	overflow: hidden;
+
+	.main-img {
+		bottom: 256px;
+		margin-bottom: -220px;
+		img {position: relative;}
+		@media (max-width: $screen-md-max) {img {max-width: 500px;} bottom: 170px; margin-bottom: -150px; } //pulling it up to align with outer div
+		@media (max-width: $screen-sm-max) {max-width: 600px; bottom: auto; margin-bottom: 0; } 
+		@media (max-width: $screen-xs-max) {max-width: 400px; }
+	}
+	.landing-call-text {
+		@media (max-width: $screen-sm-max) { text-align: center; max-width: 600px; }
+		@media (max-width: $screen-xs-max) { 
+			max-width: 450px; padding: 0;
+			.headline {margin-bottom: 0;}
+		}
+	}
+	.over-headline {
+		position: relative;
+		@extend .invert-text;
+		h1 { font-size: 35px;}
+		h4 {text-transform: none;}
+		margin-top: 20px;
+		margin-bottom: 20px;
+		@media (max-width: $screen-md-max) {
+			margin-top: 20px;
+			h1 { font-size: 25px;}
+		}
+		@media (max-width: $screen-sm-max) {
+			text-align: center;
+			margin-top: 30px;
+		}
+		@media (max-width: $screen-xs-max) {
+			margin-top: 20px;
+		}
+		
+	}
+	.headline {
+		margin-top: 0;
+		em {font-weight: 700;}
+		@media (max-width: $screen-sm-max) {
+			margin-top: -200px;
+		}
+		@media (max-width: $screen-xs-max) {
+			margin-top: -140px;
+		}
+	}
+}
+
+// lil infoblocks customization  
+.yto-landing {
+	.advantages-wrap {
+		.info-block, .info-block:after, .fa-stack, .fa-inverse {@extend .trans-xxs;}
+		.link-wrapper:hover {
+			.info-block {
+				@include translate3d( 0, 0, 0);
+				@include scale(1.1);
+				.fa-stack {
+					.fa-inverse {
+						@include scale(0.93);
+					}
+				}
+			}
+		}
+	}
+	.info-block {
+		//avoiding h3 long words break on mobile
+		.fa-stack {color: $brand-danger;}
+		h3 {
+			@media (max-width: $screen-xs-max) {font-size: $font-size-small;} 
+		}
+		@include triangle (down,$gray-lighter-low, 85px, 33px, -1);
+		@media (max-width: $screen-sm-max) {
+			min-height: 185px;
+		}
+	}
+}
+
+// supp reviews
+.supp-reviews-wrap {
+	background-color: $brand-danger;
+	border-color: $brand-danger;
+
+	// lil infoblocks customization  
+	.info-block {
+		&.right {
+			@include triangle (left,$gray-lighter-low, 85px, 21px, 1);
+			@media (max-width: $screen-sm-max) {
+				@include triangle (up,$gray-lighter-low, 85px, 21px, 1);
+				&:after {right: 40px; left: auto;}
+			}	
+		}
+		&.left {
+			@include triangle (right,$gray-lighter-low, 85px, 21px, 1);
+			@media (max-width: $screen-sm-max) {
+				@include triangle (up,$gray-lighter-low, 85px, 21px, 1);
+				&:after {right: 40px; left: auto;}
+			}	
+		}
+		
+	}
+
+	.supp-img {
+		@media (max-width: $screen-sm-max) {
+			margin-bottom: 30px;
+		}
+		@media (max-width: $screen-sm-max) {
+			img {max-width: 170px;}
+		}
+	}
+	.supp-says {
+		min-height: 80px;
+		font-size: $font-size-mid;
+	}
+}
+
+//logos
+.landing-logos-wrap {
+	background-color: $light;
+	border-color: $light;
+}

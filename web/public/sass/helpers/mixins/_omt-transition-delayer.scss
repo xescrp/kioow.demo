@@ -1,0 +1,54 @@
+@mixin animation-delayer($i, $initial-delay, $stagger-delay) {
+  @while $i > 0 {
+    &:nth-of-type(#{$i}) {
+      @include animation-delay($initial-delay + $stagger-delay * $i)
+    }
+    $i: $i - 1;
+  }
+}
+
+@mixin delayedIn($amount) {
+	position: relative;
+	opacity: 0;
+	@include animation(comein 0.4s forwards);
+	@include animation-delayer($amount, 1s, 0.2s); 
+}
+
+
+//animations
+@-webkit-keyframes comein {
+    0% {opacity: 0; @include translate(0,-30px);}
+  100%{opacity: 1; @include translate(0, 0);}
+}
+@-moz-keyframes comein {
+   0% {opacity: 0; @include translate(0,-30px);}
+  100%{opacity: 1; @include translate(0, 0);}
+}
+@-o-keyframes comein {
+      0% {opacity: 0; @include translate(0,-30px);}
+  100%{opacity: 1; @include translate(0, 0);}
+}
+
+.fadein-l {
+  opacity: 0;
+  @include animation(fadein 1s forwards);
+}
+
+.fadein-xxl {
+  opacity: 0;
+  @include animation(fadein 3s forwards);
+}
+
+//animations
+@-webkit-keyframes fadein {
+    0% {opacity: 0;}
+  100%{opacity: 1;}
+}
+@-moz-keyframes fadein {
+   0% {opacity: 0};
+  100%{opacity: 1;}
+}
+@-o-keyframes fadein {
+      0% {opacity: 0;}
+  100%{opacity: 1;}
+}

@@ -1,0 +1,280 @@
+// select icon 
+select.form-control{
+  background: $input-bg url("http://res.cloudinary.com/open-market-travel/image/upload/assets/select-tri.png") 100% 50% no-repeat;
+}
+
+input[type=text].select-input, input[type=text].select-city, input[type=text].select-tag{
+  background: $input-bg url("http://res.cloudinary.com/open-market-travel/image/upload/assets/select-list.png") 100% 50% no-repeat;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.form-control {
+  //border-radius: $input-border-radius;
+  border-radius: 0;
+}
+
+
+.help-block {
+  font-style: italic;
+  color: $gray-light-mid;
+}
+// red color "* requiered fields"
+.required-label{
+  @extend .pull-right;
+  color: $brand-danger;
+}
+
+label b{
+  color: $brand-danger;
+}
+// progress of forms
+
+.steps{
+  @extend .clearfix;
+  @extend .pull-right;
+  padding-right: 1em;
+  ol{
+    @extend .list-unstyled;
+    @extend .list-inline;
+    background: url("http://res.cloudinary.com/open-market-travel/image/upload/assets/bg-steps.png") center repeat-x;
+    height: 10px!important;
+    li{
+      vertical-align: top;
+      @include border-left-radius(100%);
+      @include border-right-radius(100%);
+      @include border-top-radius(100%);
+      @include border-bottom-radius(100%);
+      @include square(10px);
+      margin: 0 7px;
+      background-color: $gray;
+      &.active{
+        background-color: $brand-success;
+      }
+      span{
+        @extend .text-hide;
+      }
+    }
+  }
+}
+.padleft{
+  margin-right: $padding-base-horizontal;
+}
+// calendar table
+.availability-calendar{
+    th{
+      @extend .text-center;
+      font-size: $font-size-small;
+      text-transform: uppercase;
+      @extend .regular;
+    }
+    td{
+      height: 59px;
+      //width: 14%;
+      background-color: $input-bg-disabled;
+      color: $gray-light-base;
+      line-height: 1em!important;
+
+      // &:hover{
+      //     .user-front & em {color: $light;}
+      //     .regime {
+      //       color: $light!important;
+      //       strong {
+      //         color: $light!important;
+      //       }
+      //     }          
+      //     background-color: $gray;
+      //     color: $light;
+      //     cursor: pointer;
+      //   }
+      &.enabled{
+        background-color: $light;
+        color: $text-color;
+        &:hover{
+          .user-front & em {color: $light;}
+          background-color: $gray;
+          color: $light;
+          cursor: pointer;
+        }
+      }
+        &.selected {
+
+        .regime {
+          color: $light!important;
+          strong {color: $light!important;}
+        }          
+        background-color: $brand-danger;
+        color: $light;
+        .user-front & em {color: $light;}
+        &:hover {
+          background-color: $brand-danger-dark;
+        }
+      }
+      .currency {
+        font-size: $font-size-small;
+        float: none!important;
+      }
+      span{
+        @extend .pull-left;
+        font-weight: 800;
+      }
+      strong{
+        @extend .pull-right;
+      }
+
+      p {margin: 0;}
+
+      .regime {
+        color: $gray-light!important;        
+        strong {
+          color:$gray!important;
+          font-style: normal;
+          margin-top: 2px;          
+        }
+      }
+
+      em{
+        @extend .clearfix;
+        @extend .text-right;
+        clear: both;
+        display: block;
+      }
+    }
+}
+
+
+// DMC CALENDAR
+.dmc-session .availability-calendar {
+  td em {
+    margin-top: 35px;
+    display: block;
+    font-weight: bold;
+  }
+}
+
+// USER FRONT CALENDAR STYLES
+.user-front .availability-calendar{ 
+  @extend .mb-zero;
+  td em {
+    color: $gray;         
+    margin-top: .2em;
+    font-size: 12px!important;
+    font-style: italic!important;
+    strong {font-size: $font-size-mid!important;}
+  }
+  em {font-style: normal;}
+  em strong {font-size: $font-size-large;}
+  thead {
+    th {padding: 2px 8px;}
+  }
+}
+
+// MOBILE STYLES
+@media (max-width: $screen-sm-max) {
+  .user-front .availability-calendar{ 
+    td {height: auto; text-align: center; font-weight: bold;}
+    thead, td em, td span {display: none;}
+  }
+  #roomTypesPop {display: none;}
+}
+
+.available-pop{
+  @extend .popover;
+  @extend .bottom;
+  min-width: 340px;
+  max-width: none;
+}
+.nav-calendar{
+  @extend .row;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  .left{
+    @extend .col-xs-1;
+    @extend .col-md-1;
+    button{
+      @extend .pull-left;
+    }
+  }
+  .right{
+    @extend .col-xs-1;
+    @extend .col-md-1;
+    button{
+      @extend .pull-right;
+    }
+  }
+  .center{
+    @extend .col-xs-10;
+    @extend .col-md-10;
+
+    select{
+      @extend .center-block;
+      width: 200px;
+    }
+  }
+}
+form.itinerary{
+  .day{
+    @extend .row;
+  }
+  .add-city{
+    margin: 0 0 0 $padding-base-horizontal;
+  }
+  h5, .h5{
+    font-size: $font-size-large;
+    color: $gray;
+  }
+}
+.form-inline .select-lang{
+      width: 190px;
+    }
+
+.text-brand-danger{
+  color: $brand-danger;
+}
+.link-danger{
+     @extend .text-brand-danger;
+     &:hover{
+        @extend .text-danger;
+     }
+}
+.form-helper{
+  @extend .text-brand-danger;
+  font-size: $font-size-h3;
+  font-family: $font-family-sans-serif;
+  position: relative;
+  top: 2px;
+  padding: 0 0 0 $padding-base-horizontal;
+}
+.control-label .fa-exclamation-circle, .account-settings h3 .fa-exclamation-circle, .singup-dmc h3 .fa-exclamation-circle{
+  display: none;
+}
+.account-settings h3.has-error, .singup-dmc h3.has-error{
+  @extend .text-danger;
+} 
+.has-error .control-label .fa-exclamation-circle,  .account-settings h3.has-error .fa-exclamation-circle,  .singup-dmc h3.has-error .fa-exclamation-circle{
+  display: inline;
+}
+
+//super rule to soften disabled inputs
+input[disabled] {
+  opacity: .5!important;
+}
+[contenteditable]{
+  border-bottom: dotted $brand-danger 1px;
+  color: $brand-danger !important;
+  min-height: 20px;
+}
+// glyphicon to fontawesome
+.glyphicon {
+  @extend .fa;
+}
+.glyphicon-chevron-right{
+  @extend .fa-arrow-right;
+}
+.glyphicon-chevron-left{
+  @extend .fa-arrow-left;
+}

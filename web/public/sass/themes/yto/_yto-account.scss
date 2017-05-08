@@ -1,0 +1,132 @@
+.activities-box{
+	padding: 20px;
+}
+
+.account-dmc-tit{
+	@extend .clearfix;
+	@extend .page-header;
+	figure{
+		@extend .pull-left;
+	}
+	figcaption{
+		@extend .sr-only;
+	}
+	section{
+		@extend .pull-left;
+		margin-left: $line-height-computed;
+	}
+	h1{
+		margin: ($line-height-computed*0.7) 0; 
+		span{
+			color: $gray;
+			font-weight: 300;
+		}
+	}
+}
+.left-mar-btn{
+	margin-left: 2em;
+}
+.account-settings{
+	@extend .col-md-9;
+	@extend .col-xs-9;
+	@extend .panel-scaffolding;
+	@extend .panel-default;
+	margin-top: 3em;
+	h1, h2, h3{
+		font-weight: 300;
+		color: $gray-dark;
+	}
+	a.action{
+		padding: ($padding-base-vertical*2) 0 $padding-base-vertical;
+		display: inline-block;
+	}
+	article.row{
+		clear: both;
+	}
+	.required-label{
+		  margin-top: -10px;
+	}
+	.delete-btn{
+		@extend .pull-right;
+		margin-top: -10px;
+	}
+	footer > .btn-lg{
+		margin-bottom: 1em;
+	}
+	
+}
+.activities-filter{
+		@extend .form-inline;
+		@extend .form-group;
+		@extend .col-xs-8;
+		margin-top: -0.7em;
+		select.form-control{
+			width: 190px;
+			}
+}
+.activities-other{
+		@extend .form-inline;
+		@extend .form-group;
+		@extend .col-md-12;
+		@extend .no-bottom;
+		margin-top: $padding-base-vertical;
+		input, .btn{
+			margin-left: 1em;
+		}
+	}
+.account-add-search{
+	@extend .form-inline;
+	padding: ($padding-base-vertical*2) 0 $padding-base-vertical;
+	.btn, a, .select-zone{
+		margin-left: $padding-base-horizontal;
+	}
+}
+.address-box{
+	@extend .row;
+	margin: ($padding-base-vertical*2) 0 $padding-base-vertical;
+	padding: ($padding-base-vertical*2) 0 0;
+	border: solid 1px $gray-lighter;
+}
+
+#map-address-dmc {
+        height: 20em;
+        margin: 0px;
+        padding: 0px;
+        border: solid 1px $gray-lighter;
+      }
+.guide-image{
+	@extend .col-md-3;
+	@extend .text-center;
+	margin-top: ($padding-base-vertical*2);
+	img{
+		border: 2px solid $gray-light;
+		margin-bottom: 1em;
+	}
+}
+.expenditure{
+	@extend .col-md-6;
+	.form-inline{
+		margin-top: $padding-base-vertical;
+	}
+	.control-label{
+		@extend .text-right;
+		width: 36%;
+	};
+	.dayexpend{
+		width: 100px;
+		margin-left: 1em;
+		margin-right: 1em;
+	}
+}
+.alert-intro{
+	@extend .alert; 
+	@extend .alert-info;
+	padding: ($padding-base-horizontal*2);
+	border: 1px solid $state-danger-border;
+}
+.lh15{
+	line-height: 1.5;
+}
+.img-dmc-big{
+	@extend .img-circle;
+}

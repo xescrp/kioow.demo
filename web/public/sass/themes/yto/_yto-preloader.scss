@@ -1,0 +1,212 @@
+// PRELOADER USAGE
+      
+      // 1. Blanket mode (covers whole screen)
+          //  INACTIVE
+                // <div class="preloader-blanket">
+                //       <div class="preloader">
+                //             <span></span><span></span><span></span>
+                //       </div>
+                //  </div>
+
+          //  ACTIVE
+                // <div class="preloader-blanket in">
+                //       <div class="preloader">
+                //             <span></span><span></span><span></span>
+                //         </div>
+                //  </div>
+      
+      // 2. Solo mode (no background)
+          // INACTIVE
+                //         <div class="preloader solo">
+                //             <span></span>
+                //             <span></span>
+                //             <span></span>
+                //         </div>      
+          // ACTIVE
+                //         <div class="preloader solo in">
+                //             <span></span>
+                //             <span></span>
+                //             <span></span>
+                //         </div>
+
+      // 3. Button preloader (example)
+                // <button type="submit" class="btn btn-danger" ng-class="{'btn-preloader-button' : searchbtnloading}">
+                //    <span ng-show="!searchbtnloading"><i class="fa fa-search"></i> Buscar</span>
+                //    <div ng-init="searchbtnloading=false" ng-show="searchbtnloading" class="preloader btn-preloader solo in">
+                //        <span></span><span></span><span></span>
+                //    </div>
+                // </button>            
+
+      // 4. Preloader partial blanket  // **** USES alt-color, like in the main search form, to turn balls white
+          // INACTIVE
+                // <div class="preloader-partial-blanket">
+                //   <div class="preloader alt-color">
+                //     <span></span><span></span><span></span>
+                //   </div>
+                // </div>
+          // ACTIVE
+                // <div class="preloader-partial-blanket in">
+                //   <div class="preloader alt-color">
+                //     <span></span><span></span><span></span>
+                //   </div>
+                // </div>            
+
+
+      // AFTER GRABBING CODE NOTE: sublime text toggles comments with CMD+SHIFT+7
+
+.preloader-blanket {
+  display: none;
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: 1040;
+  background-color: rgba($light, 0.9);
+  &.in {display: block;} 
+}
+.preloader-partial {
+  @extend .preloader-blanket;
+  position: absolute!important;
+}
+.preloader-partial-blanket {
+  @extend .preloader-blanket;
+  background-color: rgba($brand-alternate, .8)!important;
+  position: absolute!important;
+}
+
+
+.btn-preloader {
+    margin: 0 auto!important;
+    top: 10px!important;
+    padding: 0!important;
+    height: 20px!important;
+    span {top: 4px!important;}
+}
+
+.btn-preloader-button {
+  &, &:focus, &:active, &:hover {
+    @extend .disabled;
+    background-color: $almost-light!important;
+    border-color:$almost-light!important; 
+    color: $gray-light-base!important; 
+    outline: none!important;
+  }
+}
+
+.preloader, .btn-preloader {
+  border-radius: 0px;
+  height: 30px;
+  width: 100px;
+  top: 0; left: 0; bottom: 0; right: 0;
+  position: absolute;
+  margin: auto;
+  display: block;
+  &.solo {
+    display: none;
+    position: relative;
+    top: auto; left: auto; bottom: auto; right: auto;
+    margin: $padding-xl-vertical auto;
+    height: 30px;
+    width: 100px;
+    &.in {display: block;}
+  }
+
+  span {
+    width:16px; height:16px;
+    border-radius:0%;
+    display: inline-block;
+    position:absolute;
+    left:50%;
+    margin-left:-10px;
+    @include animation(1s infinite cubic-bezier(.88,.07,.62,.89));
+    top: 8px; 
+  }
+}
+
+.preloader span:nth-child(1), .preloader.solo span:nth-child(1), .btn-preloader span:nth-child(1) {
+  background:$brand-primary;
+  @include animation(kiri 0.9s infinite cubic-bezier(.88,.07,.62,.89)); 
+}
+.preloader span:nth-child(2), .preloader.solo span:nth-child(2), .btn-preloader span:nth-child(2) {
+  background:$brand-warning;
+  z-index:100;
+}
+.preloader span:nth-child(3), .preloader.solo span:nth-child(3), .btn-preloader span:nth-child(3) {
+  background:$brand-alternate;
+  @include animation(kanan 0.9s infinite cubic-bezier(.88,.07,.62,.89));
+  }
+
+.alt-color span:nth-child(1) {
+  background: $light;
+}
+.alt-color span:nth-child(2) {
+  background: $light;
+}
+.alt-color span:nth-child(3) {
+  background: $light;
+  }
+
+
+//animations
+@-webkit-keyframes kanan {
+    0% {-webkit-transform:translateX(20px);}
+  50%{-webkit-transform:translateX(-20px);}
+  100%{-webkit-transform:translateX(20px); z-index:200;}
+}
+@-moz-keyframes kanan {
+    0% {-moz-transform:translateX(20px);}
+  50%{-moz-transform:translateX(-20px);}
+  100%{-moz-transform:translateX(20px);z-index:200;}
+}
+@-o-keyframes kanan {
+    0% {-o-transform:translateX(20px);}
+  50%{-o-transform:translateX(-20px);}
+  100%{-o-transform:translateX(20px);z-index:200;}
+}
+@keyframes kanan {
+    0% {transform:translateX(20px);}
+  50%{transform:translateX(-20px);}
+  100%{transform:translateX(20px);z-index:200;}
+}
+
+@-webkit-keyframes kiri {
+     0% {-webkit-transform:translateX(-20px); z-index:200;}
+  50%{-webkit-transform:translateX(20px);}
+  100%{-webkit-transform:translateX(-20px);}
+}
+@-moz-keyframes kiri {
+     0% {-moz-transform:translateX(-20px);z-index:200;}
+  50%{-moz-transform:translateX(20px);}
+  100%{-moz-transform:translateX(-20px);}
+}
+@-o-keyframes kiri {
+     0% {-o-transform:translateX(-20px);z-index:200;}
+  50%{-o-transform:translateX(20px);}
+  100%{-o-transform:translateX(-20px);}
+}
+@keyframes kiri {
+     0% {transform:translateX(-20px);z-index:200;}
+  50%{transform:translateX(20px);}
+  100%{transform:translateX(-20px);}
+}
+
+
+// FALLBACK
+.no-cssanimations {
+  .preloader, .btn-preloader {
+    span {display: none;}
+    width: 70px;
+    background-image: url("http://res.cloudinary.com/open-market-travel/image/upload/assets/preloader.gif"); 
+  }
+}
+
+.no-rgba, .no-opacity {
+  .preloader-blanket {
+    background-color: $light;
+  }
+}
+
+
+// HELPER CLASSES
+.btn-fixed-xl {
+  width: 250px!important;
+  height: 45px!important;
+}

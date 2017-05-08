@@ -1,0 +1,115 @@
+@media (min-width: $screen-md-min) and (min-height: 400px) {
+	html {
+	    position: relative;
+	    min-height: 100%;
+	}
+	#footer {
+	    position: absolute;
+	    left: 0;
+	    bottom: 0;
+	    width: 100%;
+	}
+	.dmc-session {
+		//margin: 0 0 370px; /* bottom = footer height */
+		#footer {height: 370px; position: static; margin-top: 3em;}
+	}
+	.traveler-session{
+		margin: 0 0 540px; /* bottom = footer height */ 
+		#footer {height: 540px;}
+	}
+	.admin-session {
+		margin: 0 0 370px; /* bottom = footer height */ 
+		#footer {height: 370px;}
+	}
+}
+
+body > footer{
+	background: $footer-bg-color;
+	padding: 3em 0;
+	font-size: ceil(($font-size-base * 0.9));
+	.footer-content{
+		@extend .col-md-10;
+		@extend .col-md-offset-1;
+	}
+	.col-footer{
+		@extend .col-xs-6;
+		@extend .col-md-3;
+	}
+	.brand{
+		@extend .col-md-12;
+		img.logo{
+			//width: 180px;
+			@extend .pull-left;
+		}
+	}
+	h5{
+		display: inline-block;
+		vertical-align: middle;
+		position: relative;
+		top: -5px;
+		left: 10px;
+		font-family: $font-family-alt;
+
+	}
+	ul{
+		@extend .list-unstyled;
+		li{
+			padding-top: 7px;
+		}
+	}
+	.socialfooter{
+		@extend .col-xs-12;
+		@extend .col-md-12;
+		h4{
+			@extend .text-center;
+		}
+	}
+	.social-icons{
+			@extend .center-block;
+			@extend .list-inline;
+			a{
+				font-size: $font-size-h3;
+				@include border-left-radius(100%);
+				@include border-right-radius(100%);
+				@include border-top-radius(100%);
+				@include border-bottom-radius(100%);
+				@extend .text-center;
+				@include square(1.8em);
+				margin: 0.1em;
+				display: block;
+				border: 1px solid $brand-primary;
+				color: $brand-primary;
+				&:hover {
+					color: $brand-alternate;
+					border-color: $brand-alternate;
+				}
+			}
+			i{
+				position: relative;
+				top: 4px;
+			}
+			span{
+				@extend .text-hide;
+			}
+				
+	}
+	.brand {
+		margin: $padding-large-vertical 0;
+		a {display: inline-block;}
+	}
+	.verifieds {
+		margin: 0 $padding-large-horizontal;
+		img {margin-right: $padding-large-horizontal; margin-bottom: $padding-xl-horizontal;} 
+	}
+
+}
+
+.cookiewarn-wrap {
+	background: rgba($gray-dark, .9);
+	border-top: 5px solid $gray-light;
+	bottom: 0;
+	position: fixed;
+	width: 100%;
+	color: $light;
+	z-index: $zindex-cookiewarn;
+}

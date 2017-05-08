@@ -1,0 +1,50 @@
+.table {
+	.nb{
+		border: none!important;
+	}
+	.nbt{
+		border-top: none!important;
+	}
+	.nbb{
+		border-bottom: none!important;
+	}
+	.nbl{
+		border-left: none!important;
+	}
+	.nbr{
+		border-right: none!important;
+	}
+}
+.table-results a.sorter{
+  color: $gray-dark;
+  white-space: nowrap;
+}
+.table-results-admin{
+	font-size: 0.9em;
+}
+table {
+	td.per50{
+		width: 50%
+	}
+	td.per40{
+		width: 40%
+	}
+	td.per30{
+		width: 30%
+	}
+	td.per20{
+		width: 20%
+	}
+	td.per15{
+		width: 15%
+	}
+	td.per10{
+		width: 10%
+	}
+	td.per5{
+		width: 5%
+	}
+}
+td.split{
+	border-left: 1px solid $gray;
+}

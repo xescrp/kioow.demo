@@ -1,0 +1,33 @@
+.sell-title{
+	@extend .pull-left;
+
+}
+.sell-tag{
+	padding-left: 2em;
+	padding-top: 0.7em;
+	display: inline-block;
+}
+.sell-date{
+	clear: both;
+}
+
+
+//invoice generator
+.invoices { .fa-stack-1x {bottom: -5px!important;} }
+
+.invoice-modal {	
+	.cellempty {
+		background: transparent!important;
+		border: none!important;
+	}
+	.celleditable {
+		background-color: transparent;
+		border: 1px solid $gray-lighter-low!important;
+		max-width: 150px;
+	}
+}
+
+.invoice-preview {
+	@extend .bordered;
+	@extend .padded-xxl;
+}

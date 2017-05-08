@@ -1,0 +1,146 @@
+﻿<div class="booking-search mb-xxl bg-light padded-xl well pull-right col-md-12 col-sm-12" ng-controller="filterProducts">
+    <div class="row">
+        <div class="col-md-12">
+            <small class="pull-right mb-l">
+                <a href="" ng-click="cleanandrefresh()">
+                    limpiar filtros
+                </a>
+            </small>
+        </div>
+    </div>
+    <div class="row" ng-show="rolename == 'admin'">
+        <!--datebooking COL -->
+        <div class="col-md-2 col-sm-2 line-right">
+            <label class="control-label" for=""><strong>Status</strong></label>
+            <div id="filterStatus" class="collapse in">
+                <div class="checkbox">
+                    <label>
+                        <input ng-change="filterchanged()" type="checkbox" ng-model="selectedFilters.status.published"> Published 
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input ng-change="filterchanged()" type="checkbox" ng-model="selectedFilters.status.publishednodates"> Published (no.av)
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input ng-change="filterchanged()" type="checkbox" ng-model="selectedFilters.status.unpublished"> Upublished 
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input ng-change="filterchanged()" type="checkbox" ng-model="selectedFilters.status.underreview"> Under review 
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input ng-change="filterchanged()" type="checkbox" ng-model="selectedFilters.status.draft"> Draft
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- datebooking col ends -->
+        <!--datetour COL -->
+        
+        <div class="col-md-3 col-sm-3 line-right">
+            <label class="control-label" for="bookingdatestart"><strong>DMCs</strong></label>
+            <div id="filterDMCS" class="collapse in" style="max-height: 148px; overflow-y: scroll;">
+                <div class="checkbox" ng-repeat="dmc in selectedFilters.dmcs">
+                    <label>
+                        <input title="" type="checkbox"
+                               checklist-model="selectedFilters.selecteddmcs"
+                               checklist-value="dmc" ,
+                               ng-click="filterchanged()"
+                               value="{{ dmc._id }}"> {{ dmc.company.name || dmc.name }}
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- datetour col ends -->
+        <div class="col-md-3 col-sm-3 line-right" style="">
+            <label class="control-label" for="bookingdatestart"><strong>Operation country</strong></label>
+            <div id="filterCountries" class="collapse in" style="max-height: 148px; overflow-y: scroll;">
+                <div class="checkbox" ng-repeat="country in selectedFilters.countries">
+                    <label>
+                        <input title="" type="checkbox" 
+                               checklist-model="selectedFilters.selectedcountries" 
+                               checklist-value="country",
+                               ng-click="filterchanged()" 
+                               value="{{ country }}"> {{ country.country }} 
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-2 line-right">
+            <label class="control-label" for="bookingdatestart"><strong>Duration</strong></label>
+            <div class="filter-collapse pt-l pl-b pr-b" id="durartiontripform">
+                <span>{{mindays}} días</span>
+                <span class="pull-right">{{maxdays}} días</span>
+                <input id="programlengthSlider" type="text" value="" />
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-2">
+            <div class="input-group mb-l full-width">
+                <label class="control-label" for="arrivaldate">Búsqueda de texto</label>
+                <input class="form-control" id="arrivaldate" ng-model="textSearch" type="text" value="">
+            </div>
+            <p class="help-block mt-xs mb-xs">Busca por: destino, dmc, save as, tour name.</p>
+            <button type="button" class="btn bnt-block mt-b btn-primary full-width" ng-click="textsearch()"><i class="fa fa-search"></i> buscar</button>
+        </div>
+    </div>
+    <div class="row" ng-show="rolename == 'dmc'">
+        <!--datebooking COL -->
+        <div class="col-md-3 col-sm-3 line-right">
+            <label class="control-label" for=""><strong>Status</strong></label>
+            <div id="filterStatus" class="collapse in">
+                <div class="checkbox" title="Published program">
+                    <label>
+                        <input ng-change="filterchanged()" type="checkbox" ng-model="selectedFilters.status.published"> Published
+                    </label>
+                </div>
+                <div class="checkbox" title="Published program, but need to update prices for the current year">
+                    <label>
+                        <input ng-change="filterchanged()" type="checkbox" ng-model="selectedFilters.status.publishednodates"> Published (no.av)
+                    </label>
+                </div>
+                <div class="checkbox" title="Unpublished programs">
+                    <label>
+                        <input ng-change="filterchanged()" type="checkbox" ng-model="selectedFilters.status.unpublished"> Upublished
+                    </label>
+                </div>
+                <div class="checkbox" title="Under review (by yourttoo) programs">
+                    <label>
+                        <input ng-change="filterchanged()" type="checkbox" ng-model="selectedFilters.status.underreview"> Under review
+                    </label>
+                </div>
+                <div class="checkbox" title="On Draft programs">
+                    <label>
+                        <input ng-change="filterchanged()" type="checkbox" ng-model="selectedFilters.status.draft"> Draft
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- datebooking col ends -->
+        <!--datetour COL -->
+        <div class="col-md-3"></div>
+        
+        <!-- datetour col ends -->
+        <div class="col-md-3 col-sm-3 line-right">
+            <label class="control-label" for="bookingdatestart"><strong>Duration</strong></label>
+            <div class="filter-collapse pt-l pl-b pr-b" id="durartiontripformDMC">
+                <span>{{mindays}} días</span>
+                <span class="pull-right">{{maxdays}} días</span>
+                <input id="programlengthSliderDMC" type="text" value="" />
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-3">
+            <div class="input-group mb-l full-width">
+                <label class="control-label" for="arrivaldate">Text search</label>
+                <input class="form-control" id="arrivaldate" ng-model="textSearch" type="text" value="">
+            </div>
+            <p class="help-block mt-xs mb-xs">Find programs by code, name.</p>
+            <button type="button" class="btn bnt-block mt-b btn-primary full-width" ng-click="textsearch()"><i class="fa fa-search"></i> search</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,46 @@
+﻿module.exports = function (conf, callback) {
+	var core = conf.core;
+	var data = conf.data;
+
+	//1) Send EMAILS: **************** START *********************
+	console.log('New Affiliate: ' + data.code);
+
+	var mailtemplates = {
+		affiliate: 'ytoaffiliatethanks', //the mail for the affiliate
+		yto: 'omtnewaffiliate' //the mail for OM/YTO Admins
+	};
+
+	var ml = require('../../../../factory/mailing');
+	var mailer = new ml.Mailer();
+	var mmux = require('../../../../mediator/mailstack.mediator');
+	var msend = new mmux.MailStackMediator();
+
+	data.url = core.get('fronturl') + '/affiliate/account/?code=' + data.code;
+
+    // *************************
+    //the mail for OM/YTO Admins
+    // *************************
+	mailer.SetupEmail(
+        'notifications@yourttoo.com',
+		mailtemplates.yto,
+		data,
+		function (adminMail) {
+			//send emails...
+			msend.send(adminMail,
+                function (ok) {
+                	conf.results.push({
+                		ResultOK: true,
+                		Message: 'Mail sent to YTO Admin',
+                		Mail: adminMail
+                	});
+                	callback(null, conf);
+                },
+                function (err) {
+                	conf.results.push({
+                		ResultOK: false,
+                		Errors: err,
+                	});
+                	callback(err, conf);
+                });
+        });
+}

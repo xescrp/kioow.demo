@@ -1,0 +1,20 @@
+{
+"username": "travel company",
+"email": "info@trvelcompany.com",
+"code": "AFI23",
+"phone": "649-044-541",
+"photo": {
+    "url": "http://res.cloudinary.com/open-market-travel/image/upload/v1438328849/yourtttoo/travel-logo_c.jpg"
+    },
+"password": "password123",
+"isDMC": false,
+"isTraveler": false,
+"isAffiliate" : true,
+"active": true,
+"isLocal": true,
+"isFacebookLinked": false,
+"isTwitterLinked": false,
+"isGoogleLinked": false,
+"timeZone": {"timeZoneId" : "21", "gmtAdjustment" : "GMT-03:30", "useDaylightTime" : "1", "value" : "-3.5", "label" : "(GMT-03:30) Newfoundland"},
+"currency": "EUR"
+}

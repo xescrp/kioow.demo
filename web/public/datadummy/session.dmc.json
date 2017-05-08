@@ -1,0 +1,710 @@
+{
+  "key": "bace8b21-9d6b-4723-8381-00a1ee73f5d6",
+  "date": "2015-09-08T15:47:39.691Z",
+  "user": {
+    "_id": "547f280b7584bc040ff2c605",
+    "username": "Pablo",
+    "email": "pgrillo@gmail.com",
+    "code": "ES11",
+    "phone": "",
+    "password": "$2a$10$i42psMPWHmBvN4jD2fKom.xRbX1GjbMtaz7Qs94/wk62aTLNk/4te",
+    "isDMC": true,
+    "isTraveler": false,
+    "isAdmin": false,
+    "active": true,
+    "isLocal": true,
+    "isFacebookLinked": false,
+    "isTwitterLinked": false,
+    "isGoogleLinked": false,
+    "__v": 0,
+    "updatedOn": "2015-05-05T14:41:44.382Z",
+    "createdOn": "2014-12-03T15:11:07.921Z",
+    "roles": [
+      {
+        "_id": "53d11933159705402588a154",
+        "slug": "dmc",
+        "title": "DMC",
+        "publishedDate": "2014-07-24T14:33:23.575Z",
+        "description": "Rol de DMC",
+        "__v": 0,
+        "updatedOn": "2014-07-24T14:33:23.578Z",
+        "createdOn": "2014-07-24T14:33:23.576Z",
+        "permissions": [
+          "53abf8d5d0b72a18184ff05c"
+        ]
+      }
+    ],
+    "photo": {
+      "url": "http://res.cloudinary.com/open-market-travel/image/upload/v1412587999/avatar.jpg"
+    }
+  },
+  "dmc": {
+    "_id": "547f280c7584bc040ff2c606",
+    "slug": "es11",
+    "code": "ES11",
+    "name": "Openmarket.travel",
+    "membershipDate": "2014-12-03T15:11:08.546Z",
+    "user": {
+      "_id": "547f280b7584bc040ff2c605",
+      "username": "Pablo",
+      "email": "pgrillo@gmail.com",
+      "code": "ES11",
+      "phone": "",
+      "password": "$2a$10$i42psMPWHmBvN4jD2fKom.xRbX1GjbMtaz7Qs94/wk62aTLNk/4te",
+      "isDMC": true,
+      "isTraveler": false,
+      "isAdmin": false,
+      "active": true,
+      "isLocal": true,
+      "isFacebookLinked": false,
+      "isTwitterLinked": false,
+      "isGoogleLinked": false,
+      "__v": 0,
+      "updatedOn": "2015-05-05T14:41:44.382Z",
+      "createdOn": "2014-12-03T15:11:07.921Z",
+      "roles": [
+        "53d11933159705402588a154"
+      ],
+      "photo": {
+        "url": "http://res.cloudinary.com/open-market-travel/image/upload/v1412587999/avatar.jpg"
+      }
+    },
+    "admin": {
+      "_id": "547f280b7584bc040ff2c605",
+      "username": "Pablo",
+      "email": "pgrillo@gmail.com",
+      "code": "ES11",
+      "phone": "",
+      "password": "$2a$10$i42psMPWHmBvN4jD2fKom.xRbX1GjbMtaz7Qs94/wk62aTLNk/4te",
+      "isDMC": true,
+      "isTraveler": false,
+      "isAdmin": false,
+      "active": true,
+      "isLocal": true,
+      "isFacebookLinked": false,
+      "isTwitterLinked": false,
+      "isGoogleLinked": false,
+      "__v": 0,
+      "updatedOn": "2015-05-05T14:41:44.382Z",
+      "createdOn": "2014-12-03T15:11:07.921Z",
+      "roles": [
+        "53d11933159705402588a154"
+      ],
+      "photo": {
+        "url": "http://res.cloudinary.com/open-market-travel/image/upload/v1412587999/avatar.jpg"
+      }
+    },
+    "contactuser": {
+      "_id": "547f280b7584bc040ff2c605",
+      "username": "Pablo",
+      "email": "pgrillo@gmail.com",
+      "code": "ES11",
+      "phone": "",
+      "password": "$2a$10$i42psMPWHmBvN4jD2fKom.xRbX1GjbMtaz7Qs94/wk62aTLNk/4te",
+      "isDMC": true,
+      "isTraveler": false,
+      "isAdmin": false,
+      "active": true,
+      "isLocal": true,
+      "isFacebookLinked": false,
+      "isTwitterLinked": false,
+      "isGoogleLinked": false,
+      "__v": 0,
+      "updatedOn": "2015-05-05T14:41:44.382Z",
+      "createdOn": "2014-12-03T15:11:07.921Z",
+      "roles": [
+        "53d11933159705402588a154"
+      ],
+      "photo": {
+        "url": "http://res.cloudinary.com/open-market-travel/image/upload/v1412587999/avatar.jpg"
+      }
+    },
+    "__v": 40,
+    "updatedOn": "2015-09-03T15:02:51.265Z",
+    "createdOn": "2014-12-03T15:11:08.546Z",
+    "expenditure": [
+      {
+        "label": "2014",
+        "_id": "547f280c7584bc040ff2c63d",
+        "months": [
+          {
+            "label": "January",
+            "value": null,
+            "_id": "547f280c7584bc040ff2c649"
+          },
+          {
+            "label": "February",
+            "value": null,
+            "_id": "547f280c7584bc040ff2c648"
+          },
+          {
+            "label": "March",
+            "value": null,
+            "_id": "547f280c7584bc040ff2c647"
+          },
+          {
+            "label": "April",
+            "value": null,
+            "_id": "547f280c7584bc040ff2c646"
+          },
+          {
+            "label": "May",
+            "value": null,
+            "_id": "547f280c7584bc040ff2c645"
+          },
+          {
+            "label": "Jun",
+            "value": null,
+            "_id": "547f280c7584bc040ff2c644"
+          },
+          {
+            "label": "July",
+            "value": null,
+            "_id": "547f280c7584bc040ff2c643"
+          },
+          {
+            "label": "August",
+            "value": null,
+            "_id": "547f280c7584bc040ff2c642"
+          },
+          {
+            "label": "September",
+            "value": null,
+            "_id": "547f280c7584bc040ff2c641"
+          },
+          {
+            "label": "October",
+            "value": null,
+            "_id": "547f280c7584bc040ff2c640"
+          },
+          {
+            "label": "November",
+            "value": null,
+            "_id": "547f280c7584bc040ff2c63f"
+          },
+          {
+            "label": "December",
+            "value": null,
+            "_id": "547f280c7584bc040ff2c63e"
+          }
+        ]
+      },
+      {
+        "label": "2015",
+        "_id": "547f280c7584bc040ff2c630",
+        "months": [
+          {
+            "label": "January",
+            "value": null,
+            "_id": "547f280c7584bc040ff2c63c"
+          },
+          {
+            "label": "February",
+            "value": null,
+            "_id": "547f280c7584bc040ff2c63b"
+          },
+          {
+            "label": "March",
+            "value": null,
+            "_id": "547f280c7584bc040ff2c63a"
+          },
+          {
+            "label": "April",
+            "value": null,
+            "_id": "547f280c7584bc040ff2c639"
+          },
+          {
+            "label": "May",
+            "value": null,
+            "_id": "547f280c7584bc040ff2c638"
+          },
+          {
+            "label": "Jun",
+            "value": null,
+            "_id": "547f280c7584bc040ff2c637"
+          },
+          {
+            "label": "July",
+            "value": null,
+            "_id": "547f280c7584bc040ff2c636"
+          },
+          {
+            "label": "August",
+            "value": null,
+            "_id": "547f280c7584bc040ff2c635"
+          },
+          {
+            "label": "September",
+            "value": null,
+            "_id": "547f280c7584bc040ff2c634"
+          },
+          {
+            "label": "October",
+            "value": null,
+            "_id": "547f280c7584bc040ff2c633"
+          },
+          {
+            "label": "November",
+            "value": null,
+            "_id": "547f280c7584bc040ff2c632"
+          },
+          {
+            "label": "December",
+            "value": null,
+            "_id": "547f280c7584bc040ff2c631"
+          }
+        ]
+      },
+      {
+        "label": "2016",
+        "_id": "547f29d07584bc040ff2e3f2",
+        "months": [
+          {
+            "label": "January",
+            "value": null,
+            "_id": "547f29d07584bc040ff2e3fe"
+          },
+          {
+            "label": "February",
+            "value": null,
+            "_id": "547f29d07584bc040ff2e3fd"
+          },
+          {
+            "label": "March",
+            "value": null,
+            "_id": "547f29d07584bc040ff2e3fc"
+          },
+          {
+            "label": "April",
+            "value": null,
+            "_id": "547f29d07584bc040ff2e3fb"
+          },
+          {
+            "label": "May",
+            "value": null,
+            "_id": "547f29d07584bc040ff2e3fa"
+          },
+          {
+            "label": "Jun",
+            "value": null,
+            "_id": "547f29d07584bc040ff2e3f9"
+          },
+          {
+            "label": "July",
+            "value": null,
+            "_id": "547f29d07584bc040ff2e3f8"
+          },
+          {
+            "label": "August",
+            "value": null,
+            "_id": "547f29d07584bc040ff2e3f7"
+          },
+          {
+            "label": "September",
+            "value": null,
+            "_id": "547f29d07584bc040ff2e3f6"
+          },
+          {
+            "label": "October",
+            "value": null,
+            "_id": "547f29d07584bc040ff2e3f5"
+          },
+          {
+            "label": "November",
+            "value": null,
+            "_id": "547f29d07584bc040ff2e3f4"
+          },
+          {
+            "label": "December",
+            "value": null,
+            "_id": "547f29d07584bc040ff2e3f3"
+          }
+        ]
+      },
+      {
+        "label": "2017",
+        "_id": "54aa514e9b662bac0de31c3b",
+        "months": [
+          {
+            "label": "January",
+            "value": null,
+            "_id": "54aa514e9b662bac0de31c47"
+          },
+          {
+            "label": "February",
+            "value": null,
+            "_id": "54aa514e9b662bac0de31c46"
+          },
+          {
+            "label": "March",
+            "value": null,
+            "_id": "54aa514e9b662bac0de31c45"
+          },
+          {
+            "label": "April",
+            "value": null,
+            "_id": "54aa514e9b662bac0de31c44"
+          },
+          {
+            "label": "May",
+            "value": null,
+            "_id": "54aa514e9b662bac0de31c43"
+          },
+          {
+            "label": "Jun",
+            "value": null,
+            "_id": "54aa514e9b662bac0de31c42"
+          },
+          {
+            "label": "July",
+            "value": null,
+            "_id": "54aa514e9b662bac0de31c41"
+          },
+          {
+            "label": "August",
+            "value": null,
+            "_id": "54aa514e9b662bac0de31c40"
+          },
+          {
+            "label": "September",
+            "value": null,
+            "_id": "54aa514e9b662bac0de31c3f"
+          },
+          {
+            "label": "October",
+            "value": null,
+            "_id": "54aa514e9b662bac0de31c3e"
+          },
+          {
+            "label": "November",
+            "value": null,
+            "_id": "54aa514e9b662bac0de31c3d"
+          },
+          {
+            "label": "December",
+            "value": null,
+            "_id": "54aa514e9b662bac0de31c3c"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      {
+        "_id": "543e9825ee63d0382c52dee4",
+        "slug": "safari",
+        "label": "Safaris",
+        "label_en": "Safari"
+      },
+      {
+        "_id": "543e8fccee63d0382c52decb",
+        "slug": "cruises",
+        "label": "Cruceros",
+        "label_en": "Cruises & Sailing"
+      },
+      {
+        "_id": "547d8958c05f69b4097146c3",
+        "slug": "weekend",
+        "label": "Fin de semana",
+        "label_en": "Weekend"
+      },
+      {
+        "_id": "54293515ac31dc2a4a853cc9",
+        "slug": "four-wheel",
+        "label": "4x4",
+        "label_en": "4x4 "
+      }
+    ],
+    "tourEscorts": [
+      {
+        "fullname": "Juan perez",
+        "biography": "asdaskdkjashdkahhdjhjhdkjashjkdh",
+        "_id": "55bf2d7805f4cd926ef2e7f4",
+        "languages": [
+          {
+            "label": "German",
+            "value": "ge",
+            "_id": "55bf2d8905f4cd926ef2e7f5"
+          },
+          {
+            "label": "Spanish",
+            "value": "sp",
+            "_id": "55d34f6c728494df59159140"
+          }
+        ],
+        "image": {
+          "public_id": "w60nrlfpfrby3qspe7sz",
+          "version": 1438592410,
+          "signature": "ea07a0784140b283edb98597c18be8e07cf6d667",
+          "width": 225,
+          "height": 225,
+          "format": "jpg",
+          "resource_type": "image",
+          "secure_url": "https://res.cloudinary.com/open-market-travel/image/upload/v1438592410/w60nrlfpfrby3qspe7sz.jpg",
+          "url": "http://res.cloudinary.com/open-market-travel/image/upload/v1438592410/w60nrlfpfrby3qspe7sz.jpg"
+        }
+      },
+      {
+        "fullname": "",
+        "biography": "",
+        "_id": "55bf2d9b05f4cd926ef2e7f6",
+        "languages": [],
+        "image": {
+          "url": ""
+        }
+      }
+    ],
+    "additionalinfo": {
+      "notpunished": true,
+      "paymenttaxes": true,
+      "description": "dsadadasd",
+      "insurancepolicy": {
+        "url": "http://openmarketprd.cloudapp.net:3000/api/getfile/?file=00d788cb-370c-4537-b82c-aabc6167ab28.pdf&type=insurances"
+      },
+      "registration": {
+        "url": "http://openmarketprd.cloudapp.net:3000/api/getfile/?file=96910cc2-ab63-4dd8-ac02-3a7d101b5412.pdf&type=certifications"
+      },
+      "associations": [
+        {
+          "name": "The CODE",
+          "_id": "547f2c1c7584bc040ff2f7b3",
+          "image": {
+            "public_id": "uev5jlvsj8xzlsn22dpa",
+            "version": 1428684977,
+            "signature": "aae21f62ba262ef7c3e65813c2a2b268f9e253af",
+            "width": 225,
+            "height": 225,
+            "format": "jpg",
+            "resource_type": "image",
+            "url": "http://res.cloudinary.com/open-market-travel/image/upload/v1428684977/uev5jlvsj8xzlsn22dpa.jpg",
+            "secure_url": "https://res.cloudinary.com/open-market-travel/image/upload/v1428684977/uev5jlvsj8xzlsn22dpa.jpg"
+          }
+        }
+      ],
+      "recomenders": [
+        {
+          "name": "Tripadvisor",
+          "url": "http://www.tripadvisor.com",
+          "_id": "547f2c397584bc040ff2f7b4"
+        }
+      ]
+    },
+    "company": {
+      "name": "Openmarket.travel",
+      "legalname": "Open Market Travel SL",
+      "constitutionyear": 1995,
+      "phone": "649045413",
+      "emergencyphone": "454554554",
+      "website": "",
+      "taxid": "458755445",
+      "location": {
+        "fulladdress": "Carrer Gómez Ullà, 19, 07650 Santanyí, Illes Balears, Spain",
+        "city": "Santanyí",
+        "stateorprovince": "Illes Balears",
+        "cp": "07650",
+        "country": "Spain",
+        "countrycode": "ES",
+        "latitude": 39.3581329,
+        "longitude": 3.130619700000011
+      },
+      "operatein": [
+        {
+          "zone": "Andalucía",
+          "_id": "547f280c7584bc040ff2c62e",
+          "operateLocation": {
+            "fulladdress": "Spain",
+            "cp": "",
+            "city": "",
+            "country": "Spain",
+            "countrycode": "ES",
+            "stateorprovince": "",
+            "latitude": 40.46366700000001,
+            "longitude": -3.7492200000000366
+          }
+        },
+        {
+          "zone": "all",
+          "_id": "55bb3c4a644d281c5ed66989",
+          "operateLocation": {
+            "fulladdress": "Italy",
+            "cp": "",
+            "city": "",
+            "country": "Italy",
+            "countrycode": "IT",
+            "stateorprovince": "",
+            "latitude": 41.87194,
+            "longitude": 12.567379999999957
+          }
+        },
+        {
+          "zone": "Balearic Islands",
+          "_id": "55daf8324f4da9ba37916100",
+          "operateLocation": {
+            "fulladdress": "Ciutadella de Menorca, Balearic Islands, Spain",
+            "cp": "",
+            "city": "Ciutadella de Menorca",
+            "country": "Spain",
+            "countrycode": "ES",
+            "stateorprovince": "Balearic Islands",
+            "latitude": 39.9991163,
+            "longitude": 3.8389047000000573
+          }
+        },
+        {
+          "zone": "Castilla-La Mancha",
+          "_id": "55daf83b4f4da9ba37916101",
+          "operateLocation": {
+            "fulladdress": "Cuenca, Cuenca, Spain",
+            "cp": "",
+            "city": "Cuenca",
+            "country": "Spain",
+            "countrycode": "ES",
+            "stateorprovince": "Castilla-La Mancha",
+            "latitude": 40.0703925,
+            "longitude": -2.1374161999999615
+          }
+        },
+        {
+          "zone": "Balearic Islands",
+          "_id": "55daf89f4f4da9ba37916102",
+          "operateLocation": {
+            "fulladdress": "Balearic Islands, Spain",
+            "cp": "",
+            "city": "",
+            "country": "Spain",
+            "countrycode": "ES",
+            "stateorprovince": "Balearic Islands",
+            "latitude": 39.5341789,
+            "longitude": 2.857710499999939
+          }
+        },
+        {
+          "zone": "Balearic Islands",
+          "_id": "55daf8a64f4da9ba37916103",
+          "operateLocation": {
+            "fulladdress": "Balearic Islands, Spain",
+            "cp": "",
+            "city": "",
+            "country": "Spain",
+            "countrycode": "ES",
+            "stateorprovince": "Balearic Islands",
+            "latitude": 39.5341789,
+            "longitude": 2.857710499999939
+          }
+        },
+        {
+          "zone": "Federal District",
+          "_id": "55e01e2d0c2675203815c684",
+          "operateLocation": {
+            "fulladdress": "Mexico City, Federal District, Mexico",
+            "cp": "",
+            "city": "Mexico City",
+            "country": "Mexico",
+            "countrycode": "MX",
+            "stateorprovince": "Federal District",
+            "latitude": 19.4326077,
+            "longitude": -99.13320799999997
+          }
+        }
+      ]
+    },
+    "delegations": [],
+    "timeZone": {
+      "gmtAdjustment": "GMT-11:00",
+      "label": "(GMT-11:00) Midway Island, Samoa",
+      "timeZoneId": "2",
+      "useDaylightTime": "0",
+      "value": "-11"
+    },
+    "currency": {
+      "label": "Euro",
+      "symbol": "€",
+      "value": "EUR"
+    },
+    "images": {
+      "splash": {
+        "url": "img/elements/img-empty.png"
+      },
+      "logo": {
+        "url": "http://res.cloudinary.com/open-market-travel/image/upload/v1428684959/kfnorwwnumnxxhk42tv1.png"
+      },
+      "photo": {
+        "url": "http://res.cloudinary.com/openmarket-travel/image/upload/v1417620501/hmbfkg4v5s6gbtumqmab.jpg"
+      }
+    },
+    "membership": {
+      "b2bchannel": true,
+      "b2cchannel": true,
+      "commission": 11,
+      "acceptterms": true,
+      "membershipDate": null,
+      "registervalid": true,
+      "publicprofilecomplete": true,
+      "companyimagescomplete": true,
+      "companycomplete": true,
+      "paymentcomplete": true,
+      "averagecomplete": true,
+      "companytaxid": true,
+      "emergencycomplete": true,
+      "requestdelete": true,
+      "toursmultidays": true,
+      "tailormade": true,
+      "groups": true,
+      "payagreement": "",
+      "confirmterms": true,
+      "autopublish": false,
+      "cancelpolicy": {
+        "_en": "tuynruru oñ iduyt",
+        "_es": ""
+      },
+      "paymentoption": {
+        "_en": "Last day of the trip",
+        "_es": "Día de vuelta del cliente del destino",
+        "slug": "departure"
+      }
+    },
+    "bankinfo": {
+      "beneficiary": "beneficiary",
+      "iban": "iban number",
+      "accountnumber": "account numebr",
+      "bankname": "bank name",
+      "bic": "bic code",
+      "routing": "routing",
+      "bankaddress": "bank address",
+      "bankzip": "bank zip",
+      "bankcity": "bank city",
+      "bankcountry": {
+        "label": "Argentina",
+        "value": "ARG"
+      }
+    },
+    "contact": {
+      "title": "Mr.",
+      "firstname": "Pablo",
+      "lastname": "Grillo",
+      "email": "pgrillo@gmail.com",
+      "fax": "",
+      "skype": "pableco",
+      "nif": "",
+      "position": "IT",
+      "reqGroupContact": {
+        "email": "pableco@gmail.com"
+      },
+      "reqFITContact": {
+        "email": "pableco@gmail.com"
+      },
+      "prodContact": {
+        "email": "pableco@gmail.com"
+      },
+      "bookingContact": {
+        "email": "pableco@gmail.com"
+      },
+      "accountingContact": {
+        "email": "pgrillo@gmail.com",
+        "name": "Accounting person"
+      },
+      "name": ""
+    }
+  },
+  "traveler": null,
+  "admin": null
+}

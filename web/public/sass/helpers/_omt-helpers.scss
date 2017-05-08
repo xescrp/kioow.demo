@@ -1,0 +1,236 @@
+//============= Fonts =============
+//weight
+.thin {font-weight: 300!important;}
+.regular {font-weight: 400!important;}
+.bold {font-weight: 700!important;}
+.italic {font-style: italic;}
+
+//position
+.middle{vertical-align: middle!important;}
+.nowrap {white-space: nowrap;}
+.lh-xs {line-height: 0!important;}
+.lh-normal {line-height: normal;}
+.lh-b {line-height: $line-height-base;}
+.lh-l {line-height: $line-height-base*1.5;}
+.lh-xl {line-height: $line-height-base*2;}
+.lh-xxl {line-height: $line-height-base*3;}
+.oh {overflow: hidden;}
+.wp-normal {white-space: normal;}
+
+//size
+.text-xs{font-size: $font-size-xs;}
+.text-sm{font-size: $font-size-small;}
+.text-l{font-size: $font-size-mid;}
+.text-xl{font-size: $font-size-large;}
+.base-sized {font-size: $font-size-base;}
+.h4-sized {font-size: $font-size-h4;}
+.mid-sized {font-size: $font-size-mid;}
+
+//specific styles
+.uppercase {text-transform: uppercase;}
+.no-transform{text-transform: none;}
+.itext-left {text-align: left!important;}
+.itext-right {text-align: right!important;}
+
+//=========== Positioning ===========
+//margin classes
+.marged-b {margin: $padding-base-vertical $padding-base-horizontal;}
+.marged-l {margin: $padding-large-vertical $padding-large-horizontal;}
+.marged-xl {margin: $padding-xl-vertical $padding-xl-horizontal;}
+.marged-xxl {margin: $padding-xxl-vertical $padding-xxl-horizontal;}
+.mt-five {margin-top: 5px;}
+.mt-xs {margin-top: $padding-xs-vertical;}
+.mt-xs {margin-top: $padding-xs-vertical;}
+.mt-b {margin-top: $padding-base-vertical;}
+.mt-l {margin-top:$padding-large-vertical;}
+.mt-xl {margin-top: $padding-xl-vertical;}
+.mt-xxl {margin-top: $padding-xxl-vertical;}
+.mb-xs {margin-bottom: $padding-xs-vertical;}
+.mb-b {margin-bottom: $padding-base-vertical;}
+.mb-l {margin-bottom: $padding-large-vertical;}
+.mb-xl {margin-bottom: $padding-xl-vertical;}
+.mb-xxl {margin-bottom: $padding-xxl-vertical;}
+.ml-xs {margin-left: $padding-xs-horizontal;}
+.ml-b {margin-left: $padding-base-horizontal;}
+.ml-l {margin-left: $padding-large-horizontal;}
+.ml-xl {margin-left: $padding-xl-horizontal;}
+.ml-xxl {margin-left: $padding-xxl-horizontal;}
+.mr-four {margin-right: 4px;}
+.ml-four {margin-left: 4px;}
+.mr-xs {margin-right: $padding-xs-horizontal;}
+.mr-b {margin-right: $padding-base-horizontal;}
+.mr-l {margin-right: $padding-large-horizontal;}
+.mr-xl {margin-right: $padding-xl-horizontal;}
+.mr-xxl {margin-right: $padding-xxl-horizontal;}
+.marged-zero {margin: 0;}
+.mt-zero {margin-top: 0;}
+.mb-zero {margin-bottom: 0;}
+.ml-zero {margin-left: 0;}
+.mr-zero {margin-right: 0;}
+.mt-tfive {margin-top: 25px;}
+
+//padding classes
+.padded-xs {padding: $padding-xs-vertical $padding-xs-horizontal;}
+.padded-b {padding: $padding-base-vertical $padding-base-horizontal;}
+.padded-l {padding: $padding-large-vertical $padding-large-horizontal;}
+.padded-xl {padding: $padding-xl-vertical $padding-xl-horizontal;}
+.padded-xxl {padding: $padding-xxl-vertical $padding-xxl-horizontal;}
+.pl-b {padding-left: $padding-base-horizontal;}
+.pl-l {padding-left: $padding-large-horizontal;}
+.pl-xl {padding-left: $padding-xl-horizontal;}
+.pl-xxl {padding-left: $padding-xxl-horizontal;}
+.pr-b {padding-right: $padding-base-horizontal;}
+.pr-l {padding-right: $padding-large-horizontal;}
+.pr-xl {padding-right: $padding-xl-horizontal;}
+.pr-xxl {padding-right: $padding-xxl-horizontal;}
+.pt-xs {padding-top: 3px;}
+.pt-b {padding-top: $padding-base-vertical;}
+.pt-l {padding-top:$padding-large-vertical;}
+.pt-xl {padding-top: $padding-xl-vertical;}
+.pt-xxl {padding-top: $padding-xxl-vertical;}
+.pt-huge {padding-top: 200px;}
+.pb-b {padding-bottom: $padding-base-vertical;}
+.pb-l {padding-bottom: $padding-large-vertical;}
+.pb-xl {padding-bottom: $padding-xl-vertical;}
+.pb-xxl {padding-bottom: $padding-xxl-vertical;}
+.padded-zero {padding: 0;}
+.pt-zero {padding-top: 0;}
+.pb-zero {padding-bottom: 0;}
+.pl-zero {padding-left: 0;}
+.pr-zero {padding-right: 0;}
+
+// element type classes
+.block {display: block;}
+.inline {display: inline;}
+.iblock {display: inline-block;}
+
+// element position classes
+.relative {position: relative;}
+.absolute {position: absolute;}
+.absolute-center {top: 0; right: 0; bottom: 0; left: 0; position: absolute; margin: auto;}
+
+// element centering cases
+.center-block {@include center-block;}
+.max-center-sm {@include max-center($screen-sm-max, 500px, 250px);}
+.max-center-xs {@include max-center($screen-xs-max, 500px, 250px);}
+.mobile-centered {@media (max-width: $screen-sm-max) {text-align: center;}}
+.mobile-full {@media (max-width: $screen-sm-max) {width: 100%!important;}}
+.xs-centered {@media (max-width: $screen-xs-max) {text-align: center;}}
+
+//specific
+.spaceholder {min-height: 500px;}
+.spaceholder-sm {min-height: 300px;}
+.xs-righted {@media (max-width: $screen-xs-max) {text-align: right;}}
+.bg-light {background-color: $light;}
+
+
+//============= Image blockers =============
+.mainproductimage {max-width: 850px;}
+.itinerarydaythumb {max-width: 120px;}
+.resultimage {max-width: 380px;}
+.avatarb36 {max-width: 36px;}
+.avatarm42 {max-width: 42px;}
+.avatarl70 {max-width: 70px;}
+.avatar100 {max-width: 100px;}
+.searchresult {max-width: 360px;}
+.corporateselfie {max-width: 250px;}
+
+
+//============= Specific Style cases =============
+//preventing link wrappers from link properties
+.link-wrapper {
+	display: block;
+  	color: inherit;
+  	text-decoration: none;
+	&:hover,
+	&:focus {color: inherit; text-decoration: none;}
+	&:focus {outline: none;}
+}
+.no-decoration{
+  text-decoration: none;
+}
+//links over dark blue background
+.link-softened {display: inline-block; color: $footer-dmc-link-color;&:hover, &:focus {color: $footer-dmc-link-hover-color;} }
+//links over bw theme
+.link-gray {color: $gray; &:hover, &:active, &:focus {color: $gray-dark;}}
+//links over darker
+.link-invert {color: $light; &:hover, &:active, &:focus {color: $almost-light;}	}
+//pointer on hover
+.pointer {cursor: pointer;}
+
+//lines
+.line-invert {border-top: 1px solid rgba($light, .3);}
+.line-invert-bottom {border-bottom: 1px solid rgba($light, .3);}
+.line-dark {border-top: 1px solid rgba($gray-dark, .3);}
+.line-gray {border-top: 1px solid rgba($gray-light-base, .3);}
+.line-right {border-right: 1px solid rgba($gray-dark, .1);}
+.line-brand-primary {border-top: 1px solid rgba($brand-primary, .3);}
+.line-brand-alternate {border-top: 1px solid rgba($brand-alternate, .3);}
+//borders
+.bordered {border: 1px solid $gray-lighter-low;}
+.bordered-gdark {border: 1px solid $gray-dark;}
+.bordered-top, .bordered-t {border-top: 1px solid $gray-lighter-low;}
+.bordered-l {border-left: 1px solid $gray-lighter-low;}
+.bordered-r {border-right: 1px solid $gray-lighter-low;}
+.bordered-bottom, .bordered-b {border-bottom: 1px solid $gray-lighter-low;}
+.bb-double {border-bottom-width: 2px;}
+.bb-none {border-bottom: none;}
+.border-none {border: none!important;}
+
+//opacities
+.opac-full {opacity: .1;}
+.opac-b {opacity: .8;}
+.opac-l {opacity: .6;}
+.opac-xl {opacity: .4;}
+.opac-xxl {opacity: .2;}
+.disabledbox{@include opacity(.3);}
+
+//widths 
+.full-width {width: 100%;}
+.almost-full-width {width: 80%;}
+.half-width {width: 50%;}
+
+//textareas
+.textarea-b {resize:vertical; max-height: 140px;}
+.textarea-l {resize:vertical; max-height: 160px;}
+.textarea-xl {resize:vertical; max-height: 220px; min-height: 130px;}
+.textarea-xxl {resize:vertical; max-height: 300px;}
+
+//tables
+.table-nolined {td {background: transparent!important;border: none!important;}}
+
+
+//============= Motion =============
+//transitions
+.trans-xxs {@include transition(all .1s ease);}
+.trans-xs {@include transition(all .2s ease);}
+.trans-b {@include transition(all .4s ease);}
+.trans-l {@include transition(all .6s ease-out);}
+.trans-xl {@include transition(all 1s ease);}
+
+//selection
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+//other...
+.h3-padded-nav {padding: 12px; @extend .h3; @extend .marged-zero;} 
+.comma:last-child {display: none;}
+.block-at-afour {min-width: 595px;} //stop at A4 size for print
+
+
+.cell-b-t{
+   border-top: 1px solid $table-border-color;
+}
+.cell-b-b{
+   border-bottom: 1px solid $table-border-color;
+}
+.cell-b-l{
+   border-left: 1px solid $table-border-color;
+}
+.cell-b-r{
+   border-right: 1px solid $table-border-color;
+}

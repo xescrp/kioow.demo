@@ -1,0 +1,15 @@
+// Invert text
+
+@mixin invert-text {
+	color: $light;
+	a {
+	  	color: $light;
+		&:hover,
+		&:focus {color: $almost-light;}
+	}
+}
+@mixin invert-text-only {
+	color: $light;
+}
+
+.invert-text {@include invert-text;}

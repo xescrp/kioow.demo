@@ -1,0 +1,9 @@
+.booking-search {
+	.line-right {@media (max-width: $screen-xs-max) {border-right: none;}}
+	.line-right.last {@media (max-width: $screen-sm-max) {border-right: none;}}
+}
+.item-body-query{
+    width: 100%;
+    padding-left: 3.5em;
+    margin-bottom: 1em;
+}

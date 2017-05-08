@@ -1,0 +1,59 @@
+[
+{
+"name": "Afghanistan",
+"countrycode": "AF",
+"cities" : ["Kabul", "Kandahar", "Herat"]
+},
+{
+"name": "Belgium",
+"countrycode": "BE",
+"cities" : ["Durbuy", "Mons", "Tournai", "Liege", "Spa"]
+},
+{
+"name": "Belize",
+"countrycode": "BZ",
+"cities" : ["Belize City"]
+},
+{
+"name": "Canada",
+"countrycode": "CA",
+"cities" : ["Ontario", "Nova Scotia"]
+},
+{
+"name": "Cayman Islands",
+"countrycode": "KY",
+"cities" : ["George Town", "West Bay", "Bodden Town", "East End", "North Side"]
+},
+
+{
+"name": "Chile",
+"countrycode": "CL",
+"cities": ["Iquique", "Arica", "Calama", "Copiapó", "Caldera", "Los Vilos", "El Palqui", "Monte Patria"]
+},
+{
+"name": "China",
+"countrycode": "CN",
+"cities": ["Beijing","Chongqing","Shanghai","Tianjin","Hong","Macau","Anqing","Bengbu","Bozhou","Chaohu","Chizhou","Chuzhou","Fuyang","Hefei","Huaibei","Huainan","Huangshan","Jieshou","Lu'an","Ma'anshan","Mingguang","Ningguo","Suzhou","Tianchang","Tongcheng"]
+},
+
+{
+"name": "Dominica",
+"countrycode": "DM",
+"cities" : ["Bataka"]
+},
+{
+"name": "Dominican Republic",
+"countrycode": "DO",
+"cities" : ["Santiago", "Santo Domingo"]
+},
+{
+"name": "Ecuador",
+"countrycode": "EC",
+"cities" : ["Quito"]
+},
+{
+"name": "Egypt",
+"countrycode": "EG",
+"cities" : ["Alexandria", "Asyut", "Qena", "Cairo", "Giza", "Suez", "Abu Kabir", "Girga", "Matareya"]
+}
+]

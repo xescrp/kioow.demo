@@ -1,0 +1,70 @@
+﻿{
+    "name": "APP CORE",
+    "brand": "Brand name",
+    "compress": "true",
+    "headless": "false",
+    "logger": "dev",
+    "auto update": "false",
+    "cloudinary prefix": "cl_pr",
+    "deploydirectory": "../core",
+    "publicdirectory": "..resources/public",
+    "sessionstorage": "full",
+    "google api key": "----",
+    "apiurl": "http://localhost:3000",
+    "fronturl": "http://localhost:1000",
+    "frontadminurl" : "",
+    "serverip": "0.0.0.0",
+    "facebook": {
+        "applicationId": "appid",
+        "applicationSecret": "appsecrect",
+        "callbackUrl": "http://localhost:3000/auth/fbcallback"
+    },
+    "dbconnections": [ "mongodb", "cmsdb", "operationsdb" ],
+	"mongodb" : {
+		"server": "localhost",
+		"port": "27017",
+		"dbname": "maindb",
+        "connection": "mongodb://localhost/maindb",
+        "modelspath": "../libs/common/models-omt",
+        "models" : "omt"
+	},
+    "cmsdb": {
+        "server": "localhost",
+        "port": "27017",
+        "dbname": "cms-openmarket",
+        "connection": "mongodb://localhost/cms-app",
+        "modelspath":  "../libs/common/models-cms",
+        "models" : "cms"
+    },
+    "operationsdb" : {
+		"server": "localhost",
+		"port": "27017",
+		"dbname": "operations-app",
+        "connection": "mongodb://localhost/operations-app",
+        "modelspath":  "../libs/common/models-help",
+        "models" : "help"
+	},
+	"mailing" : {
+		"server" : "smtp.mandrillapp.com",
+		"port" : "587",
+		"username" : "username",
+		"password" : "password",
+		"servicename" : "Mandrill SMTP",
+		"from" : "from@testmail.com",
+		"errorsfrom" : "errors@testmail.com",
+		"errorsrecipient" : "ecp@testmail.com",
+    "templates": "D:/dev/mails/public",
+    "collectionname" : "Mails"
+	},
+	"log": {
+		"sendmailonerrors" : "true", 
+		"mode" : "fs", 
+		"filepath" : "./Log",
+        "level" :  "15"
+		},
+    "cloudinaryconfig" : {
+         "cloud_name": "cloud-name", 
+         "api_key": "apikey", 
+         "api_secret": "apisecret" 
+    }
+}

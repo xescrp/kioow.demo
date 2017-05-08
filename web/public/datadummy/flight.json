@@ -1,0 +1,238 @@
+{
+    "destination": [
+      {
+        "from": "PMI",
+        "to": "CAI",
+        "date": "2016-04-13",
+        "dayNumber": 1
+      },
+      {
+        "to": "LXR",
+        "from": "CAI",
+        "date": "2016-04-18",
+        "dayNumber": 4
+      },
+      {
+        "to": "CAI",
+        "from": "ASW",
+        "date": "2016-04-22",
+        "dayNumber": 8
+      },
+      {
+        "to": "PMI",
+        "from": "CAI",
+        "date": "2016-04-23",
+        "dayNumber": 9
+      }
+    ],
+    "directFlight": false,
+    "lowCost": false,
+    "numAdult": 5,
+    "numChild": 0,
+    "numInfant": 0,
+    "residentAdult": {},
+    "residentChild": {},
+    "residentInfant": {},
+    "singleRoom": "0",
+    "doubleRoom": "1",
+    "tripleRoom": "1",
+    "dayStar": "2016-04-14T22:00:00.000Z",
+    "offset": 2,
+    "roomPrice": {
+      "currency": {
+        "label": "Euro",
+        "symbol": "â‚¬",
+        "value": "EUR"
+      },
+      "triple": {
+        "price": 595
+      },
+      "double": {
+        "price": 595
+      },
+      "single": {
+        "price": 735
+      }
+    },
+  "flight": {
+    "fareNotes": [
+      {
+        "category": "71",
+        "code": "PEN",
+        "description": "TICKETS ARE NON REFUNDABLE AFTER DEPARTURE"
+      },
+      {
+        "category": "40",
+        "code": "LTD",
+        "description": "LAST TKT DTE02APR16 - SEE ADV PURCHASE"
+      },
+      {
+        "category": "79",
+        "code": "SUR",
+        "description": "FARE VALID FOR E TICKET ONLY"
+      }
+    ],
+    "priceGroup": 101,
+    "price": 3514.4,
+    "isLowcost": false,
+    "pricePerUser": {
+      "infant": {
+        "discount": 0,
+        "price": 0,
+        "fee": 15,
+        "tax": 0
+      },
+      "adult": {
+        "discount": 0,
+        "price": 438,
+        "fee": 15,
+        "tax": 249.88
+      },
+      "child": {
+        "discount": 0,
+        "price": 0,
+        "fee": 15,
+        "tax": 0
+      }
+    },
+    "isTourOperation": false,
+    "flightList": {
+      "1": {
+        "1000": {
+          "departureTime": "14/04/2016 16:10",
+          "scale": [
+            {
+              "departureTime": "14/04/2016 16:10",
+              "marketingCarrier": "BA",
+              "arriveTime": "14/04/2016 17:45",
+              "departure": "PMI",
+              "flightNumber": "BA451",
+              "operationCarrier": "BA",
+              "arrive": "LHR"
+            },
+            {
+              "departureTime": "14/04/2016 18:55",
+              "marketingCarrier": "BA",
+              "arriveTime": "15/04/2016 00:45",
+              "departure": "LHR",
+              "flightNumber": "BA155",
+              "operationCarrier": "BA",
+              "arrive": "CAI"
+            }
+          ],
+          "fareType": "Publicada",
+          "cabinType": "M",
+          "arriveTime": "15/04/2016 00:45",
+          "freeSeat": 9,
+          "fareCode": "NLBCRES",
+          "departure": "PMI",
+          "weightBagage": 0,
+          "typeBagage": "N",
+          "flightNumber": "BA451",
+          "operationCarrier": "BA",
+          "marketingCarrier": "BA",
+          "numBagage": "1",
+          "arrive": "CAI",
+          "id": 1000,
+          "measureBagage": null
+        }
+      },
+      "2": {
+        "2000": {
+          "departureTime": "18/04/2016 06:00",
+          "scale": null,
+          "fareType": "Publicada",
+          "cabinType": "M",
+          "arriveTime": "18/04/2016 07:00",
+          "freeSeat": 9,
+          "fareCode": "YDEG",
+          "departure": "CAI",
+          "weightBagage": 0,
+          "typeBagage": "N",
+          "flightNumber": "MS72",
+          "operationCarrier": "MS",
+          "marketingCarrier": "MS",
+          "numBagage": "1",
+          "arrive": "LXR",
+          "id": 2000,
+          "measureBagage": null
+        }
+      },
+      "3": {
+        "3000": {
+          "departureTime": "22/04/2016 08:55",
+          "scale": null,
+          "fareType": "Publicada",
+          "cabinType": "M",
+          "arriveTime": "22/04/2016 10:20",
+          "freeSeat": 9,
+          "fareCode": "YDEG",
+          "departure": "ASW",
+          "weightBagage": 0,
+          "typeBagage": "N",
+          "flightNumber": "MS392",
+          "operationCarrier": "MS",
+          "marketingCarrier": "MS",
+          "numBagage": "1",
+          "arrive": "CAI",
+          "id": 3000,
+          "measureBagage": null
+        }
+      },
+      "4": {
+        "4000": {
+          "departureTime": "23/04/2016 07:25",
+          "scale": [
+            {
+              "departureTime": "23/04/2016 07:25",
+              "marketingCarrier": "BA",
+              "arriveTime": "23/04/2016 11:45",
+              "departure": "CAI",
+              "flightNumber": "BA154",
+              "operationCarrier": "BA",
+              "arrive": "LHR"
+            },
+            {
+              "departureTime": "23/04/2016 20:30",
+              "marketingCarrier": "BA",
+              "arriveTime": "23/04/2016 23:50",
+              "departure": "LHR",
+              "flightNumber": "BA534",
+              "operationCarrier": "I2",
+              "arrive": "PMI"
+            }
+          ],
+          "fareType": "Publicada",
+          "cabinType": "M",
+          "arriveTime": "23/04/2016 23:50",
+          "freeSeat": 9,
+          "fareCode": "SLBCRES",
+          "departure": "CAI",
+          "weightBagage": 0,
+          "typeBagage": "N",
+          "flightNumber": "BA154",
+          "operationCarrier": "BA",
+          "marketingCarrier": "BA",
+          "numBagage": "1",
+          "arrive": "PMI",
+          "id": 4000,
+          "measureBagage": null
+        }
+      }
+    }
+  },
+  "itinerary": {
+    "itinerariesId": [
+      "1000",
+      "2000",
+      "3000",
+      "4000"
+    ],
+    "priceGroup": 101,
+    "token": 93158,
+    "numAdult": 5,
+    "numChild": 0,
+    "numInfant": 0,
+    "price": 3514.4
+  }
+}

@@ -1,0 +1,67 @@
+﻿{
+    "brand":{
+        "name": "APP",
+        "domain": "APP.com",
+        "path": "",
+        "logo": "http://res.cloudinary.com/app/image/upload/c_scale,h_25/v1438156257/yourttoo.com/logo_x2.png",
+        "contactphone": "",
+        "contactemail": "",
+        "contactschedule": "",
+        "language": "es",
+        "prefix" : "admin",
+        "footertxt" : "",
+        "appversion": "5.1.3",
+        "cloudinaryfolder" :  ""
+    },
+    "compress": "true",
+    "headless": "false",
+    "logger": "dev",
+    "publicdirectory": "C:/development/node/app/resources/newpublic",
+    "deploydirectory": "C:/development/node/app/resources/newpublic",
+    "datadirectory": "C:/development/node/app/resources/public/data.deploy",
+    "whitelabelcustomspath" :  "C:/development/node/app/resources/public/partials/wl",
+    "sessionstorage": "full",
+    "port": 11111,
+    "rooturl": "http://localhost",
+    "basicAuth": "false",
+    "maintenance": "false",
+    "enviroment": "dev",
+    "tpv": {
+        "merchanCode": "",
+        "currency": "",
+        "transactionType": "0",
+        "privateKey": "qwertyasdf0123456789",
+        "url": "",
+    },
+    "mongodb": {
+        "server": "127.0.0.1",
+        "port": "27017",
+        "dbname": "operations-app",
+        "connection": "mongodb://127.0.0.1/operations-app"
+    },
+	  "cloudinaryconfig" : {
+         "cloud_name": "", 
+         "api_key": "", 
+         "api_secret": "" 
+    },
+    "uploads": {
+      "path": "c:/app.work/uploads/",
+      "cloudinary": "images"
+    },
+    "ytoapiclient": {
+        "url": "https://localhost:6033",
+        "endpointinterface": "socket",
+        "_comment": "",
+        "useanonymous": false,
+        "anonymousdmc": {
+          "slug": "",
+          "email": "",
+          "password": ""
+        }
+    },
+    "ssl": {
+        "enabled": false,
+        "keyfile": "C:/development/node/app/resources/ssl/ytokey.pem",
+        "certfile": "C:/development/node/app/resources/ssl/ytocert.pem"
+    }
+}

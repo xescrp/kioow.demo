@@ -1,0 +1,48 @@
+// Page header
+// -------------------------
+.page-header {
+  padding-bottom: (($line-height-computed / 2) - 1);
+  margin: $line-height-computed 0 0;
+  border-bottom: none;
+}
+
+@include bg-variant('.bg-price', $state-price-bg);
+@include bg-variant('.bg-primary-light', $state-primary-bg);
+.bg-alternate {background-color: $brand-bg-alternate;}
+.bg-green {background-color: $brand-success;}
+.bg-softgreen {background-color: $alert-success-bg;}
+.bg-darkblue {background-color: $brand-alternate;}
+.bg-darkblue-half {background-color: rgba($brand-alternate, .8);}
+.bg-blue {background-color: $brand-primary; }
+.bg-primary {background-color: $brand-primary; }
+.bg-red {background-color: $brand-danger;}
+.bg-red-mid {background-color: $brand-danger-mid;}
+.bg-red-dark {background-color: $brand-danger-dark;}
+.bg-gray-light-mid {background-color: $gray-light-mid;}
+.bg-gdark {background-color: $gray-dark;}
+.bg-opacgray {background-color: rgba($gray-darker, 0.6);}
+.bg-opacgray-light {background-color: rgba($gray-light-mid, 0.6);}
+.bg-light {background-color: $light;}
+.bg-soft {background-color: darken($light, 5%);}
+
+
+@include text-emphasis-variant('.text-alternate', $brand-alternate);
+@include text-emphasis-variant('.text-light', $light);
+@include text-emphasis-variant('.text-red', $brand-danger);
+@include text-emphasis-variant('.text-green', $brand-success); 
+@include text-emphasis-variant('.text-gray', $gray);
+@include text-emphasis-variant('.text-graydark', $gray-dark);
+@include text-emphasis-variant('.text-gray-light-base', $gray-light-base); 
+@include text-emphasis-variant('.text-gray-light-mid', $gray-light-mid); 
+@include text-emphasis-variant('.text-gray-lighter-low', $gray-lighter-low);
+@include text-emphasis-variant('.text-help', $gray-help);
+
+//reducing title size on smaller screens
+@media (max-width: $screen-sm-max) {
+	h1, .h1 {font-size: $font-size-h2!important;} 
+	h2, .h2 {font-size: $font-size-h3!important;}
+	h3, .h3 {font-size: $font-size-h4!important;}
+}
+.pre-text{
+	white-space: pre-line;
+}

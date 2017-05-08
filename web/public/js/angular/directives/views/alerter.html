@@ -1,0 +1,88 @@
+﻿<style>
+    .badgenot:after{
+    content:"{{ notifications.count }}";
+    position: absolute;
+    background: #ff4940;
+    height:1.9rem;
+    bottom:1rem;
+    left:1rem;
+    width:2.6rem;
+    text-align: center;
+    line-height: 1.9rem;
+    font-size: 1rem;
+    border-radius: 50%;
+    color:white;
+}
+</style>
+
+<div class="dropdown item-icon pull-left" uib-dropdown>
+    <a href="#" data-toggle="dropdown" class="nav-dd nots dropdown-toggle" uib-dropdown-toggle>
+        <i class="fa fa-bell-o badgenot"></i>
+    </a>
+
+    <ul class="dropdown-menu uib-dropdown-menu padded-xxl" style="width:400px;">
+        <li>
+            <h4>Configuracion notificaciones</h4>
+            <div class="row">
+                <div class="col-md-1">
+                    <input type="checkbox" ng-model="alertengine.preferences.shownotifications"/>
+                </div>
+                <div class="col-md-11">
+                    mostrar notificaciones
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1">
+                    <input type="checkbox" ng-model="alertengine.preferences.sound" />
+                </div>
+                <div class="col-md-11">
+                    activar sonidos
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1">
+                    
+                </div>
+                <div class="col-md-11">
+                    Temas: <br />
+                    <div class="checkbox" ng-repeat="subject in alertengine.availablesubjects">
+                        <label>
+                            <input title="" type="checkbox"
+                                   checklist-model="alertengine.preferences.selectedsubjects"
+                                   checklist-value="subject" ,
+                                   ng-click="subjectschanged()"
+                                   value="{{ subject }}"> {{ subject }}
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-11">
+                    <button class="btn btn-success btn-small" ng-click="showlastone()">mostrar ultima notificacion</button>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-md-6 text-right">
+                    <button class="btn btn-primary btn-small" ng-click="savepreferences()">guardar</button>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+</div>
+
+<script type="text/ng-template" id="not_custom_template.html">
+    <div class="ui-notification">
+        <h3 ng-show="title" ng-bind-html="title"></h3>
+        <div class="message" ng-bind-html="message"></div>
+        <div class="row mt-xl padded-l">
+            <div class="col-xs-6">
+                <img src="/img/brand/yourttoo.com-logo.png" style="width:138px;"></div>
+            <div class="col-xs-6">
+                <button class="mb-l btn btn-success btn-xs pull-right" ng-click="alert('hey!'); markreaded()" 
+                        title="on prototype">marcar leido</button></div>
+        </div> 
+    </div>
+</script>

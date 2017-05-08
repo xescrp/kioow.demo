@@ -1,0 +1,16 @@
+{
+  "name": "yourttoo.filetransfer",
+  "version": "1.1.2",
+  "description": "yourttoo.filetransfer",
+  "main": "index.js",
+  "author": {
+    "name": "Xisco Rossello",
+    "email": "xisco@openmarket.travel"
+  },
+  "dependencies": {
+    "socket.io": "^1.4.5",
+    "socket.io-client": "^1.4.5",
+    "underscore": "^1.8.3",
+    "yourttoo.common": "^3.5.28"
+  }
+}

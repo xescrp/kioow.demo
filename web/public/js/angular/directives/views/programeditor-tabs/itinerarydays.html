@@ -1,0 +1,410 @@
+﻿<div class="day" ng-show="programs[selectedindexcategory].itinerary[selecteditineraryday] != null" ng-init="itinerary = programs[selectedindexcategory].itinerary[selecteditineraryday]">
+    <div class="day-thumb" ng-show="programs[selectedindexcategory].itinerary.length > (selecteditineraryday + 1)">
+        <span class="label label-day"><i class="fa fa-calendar-o"></i> Day {{selecteditineraryday + 1}}</span> 
+        <span class="ml-l" style="font-size:16px;"> {{showCities(programs[selectedindexcategory].itinerary[selecteditineraryday], selecteditineraryday, programs[selectedindexcategory].itinerary)}} </span>
+    </div>
+    <div class="day-thumb" ng-show="programs[selectedindexcategory].itinerary.length == (selecteditineraryday + 1)">
+        <span class="label label-day"><i class="fa fa-calendar-o"></i> Last Day</span> 
+        <span class="ml-l" style="font-size:16px;"> {{showCities(programs[selectedindexcategory].itinerary[selecteditineraryday], selecteditineraryday, programs[selectedindexcategory].itinerary)}} </span>
+    </div>
+    <uib-tabset active="active">
+        <uib-tab index="0" heading="Cities" style="padding-left: 0px;">
+            <h4>Destinations <b class="text-danger">*</b></h4>
+            <div class="form-inline form-group">
+                <label class="sr-only" for="select-city">Select City</label>
+                <input type="text"
+                       class="form-control select-city"
+                       ng-model="programs[selectedindexcategory].itinerary[selecteditineraryday].citytoadd.city"
+                       placeholder="Select city"
+                       id="select-city"
+                       uib-typeahead="destination as destination.label_en for destination in cities | filter:$viewValue | limitTo:8"
+                       typeahead-popup-template-url="/partials/popup/cities-popup-result-item.html?v={? appversion ?}"
+                       typeahead-template-url="/partials/popup/cities-result-item.html?v={? appversion ?}" />
+                <button type="button" ng-click="addcitytoitinerary(programs[selectedindexcategory].itinerary[selecteditineraryday], programs[selectedindexcategory].itinerary[selecteditineraryday].citytoadd.city)" class="btn btn-default add-city notranslate">Add stop</button>
+                <button type="button"
+                        ng-show="programs[selectedindexcategory].itinerary.length > (selecteditineraryday + 1) && (programs[selectedindexcategory].itinerary[selecteditineraryday].sleepcity == null || programs[selectedindexcategory].itinerary[selecteditineraryday].sleepcity.city == '')"
+                        ng-click="addsleeptoitinerary(programs[selectedindexcategory].itinerary[selecteditineraryday], programs[selectedindexcategory].itinerary[selecteditineraryday].citytoadd.city)"
+                        class="btn btn-primary add-city">
+                    Add night
+                </button>
+            </div>
+
+            <h4>Departure</h4>
+            <span class="label label-info" ng-show="selecteditineraryday > 0 && (programs[selectedindexcategory].itinerary[selecteditineraryday - 1].sleepcity != null && programs[selectedindexcategory].itinerary[selecteditineraryday - 1].sleepcity.city != '')" style="font-size: 16px;">
+                <strong>{{ selecteditineraryday > 0 ? programs[selectedindexcategory].itinerary[selecteditineraryday - 1].sleepcity.city : null }}</strong>
+            </span>
+            <hr />
+
+            <h4>Stops</h4>
+            <span ng-show="programs[selectedindexcategory].itinerary[selecteditineraryday].stopcities.length > 0" style="font-size: 16px; display: inline-block;"
+                  ng-repeat="city in programs[selectedindexcategory].itinerary[selecteditineraryday].stopcities" class="label label-danger mr-xs mb-xs">
+                <strong>{{city.city}}</strong>
+                <a class="text-info ml-xxl" href="" uib-tooltip="Click here to delete"
+                   ng-click="removestopcitytoitinerary(programs[selectedindexcategory].itinerary[selecteditineraryday], city, programs[selectedindexcategory].itinerary)">
+                    <i class="fa fa-trash-o"></i>
+                </a>
+            </span>
+            <hr />
+
+            <h4>Sleep (night)</h4>
+            <span ng-show="programs[selectedindexcategory].itinerary[selecteditineraryday].sleepcity != null && programs[selectedindexcategory].itinerary[selecteditineraryday].sleepcity.city != ''" class="label label-danger" style="font-size: 16px;">
+                <strong>{{programs[selectedindexcategory].itinerary[selecteditineraryday].sleepcity.city}}</strong> 
+                    <a class="text-info ml-xxl" href="" uib-tooltip="Click here to delete"
+                       ng-click="removesleepcitytoitinerary(programs[selectedindexcategory].itinerary[selecteditineraryday])">
+                        <i class="fa fa-trash-o"></i>
+                    </a>
+            </span>
+        </uib-tab>
+        <uib-tab index="0" heading="General info" style="padding-left: 0px;">
+            <fieldset class="day-desc-item mt-xxl">
+
+                <div class="form-group pb-xxl" ng-show="programs[selectedindexcategory].languages.english">
+                    <label class="control-label" for="day{{programs[selectedindexcategory].itinerary[selecteditineraryday].daynumber}}">Day {{selecteditineraryday + 1}} description (english)</label>
+                    <a ng-show="programs[selectedindexcategory].languages.english && programs[selectedindexcategory].languages.spanish" href="" ng-click="translateitinerary_es(programs[selectedindexcategory].itinerary[selecteditineraryday])" class="pull-right trans">
+                        <i class="fa fa-language"></i> get translation
+                    </a>
+                    <textarea ng-model="programs[selectedindexcategory].itinerary[selecteditineraryday].description_en" class="form-control" rows="7" placeholder="please, add the description for day {{selecteditineraryday + 1}}.."></textarea>
+                </div>
+                <div class="form-group" ng-show="programs[selectedindexcategory].languages.spanish">
+                    <label class="control-label" for="day{{itinerary.daynumber}}">Day {{programs[selectedindexcategory].itinerary[selecteditineraryday].daynumber}} description (spanish)</label>
+                    <a ng-show="programs[selectedindexcategory].languages.english && programs[selectedindexcategory].languages.spanish" href="" ng-click="translateitinerary(programs[selectedindexcategory].itinerary[selecteditineraryday])" class="pull-right trans">
+                        <i class="fa fa-language"></i> get translation
+                    </a>
+                    <textarea ng-model="programs[selectedindexcategory].itinerary[selecteditineraryday].description_es" class="form-control" rows="7" placeholder="please, add the description for day {{selecteditineraryday + 1}}.."></textarea>
+                </div>
+                <label>Day image</label>
+                <div class="row" ng-show="!programs[selectedindexcategory].itinerary[selecteditineraryday].imageprogress">
+                    <div class="col-xs-4">
+                        <div ng-show="false" id="{{'prev_' + selectedindexcategory + '_' + selecteditineraryday + '_wait' }}" class="thumbwaitimage">
+                            <div class="row">
+                                <div class="col-xs-2">
+                                    <div class="preloader solo in">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="{{'img_' + selectedindexcategory + '_' + selecteditineraryday + '_preview'}}">
+                            <img ng-src="{{getimage(programs[selectedindexcategory].itinerary[selecteditineraryday].image.url, 'itinerarydaythumb')}}" 
+                                 data-src2x="{{getimage(programs[selectedindexcategory].itinerary[selecteditineraryday].image.url, 'itinerarydaythumbretina')}}" 
+                                 class="img-responsive" alt="{{programs[selectedindexcategory].title}} itinerary" title="{{programs[selectedindexcategory].title}} itinerary" />
+
+
+                            <label ng-show="!showmainimage" class="btn btn-danger btn-upload mt-xl">
+                                <i class="fa fa-cloud-upload"></i>
+                                <span>upload image</span>
+                                <input type="file" ng-hideid="{{'img_' + selectedindexcategory + '_' + selecteditineraryday + '_preview'}}" 
+                                       ng-waitingid="{{'prev_' + selectedindexcategory + '_' + selecteditineraryday + '_wait'}}" ng-file-select="" ng-model="programs[selectedindexcategory].itinerary[selecteditineraryday].image" />
+                            </label>
+                            <label class="btn btn-danger btn-upload mt-xl" ng-show="showmainimage">
+                                <i class="fa fa-cloud-upload"></i>
+                                <span>replace image</span>
+                                <input type="file" ng-hideid="{{'img_' + selectedindexcategory + '_' + selecteditineraryday + '_preview'}}" 
+                                       ng-waitingid="{{'prev_' + selectedindexcategory + '_' + selecteditineraryday + '_wait'}}" ng-file-select="" ng-model="programs[selectedindexcategory].itinerary[selecteditineraryday].image" />
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-xs-8">
+                        <div class="bordered padded-l">
+                            <h4 class="text-xs">
+                                Copy general info from this category to the other categories
+                                <i uib-tooltip="Copy the description (english, spanish) and image of this itinerary category to the other itinerary categories" class="ml-xs fa fa-info-circle"></i>
+                            </h4>
+                            <label class="btn btn-danger btn-upload mt-xl" ng-click="copydayinfotocategories(programs[selectedindexcategory].itinerary[selecteditineraryday], programs[selectedindexcategory])">
+                                <i class="fa fa-copy"></i>
+                                <span>Copy this day</span>
+                            </label>
+                            <br />
+                            <label class="btn btn-danger btn-upload mt-xl" ng-click="copydayinfotocategories(null, programs[selectedindexcategory])">
+                                <i class="fa fa-copy"></i>
+                                <span>Copy each day</span>
+                            </label>
+                        </div>
+                        
+                    </div>
+                </div>
+            </fieldset>
+        </uib-tab>
+        <uib-tab index="0" heading="Hotel" style="padding-left: 0px;" > <!--ng-show="programs[selectedindexcategory].itinerary.length > (selecteditineraryday + 1)"-->
+            <h4 class="">Hotel</h4> 
+            <div class="">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <label class="control-label" for="hotel-name">Hotel name </label>
+                                <input ng-model="programs[selectedindexcategory].itinerary[selecteditineraryday].hotel.name" 
+                                       class="form-control" id="hotel-name" type="text" value="" placeholder="please, add the hotel name here..." />
+                                <!-- TODO --> <p class="help-block">If you don't have a hotel name, leave it blank.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label" for="hotel-name">Hotel category </label> <!-- ng-change="programs[selectedindexcategory].itinerary[selecteditineraryday].hotel.category = programs[selectedindexcategory].itinerary[selecteditineraryday].hotel.selectedcategory.category"-->
+                                <select  class="form-control"
+                                        ng-options="cat for cat in availablehotelcategory"
+                                        ng-model="programs[selectedindexcategory].itinerary[selecteditineraryday].hotel.category"></select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="">
+
+                        <div class="row">
+                            <div class="col-xs-5 col-md-3">
+                                <div class="radio">
+                                    <label>Hotel location</label>
+                                </div>
+                            </div>
+                            <!--<div class="col-xs-3 col-md-2">
+                                <div class="radio">
+                                    <label>
+                                        <input ng-change="changehotelkind(programs[selectedindexcategory].itinerary[selecteditineraryday])" ng-model="programs[selectedindexcategory].itinerary[selecteditineraryday].hotel.locationkind" type="radio" value="hotelcity" /> In City
+                                    </label>
+                                </div>
+                                <label>(only check this if the hotel is located out of the city)</label>
+                            </div>-->
+                            <div class="col-xs-4 col-md-3">
+                                <div class="checkbox" uib-tooltip="only check this if the hotel is located out of the city">
+                                    <label>
+                                        <input type="checkbox" 
+                                               ng-change="changehotelkind(programs[selectedindexcategory].itinerary[selecteditineraryday])" 
+                                               ng-model="programs[selectedindexcategory].itinerary[selecteditineraryday].hotel.insurroundings" /> Out City
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div> <!-- close panel -->
+            <h4>Meals</h4>
+            <div class="no-bottom">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <div class="checkbox ml-xxl">
+                            <label>
+                                <input ng-model="programs[selectedindexcategory].itinerary[selecteditineraryday].hotel.breakfast" type="checkbox" id="breakfast" value="breakfast" /> Breakfast
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+
+                        <div class="checkbox">
+                            <label>
+                                <input ng-model="programs[selectedindexcategory].itinerary[selecteditineraryday].hotel.lunch" type="checkbox" id="lunch" value="lunch" /> Lunch
+                            </label>
+                        </div>
+                        <div class="checkbox" ng-show="programs[selectedindexcategory].itinerary[selecteditineraryday].hotel.lunch">
+                            <label>
+                                <input ng-model="programs[selectedindexcategory].itinerary[selecteditineraryday].hotel.lunchdrinks" type="checkbox" id="lunch-drink" value="lunch-drink" /> Drinks included
+                            </label>
+                        </div>
+
+                    </div>
+                    <div class="col-xs-4">
+
+                        <div class="checkbox">
+                            <label>
+                                <input ng-model="programs[selectedindexcategory].itinerary[selecteditineraryday].hotel.dinner" type="checkbox" id="dinner" value="dinner" /> Dinner
+                            </label>
+                        </div>
+                        <div class="checkbox" ng-show="programs[selectedindexcategory].itinerary[selecteditineraryday].hotel.dinner">
+                            <label>
+                                <input ng-model="programs[selectedindexcategory].itinerary[selecteditineraryday].hotel.dinnerdrinks" type="checkbox" id="dinner-drink" value="dinner-drink" /> Drinks included
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </uib-tab>
+        <uib-tab index="0" heading="Activities" style="padding-left: 0px;">
+            <h4>Activities or Excursions</h4>
+            <div ng-repeat="activity in programs[selectedindexcategory].itinerary[selecteditineraryday].activities track by $index" class="bordered mb-l">
+                <div class="activ-item">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-2 col-md-push-10">
+                                <button ng-click="deleteactivity(programs[selectedindexcategory].itinerary[selecteditineraryday], activity)" 
+                                        type="button" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> delete</button>
+                            </div>
+                            <div class="col-md-10 col-md-pull-2">
+                                <div class="form-group" ng-show="programs[selectedindexcategory].languages.english" ng-class="{true : 'has-error'} [90 < activity.title.length]">
+                                    <label class="control-label" for="activ-name">Title (english) </label> <a href="" ng-show="programs[selectedindexcategory].languages.english && programs[selectedindexcategory].languages.spanish" ng-click="translateactivity_es(activity)" class="pull-right trans"><i class="fa fa-language"></i> get translation</a>
+                                    <input ng-model="activity.title" class="form-control" ng-maxlength="90" maxlength="90" id="activ-name" type="text" value="" placeholder="" />
+                                    <p class="help-block text-right small notranslate">Max 90 char: <strong>{{90 - activity.title.length}} left</strong></p>
+                                </div>
+                                <div class="form-group" ng-show="programs[selectedindexcategory].languages.spanish" ng-class="{true : 'has-error'} [90 < activity.title_es.length]">
+                                    <label class="control-label" for="activ-name">Title (spanish) </label> <a href="" ng-show="programs[selectedindexcategory].languages.english && programs[selectedindexcategory].languages.spanish" ng-click="translateactivity(activity)" class="pull-right trans"><i class="fa fa-language"></i> get translation</a>
+                                    <input ng-model="activity.title_es" ng-maxlength="90" maxlength="90" class="form-control" id="activ-name" type="text" value="" placeholder="" />
+                                    <p class="help-block text-right small notranslate">Max 90 char: <strong>{{90 - activity.title_es.length}} left</strong></p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="activ-group-box">
+                                    <label class="radio-inline notranslate">
+                                        <input ng-change="activitykindchange(activity)" ng-model="activity.activitykind" type="radio" value="group" /> Group
+                                    </label>
+                                    <label class="radio-inline notranslate">
+                                        <input ng-change="activitykindchange(activity)" ng-model="activity.activitykind" type="radio" value="individual" /> Private
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="activ-extras">
+
+                                    <div class="checkbox">
+                                        <label>
+                                            <input ng-model="activity.ticketsincluded" type="checkbox" /> Tickets
+                                        </label>
+                                    </div>
+
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" ng-model="activity.localguide" /> Local Guide
+                                        </label>
+                                    </div>
+
+                                </div>
+                                <div class="checkbox alert" ng-show="activity.localguide">
+                                    <h5><strong>Local guide</strong></h5>
+                                    <label class="checkbox">
+                                        <input ng-model="activity.language.spanish" type="checkbox" id="lang-tour-esc-es" value="spanish" /> Spanish
+                                    </label>
+                                    <label class="checkbox">
+                                        <input ng-model="activity.language.english" type="checkbox" id="lang-tour-esc-en" value="english" /> English
+                                    </label>
+                                    <label class="checkbox">
+                                        <input ng-model="activity.language.french" type="checkbox" id="lang-tour-esc-fr" value="french" /> French
+                                    </label>
+                                    <label class="checkbox">
+                                        <input ng-model="activity.language.german" type="checkbox" id="lang-tour-esc-ge" value="german" /> German
+                                    </label>
+                                    <label class="checkbox">
+                                        <input ng-model="activity.language.italian" type="checkbox" id="lang-tour-esc-it" value="italian" /> Italian
+                                    </label>
+                                    <label class="checkbox">
+                                        <input ng-model="activity.language.portuguese" type="checkbox" id="lang-tour-esc-it" value="portuguese" /> Portuguese
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <button ng-click="addactivitytoitinerary(programs[selectedindexcategory].itinerary[selecteditineraryday])" type="button" class="btn btn-alt">add an activity</button>
+
+        </uib-tab>
+        <uib-tab index="0" heading="Domestic Flights" style="padding-left: 0px;" ng-show="programs[selectedindexcategory].itinerary.length > (selecteditineraryday + 1) && selecteditineraryday > 0">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="checkboxform-inline mb-zero mt-zero">
+                        <label class="check-inline">
+                            <input ng-model="programs[selectedindexcategory].itinerary[selecteditineraryday].needflights" type="checkbox" id="needflights"
+                                   ng-change="loadflights(programs[selectedindexcategory].itinerary[selecteditineraryday].needflights, programs[selectedindexcategory].itinerary[selecteditineraryday], programs[selectedindexcategory])" /> <strong>this day requires domestic flights not included in your price?</strong>
+                        </label>
+                    </div>
+                    <div ng-show="programs[selectedindexcategory].itinerary[selecteditineraryday].needflights">
+                        <h4 class="mt-l">Please, indicates the flights that the clients have to book.</h4>
+                        <div class="mb-l">
+                            <h4 class="padded-l" ng-show="programs[selectedindexcategory].itinerary[selecteditineraryday].flights.length == 0">Please add a domestic flight</h4>
+                            <div class="panel-body" ng-repeat="flight in programs[selectedindexcategory].itinerary[selecteditineraryday].flights track by $index">
+                                <div class="row">
+                                    <div class="col-md-2 col-md-push-10">
+                                        <button ng-click="deleteflights($index, programs[selectedindexcategory].itinerary[selecteditineraryday], programs[selectedindexcategory])" type="button" style="margin-top: 25px;" class="btn btn-danger pull-right"><i class="fa fa-trash-o"></i> delete</button>
+                                    </div>
+                                    <div class="col-md-3 col-md-pull-2">
+                                        <div class="form-group">
+                                            <label class="control-label" for="departureairport">Departure Airport</label>
+                                            <input ng-model="flight.departure" class="form-control select-tag"
+                                                   id="departureairport" type="text" value="" placeholder="Search IATA code"
+                                                   uib-typeahead="item as item.label for item in airports | filter:$viewValue  | limitTo:8"
+                                                   typeahead-loading="loadingAirport" typeahead-on-select="onSelectAirport($item, $model, $label, programs[selectedindexcategory].itinerary[selecteditineraryday], programs[selectedindexcategory], $index, 'departure')" required />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-md-pull-2">
+                                        <div class="form-group">
+                                            <label class="control-label" for="arrivalairport">Arrival Airport</label>
+                                            <input ng-model="flight.arrival" class="form-control select-tag" id="arrivalairport"
+                                                   type="text" value="" placeholder="Search IATA code"
+                                                   uib-typeahead="item as item.label for item in airports | filter:$viewValue  | limitTo:8"
+                                                   typeahead-loading="loadingAirport" typeahead-on-select="onSelectAirport($item, $model, $label, programs[selectedindexcategory].itinerary[selecteditineraryday], programs[selectedindexcategory], $index, 'arrival')" required />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-md-pull-2">
+                                        <div class="form-group">
+                                            <label class="control-label" for="recomendedflight">Recomended flight </label>
+                                            <input ng-model="flight.recommendedflight" class="form-control" id="recomendedflight" type="text" value="" placeholder="ex: flight code.." />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button ng-click="addflights(programs[selectedindexcategory].itinerary[selecteditineraryday], programs[selectedindexcategory])" type="button" class="btn btn-alt">add domestic flight</button>
+                    </div>
+                </div>
+            </div>
+        </uib-tab>
+        <uib-tab heading="Day preview">
+
+            <section class="itinerary mt-l product-detail bordered" style="color:#000;">
+                <h2>Itinerario</h2>
+                <hr />
+                <div class="row day-item mt-l">
+                    <div class="day-thumb">
+                        <span class="label label-day" style="font-size: 14px;line-height: 2;"><i class="fa fa-calendar-o"></i> Día {{ selecteditineraryday + 1 }}</span>
+                        <img class="img-responsive" ng-src="{{ getimage(programs[selectedindexcategory].itinerary[selecteditineraryday].image.url, 'itinerarydaythumb') }}"
+                             data-src2x="{{ getimage(programs[selectedindexcategory].itinerary[selecteditineraryday].image.url, 'itinerarydaythumbretina') }}"
+                             alt="day {{ selecteditineraryday + 1 }}" title="day {{ selecteditineraryday + 1 }}" />
+                    </div>
+                    <div class="day-desc">
+                        <h3 class="day-tit">{{ showCities(programs[selectedindexcategory].itinerary[selecteditineraryday],selecteditineraryday, programs[selectedindexcategory].itinerary) }} </h3>
+                        <h4 ng-show="programs[selectedindexcategory].itinerary[selecteditineraryday].description_es != ''">Descripción</h4>
+                        <p class="pre-text" ng-show="programs[selectedindexcategory].itinerary[selecteditineraryday].description_es != ''">{{ programs[selectedindexcategory].itinerary[selecteditineraryday].description_es }}</p>
+                        <h4 ng-show="programs[selectedindexcategory].itinerary.length > (selecteditineraryday + 1) && programs[selectedindexcategory].itinerary[selecteditineraryday].hotel.category != ''">Hotel</h4>
+                        <p ng-show="programs[selectedindexcategory].itinerary.length > (selecteditineraryday + 1)">
+                            <strong>{{programs[selectedindexcategory].itinerary[selecteditineraryday].hotel.name}} {{ programs[selectedindexcategory].itinerary[selecteditineraryday].hotel.category }} </strong>
+                            <em ng-show="programs[selectedindexcategory].itinerary[selecteditineraryday].hotel.insurroundings">(fuera de la ciudad)</em>
+                        </p>
+                        <h4 ng-show="therearemeals(programs[selectedindexcategory].itinerary[selecteditineraryday])">Régimen Alimenticio</h4>
+                        <p ng-show="therearemeals(programs[selectedindexcategory].itinerary[selecteditineraryday])">
+                            <span ng-show="programs[selectedindexcategory].itinerary[selecteditineraryday].hotel.breakfast">
+                                Desayuno
+                                <span ng-show="programs[selectedindexcategory].itinerary[selecteditineraryday].hotel.lunch"> - </span>
+                            </span>
+                            <span ng-show="programs[selectedindexcategory].itinerary[selecteditineraryday].hotel.lunch">
+                                Almuerzo
+                                <em ng-show="programs[selectedindexcategory].itinerary[selecteditineraryday].hotel.lunchdrinks">(bebidas incluidas)</em>
+                                <span ng-show="programs[selectedindexcategory].itinerary[selecteditineraryday].hotel.dinner"> - </span>
+                            </span>
+                            <span ng-show="programs[selectedindexcategory].itinerary[selecteditineraryday].hotel.dinner">
+                                Cena
+                                <em ng-show="programs[selectedindexcategory].itinerary[selecteditineraryday].hotel.dinnerdrinks">(bebidas incluidas)</em>
+                            </span>
+                        </p>
+                        <h4 ng-show="programs[selectedindexcategory].itinerary[selecteditineraryday].activities != null && programs[selectedindexcategory].itinerary[selecteditineraryday].activities.length > 0">Actividades y excursiones</h4>
+                        <ul ng-show="programs[selectedindexcategory].itinerary[selecteditineraryday].activities != null && programs[selectedindexcategory].itinerary[selecteditineraryday].activities.length > 0" class="list-activities">
+                            <li ng-repeat="activity in programs[selectedindexcategory].itinerary[selecteditineraryday].activities" ng-show="activity.title_es !=''">
+                                <strong>{{activity.title_es}}</strong> - {{ showActivityResume(activity,'es') }}
+                            </li>
+                        </ul>
+                        <p ng-show="programs[selectedindexcategory].itinerary[selecteditineraryday].flights.length > 0">
+                            <em>Requiere vuelo (no incluido). Ver notas importantes.</em>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+                
+</uib-tab>
+</uib-tabset>
+</div>
+    

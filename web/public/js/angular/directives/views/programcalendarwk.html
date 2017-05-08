@@ -1,0 +1,17 @@
+﻿<div ng-include="pricepoptemplate"></div>
+<div ng-include="calendartemplate">
+    <!--ng-include="calendartemplate"-->
+</div>
+<div class="nav-calendar">
+    <div class="left">
+        <button ng-click="removemonth()" type="button" class="btn btn-default"><i class="fa fa-arrow-left"></i></button>
+    </div>
+    <div class="center">
+        <select ng-change="newmonthselected(month)" class="form-control notranslate"
+                id="select" ng-options="month.selectiontext for month in availablemonths"
+                ng-model="selectnewmonth"></select>
+    </div>
+    <div class="right">
+        <button ng-click="addmonth()" type="button" class="btn btn-default"><i class="fa fa-arrow-right"></i></button>
+    </div>
+</div>

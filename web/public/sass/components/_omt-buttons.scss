@@ -1,0 +1,112 @@
+
+.btn-invert {
+  @include button-variant($btn-invert-color, $btn-invert-bg, $btn-invert-border, $btn-invert-txt-shadow);
+}
+.btn-empty {
+  @include button-variant($btn-empty-color, $btn-empty-bg, $btn-empty-border, $btn-empty-txt-shadow);
+  border: 1px solid;
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    color: $btn-empty-color;
+    background-color: rgba($light, .1);
+  }
+}
+.btn-empty-invert {
+  @include button-variant($btn-invert-color, $btn-invert-bg, $btn-invert-border, $btn-invert-txt-shadow);
+  border: 1px solid;
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    color: $btn-invert-color;
+    background-color: rgba($light, .1);
+  }
+}
+.btn-alt {
+  @include button-variant($btn-alt-color, $btn-alt-bg, $btn-alt-border, $btn-alt-txt-shadow);
+}
+
+.btn-gplus {@include button-variant($btn-alt-color, #CB4437, #880002, #CB4437);}
+.btn-fb {@include button-variant($btn-alt-color, #3B5998, #1B316C, #3B5998);}
+.btn-twitter {@include button-variant($btn-alt-color, #55ACEE, #3D7BAB, #55ACEE);}
+
+// btn-default , .btn-invert colors
+.btn-default.primary, .btn-invert.primary{
+  color: darken($brand-primary, 5%);
+}
+.btn-default.success, .btn-invert.success{
+  color: darken($brand-success, 5%);
+}
+.btn-default.info, .btn-invert.info{
+  color: darken($brand-info, 5%);
+}
+.btn-default.warning, .btn-invert.warning{
+  color: darken($brand-warning, 5%);
+}
+.btn-default.danger, .btn-invert.danger{
+  color: darken($brand-danger, 5%);
+}
+.btn {
+  text-shadow: none;
+    span{
+      font-family: $font-family-sans-serif;
+      text-shadow: none;
+    }
+  &.active{
+     @include box-shadow(inset 0 0 0 rgba(0,0,0,.1));
+     border: none;
+  }
+}
+.btn-upload {
+input[type="file"] {display: none;}
+  span{
+      font-family: $font-family-alt;
+  }
+}
+
+.btn-link {
+  &.active {@include box-shadow(none);}
+}
+
+/* ///////////  btn upload works styling a label that wraps a hidden input tag
+<label class="btn btn-upload btn-primary left-mar-btn">
+  <i class="fa fa-cloud-upload"></i> 
+  subir imagen
+  <input type="file"/>
+</label>
+/////////*
+
+
+/// button press variants
+/*
+.btn-default.press {
+ background-color: darken($btn-default-bg, 20%);
+}
+.btn-invert.press {
+  background-color: darken($btn-invert-bg, 20%);
+}
+.btn-alt.press {
+  background-color: lighten($btn-alt-bg, 20%);
+}
+.btn-primary.press {
+  background-color: darken($btn-primary-bg, 20%);
+}
+// Success appears as green
+.btn-success.press {
+  background-color: darken($btn-success-bg, 20%);
+}
+// Info appears as blue-green
+.btn-info.press {
+  background-color: darken($btn-info-bg, 20%);
+}
+// Warning appears as orange
+.btn-warning.press {
+  background-color: darken($btn-warning-bg, 20%);
+}
+// Danger and error appear as red
+.btn-danger.press {
+  background-color: darken(desaturate($btn-danger-bg, 20%), 20%);
+}
+*/

@@ -1,0 +1,334 @@
+//DISPLAY!
+.request-offer {
+	.request-discard{
+		@include opacity(.5);
+	}
+	.request-offer-num {
+		border-left: 5px solid $gray-light-base;
+		color: $gray-light-base;
+		padding: 4px 6px;
+		font-size: $font-size-base;
+		@extend .pull-left;
+	}
+	.request-offer-title {
+		@extend .padded-b;
+	}
+	.request-offer-price-detail {
+		// background-color: lighten($brand-warning, 40%);
+		//background-color: $brand-danger;
+		// @extend .bg-warning;
+		border: 1px solid $gray-lighter-low;
+		border-width: 1px 0;
+		@extend .padded-b;
+	}
+	.request-offer-itinerary {
+		@extend .padded-b;	
+		ul {
+			padding-left: $padding-large-horizontal;
+  			//list-style-type: circle;
+  			@extend .text-gray;
+		}
+	}
+	.request-offer-foot {
+		@extend .text-center;
+		@extend .padded-l;
+	}
+}
+
+
+//FORM
+.request-flow {
+	.headline-wrap {z-index: 1;}
+}
+
+.related-banner-wrap {
+	margin-top: 10px;
+	@extend .col-lg-3;
+	@extend .col-md-4;
+	@extend .hidden-xs;
+	@extend .hidden-sm;
+}
+
+.rb-close {
+	@extend .mt-l;
+}
+.related-banner {
+	@extend .info-block;
+	@extend .text-gray;
+	@extend .mb-l;
+	padding: 9px 11px 7px;
+	&:after { border-width: 40px 125px 0 0!important; bottom: -40px!important; }
+	.fa-stack {
+		font-size: $font-size-xs!important;
+		color: $gray-light;
+	}
+	&:hover {
+		background-color: $brand-danger;
+		.fa-inverse {color: $brand-danger;}
+		&, .rb-price, .rb-price a, .fa-circle, .fa-arrow-circle-right, .text-alternate {color: $light;}
+		&:after {
+		border-color: $brand-danger-dark rgba(255,255,255,0) rgba(255,255,255,0) rgba(255,255,255,0);
+		border-color: $brand-danger-dark transparent transparent transparent!important;
+		}
+	}
+}
+
+.rb-price {
+	a, & {
+		color: $brand-danger; 
+	}
+	.price-total {
+		font-size: $font-size-large;
+		vertical-align: baseline;
+	}
+	a {&:hover {color: $brand-danger-dark;}}
+}
+
+.rb-more {
+	@extend .col-md-12;
+	margin-top: 30px;
+}
+
+
+.request-form {
+	@extend .col-md-5;
+	min-height: 360px;
+	table {
+	    background-color: $light;
+	}
+	table:focus {
+	    outline:none;
+	}
+	.flow-tabs {
+		background-color: rgba($brand-alternate, .85);
+		width: 45px;
+	}
+	li.act-tab {
+		height: 40px;
+		&:hover {a {background-color: $brand-alternate;}}
+		
+		&.active { a {background-color: $brand-danger!important;} }
+		&.active:after {
+			content: "";
+			position: absolute;
+			width: 0;
+			height: 0;
+			top: 0px;
+			right: -11px;
+			border-style: solid;
+			z-index: 2;
+			border-width: 20px 0 20px 11px;
+			border-color: transparent transparent transparent $brand-danger;
+			-moz-transform: scale(0.9999);
+		}
+
+		&.completed {a {background-color: $brand-primary;}}
+		&.completed:hover {a {background-color: $brand-primary;}}
+		a {
+		text-align: center;
+		font-size: $font-size-h3;
+		padding: 6px 10px;
+		color: $light;
+		}
+	}
+	.tab-content {
+		@extend .buscador-destino-wrap;
+		background-color: transparent!important;
+		width: 100%;
+		padding-left: 46px;
+		b {color: $brand-danger;}
+		//triangle only on md lg
+		@media (min-width: $screen-md-min) {
+			&:after {
+				content: "";
+				position: absolute;
+				width: 0;
+				height: 0;
+				top: 0px;
+				right: 4px;
+				border-style: solid;
+				z-index: 1;
+				border-width: 20px 0 20px 11px;
+				border-color: transparent transparent transparent rgba($brand-alternate, .85); ;
+				-moz-transform: scale(0.9999);
+			}
+		}
+		.help-block{
+			color: $gray-lighter;
+		}
+		.tab-pane {
+			background-color: rgba($brand-alternate, .85);
+			min-height: 100px;
+			position: relative;
+			top: 0;
+			//overflow: hidden;
+			@include invert-text-only;
+			@extend .padded-l;
+			a {
+				@extend .link-softened;
+			}
+			footer {
+				min-height: 50px;
+				@extend .mt-l;
+			}
+			.input-group {
+				color: $gray-dark;
+			}
+			.must {
+				color: $brand-danger;
+				@extend .bold;
+				position: absolute; 
+				bottom: $padding-large-horizontal;
+				@media (max-width: $screen-xs-max) { 
+					position: static;
+					display: block;
+				}
+			}
+		}
+	}
+	.smnumb {
+		width: 90px;
+		display:inline-block;
+	}
+	.input-city {width: 100%!important;}
+	textarea {@extend .textarea-b;}
+	@media (max-width: $screen-xs-max) {
+		.fa-3x { font-size: $font-size-h2;} 
+		.stack-title { padding: 15px 0; }
+	}
+	.group-btn {
+		position: absolute;
+		top: 10px;
+	    right: 15px;
+	    color: $light !important;
+	}	
+}
+ul.destinations a{
+	padding: 6px 10px;
+}
+// pasajeros
+.pasajeros-radios {
+	label {
+		@extend .btn-block;
+		@extend .bg-light;
+		@extend .padded-l;
+		@extend .text-center;
+		@extend .h5;
+		@include border(bottom, $gray-lighter-low);
+		margin: 0;
+		color: $gray;
+	}
+	input[type="radio"] {display: none;}
+	input[type="radio"] + label {
+	}
+	input[type="radio"]:checked + label {
+		background-color: $brand-danger;
+		color: $light;
+	}
+}
+
+.pasajeros-box {
+	border-color: $light;
+	@extend .mb-xl;
+	@extend .padded-b;
+}
+
+.pasajeros-title {
+	@extend .mt-l; 
+	@extend .mb-b; 
+	@extend .bold; 
+	font-size: $font-size-large;
+}
+.pasajeros-radio, .pasajeros-select, .pasajeros-room-select {@extend .mb-xl;}
+.pasajeros-radio {@extend .col-md-6; }
+.pasajeros-select {@extend .col-md-4; }
+.pasajeros-room-select {@extend .col-md-4;}
+
+// .pasajero-age{
+// 	width: 30%;
+// 	margin-right : 3%;
+// 	float: left;
+// }
+
+.btn-delete-room{
+	@extend .btn;
+	@extend .btn-danger;
+	@extend .btn-xs;
+	@extend .ml-b;
+	@media (max-width: $screen-lg-min){
+		span{
+			display: none;
+		}
+	}	
+}
+.btn-add-destination{
+	@extend .btn;
+	@extend .btn-primary;
+	border-bottom : none !important;
+}
+.request-resume-wrap {
+	@extend .col-md-3;
+	@extend .col-lg-4;
+}
+.request-resume {
+	color: $gray-light-mid;
+	background-color: rgba(255, 253, 244, .88);
+	@extend .mt-xxl;
+	i{
+		width: 22px;
+	}
+}
+
+.fechas-input {
+	@extend .mb-xl;
+	@extend .col-md-12;
+	@media (min-width: $screen-md-min){
+		.input-date {width: 40%!important;}
+		select {width: 40%!important;}
+	}
+}
+
+.alojamiento-cbs {
+	@extend .mb-xl;
+}
+
+.stack-title {
+	padding: 25px 0;
+	margin: 0;
+}
+
+.request-revision {
+	max-height: 900px;
+	overflow: scroll;
+	// hr {
+	// 	border-top: 1px solid rgba($bg-light-color, .3);
+	// 	@extend .mt-b; @extend .mb-b;
+	// 	@extend .col-md-12;
+	// }
+	h4, h5 {
+		@extend .mt-b;
+		@extend .mb-b;
+	}
+}
+.rev-info {
+	// @extend .col-md-7;
+	// @extend .col-lg-8;
+	@extend .col-lg-12;
+	color: $gray-lighter;
+	strong {color: $light;}
+	h5 {
+		font-size: $font-size-large;
+		@extend .thin;
+	}
+	border-bottom: 1px solid rgba($bg-light-color, .3);
+	padding-bottom : 0.5em;
+}
+.rev-btn {
+	@extend .col-md-5;
+	@extend .col-lg-4;
+}
+
+//modals
+.fechaswarning { .modal-body {margin-top: 40px;} } 
+.groupmodal {textarea {resize:vertical; max-height: 140px;}}
+

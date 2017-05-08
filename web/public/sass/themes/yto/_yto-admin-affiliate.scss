@@ -1,0 +1,67 @@
+.admin-affiliate{
+	//padding-top: 70px;
+	min-width: 700px;
+	> header{
+		@extend .navbar-inverse;
+	}
+	.breadcrumb {margin-top: 0;}
+}
+
+aside{
+	@extend .col-xs-3;
+	@extend .col-md-3;
+}
+.affiliate-rating{
+	color: $brand-warning;
+	}
+
+.add-tag-control{
+		@extend .row;
+		.search{
+			@extend .col-xs-8;
+			@extend .col-md-3;
+		}
+		.action{
+			@extend .col-xs-4;
+			@extend .col-md-1;
+			padding-top: 25px;
+		}
+		.result{
+			@extend .col-xs-12;
+			@extend .col-md-8;
+			padding-top: 10px;
+		}
+	};
+
+table.booking-detail{
+	label {
+		@extend .mb-zero;
+		color: #999999;
+		display: block;
+    	//text-align: right; 
+	}
+}
+table.query-detail{
+	tr>td:first-child{
+		width: 20%
+	}
+}
+
+.wellcome-affiliate{
+	.ventajas-wrap {
+		margin-top: 350px;
+		@media (max-width: $screen-sm-min) { 
+			margin-top: 50px;
+		}
+	}
+	.tit-shadow{
+		text-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
+		font-size: 1.3em;
+	}
+	display: block;
+    width: 100%;
+    min-height: 650px;
+    background-position: center 0%;
+    background-size: cover;
+    background-image: url($bg-home-affiliate);
+}

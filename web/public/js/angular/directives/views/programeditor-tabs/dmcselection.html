@@ -1,0 +1,92 @@
+﻿
+<h2>DMC selection</h2>
+<p>Select the DMC you want to load/modify a program.</p>
+<!--<pre>{{dmcsearch}}</pre>-->
+<div class="" ng-show="quote == null">
+    <div class="col-md-6">
+        <label class="sr-only" for="select-dmc-th">Find DMC (by name)</label>
+        <input type="text"
+               class="form-control select-city"
+               ng-model="dmcsearch"
+               placeholder="Type DMC company name"
+               id="select-dmc-th"
+               uib-typeahead="selectdmc as selectdmc.companyname for selectdmc in validDMCs | filter: { companyname: $viewValue } | limitTo:15"
+               typeahead-on-select="typeaheadDMCselect($item, $model, $label, selectdmc)" />
+
+    </div>
+    <div class="col-md-6">
+        <label class="sr-only" for="select-dmc-th">Find DMC (by country)</label>
+        <input type="text"
+               class="form-control select-city"
+               ng-model="dmcsearch"
+               placeholder="Type DMC operation country"
+               id="select-dmc-th"
+               uib-typeahead="selectdmc as selectdmc.opcountry for selectdmc in validDMCs | filter: { opcountry: $viewValue } | limitTo:20"
+               typeahead-on-select="typeaheadDMCselect($item, $model, $label, selectdmc)" />
+
+    </div>
+</div>
+<br />
+<br />
+<br />
+<div class="row" style="">
+    <!-- Candidates -->
+    <div class="col-md-6 line-right" style="overflow-y: scroll; height: 400px;" ng-show="quote == null">
+        <h4>DMCs</h4>
+
+        <a ng-repeat="dmc in validDMCs"
+           ng-click="selectdmc(dmc)"
+           ng-show="dmc.membership"
+           style="width:100%"
+           class="bordered pointer padded-l"
+           ng-class="{  
+                          'waiting' : !dmc.membership.registervalid,
+                          'valid' : dmc.membership.registervalid && dmc.membership.publicprofilecomplete && dmc.membership.companyimagescomplete && dmc.membership.companycomplete && dmc.membership.paymentcomplete && dmc.membership.companytaxid && dmc.membership.emergencycomplete,
+                          'confirmed' : dmc.membership.registervalid && (!dmc.membership.publicprofilecomplete || !dmc.membership.companyimagescomplete || !dmc.membership.companycomplete || !dmc.membership.paymentcomplete || !dmc.membership.companytaxid || !dmc.membership.emergencycomplete)}"
+           ng-include="dmcitemtemplateurl">
+        </a>
+    </div>
+    <div class="col-md-6" ng-show="dmc == null">
+        <h4>SELECTED DMC: </h4>
+        <h4>No DMC selected yet!</h4>
+        <p>Please select a DMC to continue operation</p>
+    </div>
+    <div class="col-md-6 line-right" ng-show="dmc != null">
+        <h4>SELECTED DMC: </h4>
+        <div class="row">
+            <div class="col-md-2">
+                <img class="img-circle img-responsive id-user-img avatarl70"
+                     ng-src="{{getimage(dmc.images.logo.url, 'avatarl70')}}" data-src2x="{{getimage(dmc.images.logo.url,   'avatarb36retina')}}" alt="{{dmc.name}}" title="{{ dmc.name}}" />
+            </div>
+            <div class="col-md-10">
+                <div class="pr-xl">
+                    <h4 class="list-group-item-heading"><strong>{{ dmc.name }}</strong> <em>| {{ dmc.company.legalname }}</em> [{{ dmc.code }}]</h4>
+                    <!-- paises que opera -->
+                    <div class="dmc-text">
+                        <i class="fa fa-globe pull-left pt-xs"></i>
+                        <p class="destinations">
+                            <small ng-repeat="operates in dmc.company.operatein">
+                                <span>{{ operates.operateLocation.country }} ({{ operates.operateLocation.countrycode}})</span>
+                            </small>
+                        </p>
+                    </div>
+                    <div class="dmc-text">
+                        <h4>Comission:</h4>
+                        <p class="ml-xs">B2B: {{dmc.membership.b2bcommission}} %</p>
+                        <p class="ml-xs">B2C: {{dmc.membership.commission}} %</p>
+                        <br />
+                        <p><a href="/edit/account?code={{dmc.code}}&usertype=dmc" target="_blank" class="btn btn-xs btn-danger" style="color: white;" >go to account</a></p>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p>
+                                {{dmc.user.email}} 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>
+        

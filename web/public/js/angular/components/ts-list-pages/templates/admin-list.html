@@ -1,0 +1,39 @@
+﻿<style>
+    .imgprodlist{
+        width:30px;
+        height:30px;
+    }
+</style>
+<div class="container" ng-controller="adminListController">
+    <div class="row mt-l mb-b" ng-init="rbsearch = false">
+        <ul class="breadcrumb">
+            <li>
+                <a href="/" target="_self">Home</a>
+            </li>
+            <li>
+                <a href="/admin/account" target="_self" class="ng-binding">{{loginsession.user.code}}</a>
+            </li>
+            <li class="active">{{currentconfiguration.list.title}}</li>
+        </ul>
+        <div class="mt-b">
+            <h1>
+                {{currentconfiguration.list.title}} <small ng-show="queryservice.totalitems > 0"> {{queryservice.totalitems}} resultados</small>
+            </h1>
+        </div>
+    </div>
+    <ts-filter-panes filterbox="currentconfiguration.list.filterbox" filtershortcuts="currentconfiguration.list.filtershortcuts"></ts-filter-panes>
+    <div class="row">
+        <section class="col-md-12 mt-xxl">
+            <ts-table name="currentconfiguration.list.name"
+                      columns="currentconfiguration.list.tableconfiguration.columns"
+                      itemtemplate="currentconfiguration.list.tableconfiguration.tableitemtemplate"
+                      queryservice="queryservice"
+                      auxmethods=""
+                      onitemclick="currentconfiguration.list.tableconfiguration.onitemclick"
+                      rolename="rolename">
+
+            </ts-table>
+        </section>
+    </div>
+    <div class="row" ng-include="'/js/angular/components/ts-pagination/templates/pagination.html'"></div>
+</div>

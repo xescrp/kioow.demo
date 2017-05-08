@@ -1,0 +1,8 @@
+//limit width on small devices and center as a block
+@mixin max-center($from, $max, $min) {
+	@media (max-width: $from) { 
+		max-width: $max;
+		min-width: $min;
+		margin-right: auto; margin-left: auto;
+	}
+}

@@ -1,0 +1,87 @@
+.dmc-profile-wrap {
+	background-color: $brand-primary;
+	border: 1px solid $brand-primary;
+	@include invert-text;
+}
+
+.profile-image {
+	@extend .col-md-1;
+	img {
+		@extend .mobile-centered;
+		@media (min-width: $screen-md-min) {float: right;}
+	}
+}
+
+.profile-name {
+	@extend .col-md-6;
+	@media (max-width: $screen-sm-max) {text-align: center;}
+}
+
+.profile-activities {
+	@extend .col-md-5;
+	@extend .text-right;
+	@extend .mt-b;
+	@extend .mobile-centered;
+	cursor: default;
+
+	.label-info {
+		font-size: $font-size-mid;
+		background-color: transparent;
+		display: inline-block;
+		margin-bottom: 2px;
+		&:hover{
+			background-color: transparent;
+			color: $light;
+			// not interactive for the moment
+			// background-color: rgba($gray, .2);
+		}
+	}
+}
+
+.profile-countries {
+	a {color: $gray-dark!important; line-height: 2.5em;}
+}
+
+.profile-block {
+	@extend .bg-light;
+	@extend .well;
+	@extend .mb-xxl;
+	.profile-title {@extend .col-md-12;}
+	.information {margin: 0!important;}
+}
+
+.profile-info {
+	@extend .clearfix;
+	@extend .pt-b;
+	border-bottom: 1px solid $gray-lighter-low;
+	&:last-child {border-bottom: none;}
+	padding-bottom: 4px;
+	@extend .mb-l;
+	@extend .pb-xl;
+	@extend .mt-l;
+	text-align: right;
+	h5 {
+		@extend .marged-zero;
+		@extend .pull-left;
+		@extend .bold;
+		@extend .pb-l;
+		line-height: 19px;
+		margin-right: 10px;
+	}
+	span {
+		float: inherit!important;
+  		white-space: nowrap;
+	}
+	@media (max-width: $screen-sm-max) {
+  		text-align: left;
+		padding-bottom:20px;
+		span {
+			float: inherit!important;
+			text-align: left;
+		}
+		h5 {
+			float: none!important;
+			margin-right: 10px;
+		}
+	}
+}

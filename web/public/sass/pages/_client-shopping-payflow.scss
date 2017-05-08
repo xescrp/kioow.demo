@@ -1,0 +1,142 @@
+.shopping-payflow-wrap {
+	header {
+		@media(max-width: $screen-xs-max) {
+			h1 {display: block; margin-bottom: 5px;}
+			a {display: block;}
+		}
+	}
+}
+
+.step-sf, .tpv-frame {
+	& > h2 {
+		color: $gray-light-mid;
+		span {
+			border-left: 5px solid $gray-light-mid;
+			padding-left: 20px;
+			margin-left: -20px;
+		}
+	}
+	h3 {
+		font-size: $font-size-h4;
+	}
+	.payment-tabs {
+		li {min-width: 32%; text-align: center;}
+		i { color: $gray-lighter-low;}
+		.active i {color: $gray;}
+	}
+}
+
+.hidden-logos {@extend .hidden;}
+
+.credit-iframe {
+	height: 600px;
+	@media (max-width: $screen-md-max) {height: 800px;}
+}
+.tpv-frame {
+	&.processing-payment {
+		.tpv-form {@extend .disabledbox; @extend .disabled;}
+		.processing-preloader {display: block!important;}
+	}
+}
+
+
+.shopping-payflow, .tpv-frame {
+	.price, .price-total {
+		strong {font-size: $font-size-large;}
+	}
+	.price-total {
+		@extend .invert-text;
+		background-color: $brand-danger;
+	}
+	.fa-question-circle {
+		color: $brand-danger;
+		font-size: $font-size-large;
+		float: right;
+	}
+	.cvv-img {
+		width: 128px;
+		height: 96px;
+	}
+}
+.select-room{
+	width: 120px !important;
+	@extend .form-control;
+	@extend .ml-b;
+
+}
+.tit-room{
+	@extend .h3;
+	@extend .iblock;
+	@extend .mr-l;
+	@extend .mt-zero;
+	@extend .bold;
+	position: relative;
+	top: 4px;
+}
+.shopping-prebooking {
+	// .static-content {margin-bottom: 50px;}
+	background-color: $brand-success;
+	@include invert-text;
+}
+.transfer-msg{
+	margin-top: 30px;
+}
+.locata {
+	@extend .text-center;
+	background-color: $almost-light;  
+}		
+
+
+.shopping-paid-resume {
+	.ticket {
+		margin-top: 51px;
+		padding: 60px;
+		border-radius: 60px;
+		.ball, .ball-down {
+			width: 100px;
+			height: 100px;
+			background-color: $almost-light;
+			position: absolute;
+			right: 50%;
+			margin-right: -50px;
+			border-radius: 100px;
+		}
+		.ball {top: -50px;}
+		.ball-down {bottom: -50px;}
+		// .small-ball-r1, .small-ball-r2, .small-ball-r3, .small-ball-l1, .small-ball-l2, .small-ball-l3 {
+		// 	width: 16px;
+		// 	height: 16px;
+		// 	background-color: $almost-light;
+		// 	position: absolute;
+		// 	top: -8px;
+		// 	border-radius: 40px;
+		// 	margin-right: -8px;
+		// }
+		// .small-ball-r1 {right: 10%;}
+		// .small-ball-r2 {right: 20%;}
+		// .small-ball-r3 {right: 30%;}
+		// .small-ball-l1 {right: 70%;}
+		// .small-ball-l2 {right: 80%;}
+		// .small-ball-l3 {right: 90%;}
+	}
+	.ticket-line {border-top: 3px dashed $almost-light;}
+}
+
+
+.shopping-error {
+	background-color: $brand-danger;
+	@include invert-text;
+}
+
+.pasajero-done {
+	p {
+		@extend .text-gray;
+		@extend .mt-xl;
+		@extend .mb-zero;
+	}
+	h3 {margin: 0;}
+}
+
+.link-faq-price{
+	color: $brand-primary !important;
+}

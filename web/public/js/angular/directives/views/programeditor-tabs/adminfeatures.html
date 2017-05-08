@@ -1,0 +1,207 @@
+﻿<style>
+    .admincontent .tab-content {
+        padding-left: 0px !important;
+    }
+</style>
+<h2>Traveler Sense Control Fields</h2>
+
+<div class="row" >
+    <div class="col-md-12 mb-l">
+        <div class="admincontent">
+            <uib-tabset active="active">
+                <uib-tab index="0" heading="Destacados" style="padding-left: 0px;">
+                    <fieldset class="padded-xl bordered-l bordered-r bordered-b">
+                        <h4 class="text-xs mb-zero">Destacados</h4>
+                        <ul class="list-inline">
+                            <li class="checkbox" ng-repeat="tag in tagoptions | filter : {state:'special'}">
+                                <label>
+                                    <input name="{{tag.slug}}" type="checkbox" checklist-model="programs[selectedindexcategory].tags" checklist-value="tag">{{tag.label}}
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                </uib-tab>
+                <uib-tab index="1" heading="Categorías">
+                    <div class="padded-xl bordered-l bordered-r bordered-b">
+                        <fieldset>
+                            <h4 class="text-xs mb-zero">Idiomas</h4>
+                            <ul class="list-inline">
+                                <li class="checkbox" ng-repeat="tag in tagoptions | filter : {state:'language'}">
+                                    <label>
+                                        <input name="{{tag.slug}}" type="checkbox" checklist-model="programs[selectedindexcategory].tags" checklist-value="tag">{{tag.label}}
+                                    </label>
+                                </li>
+                            </ul>
+                        </fieldset>
+                        <hr class="mt-b mb-b" />
+
+                        <fieldset>
+                            <h4 class="text-xs mb-zero">Tipo de Viaje</h4>
+                            <ul class="list-inline">
+                                <li class="checkbox" ng-repeat="tag in tagoptions | filter : {state:'kindtrip'}">
+                                    <label>
+                                        <input name="{{tag.slug}}" type="checkbox" checklist-model="programs[selectedindexcategory].tags" checklist-value="tag">{{tag.label}}
+                                    </label>
+                                </li>
+                            </ul>
+                        </fieldset>
+                        <hr class="mt-b mb-b" />
+
+                        <fieldset>
+                            <h4 class="text-xs mb-zero">Tipo de Viajero</h4>
+                            <ul class="list-inline">
+                                <li class="checkbox" ng-repeat="tag in tagoptions | filter : {state:'kindtraveler'}">
+                                    <label>
+                                        <input name="{{tag.slug}}" type="checkbox" checklist-model="programs[selectedindexcategory].tags" checklist-value="tag">{{tag.label}}
+                                    </label>
+                                </li>
+                            </ul>
+                        </fieldset>
+                        <hr class="mt-b mb-b" />
+
+                        <fieldset>
+                            <h4 class="text-xs mb-zero">Categorías</h4>
+                            <ul class="list-inline">
+                                <li class="checkbox" ng-repeat="tag in tagoptions | filter : {state:'hotel-category'}">
+                                    <label>
+                                        <input name="{{tag.slug}}" type="checkbox" checklist-model="programs[selectedindexcategory].tags" checklist-value="tag">{{tag.label}}
+                                    </label>
+                                </li>
+                            </ul>
+                        </fieldset>
+                        <hr class="mt-b mb-b" />
+
+                        <fieldset>
+                            <h4 class="text-xs mb-zero">Régimen Alimenticio</h4>
+                            <ul class="list-inline">
+                                <li class="checkbox" ng-repeat="tag in tagoptions | filter : {state:'regimen'}">
+                                    <label>
+                                        <input name="{{tag.slug}}" type="checkbox" checklist-model="programs[selectedindexcategory].tags" checklist-value="tag">{{tag.label}}
+                                    </label>
+                                </li>
+                            </ul>
+                        </fieldset>
+                    </div>
+                </uib-tab>
+                <uib-tab index="2" heading="Vuelos">
+                    <div class="padded-xl bordered-l bordered-r bordered-b">
+                        <fieldset>
+                            <h4 class="text-xs mb-zero">Vuelos</h4>
+                            <ul class="list-inline">
+                                <li class="checkbox">
+                                    <label>
+                                        <input name="flightsdmc" ng-model="programs[selectedindexcategory].flightsdmc" ng-change="onselecflightsdmc(programs[selectedindexcategory].flightsdmc)" type="checkbox"> Vuelos ofrecidos por DMC
+                                    </label>
+                                </li>
+                                <li class="checkbox">
+                                    <label>
+                                        <input name="flights" ng-disabled="blockflights" ng-change="onselecflights(programs[selectedindexcategory].flights)" ng-model="programs[selectedindexcategory].flights" type="checkbox">Ofrecer Vuelos
+                                    </label>
+                                </li>
+                            </ul>
+                            <div class="row" ng-show="programs[selectedindexcategory].flights">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label" for="arrivalairport">Arrival Airport</label>
+                                        <input ng-model="programs[selectedindexcategory].itinerary[0].flights[0].arrival" class="form-control select-tag" id="arrivalairport"
+                                               type="text" value="" placeholder="Search IATA code"
+                                               uib-typeahead="item as item.label for item in airports | filter:$viewValue  | limitTo:8"
+                                               typeahead-loading="loadingAirport" typeahead-on-select="onSelectAirport($item, $model, $label, programs[selectedindexcategory].itinerary[0], programs[selectedindexcategory], 0, 'arrival')" required />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label" for="departureairport">Departure Airport</label>
+                                        <input ng-model="programs[selectedindexcategory].itinerary[programs[selectedindexcategory].itinerary.length - 1].flights[0].departure" class="form-control select-tag"
+                                               id="departureairport" type="text" value="" placeholder="Search IATA code"
+                                               uib-typeahead="item as item.label for item in airports | filter:$viewValue  | limitTo:8"
+                                               typeahead-loading="loadingAirport" typeahead-on-select="onSelectAirport($item, $model, $label, programs[selectedindexcategory].itinerary[programs[selectedindexcategory].itinerary.length - 1], programs[selectedindexcategory], 0, 'departure')" required />
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                </uib-tab>
+                <uib-tab index="3" heading="Tags">
+                    <div>
+                        <div class="form-group">
+                            <!--<span class="help-block">Important for customer trip search.</span>-->
+                            <div class="" >
+                                <!--<div class="search">
+                                    <label class="control-label" for="tag-tour">Select the tags  (English)</label>
+                                    <input uib-typeahead="tag as tag.label_en for tag in publicTags | filter:$viewValue | limitTo:8"
+                                           ng-model="tagtoadd" type="text" class="form-control select-tag"
+                                           placeholder="Search tag" id="tagsenglish" uib-typeahead-template-url="tagTemplate.html" />
+                                </div>
+                                <div class="action">
+                                    <button ng-click="addTag()" type="button" class="btn btn-primary"><i class="fa fa-plus"></i> Add</button>
+                                </div>-->
+                                <div class="mb-xxl">
+                                    <h4 class="">
+                                        <i class="fa fa-tags"></i> Tags:
+                                    </h4>
+                                    <span style="display: inline-block; font-size:13px;" 
+                                          class="label label-danger mr-xs mb-xs bold" ng-repeat="tag in programs[selectedindexcategory].tags | filter : {state:'published'}">{{tag.label_en}}</span>
+                                </div>
+                            </div>
+                            
+                            <!--<p>
+                                <a class="action" ng-click="viewCategorie = true"
+                                   ng-show="!viewCategorie" href="">View all tags</a>
+                            </p>-->
+                            <div class="alert activities-box" ng-form="activitiesform">
+                                <div class="row">
+                                    <h4 class="col-xs-3">Activities</h4>
+                                    <div class="activities-filter col-xs-9">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-4 col-xs-6" ng-repeat="tag in publicTags track by $index" ng-if="tag.state != 'special'">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name="{{tag.slug}}" type="checkbox"
+                                                       checklist-model="programs[selectedindexcategory].tags" checklist-comparator=".slug" checklist-value="tag" />{{tag.label_en}}
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!-- esto debe ir cada 3 categorias-->
+                                    <!-- <div class="clearfix visible-xs-block"></div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </uib-tab>
+                <uib-tab index="3" heading="Voucher">
+                    <div>
+                        <div class="form-group">
+                            <h4 class="col-xs-3">Voucher notes</h4>
+                            <textarea 
+                                      ng-model="programs[selectedindexcategory].vouchernotes" 
+                                      class="form-control" rows="7" id="vouchernotes" 
+                                      placeholder="Write the text that will be included in the voucher"></textarea>
+                        </div>
+                    </div>
+                </uib-tab>
+                <uib-tab heading="RAW edition">
+                    <button class="btn btn-danger btn-xs" ng-click="savejson()"> save json</button>    <button class="btn btn-danger btn-xs" ng-click="reloadjson()"> reload json</button>
+                    <div class="padded-xl bordered-l bordered-r bordered-b" id="rawjsoncontainer" style="overflow: scroll; height: 500px;">
+
+                    </div>
+                </uib-tab>
+</uib-tabset>
+
+
+        </div>
+        <hr class="mt-l mb-l" />
+
+        <fieldset>
+            <label class="checkbox-inline">
+                <input ng-model="programs[selectedindexcategory].productvalid" type="checkbox" id="productvalid"> Producto Publicable
+            </label>
+            <label class="checkbox-inline">
+                <input ng-model="programs[selectedindexcategory].pvp.keep" type="checkbox" id="productvalid"> Mantener Paridad Precios
+            </label>
+        </fieldset>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+﻿<div class="row">
+    <div class="col-md-2">
+        <img class="img-circle img-responsive id-user-img avatarb36"
+             ng-src="{{getimage(dmc.images.logo.url, 'avatarb36')}}" data-src2x="{{getimage(dmc.images.logo.url,   'avatarb36retina')}}" alt="{{dmc.name}}" title="{{ dmc.name}}" />
+    </div>
+    <div class="col-md-10">
+        <div class="pr-xl">
+            <h4 class="list-group-item-heading"><strong>{{ dmc.name }}</strong> <em>| {{ dmc.company.legalname }}</em> [{{ dmc.code }}]</h4>
+            <!-- paises que opera -->
+            <div class="dmc-text">
+                <i class="fa fa-globe pull-left pt-xs"></i>
+                <p class="destinations">
+                    <small ng-repeat="operates in dmc.company.operatein">
+                        <span>{{ operates.operateLocation.country }} ({{ operates.operateLocation.countrycode}})</span>
+                    </small>
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="">
+                        {{dmc.user.email}} <span ng-show="dmc.contact != null && dmc.contact.firstname != ''">| {{dmc.contact.firstname}} {{dmc.contact.lastname}} </span>
+                    </p>
+                </div>
+                <div class="col-md-6">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<i class="fa fa-arrow-right hidden pull-right text-gray mt-xl mr-xl"></i>

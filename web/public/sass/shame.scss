@@ -1,0 +1,161 @@
+// Raleway go home, Montserrat should be welcome soon!
+/**
+ * Nav specificity fix.
+ *
+ * Someone used an ID in the header code (`#header a {}`) which trumps the
+ * nav selectors (`.site-nav a {}`). Use !important to override it until I
+ * have time to refactor the header stuff.
+*/
+
+.popover-filter{
+    display: block;
+    top: -60px;
+    width: 220px;
+    height: 60px;
+}
+.no-bottom{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.stop-scroll {
+    overflow: hidden!important;
+}
+
+// crappy solution to align font awesome stacks
+.fa-stack {.fa-stack-1x {bottom: 1px;}}
+
+.modal, .popover, .tooltip{
+    display: block;
+}
+.uploadfilebutton{
+    width: 130px;
+    height: 32px;
+}
+.uploadfilebutton::before {
+    content: 'UPLOAD IMAGE';
+    margin-bottom: 10px;
+    display: block;
+}
+
+.replacefilebutton{
+    width: 130px;
+    height: 32px;
+}
+.replacefilebutton::before {
+    content: 'REPLACE IMAGE';
+    margin-bottom: 10px;
+    display: block;
+}
+.mainwaitimage{
+  position: absolute;
+  margin: 4.2em auto 4.2em 8.6em;
+}
+.thumbwaitimage{
+  position: absolute;
+  margin: 2.1em auto 2.1em 0.7em;
+}
+.avatarwaitimage {
+  position: absolute;
+  margin-top: 20px;
+}
+.escortwaitimage{
+    position: absolute;
+    top: 23px;
+    left: 50%;
+    margin-left: -50px;
+}
+.selfiewaitimage{
+    position: absolute;
+    margin-left: 75px;
+    margin-top: 40px;
+}
+.documentwait{
+    position: absolute;
+    margin-top: -56px;
+    margin-left: 40px;
+}
+.img-thumbnail-alias{
+    padding: 4px;
+    line-height: 1.42857;
+    background-color: #f1f1f1;
+    border: 1px solid #dddddd;
+    border-radius: 2px;
+    display: inline-block;
+    width: 100% \9;
+    max-width: 100%;
+    height: auto;
+}
+// mail chimp classes
+#mce-responses{
+    position: absolute;
+}
+#mce-error-response{
+    @extend .text-danger;
+}
+#mce-success-response{
+    @extend .text-success;
+}
+
+div#cibtWidgetLoaderDiv {
+    position: relative !important;
+    left: 50%;
+    margin-left: -324px;
+}
+div#cibtvisareqwidget {
+    border-radius: 0px;
+    -moz-border-radius: 0px;
+    border: 4px solid #fff;
+}
+.cibtvisareqwidgetheadline {
+    text-align: left !important;
+}
+
+
+//OVERRIDING OLARK ROUND CORNERS
+#habla_window_div.olrk-fixed-bottom .habla_panel_border, #habla_window_div.olrk-fixed-bottom #habla_topbar_div {
+    border-radius: 0px!important;
+}
+
+// btn_chat position
+// 
+.btn-chat-submit{
+    position: relative;
+    margin-top: 10px;
+    z-index: 2;}
+
+//quito campana temporalmente
+.navbar-dropdown-nots {display: none;}
+
+.error-blanket {
+  display: none;
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: 1040;
+  background-color: rgba($light, 0.9);
+  &.in {display: block;} 
+}
+.full-page-error {
+  border-radius: 30px;
+  height: 30px;
+  width: 300px;
+  top: 0; left: 0; bottom: 0; right: 0;
+  position: absolute;
+  margin: auto;
+  display: block;
+}
+
+
+/* 
+  Allow angular.js to be loaded in body, hiding cloaked elements until 
+  templates compile.  The !important is important given that there may be 
+  other selectors that are more specific or come later and might alter display.  
+ */
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none !important;
+}
+
+ul.paffiliatelist>li.disabled{
+  display: none;
+}
+.ibg-black {background-color: #000!important; opacity: .8!important;}// background to image galery
+

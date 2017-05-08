@@ -1,0 +1,131 @@
+﻿<nav class="subnav col-md-12" ng-controller="filtertoolbar" ng-show="listname == 'bookings' && rolename == 'admin'">
+    <div class="main">
+        <a href="" class="btn btn-invert" ng-click="refresh()">
+            <i class="fa fa-refresh"></i>
+        </a>
+        <a href="" class="btn" ng-class="{ 'btn-success' : activebuttons.environment.all, 'btn-invert': !activebuttons.environment.all }"
+           ng-click="toggleenvironment('all')">
+            <i class="fa fa-list"></i> todas
+        </a>
+        <a href="" class="btn" ng-class="{ 'btn-success' : activebuttons.environment.b2b, 'btn-invert': !activebuttons.environment.b2b }"
+           ng-click="toggleenvironment('b2b')">
+            <i class="fa fa-list"></i> yourttoo
+        </a>
+        <a href="" class="btn" ng-class="{ 'btn-success' : activebuttons.environment.b2c, 'btn-invert': !activebuttons.environment.b2c }"
+           ng-click="toggleenvironment('b2c')">
+            <i class="fa fa-list"></i> omt
+        </a>
+        <a href="" class="btn" ng-class="{ 'btn-success' : activebuttons.environment.whitelabel, 'btn-invert': !activebuttons.environment.whitelabel }"
+           ng-click="toggleenvironment('whitelabel')">
+            <i class="fa fa-check"></i> marca blanca
+        </a>
+    </div>
+    <div class="side">
+        <a href="" class="btn" ng-class="{ 'btn-success' : activebuttons.status.all, 'btn-invert': !activebuttons.status.all }" 
+           ng-click="togglestatusfilter('all')">
+            <i class="fa fa-list"></i> todas
+        </a>
+        <a href="" class="btn" ng-class="{ 'btn-success' : activebuttons.status.commited, 'btn-invert': !activebuttons.status.commited }" 
+           ng-click="togglestatusfilter('commited')">
+            <i class="fa fa-check"></i> confirmadas
+        </a>
+        <a href="" class="btn btn-success" ng-class="{ 'btn-success' : activebuttons.status.pendingpayment, 'btn-invert': !activebuttons.status.pendingpayment }" 
+           ng-click="togglestatusfilter('pendingpayment')">
+            <i class="fa fa-check"></i> p. pago
+        </a>
+        <a href="" class="btn btn-success" ng-class="{ 'btn-success' : activebuttons.status.pendingcharges, 'btn-invert': !activebuttons.status.pendingcharges }" 
+           ng-click="togglestatusfilter('pendingcharges')">
+            <i class="fa fa-check"></i> p. cobro
+        </a>
+        <a href="" class="btn btn-default" ng-class="{ 'btn-success' : activebuttons.status.cancelled, 'btn-invert': !activebuttons.status.cancelled }" 
+           ng-click="togglestatusfilter('cancelled')">
+            <i class="fa fa-times-circle"></i> canceladas
+        </a>
+    </div>
+</nav>
+
+<nav class="subnav col-md-12" ng-controller="filtertoolbar" ng-show="(listname != 'budgets' && listname != 'billings' && rolename != 'admin')">
+    <div class="main" ng-show="rolename != 'dmc'">
+        <a href="" class="btn btn-invert" ng-click="refresh()">
+            <i class="fa fa-refresh"></i>
+        </a>
+        <a href="" class="btn" ng-class="{ 'btn-success' : activebuttons.environment.all, 'btn-invert': !activebuttons.environment.all }"
+           ng-click="toggleenvironment('all')">
+            <i class="fa fa-list"></i> todas
+        </a>
+        <a href="" class="btn" ng-class="{ 'btn-success' : activebuttons.environment.b2b, 'btn-invert': !activebuttons.environment.b2b }"
+           ng-click="toggleenvironment('b2b')">
+            <i class="fa fa-list"></i> yourttoo
+        </a>
+        <a href="" class="btn" ng-class="{ 'btn-success' : activebuttons.environment.whitelabel, 'btn-invert': !activebuttons.environment.whitelabel }"
+           ng-click="toggleenvironment('whitelabel')">
+            <i class="fa fa-check"></i> marca blanca
+        </a>
+    </div>
+    <div class="side" ng-show="rolename != 'dmc'">
+        <a href="" class="btn" ng-class="{ 'btn-success' : activebuttons.status.all, 'btn-invert': !activebuttons.status.all }"
+           ng-click="togglestatusfilter('all')">
+            <i class="fa fa-list"></i> todas
+        </a>
+        <a href="" class="btn" ng-class="{ 'btn-success' : activebuttons.status.commited, 'btn-invert': !activebuttons.status.commited }"
+           ng-click="togglestatusfilter('commited')">
+            <i class="fa fa-check"></i> confirmadas
+        </a>
+        <a href="" class="btn btn-default" ng-class="{ 'btn-success' : activebuttons.status.cancelled, 'btn-invert': !activebuttons.status.cancelled }"
+           ng-click="togglestatusfilter('cancelled')">
+            <i class="fa fa-times-circle"></i> canceladas
+        </a>
+    </div>
+    <div class="side" ng-show="rolename == 'dmc'">
+        <a href="" class="btn" ng-class="{ 'btn-success' : activebuttons.status.all, 'btn-invert': !activebuttons.status.all }"
+           ng-click="togglestatusfilter('all')">
+            <i class="fa fa-list"></i> all
+        </a>
+        <a href="" class="btn" ng-class="{ 'btn-success' : activebuttons.status.commited, 'btn-invert': !activebuttons.status.commited }"
+           ng-click="togglestatusfilter('commited')">
+            <i class="fa fa-check"></i> confirmed
+        </a>
+        <a href="" class="btn btn-default" ng-class="{ 'btn-success' : activebuttons.status.cancelled, 'btn-invert': !activebuttons.status.cancelled }"
+           ng-click="togglestatusfilter('cancelled')">
+            <i class="fa fa-times-circle"></i> cancelled
+        </a>
+    </div>
+</nav>
+
+<nav class="subnav col-md-12" ng-controller="filtertoolbar" ng-show="(listname == 'billings')">
+    <div class="main" ng-show="rolename != 'dmc'">
+        <a href="" class="btn btn-invert" ng-click="refresh()">
+            <i class="fa fa-refresh"></i>
+        </a>
+        <a href="" class="btn" ng-class="{ 'btn-success' : activebuttons.environment.all, 'btn-invert': !activebuttons.environment.all }"
+           ng-click="toggleenvironment('all')">
+            <i class="fa fa-list"></i> todas
+        </a>
+        <a href="" class="btn" ng-class="{ 'btn-success' : activebuttons.environment.b2b, 'btn-invert': !activebuttons.environment.b2b }"
+           ng-click="toggleenvironment('b2b')">
+            <i class="fa fa-list"></i> yourttoo
+        </a>
+        <a href="" class="btn" ng-class="{ 'btn-success' : activebuttons.environment.whitelabel, 'btn-invert': !activebuttons.environment.whitelabel }"
+           ng-click="toggleenvironment('whitelabel')">
+            <i class="fa fa-check"></i> marca blanca
+        </a>
+    </div>
+    <div class="side" ng-show="rolename == 'admin'">
+        <a href="" class="btn" ng-class="{ 'btn-success' : activebuttons.status.all, 'btn-invert': !activebuttons.status.all }"
+           ng-click="togglestatusfilter('all')">
+            <i class="fa fa-list"></i> todas
+        </a>
+        <a href="" class="btn" ng-class="{ 'btn-success' : activebuttons.status.pendingpaymentdmc, 'btn-invert': !activebuttons.status.pendingpaymentdmc }"
+           ng-click="togglepayfilter('pending.payment.dmc')">
+            <i class="fa fa-check"></i> pdte. pago dmc
+        </a>
+        <a href="" class="btn" ng-class="{ 'btn-success' : activebuttons.status.pendingpaymentaavv, 'btn-invert': !activebuttons.status.pendingpaymentaavv }"
+           ng-click="togglepayfilter('pending.payment.aavv')">
+            <i class="fa fa-check"></i> pdte. pago aavv
+        </a>
+        <a href="" class="btn btn-default" ng-class="{ 'btn-success' : activebuttons.status.pendingcharges, 'btn-invert': !activebuttons.status.pendingcharges }"
+           ng-click="togglepayfilter('pending.charges')">
+            <i class="fa fa-times-circle"></i> pdte. cobro
+        </a>
+    </div>
+</nav>

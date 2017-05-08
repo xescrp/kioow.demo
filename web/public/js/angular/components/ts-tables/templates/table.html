@@ -1,0 +1,24 @@
+﻿<table class="table table-striped table-hover table-results table-results-admin" ng-show="queryservice.currentitems != null && queryservice.currentitems.length > 0">
+    <thead>
+        <tr>
+            <td ng-repeat="column in columns" ng-if="column.roles.indexOf(rolename) >= 0">
+                <a href="#" ng-click="column.onclick(queryservice)">
+                    {{column.label}}
+                    <i ng-show="column.sortable && queryservice.orderby != column.modelproperty" class="fa fa-sort"></i>
+                    <i ng-show="column.sortable && queryservice.orderby == column.modelproperty && queryservice.sorting == 'desc'" class="fa fa-caret-down"></i>
+                    <i ng-show="column.sortable && queryservice.orderby == column.modelproperty && queryservice.sorting == 'asc'" class="fa fa-caret-up"></i>
+                </a>
+            </td>
+        </tr>
+    </thead>
+    <tbody class="bg-light">
+        <tr class="pointer"
+            ng-repeat="item in queryservice.currentitems"
+            ng-include="itemtemplate"
+            ng-click="onitemclick(item)"></tr>
+    </tbody>
+</table>
+<div class="no-results padded-xxl col-md-12" ng-show="queryservice.currentitems == null || queryservice.currentitems.length == 0">
+    <h1 class="thin text-center mb-b">No hemos encontrado Resultados</h1>
+    <h3 class="thin text-center">Sin resultados para esta selección<br> </h3>
+</div>

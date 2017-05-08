@@ -1,0 +1,298 @@
+.products{
+	@extend .col-xs-9;
+	@extend .col-md-9;
+}
+.request{
+	@extend .col-xs-12;
+	@extend .col-md-12;
+}
+.subnav{
+	.main{
+		@extend .pull-left;
+	}
+	.side{
+		@extend .pull-right;
+	}
+	@extend .clearfix;
+}
+
+.product-list, .request-list, .request-item{
+	//margin-top: 1em;
+	.item{
+		@extend .clearfix;
+	}
+	.item-select{
+		@extend .pull-left;
+		margin-right: 1em;
+		max-width: 10%;
+	}
+	h3{
+		font-size: $font-size-base;
+	}
+	ul{
+		@extend .list-inline;
+		margin: 0;
+		li{
+			padding-left: 0px;
+			font-size: $font-size-small;
+		}
+	}
+	p{
+		margin: 0 0 3px 0;
+	}
+	.id-user-img{
+		@extend .img-circle;
+		@extend .pull-left;
+		margin-right: 1em;
+		border: solid 1px $gray-lighter;
+	}
+	.time{
+		position: absolute;
+		top: 5%;
+		right: 1.4em;
+		color: $gray-light;
+		font-size: $font-size-small;
+	}
+	.status{
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		li{
+			padding-right:0;
+		}
+		.icon-notify{
+			@include size(30px, auto);
+			display: block;
+			position: relative;
+			 & i{
+				font-size: $font-size-h3;
+			}
+			& span{
+				position: absolute;
+				top: -5px;
+				right: 0;
+			}
+		}
+	}
+	.unpublished, .published, .draft, .label-item, .review{
+		min-width: 130px;
+		display: block;
+		@extend .label;
+	}
+	.draft{
+		@extend .label-default;
+	}
+	.unpublished{
+		@extend .label-danger;
+	}
+	.published{
+		@extend .label-success;
+	}
+	.review{
+		@extend .label-primary;
+	}
+	.item {
+		margin-bottom: 0px;
+		border-style: solid;
+		border-width: 0 1px 1px 3px;
+		border-color: $gray-lighter-low;
+		background-color: darken($light,3);
+		.label{
+			font-weight: 400;
+			letter-spacing: 0.05em;
+		}
+		.label-item{
+			font-weight: 400;
+		}
+		&.selected-item{
+			background-color: $light;
+			border-color: $light;
+			border-left-color: $brand-alternate;
+			color: $gray-darker;
+		}
+		&.new{
+			@extend .alert-warning;
+			border-color: darken($state-warning-border, 5);
+			border-left-color: $brand-warning;
+			background-color: darken($state-warning-bg, 5);
+			.label-item{
+				@extend .label-warning;
+			}
+		}
+		&.confirmed{
+			border-left-color: $brand-warning;
+			.label-item{
+				@extend .label-warning;
+			}
+			background-color: darken($light,3);
+			&:hover{
+				border-left-color: $brand-warning;
+			}
+		}
+		&.waiting{
+			border-left-color: $gray;
+			background-color: darken($light,3);
+			.label-item{
+				@extend .label-default;
+			}
+			background-color: darken($light,3);
+			&:hover{
+				border-left-color: $gray;
+			}
+		}
+		&.quoted{
+			border-left-color: $gray;
+			background-color: darken($light,3);
+			.label-item{
+				@extend .label-default;
+			}
+		}
+		&.booking{
+			@extend .alert-success;
+			border-left-color: $brand-success;
+			.label-item{
+				@extend .label-success;
+			}
+		}
+		&.end{
+			@include opacity(.7);
+			background-color: lighten($brand-success,95);
+			border-left-color: $state-success-border;
+			.label-item{
+				background-color: desaturate($brand-success-dark,25);
+			}
+		}
+		&.valid{
+			border-left-color: $brand-success;
+			.label-item{
+				@extend .label-success;
+			}
+			background-color: darken($light,3);
+			&:hover{
+				border-left-color: $brand-success;
+			}
+		}
+		&.change, &.error{
+			@extend .alert-danger;
+			border-left-color: $brand-danger;
+			.label-item{
+				@extend .label-danger;
+			}
+		}
+		&.lost{
+			border-left-color: $gray;
+			background-color: darken($light,20);
+			@include opacity(.7);
+			.label-item{
+				@extend .label-invert;
+			}
+		}
+		&.tailormade {
+			@extend .alert-danger;
+			background-color: $light;
+			color: $text-color;
+			border-left-color: $brand-danger;
+			h3 {font-size: $font-size-h4;}
+			.label-item{@extend .label-danger;}
+			.editor-buttons {
+				font-size: $font-size-h4;
+			}
+			li {@extend .mr-four;}
+			.status li {@extend .mr-zero;}
+		}
+	}
+}
+.product-list, .request-list{
+	.item {
+		&:hover{
+			background-color: $light !important;
+			@include opacity(1);
+		}
+	}
+}
+
+.product-list, .request-list{
+	a.item{
+		.item-body{
+			@extend .pull-left;
+			max-width: 90%;
+		}
+		&:hover{
+			@include box-shadow(0 2px 2px rgba(0,0,0,.095));
+			border-color: lighten($gray-light, 20);
+		}
+		&.new{
+			&:hover{
+				background-color: lighten($state-warning-bg, 2);
+				border-color: darken($state-warning-border, 20);
+			}
+		}
+		&.quoted{
+			&:hover{
+				background-color: $light;
+				border-left-color: $gray;
+			}
+		}
+		&.booking{
+			&:hover{
+				background-color: lighten($brand-success, 47);
+				border-color: darken($state-success-border, 15);
+			}
+		}
+		&.end{
+			&:hover{
+				background-color: lighten($state-success-border, 47);
+				border-color: $brand-success-dark;
+			}
+		}
+		&.change{
+			&:hover{
+				background-color: lighten($brand-danger, 30);
+				border-color: lighten($brand-danger, 15);
+			}
+		}
+		&.lost {
+			&:hover{
+				background-color: darken($light,10);
+				border-color: $gray-light-mid;
+			}
+		}
+
+	}
+}
+.product-list{
+	a.item{
+		.item-body{
+			@extend .pull-left;
+			max-width: 90%;
+		}
+	}
+}
+.request-list, .product-list{
+	.time{
+		@media screen and (min-width: $screen-xs-min) and (max-width: $screen-md-min) {
+			position: static;
+			clear: both;
+			margin-left: 4.2em;
+			padding-top: 0.2em;
+		}
+	}
+	// .status{
+	// 	@media screen and (min-width: $screen-xs-min) and (max-width: $screen-md-min) {
+	// 		position: relative;
+	// 		bottom: -10px;
+	// 		right: -16px;
+	// 		text-align: right;
+	// 		clear: both;
+	// 	}
+	// }
+}
+.product-list{
+	.time{
+		@media screen and (min-width: $screen-xs-min) and (max-width: $screen-md-min) {
+			margin-left: 0em;
+		}
+	}
+
+}
+

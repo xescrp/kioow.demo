@@ -1,0 +1,10 @@
+﻿<div class="pull-right">
+    <div class="text-center" ng-show="queryservice.pages > 1">página {{ queryservice.currentpage }} de {{ queryservice.pages }}</div>
+    <pagination ng-show="queryservice.pages > 1"
+                total-items="queryservice.totalitems"
+                ng-model="queryservice.currentpage"
+                ng-change="queryservice.paginationhook()"
+                class="pagination-sm pull-right"
+                items-per-page="queryservice.maxresults">
+    </pagination>
+</div>

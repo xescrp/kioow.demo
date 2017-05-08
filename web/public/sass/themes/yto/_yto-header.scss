@@ -1,0 +1,6 @@
+body{
+	padding-top: 106px;
+	@media(max-width: $screen-sm-max) {
+		padding-top: 50px;
+	}
+}

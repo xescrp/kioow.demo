@@ -1,0 +1,2602 @@
+{
+  "AAL": {
+    "code": "AAL",
+    "name": "Aalborg, Aeropuerto de Aalborg (AAL)"
+  },
+  "AAR": {
+    "code": "AAR",
+    "name": "Aarhus, Aeropuerto de Aarhus (AAR)"
+  },
+  "ABA": {
+    "code": "ABA",
+    "name": "Abakan, Aeropuerto de Abakan (ABA)"
+  },
+  "ABZ": {
+    "code": "ABZ",
+    "name": "Aberdeen, Aeropuerto de Aberdeen (ABZ)"
+  },
+  "ACA": {
+    "code": "ACA",
+    "name": "Acapulco, Aeropuerto General Juan N Álvarez (ACA)"
+  },
+  "ACE": {
+    "code": "ACE",
+    "name": "Arrecife, Aeropuerto De Lanzarote (ACE)"
+  },
+  "ADB": {
+    "code": "ADB",
+    "name": "Izmir, Aeropuerto Int. Adnan Menderes (ADB)"
+  },
+  "ADL": {
+    "code": "ADL",
+    "name": "Adelaida, Aeropuerto Int. de Adelaida (ADL)"
+  },
+  "AEP": {
+    "code": "AEP",
+    "name": "Buenos Aires, Aeroparque Jorge Newbery (AEP)"
+  },
+  "AER": {
+    "code": "AER",
+    "name": "Sochi Adler Airport (AER)"
+  },
+  "AGA": {
+    "code": "AGA",
+    "name": "Agadir, Aeropuerto De Agadir Al Massira (AGA)"
+  },
+  "AGH": {
+    "code": "AGH",
+    "name": "Helsingborg, Aeropuerto Ängelholm (AGH)"
+  },
+  "AGP": {
+    "code": "AGP",
+    "name": "Málaga, Aeropuerto De Málaga Costa Del Sol (AGP)"
+  },
+  "AGR": {
+    "code": "AGR",
+    "name": "Agra, Aeropuerto de Agra (AGR)"
+  },
+  "AHO": {
+    "code": "AHO",
+    "name": "Alghero, Aeropuerto De Alghero Fertilia (AHO)"
+  },
+  "AJA": {
+    "code": "AJA",
+    "name": "AJACCIO (AJA)"
+  },
+  "AKL": {
+    "code": "AKL",
+    "name": "Auckland, Aeropouerto Int. De Auckland (AKL)"
+  },
+  "ALA": {
+    "code": "ALA",
+    "name": "Almaty, Aeropuerto de Almaty (ALA)"
+  },
+  "ALC": {
+    "code": "ALC",
+    "name": "Alicante, Aeropuerto de Alicante Elche (ALC)"
+  },
+  "ALG": {
+    "code": "ALG",
+    "name": "Argel, Aeropuerto Int. Houari Boumedienne (ALG)"
+  },
+  "AMD": {
+    "code": "AMD",
+    "name": "Ahmedabad, Aeropuerto Int. Sardar Vallabhbhai Pate (AMD)"
+  },
+  "AMM": {
+    "code": "AMM",
+    "name": "Amman, Aeropuerto Int. De Queen Alia (AMM)"
+  },
+  "AMS": {
+    "code": "AMS",
+    "name": "Amsterdam, Aeropuerto De Amsterdam Schiphol (AMS)"
+  },
+  "ANC": {
+    "code": "ANC",
+    "name": "Anchorage, Aeropuerto Int. Ted Stevens (ANC)"
+  },
+  "ANR": {
+    "code": "ANR",
+    "name": "Antwerp, Aeropuerto Internacional de Antwerp (Deur (ANR)"
+  },
+  "ANU": {
+    "code": "ANU",
+    "name": "Antigua, Aeropuerto Int. V. C. Bird (ANU)"
+  },
+  "AOK": {
+    "code": "AOK",
+    "name": "Karpathos, Aeropuerto de Karpathos (AOK)"
+  },
+  "AOP": {
+    "code": "AOP",
+    "name": "Phuket, Puerto De Ao Po (AOP)"
+  },
+  "AQJ": {
+    "code": "AQJ",
+    "name": "Aqaba, Aeropuerto Int. King Hussein (AQJ)"
+  },
+  "AQP": {
+    "code": "AQP",
+    "name": "Arequipa, Aeropuoerto Alfredo Rodriguez Ballon (AQP)"
+  },
+  "ARI": {
+    "code": "ARI",
+    "name": "Arica, Aeropuerto Int. De Chacalluta (ARI)"
+  },
+  "ARK": {
+    "code": "ARK",
+    "name": "Arusha, Aeropuerto de Arusha (ARK)"
+  },
+  "ARN": {
+    "code": "ARN",
+    "name": "Estocolmo, Aeropuerto De Arlanda (ARN)"
+  },
+  "ASF": {
+    "code": "ASF",
+    "name": "Astrakhan, Aeropuerto de Astrakhan (ASF)"
+  },
+  "ASP": {
+    "code": "ASP",
+    "name": "Alice Springs, Aeropuerto Alice Springs (ASP)"
+  },
+  "ASR": {
+    "code": "ASR",
+    "name": "Kayseri, Aeropuerto Kayseri (ASR)"
+  },
+  "ASU": {
+    "code": "ASU",
+    "name": "Asuncion, Aeropuerto Int. Silvio Pettirossi (ASU)"
+  },
+  "ASW": {
+    "code": "ASW",
+    "name": "Asuán, Aeropuerto Int. de Asúan (ASW)"
+  },
+  "ATH": {
+    "code": "ATH",
+    "name": "Atenas, Aeropuerto Int. De Eleftherios Venizelos (ATH)"
+  },
+  "ATL": {
+    "code": "ATL",
+    "name": "Atlanta, Aeropuerto Int. De Hartsfield Jackson (ATL)"
+  },
+  "AUA": {
+    "code": "AUA",
+    "name": "Aruba, Aeropuerto Int. De Reina Beatriz (AUA)"
+  },
+  "AUH": {
+    "code": "AUH",
+    "name": "Abu Dhabi, Aeropuerto Int. Abu Dhabi (AUH)"
+  },
+  "AUS": {
+    "code": "AUS",
+    "name": "Austin, Aeropuerto Int. De Austin Bergstrom (AUS)"
+  },
+  "AXM": {
+    "code": "AXM",
+    "name": "Armenia, Aeropuerto El Edén (AXM)"
+  },
+  "AYT": {
+    "code": "AYT",
+    "name": "Antalya, Aeropuerto de Antalya (AYT)"
+  },
+  "AZS": {
+    "code": "AZS",
+    "name": "Samaná, Aeropuerto Int. De El Catey (AZS)"
+  },
+  "BAH": {
+    "code": "BAH",
+    "name": "Manama, Aeropuerto Int. De Baréin (BAH)"
+  },
+  "BAQ": {
+    "code": "BAQ",
+    "name": "Barranquilla, Aeropuerto Int. Ernesto Cortissoz (BAQ)"
+  },
+  "BAX": {
+    "code": "BAX",
+    "name": "Barnaul, Aeropuerto de Barnaul (BAX)"
+  },
+  "BCA": {
+    "code": "BCA",
+    "name": "Baracoa, Aeropuerto De Gustavo Rizo (BCA)"
+  },
+  "BCN": {
+    "code": "BCN",
+    "name": "Barcelona, Aeropuerto El Prat (BCN)"
+  },
+  "BDA": {
+    "code": "BDA",
+    "name": "Bermuda, Aeropuerto Int. L.F. Wade (BDA)"
+  },
+  "BDS": {
+    "code": "BDS",
+    "name": "Brindisi, Aeropuerto De Papola Casale (BDS)"
+  },
+  "BEG": {
+    "code": "BEG",
+    "name": "Belgrado, Aeropuerto De Nikola Tesla de Belgrado (BEG)"
+  },
+  "BEY": {
+    "code": "BEY",
+    "name": "Beirut, Aeropuerto Int. De Rafic Hariri (BEY)"
+  },
+  "BFS": {
+    "code": "BFS",
+    "name": "Belfast, Aeropuerto Int. de Belfast (BFS)"
+  },
+  "BGI": {
+    "code": "BGI",
+    "name": "Bridgetown, Aeropuerto Int. Grantley Adams (BGI)"
+  },
+  "BGO": {
+    "code": "BGO",
+    "name": "Bergen, Aeropuerto de Bergen-Flesland (BGO)"
+  },
+  "BHX": {
+    "code": "BHX",
+    "name": "Birmingham, Aeropuerto de Birmingham West Midlands (BHX)"
+  },
+  "BIO": {
+    "code": "BIO",
+    "name": "Bilbao, Aeropuerto de Bilbao (BIO)"
+  },
+  "BJL": {
+    "code": "BJL",
+    "name": "Banjul, Aeropuerto Int. Banjul (BJL)"
+  },
+  "BJV": {
+    "code": "BJV",
+    "name": "Milas Bodrum, Aeropuerto Milas Bodrum Havalimani (BJV)"
+  },
+  "BJX": {
+    "code": "BJX",
+    "name": "Leon Guanajuato, Aeropuerto Int. Del Bajío (BJX)"
+  },
+  "BJZ": {
+    "code": "BJZ",
+    "name": "Badajoz, Aeropuerto de Badajoz (BJZ)"
+  },
+  "BKI": {
+    "code": "BKI",
+    "name": "Kota Kinabalu, Aeropuerto Int. Kota Kinabalu (BKI)"
+  },
+  "BKK": {
+    "code": "BKK",
+    "name": "Bangkok, Aeropuerto Int. De Suvarnabhumi (BKK)"
+  },
+  "BLQ": {
+    "code": "BLQ",
+    "name": "Bologna, Aeropuerto Borgo Panigale (BLQ)"
+  },
+  "BLR": {
+    "code": "BLR",
+    "name": "Bangalore, Aeropuerto Int. De Bangalore (BLR)"
+  },
+  "BMA": {
+    "code": "BMA",
+    "name": "Estocolmo, Aeropuerto Bromma (BMA)"
+  },
+  "BNE": {
+    "code": "BNE",
+    "name": "Brisbane, Aeropuerto de Brisbane (BNE)"
+  },
+  "BOD": {
+    "code": "BOD",
+    "name": "Burdeos, Aeropuerto De Burdeos Merignac (BOD)"
+  },
+  "BOG": {
+    "code": "BOG",
+    "name": "Bogotá, Aeropuerto Int. El Dorado (BOG)"
+  },
+  "BOH": {
+    "code": "BOH",
+    "name": "BOURNEMOUTH AIRPORT (BOH)"
+  },
+  "BOJ": {
+    "code": "BOJ",
+    "name": "Burgas, Aeropuerto (BOJ)"
+  },
+  "BOM": {
+    "code": "BOM",
+    "name": "Bombay, Aeropuerto Int. Chhatrapati Shivaji (BOM)"
+  },
+  "BOS": {
+    "code": "BOS",
+    "name": "Boston, Aeropuerto Int. Logan de Boston (BOS)"
+  },
+  "BRC": {
+    "code": "BRC",
+    "name": "S. Carlos De Bariloche, Ap. Int. Tte. L.Candelaria (BRC)"
+  },
+  "BRE": {
+    "code": "BRE",
+    "name": "Bremen, Aeropuerto de Bremen (BRE)"
+  },
+  "BRI": {
+    "code": "BRI",
+    "name": "Bari, Aeropuerto De Bari Palese (BRI)"
+  },
+  "BRQ": {
+    "code": "BRQ",
+    "name": "Brno, Aeropuerto Brno-Tuřany (BRQ)"
+  },
+  "BRS": {
+    "code": "BRS",
+    "name": "Bristol,  Aeropuerto de Bristol (BRS)"
+  },
+  "BRU": {
+    "code": "BRU",
+    "name": "Bruselas, Aeropuerto Nacional de Bruselas (BRU)"
+  },
+  "BSB": {
+    "code": "BSB",
+    "name": "Brasilia, Aeropuerto Int. Presidente Juscelino Kub (BSB)"
+  },
+  "BSL": {
+    "code": "BSL",
+    "name": "Basilea, Aeropuerto de Basilea (BSL)"
+  },
+  "BTH": {
+    "code": "BTH",
+    "name": "Batam, Aeropuerto De Hang Nadim (BTH)"
+  },
+  "BTS": {
+    "code": "BTS",
+    "name": "Bratislava, Aeropuerto Milan Rastislav Štefánik (BTS)"
+  },
+  "BUD": {
+    "code": "BUD",
+    "name": "Budapest, Aeropuerto Int. Ferenc Liszt (BUD)"
+  },
+  "BUR": {
+    "code": "BUR",
+    "name": "Burbank, Aeropuerto Bob Hope (BUR)"
+  },
+  "BVA": {
+    "code": "BVA",
+    "name": "Beauvais, Aeropuerto De Beauvais Tillé (BVA)"
+  },
+  "BVC": {
+    "code": "BVC",
+    "name": "Boa Vista, Aeropuerto De Rabil (BVC)"
+  },
+  "BWI": {
+    "code": "BWI",
+    "name": "Baltimore Washington, Aeropuerto Int. De Baltimore (BWI)"
+  },
+  "BWN": {
+    "code": "BWN",
+    "name": "Brunei, Aeropuerto Int. de Brunei (BWN)"
+  },
+  "CAG": {
+    "code": "CAG",
+    "name": "Cagliari, Aeropuerto De Cagliari Elmas (CAG)"
+  },
+  "CAI": {
+    "code": "CAI",
+    "name": "El Cairo, Aeropuerto Int. El Cairo (CAI)"
+  },
+  "CAN": {
+    "code": "CAN",
+    "name": "Guangdong, Aeropuerto Int. De Canton Baiyun (CAN)"
+  },
+  "CBB": {
+    "code": "CBB",
+    "name": "Cochabamba, Aeropuerto Int. Jorge Wilstermann (CBB)"
+  },
+  "CCC": {
+    "code": "CCC",
+    "name": "Cayo Coco, Aeropuerto Int. Jardines del Rey (CCC)"
+  },
+  "CCS": {
+    "code": "CCS",
+    "name": "Maiquetía, Aeropuerto Int. Maiquetía Simón Bolivar (CCS)"
+  },
+  "CCU": {
+    "code": "CCU",
+    "name": "Calcuta, Aeropuerto Subhas Chandra Bose (CCU)"
+  },
+  "CDG": {
+    "code": "CDG",
+    "name": "Paris, Aeropuerto De Charles De Gaulle (CDG)"
+  },
+  "CEB": {
+    "code": "CEB",
+    "name": "Cebú, Aeropuerto Int. de Mactán Cebú (CEB)"
+  },
+  "CEI": {
+    "code": "CEI",
+    "name": "Chiang Rai, Aeropuerto Int. De Mae Fah Luang (CEI)"
+  },
+  "CEK": {
+    "code": "CEK",
+    "name": "Chelyabinsk, Aeropuerto Chelyabinsk Balandino (CEK)"
+  },
+  "CEQ": {
+    "code": "CEQ",
+    "name": "Cannes, Aeropuerto De Cannes Mandelieu (CEQ)"
+  },
+  "CFT": {
+    "code": "CFT",
+    "name": "Kowloon, Puerto (CFT)"
+  },
+  "CFU": {
+    "code": "CFU",
+    "name": "Corfú, Aeropuerto Int. De Ioannis Kapodistrias (CFU)"
+  },
+  "CGH": {
+    "code": "CGH",
+    "name": "Sao Paulo, Aeropuerto De Congonhas (CGH)"
+  },
+  "CGK": {
+    "code": "CGK",
+    "name": "Jakarta, Aeropuerto Int. Soekarno Hatta (CGK)"
+  },
+  "CGN": {
+    "code": "CGN",
+    "name": "Colonia Bonn, Aeropuerto (CGN)"
+  },
+  "CGO": {
+    "code": "CGO",
+    "name": "ZHENGZHOU, AEROPUERTO INT. XINZHENG (CGO)"
+  },
+  "CHC": {
+    "code": "CHC",
+    "name": "Christchurch, Aeropuerto Int. De Christchurch (CHC)"
+  },
+  "CHQ": {
+    "code": "CHQ",
+    "name": "Chania, Aeropuerto De Souda (CHQ)"
+  },
+  "CIA": {
+    "code": "CIA",
+    "name": "Roma, Aeropuerto De Ciampino (CIA)"
+  },
+  "CIT": {
+    "code": "CIT",
+    "name": "Shymkent, Aeropuerto de Shymkent (CIT)"
+  },
+  "CIX": {
+    "code": "CIX",
+    "name": "Chiclayo, Aeropuerto Int. Capitán José Quiñones (CIX)"
+  },
+  "CJA": {
+    "code": "CJA",
+    "name": "Cajamarca, Aeropuerto Amando Revoredo Iglesias (CJA)"
+  },
+  "CJC": {
+    "code": "CJC",
+    "name": "Calama, Aeropuerto De El Loa (CJC)"
+  },
+  "CKG": {
+    "code": "CKG",
+    "name": "Chongqing, Aeropuerto Int. De Jiangbei (CKG)"
+  },
+  "CLJ": {
+    "code": "CLJ",
+    "name": "Cluj Napoca, Aeropuerto Cluj Napoca (CLJ)"
+  },
+  "CLO": {
+    "code": "CLO",
+    "name": "Cali, Aeropuerto Int. Alfonso Bonilla Aragón (CLO)"
+  },
+  "CMB": {
+    "code": "CMB",
+    "name": "Colombo, Aeropuerto Int. De Bandaranaike (CMB)"
+  },
+  "CMN": {
+    "code": "CMN",
+    "name": "Casablanca, Aeropuerto Internacional De Mohámmed V (CMN)"
+  },
+  "CND": {
+    "code": "CND",
+    "name": "Constanta, Aeropuerto Int. Mihail Kogalniceanu (CND)"
+  },
+  "CNS": {
+    "code": "CNS",
+    "name": "Cairns, Aeropuerto de Cairns (CNS)"
+  },
+  "CNX": {
+    "code": "CNX",
+    "name": "Chiang Mai, Aeropuerto Int. Chiang Mai (CNX)"
+  },
+  "COK": {
+    "code": "COK",
+    "name": "Kochi, Aeropuerto Int. Nedumbassery (COK)"
+  },
+  "COR": {
+    "code": "COR",
+    "name": "Cordoba, Ap. Int. Ing. Aeroáutico A. Taravella (COR)"
+  },
+  "CPE": {
+    "code": "CPE",
+    "name": "Campeche, Ap. Int.  Ing. Alberto Acuña Ongay (CPE)"
+  },
+  "CPH": {
+    "code": "CPH",
+    "name": "Kastrup, Aeropuerto De Copenhague Kastrup (CPH)"
+  },
+  "CPT": {
+    "code": "CPT",
+    "name": "Ciudad Del Cabo, Ap. Int. de la Ciudad del Cabo (CPT)"
+  },
+  "CRL": {
+    "code": "CRL",
+    "name": "Bruselas, Aeropuerto De Charleroi Bruselas Sud (CRL)"
+  },
+  "CSK": {
+    "code": "CSK",
+    "name": "Cap Skirring, Aeropuerto Cap Skirring (CSK)"
+  },
+  "CTA": {
+    "code": "CTA",
+    "name": "Catania, Aeropuerto De Catania Fontanarossa (CTA)"
+  },
+  "CTG": {
+    "code": "CTG",
+    "name": "Cartagena, Aeropuerto Int. Rafael Núñez (CTG)"
+  },
+  "CTS": {
+    "code": "CTS",
+    "name": "Sapporo, Aeropuerto Nuevo De Chitose (CTS)"
+  },
+  "CTU": {
+    "code": "CTU",
+    "name": "Chengdu Shuangliu, Ap. Int. Chengdu Shuangliu (CTU)"
+  },
+  "CUN": {
+    "code": "CUN",
+    "name": "Cancun, Aeropuerto Int. de Cancún (CUN)"
+  },
+  "CUR": {
+    "code": "CUR",
+    "name": "Curazao, Aeropuerto Int. De Hato (CUR)"
+  },
+  "CUU": {
+    "code": "CUU",
+    "name": "Chihuahua, Ap. Int. General Roberto F. Villalobos (CUU)"
+  },
+  "CUZ": {
+    "code": "CUZ",
+    "name": "Cuzco, Aeropuerto Int. Alejandro Velasco Astete (CUZ)"
+  },
+  "CWB": {
+    "code": "CWB",
+    "name": "Curitiba, Aeropuerto Int. Afonso Pena (CWB)"
+  },
+  "CXR": {
+    "code": "CXR",
+    "name": "Nha Trang, Aeropuerto Int. De Cam Ranh (CXR)"
+  },
+  "CYO": {
+    "code": "CYO",
+    "name": "Cayo Largo del Sur, Aeropuerto De Vilo Acuña (CYO)"
+  },
+  "CZM": {
+    "code": "CZM",
+    "name": "Cozumel, Aeropuerto Int. de Cozumel (CZM)"
+  },
+  "DAD": {
+    "code": "DAD",
+    "name": "Da Nang, Aeropuerto Int. Da Nang (DAD)"
+  },
+  "DAL": {
+    "code": "DAL",
+    "name": "Dallas, Aeropuerto De Love Field (DAL)"
+  },
+  "DBV": {
+    "code": "DBV",
+    "name": "Dubrovnik, Aeropuerto Cilipi (DBV)"
+  },
+  "DCA": {
+    "code": "DCA",
+    "name": "Washington, Aeropuerto Nacional De Ronald Reagan (DCA)"
+  },
+  "DEL": {
+    "code": "DEL",
+    "name": "Delhi, Aeropuerto Int. De Indira Gandhi (DEL)"
+  },
+  "DEN": {
+    "code": "DEN",
+    "name": "Denver, Aeropuerto Int. de Denver (DEN)"
+  },
+  "DFW": {
+    "code": "DFW",
+    "name": "Dallas Fort Worth, Aeropuerto Int. (DFW)"
+  },
+  "DJE": {
+    "code": "DJE",
+    "name": "Djerba, Aeropuerto Int. De Yerba Zarzis (DJE)"
+  },
+  "DKR": {
+    "code": "DKR",
+    "name": "Dakar, Ap. Int. de Dakar Yoff  L. Sédar Senghor (DKR)"
+  },
+  "DLC": {
+    "code": "DLC",
+    "name": "Dalian, Aeropuerto Int. De Zhoushuizi (DLC)"
+  },
+  "DLM": {
+    "code": "DLM",
+    "name": "Dalaman, Aeropuerto  de Dalaman (DLM)"
+  },
+  "DME": {
+    "code": "DME",
+    "name": "Moscú, Aeropuerto Int. De Moscú Domodedovo (DME)"
+  },
+  "DMK": {
+    "code": "DMK",
+    "name": "Bangkok, Aeropuerto Int. De Don Muang (DMK)"
+  },
+  "DNZ": {
+    "code": "DNZ",
+    "name": "Denizli, Aeropuerto de Cardak (DNZ)"
+  },
+  "DOH": {
+    "code": "DOH",
+    "name": "Doha, Aeropuerto Internacional Hamad (DOH)"
+  },
+  "DOK": {
+    "code": "DOK",
+    "name": "Donetsk, Aeropuerto Int. Sergey Prokofiev (DOK)"
+  },
+  "DOV": {
+    "code": "DOV",
+    "name": "Dover, Puerto de Dover (DOV)"
+  },
+  "DPS": {
+    "code": "DPS",
+    "name": "Denpasar Bali, Aeropuerto Int. De Ngurah Rai (DPS)"
+  },
+  "DRS": {
+    "code": "DRS",
+    "name": "Dresde, Aeropuerto  Dresde Klotzsche (DRS)"
+  },
+  "DTM": {
+    "code": "DTM",
+    "name": "Dortmund, Aeropuerto Int. de Dortmund (DTM)"
+  },
+  "DUB": {
+    "code": "DUB",
+    "name": "Dublin, Aeropuerto de Dublin (DUB)"
+  },
+  "DUD": {
+    "code": "DUD",
+    "name": "Dunedin, Aeropuerto de Dunedin (DUD)"
+  },
+  "DUR": {
+    "code": "DUR",
+    "name": "Durban, Aeropuerto Int. De King Shaka (DUR)"
+  },
+  "DUS": {
+    "code": "DUS",
+    "name": "Düsseldorf, Aeropuerto Int. de  Düsseldorf (DUS)"
+  },
+  "DWC": {
+    "code": "DWC",
+    "name": "Dubai, Aeropuerto De Dubai World Central (DWC)"
+  },
+  "DXB": {
+    "code": "DXB",
+    "name": "Dubai, Aeropuerto Int. de Dubai (DXB)"
+  },
+  "DYG": {
+    "code": "DYG",
+    "name": "ZHANGJIAJIE, AEROPUERTO HEHUA (DYG)"
+  },
+  "EAS": {
+    "code": "EAS",
+    "name": "San Sebastian, Aeropuerto de San Sebastián (EAS)"
+  },
+  "EBJ": {
+    "code": "EBJ",
+    "name": "Esbjerg, Aeropuerto de Esbjerg (EBJ)"
+  },
+  "ECN": {
+    "code": "ECN",
+    "name": "Ercan, Aeropuerto de Ercan (ECN)"
+  },
+  "EDI": {
+    "code": "EDI",
+    "name": "Edimburgo, Aeropuerto de Edimburgo (EDI)"
+  },
+  "EFL": {
+    "code": "EFL",
+    "name": "Cefalonia, Aeropuerto Int. de Cefalonia (EFL)"
+  },
+  "EGO": {
+    "code": "EGO",
+    "name": "Belgorod, Aeropuerto Internacional de Belgorod (EGO)"
+  },
+  "EOH": {
+    "code": "EOH",
+    "name": "Medellín, Aeropuerto Olaya Herrera (EOH)"
+  },
+  "EPS": {
+    "code": "EPS",
+    "name": "Samana, Aeropuerto Int. De El Portillo (EPS)"
+  },
+  "ESB": {
+    "code": "ESB",
+    "name": "Ankara, Aeropuerto Int. De Esenboga (ESB)"
+  },
+  "EVN": {
+    "code": "EVN",
+    "name": "Zvartnots, Aeropuerto Int. Zvartnots (EVN)"
+  },
+  "EWR": {
+    "code": "EWR",
+    "name": "Newark, Aeropuerto Int. Libertad de Newark (EWR)"
+  },
+  "EZE": {
+    "code": "EZE",
+    "name": "Buenos Aires, Aeropuerto Int. Ministro Pistarini (EZE)"
+  },
+  "FAO": {
+    "code": "FAO",
+    "name": "Algarve, Aeropuerto Int. De Faro (FAO)"
+  },
+  "FCO": {
+    "code": "FCO",
+    "name": "Roma Fiumicino, Aeropuerto Int. Leonardo da Vinci (FCO)"
+  },
+  "FDH": {
+    "code": "FDH",
+    "name": "Friedrichshafen, Aeropuerto de Friedrichshafen (FDH)"
+  },
+  "FEZ": {
+    "code": "FEZ",
+    "name": "Fez, Aeropuerto de Fez Saïs (FEZ)"
+  },
+  "FFA": {
+    "code": "FFA",
+    "name": "Cozumel, Puerto (FFA)"
+  },
+  "FKB": {
+    "code": "FKB",
+    "name": "Karlsruhe, Baden Baden Aeropuerto (FKB)"
+  },
+  "FLL": {
+    "code": "FLL",
+    "name": "Fort Lauderdale, Aeropuerto Int. Fort Lauderdale (FLL)"
+  },
+  "FLN": {
+    "code": "FLN",
+    "name": "Florianopolis, Aeropuerto Int. De Hercílio Luz (FLN)"
+  },
+  "FLR": {
+    "code": "FLR",
+    "name": "Florencia, Aeropuerto De Peretola (FLR)"
+  },
+  "FLW": {
+    "code": "FLW",
+    "name": "Santa Cruz Das Flores, Aeropuerto De Flores (FLW)"
+  },
+  "FMO": {
+    "code": "FMO",
+    "name": "Münster Osnabrück, Ap. Int. Münster Osnabrück (FMO)"
+  },
+  "FNC": {
+    "code": "FNC",
+    "name": "Madeira, Aeropuerto Int. de Madeira (FNC)"
+  },
+  "FOR": {
+    "code": "FOR",
+    "name": "Fortaleza, Aeropuerto Int. Pinto Martins (FOR)"
+  },
+  "FOT": {
+    "code": "FOT",
+    "name": "Kowloon, Terminal De Cruceros Ocean (FOT)"
+  },
+  "FPO": {
+    "code": "FPO",
+    "name": "Freeport, Aeropuerto Int. De Grand Bahama (FPO)"
+  },
+  "FRA": {
+    "code": "FRA",
+    "name": "Frankfurt, Aeropuerto De Frankfurt Am Main (FRA)"
+  },
+  "FTE": {
+    "code": "FTE",
+    "name": "El Calafate, Aeropuerto Comandante Armando Tola (FTE)"
+  },
+  "FUE": {
+    "code": "FUE",
+    "name": "Fuerteventura, Aeropuerto  de Fuerteventura (FUE)"
+  },
+  "FUK": {
+    "code": "FUK",
+    "name": "Fukuoka, Aeropuerto de Fukuoka (FUK)"
+  },
+  "GDL": {
+    "code": "GDL",
+    "name": "Guadalajara, Ap. Int. De Miguel Hidalgo y Costilla (GDL)"
+  },
+  "GDN": {
+    "code": "GDN",
+    "name": "Gdansk, Aeropuerto De Lech Walesa (GDN)"
+  },
+  "GIB": {
+    "code": "GIB",
+    "name": "Aeropuerto De Gibraltar (GIB)"
+  },
+  "GIG": {
+    "code": "GIG",
+    "name": "Río De Janeiro, Ap. Int. Antônio Carlos Jobim (GIG)"
+  },
+  "GLA": {
+    "code": "GLA",
+    "name": "Glasgow, Aeropuerto Int. de Glasgow (GLA)"
+  },
+  "GMP": {
+    "code": "GMP",
+    "name": "Seúl, Aeropuerto Int. De Gimpo (GMP)"
+  },
+  "GNB": {
+    "code": "GNB",
+    "name": "Grenoble, Aeropuerto Int. de Grenoble Isère (GNB)"
+  },
+  "GND": {
+    "code": "GND",
+    "name": "Granada Point Salines Int. Aerop (GND)"
+  },
+  "GOA": {
+    "code": "GOA",
+    "name": "Genova, Aeropuerto De Cristoforo Colombo (GOA)"
+  },
+  "GOI": {
+    "code": "GOI",
+    "name": "Goa, Aeropuerto Int. De Dabolim (GOI)"
+  },
+  "GOJ": {
+    "code": "GOJ",
+    "name": "Nizhny Novgorod, Aeropuerto Internacional de Nizhn (GOJ)"
+  },
+  "GOT": {
+    "code": "GOT",
+    "name": "GOTHENBURG AIRPORT (GOT)"
+  },
+  "GPA": {
+    "code": "GPA",
+    "name": "Patras, Aeropuerto De Araxos (GPA)"
+  },
+  "GRO": {
+    "code": "GRO",
+    "name": "Gerona, Aeropuerto De Girona Costa Brava (GRO)"
+  },
+  "GRU": {
+    "code": "GRU",
+    "name": "Sao Paulo, Aeropuerto Int. de São Paulo Guarulhos (GRU)"
+  },
+  "GRW": {
+    "code": "GRW",
+    "name": "Isla Graciosa, Aeropuerto Isla Graciosa (GRW)"
+  },
+  "GRX": {
+    "code": "GRX",
+    "name": "Granada, Aeropuerto De Federico García Lorca (GRX)"
+  },
+  "GUA": {
+    "code": "GUA",
+    "name": "Guatemala, Aeropuerto Int. De La Aurora (GUA)"
+  },
+  "GUW": {
+    "code": "GUW",
+    "name": "Atyrau, Aeropuerto de Atyrau (GUW)"
+  },
+  "GVA": {
+    "code": "GVA",
+    "name": "Ginebra, Aeropuerto Int. de Ginebra (GVA)"
+  },
+  "GYD": {
+    "code": "GYD",
+    "name": "Bakú, Aeropuerto Int. De Heydar Aliyev (GYD)"
+  },
+  "GYE": {
+    "code": "GYE",
+    "name": "Guayaquil, Aeropuerto Int. José Joaquín de Olmedo (GYE)"
+  },
+  "GZP": {
+    "code": "GZP",
+    "name": "Antalya, Aeropuerto De Gazipasa (GZP)"
+  },
+  "HAJ": {
+    "code": "HAJ",
+    "name": "Hanover, Aeropuerto de Langenhagen (HAJ)"
+  },
+  "HAM": {
+    "code": "HAM",
+    "name": "Hamburgo, Aeropuerto de Hamburgo (HAM)"
+  },
+  "HAN": {
+    "code": "HAN",
+    "name": "Hanoi, Aeropuerto Int. De Noi Bai (HAN)"
+  },
+  "HAV": {
+    "code": "HAV",
+    "name": "La Habana, Aeropuerto Int. De José Martí (HAV)"
+  },
+  "HAW": {
+    "code": "HAW",
+    "name": "Harwich, Puerto de Harwich (HAW)"
+  },
+  "HDN": {
+    "code": "HDN",
+    "name": "Hayden, Aeropuerto Yampa Valley (HDN)"
+  },
+  "HDS": {
+    "code": "HDS",
+    "name": "Hoedspruit, Aeropuerto Hoedspruit (HDS)"
+  },
+  "HEH": {
+    "code": "HEH",
+    "name": "Heho, Aeropuerto de Heho (HEH)"
+  },
+  "HEL": {
+    "code": "HEL",
+    "name": "Helsinki, Aeropuerto De Helsinki Vantaa (HEL)"
+  },
+  "HER": {
+    "code": "HER",
+    "name": "Heraclión, Aeropuerto Int. De Nikos Kazantzakis (HER)"
+  },
+  "HGH": {
+    "code": "HGH",
+    "name": "Hangzhou, Aeropuerto Int. De Xiaoshan (HGH)"
+  },
+  "HGN": {
+    "code": "HGN",
+    "name": "Mae Hong Son, Aeropuerto Mae Hong Son (HGN)"
+  },
+  "HHN": {
+    "code": "HHN",
+    "name": "Frankfurt, Aeropuerto De Frankfurt Hahn (HHN)"
+  },
+  "HHQ": {
+    "code": "HHQ",
+    "name": "Hua Hin Apto (HHQ)"
+  },
+  "HKG": {
+    "code": "HKG",
+    "name": "Hong Kong, Aeropuerto Int. de Hong Kong (HKG)"
+  },
+  "HKT": {
+    "code": "HKT",
+    "name": "Phuket, Aeropuerto Int. de Phuket (HKT)"
+  },
+  "HMA": {
+    "code": "HMA",
+    "name": "Khanty-Mansiysk, Aeropuerto de Khanty Mansiysk (HMA)"
+  },
+  "HND": {
+    "code": "HND",
+    "name": "Tokio, Aeropuerto Int. De Haneda (HND)"
+  },
+  "HNL": {
+    "code": "HNL",
+    "name": "Honolulu, Aeropuerto Int. de Honolulu (HNL)"
+  },
+  "HOG": {
+    "code": "HOG",
+    "name": "Holguin, Aeropuerto Int. De Frank País (HOG)"
+  },
+  "HOR": {
+    "code": "HOR",
+    "name": "Isla De Faial, Aeropuerto De Horta (HOR)"
+  },
+  "HOU": {
+    "code": "HOU",
+    "name": "Houston, Aeropuerto De William P Hobby (HOU)"
+  },
+  "HRG": {
+    "code": "HRG",
+    "name": "Hurghada, Aeropuerto Int. de Hurghada (HRG)"
+  },
+  "HTA": {
+    "code": "HTA",
+    "name": "Chita, Aeropuerto Chita-Kadala (HTA)"
+  },
+  "HUI": {
+    "code": "HUI",
+    "name": "Hue, Aeropuerto Int. De Phu Bai (HUI)"
+  },
+  "HUX": {
+    "code": "HUX",
+    "name": "Huatulco, Aeropuerto Int. de Bahías de Huatulco (HUX)"
+  },
+  "IAD": {
+    "code": "IAD",
+    "name": "Washington, Aeropuerto Int. De Dulles (IAD)"
+  },
+  "IAH": {
+    "code": "IAH",
+    "name": "Houston, Aeropuerto Int. George Bush (IAH)"
+  },
+  "IAR": {
+    "code": "IAR",
+    "name": "Tunoshna, Aeropuerto de Tunoshna (IAR)"
+  },
+  "IBZ": {
+    "code": "IBZ",
+    "name": "Ibiza, Aeropuerto de Ibiza San José (IBZ)"
+  },
+  "ICN": {
+    "code": "ICN",
+    "name": "Seúl, Aeropuerto Int. De Incheon (ICN)"
+  },
+  "IEV": {
+    "code": "IEV",
+    "name": "Kiev Zhulyany, Aeropuerto Int. Zhulyany (IEV)"
+  },
+  "IGR": {
+    "code": "IGR",
+    "name": "Puerto Iguazú, Aeropuerto Int. Cataratas del Iguaz (IGR)"
+  },
+  "IGU": {
+    "code": "IGU",
+    "name": "Foz do Iguaçu, Aeropuerto Int. De Cataratas (IGU)"
+  },
+  "IJK": {
+    "code": "IJK",
+    "name": "Izhevsk, Aeropuerto de Izhevsk (IJK)"
+  },
+  "IKT": {
+    "code": "IKT",
+    "name": "Irkutsk, Aeropuerto de Irkutsk (IKT)"
+  },
+  "INN": {
+    "code": "INN",
+    "name": "Innsbruck, Aeropuerto de Innsbruck (INN)"
+  },
+  "INV": {
+    "code": "INV",
+    "name": "Inverness, Aeropuerto de Inverness (INV)"
+  },
+  "IST": {
+    "code": "IST",
+    "name": "Estambul, Aeropuerto Int. Ataturk (IST)"
+  },
+  "ITM": {
+    "code": "ITM",
+    "name": "Osaka, Aeropuerto Int. de Osaka (ITM)"
+  },
+  "JAI": {
+    "code": "JAI",
+    "name": "Jaipur, Aeropuerto de Jaipur (JAI)"
+  },
+  "JER": {
+    "code": "JER",
+    "name": "Saint Helier, Aeropuerto Jersey (JER)"
+  },
+  "JFK": {
+    "code": "JFK",
+    "name": "Nueva York, Aeropuerto Int. John F Kennedy (JFK)"
+  },
+  "JHB": {
+    "code": "JHB",
+    "name": "Johor, Aeropuerto Int. De Senai (JHB)"
+  },
+  "JMK": {
+    "code": "JMK",
+    "name": "Mikonos, Aeropuerto Nacional de Mikonos (JMK)"
+  },
+  "JNB": {
+    "code": "JNB",
+    "name": "Johannesburgo, Aeropuerto Int. De O R  Tambo (JNB)"
+  },
+  "JNX": {
+    "code": "JNX",
+    "name": "Naxos, Aeropuerto Nacional (JNX)"
+  },
+  "JOG": {
+    "code": "JOG",
+    "name": "Yogyakarta, Aeropuerto De Adisutjipto (JOG)"
+  },
+  "JPA": {
+    "code": "JPA",
+    "name": "Joao Pessoa, Aeropuerto Int. Presidente Castro Pin (JPA)"
+  },
+  "JSH": {
+    "code": "JSH",
+    "name": "Sitia, Aeropuerto de Sitia (JSH)"
+  },
+  "JSI": {
+    "code": "JSI",
+    "name": "Skíathos, Aeropuerto De Alexandros Papadiamantis (JSI)"
+  },
+  "JTR": {
+    "code": "JTR",
+    "name": "Santorini Thira, Aeropuerto Nacional (JTR)"
+  },
+  "JUL": {
+    "code": "JUL",
+    "name": "Juliaca, Aeropuerto Int. Inca Manco Capac (JUL)"
+  },
+  "KBP": {
+    "code": "KBP",
+    "name": "Boryspil Kiev, Aeropuerto Int. de Boryspil (KBP)"
+  },
+  "KBV": {
+    "code": "KBV",
+    "name": "Krabi, Aeropuerto Krabi (KBV)"
+  },
+  "KCH": {
+    "code": "KCH",
+    "name": "Kuching, Aeropuerto Int. Kuching (KCH)"
+  },
+  "KEF": {
+    "code": "KEF",
+    "name": "Reykjavik, Aeropuerto Int. de Keflavic (KEF)"
+  },
+  "KEJ": {
+    "code": "KEJ",
+    "name": "Kemerovo, Aeropuerto de Kemerovo (KEJ)"
+  },
+  "KGD": {
+    "code": "KGD",
+    "name": "Kaliningrad, Aeropuerto Khrabrovo (KGD)"
+  },
+  "KGS": {
+    "code": "KGS",
+    "name": "Kos, Aeropuerto Int. De Hipócrates (KGS)"
+  },
+  "KHH": {
+    "code": "KHH",
+    "name": "Kaohsiung, Aeropuerto Int. Kaohsiung (KHH)"
+  },
+  "KHV": {
+    "code": "KHV",
+    "name": "Khabarovsk, Aeropuerto Khabarovsk-Novy (KHV)"
+  },
+  "KIN": {
+    "code": "KIN",
+    "name": "Kingston, Aeropuerto Int. Norman Manley (KIN)"
+  },
+  "KIV": {
+    "code": "KIV",
+    "name": "Moldova, Aeropuerto Internacional Chişinău (KIV)"
+  },
+  "KIX": {
+    "code": "KIX",
+    "name": "Osaka, Aeropuerto Int. De Kansai (KIX)"
+  },
+  "KJA": {
+    "code": "KJA",
+    "name": "Krasnoyarsk, Aeropuerto Yemelyanovo (KJA)"
+  },
+  "KKC": {
+    "code": "KKC",
+    "name": "Khon Kaen, Aeropuerto Khon Kaen (KKC)"
+  },
+  "KLO": {
+    "code": "KLO",
+    "name": "Kalibo, Aeropuerto Int. De Kalibo (KLO)"
+  },
+  "KLT": {
+    "code": "KLT",
+    "name": "Budapest, Estación De Tren Keleti (KLT)"
+  },
+  "KLV": {
+    "code": "KLV",
+    "name": "Karlovy Vary, Aeropuerto de Karlovy Vary (KLV)"
+  },
+  "KLX": {
+    "code": "KLX",
+    "name": "Kalamata, Aeropuerto de Kalamata (KLX)"
+  },
+  "KOA": {
+    "code": "KOA",
+    "name": "Kona, Aeropuerto Int. de Kona (KOA)"
+  },
+  "KOS": {
+    "code": "KOS",
+    "name": "Sihanoukville, Aeropuerto Internacional de Sihanou (KOS)"
+  },
+  "KRK": {
+    "code": "KRK",
+    "name": "Cracovia, Aeropuerto Int. De Juan Pablo II (KRK)"
+  },
+  "KRR": {
+    "code": "KRR",
+    "name": "Krasnodar, Aeropuerto Internacional de Krasnodar (KRR)"
+  },
+  "KTW": {
+    "code": "KTW",
+    "name": "Katowice, Aeropuerto Int. Katowice (KTW)"
+  },
+  "KUA": {
+    "code": "KUA",
+    "name": "Kuantan, Aeropuerto De Sultan Ahmad Shah (KUA)"
+  },
+  "KUF": {
+    "code": "KUF",
+    "name": "Samara, Aeropuerto Internacional Kurumoch (KUF)"
+  },
+  "KUL": {
+    "code": "KUL",
+    "name": "Kuala Lumpur, Aeropuerto Int. (KUL)"
+  },
+  "KVX": {
+    "code": "KVX",
+    "name": "Kirov, Aeropuerto Pobedilovo (KVX)"
+  },
+  "KWE": {
+    "code": "KWE",
+    "name": "GUIZHOU, AEROPUERTO INT. GUIYANG LONGDONGBAO (KWE)"
+  },
+  "KWL": {
+    "code": "KWL",
+    "name": "Guilin Liangjiang, Aeropuerto Int. Guilin Liangjia (KWL)"
+  },
+  "KYA": {
+    "code": "KYA",
+    "name": "Konya, Aeropuerto de Konya (KYA)"
+  },
+  "KZN": {
+    "code": "KZN",
+    "name": "Kazan, Aeropuerto Internacional de Kazan (KZN)"
+  },
+  "LAS": {
+    "code": "LAS",
+    "name": "Las Vegas, Aeropuerto Int. Mccarran (LAS)"
+  },
+  "LAX": {
+    "code": "LAX",
+    "name": "Los Angeles, Aeropuerto Int. de Los Angeles (LAX)"
+  },
+  "LBA": {
+    "code": "LBA",
+    "name": "Leeds, Aeropuerto Int. de Leeds Bradford (LBA)"
+  },
+  "LCA": {
+    "code": "LCA",
+    "name": "Larnaca, Aeropuerto Internacional (LCA)"
+  },
+  "LCG": {
+    "code": "LCG",
+    "name": "La Coruña, Aeropuerto de La Coruña (LCG)"
+  },
+  "LCY": {
+    "code": "LCY",
+    "name": "Londres, Aeropuerto de la Ciudad de Londres (LCY)"
+  },
+  "LED": {
+    "code": "LED",
+    "name": "San Petersburgo, Aeropuerto De Pulkovo (LED)"
+  },
+  "LEI": {
+    "code": "LEI",
+    "name": "Almeria, Aeropuerto de Almería (LEI)"
+  },
+  "LEJ": {
+    "code": "LEJ",
+    "name": "Leipzig Halle, Aeropuerto de Leipzig Halle (LEJ)"
+  },
+  "LEN": {
+    "code": "LEN",
+    "name": "Leon, Aeropuerto  de León (LEN)"
+  },
+  "LGA": {
+    "code": "LGA",
+    "name": "Nueva York, Aeropuerto De La Guardia (LGA)"
+  },
+  "LGB": {
+    "code": "LGB",
+    "name": "Long Beach, Aeropuerto de Long Beach (LGB)"
+  },
+  "LGG": {
+    "code": "LGG",
+    "name": "LIEGE AIRPORT (LGG)"
+  },
+  "LGK": {
+    "code": "LGK",
+    "name": "Langkawi, Aeropuerto Int. de Langkawi (LGK)"
+  },
+  "LGW": {
+    "code": "LGW",
+    "name": "Londres, Aeropuerto De Gatwick (LGW)"
+  },
+  "LHB": {
+    "code": "LHB",
+    "name": "Lombok, Puerto De Lembar (LHB)"
+  },
+  "LHR": {
+    "code": "LHR",
+    "name": "Londres, Aeropuerto Int. De Heathrow (LHR)"
+  },
+  "LIH": {
+    "code": "LIH",
+    "name": "Lihue, Aeropuerto Lihue (LIH)"
+  },
+  "LIL": {
+    "code": "LIL",
+    "name": "Lille, Aeropuerto De Lille Lesquin (LIL)"
+  },
+  "LIM": {
+    "code": "LIM",
+    "name": "Lima, Aeropuerto Int. De Jorge Chávez (LIM)"
+  },
+  "LIN": {
+    "code": "LIN",
+    "name": "Milán, Aeropuerto Int. De Linate (LIN)"
+  },
+  "LIR": {
+    "code": "LIR",
+    "name": "Liberia, Aeropuerto Int. Daniel Oduber Quirós (LIR)"
+  },
+  "LIS": {
+    "code": "LIS",
+    "name": "Lisboa, Aeropuerto De Portela (LIS)"
+  },
+  "LJG": {
+    "code": "LJG",
+    "name": "Lijiang, Aeropuerto De Sanyi (LJG)"
+  },
+  "LJU": {
+    "code": "LJU",
+    "name": "Liubliana, Aeropuerto de Brnik (LJU)"
+  },
+  "LOP": {
+    "code": "LOP",
+    "name": "Lombok, Aeropuerto Int. de Lombok (LOP)"
+  },
+  "LOS": {
+    "code": "LOS",
+    "name": "AEROPUERTO MURTALA MUHAMMED (LOS)"
+  },
+  "LPA": {
+    "code": "LPA",
+    "name": "Gran Canaria, Aeropuerto De Las Palmas (LPA)"
+  },
+  "LPB": {
+    "code": "LPB",
+    "name": "La Paz, Aeropuerto Int. De El Alto (LPB)"
+  },
+  "LPL": {
+    "code": "LPL",
+    "name": "Liverpool, Aeropuerto Int. John Lennon (LPL)"
+  },
+  "LPQ": {
+    "code": "LPQ",
+    "name": "Luang Prabang, Aeropuerto Int. de Luang Prabang (LPQ)"
+  },
+  "LRH": {
+    "code": "LRH",
+    "name": "LA ROCHELLE AIRPORT (LRH)"
+  },
+  "LRM": {
+    "code": "LRM",
+    "name": "La Romana, Aeropuerto Int. de la Romana (LRM)"
+  },
+  "LSC": {
+    "code": "LSC",
+    "name": "La Serena, Aeropuerto La Florida (LSC)"
+  },
+  "LST": {
+    "code": "LST",
+    "name": "Launceston, Aeropuerto de Launceston (LST)"
+  },
+  "LTN": {
+    "code": "LTN",
+    "name": "Londres, Aeropuerto De Londres Luton (LTN)"
+  },
+  "LUX": {
+    "code": "LUX",
+    "name": "Luxemburgo, Aeropuerto Int. de Luxemburgo (LUX)"
+  },
+  "LWO": {
+    "code": "LWO",
+    "name": "Lviv, Aeropuerto Int. Lviv (LWO)"
+  },
+  "LXR": {
+    "code": "LXR",
+    "name": "Luxor, Aeropuerto Int. de Luxor (LXR)"
+  },
+  "LYI": {
+    "code": "LYI",
+    "name": "Linyi, Aeropuerto Linyi Shubuling (LYI)"
+  },
+  "LYS": {
+    "code": "LYS",
+    "name": "Lyon, Aeropuerto De Saint Exupéry (LYS)"
+  },
+  "MAA": {
+    "code": "MAA",
+    "name": "Chennai, Aeropuerto Int. de Chennai (MAA)"
+  },
+  "MAD": {
+    "code": "MAD",
+    "name": "Madrid, Aeropuerto De Barajas (MAD)"
+  },
+  "MAH": {
+    "code": "MAH",
+    "name": "Menorca, Aeropuerto De Mahon (MAH)"
+  },
+  "MAN": {
+    "code": "MAN",
+    "name": "Manchester, Aeropuerto de Manchester (MAN)"
+  },
+  "MAO": {
+    "code": "MAO",
+    "name": "Manaus, Aeropuerto Int. De Eduardo Gomes (MAO)"
+  },
+  "MAT": {
+    "code": "MAT",
+    "name": "Marsella, Estación De Tren (MAT)"
+  },
+  "MBA": {
+    "code": "MBA",
+    "name": "Mombasa, Aeropuerto Int. De Moi (MBA)"
+  },
+  "MBJ": {
+    "code": "MBJ",
+    "name": "Montego Bay, Aeropuerto Int. Sir Donald Sangster (MBJ)"
+  },
+  "MCI": {
+    "code": "MCI",
+    "name": "Kansas City, Aeropuerto Int. Kansas City (MCI)"
+  },
+  "MCO": {
+    "code": "MCO",
+    "name": "Orlando, Aeropuerto Int. de Orlando (MCO)"
+  },
+  "MCT": {
+    "code": "MCT",
+    "name": "Mascate, Aeropuerto Int. De Seeb (MCT)"
+  },
+  "MCZ": {
+    "code": "MCZ",
+    "name": "Maceio, Aeropuerto Int. De Zumbi dos Palmares (MCZ)"
+  },
+  "MDE": {
+    "code": "MDE",
+    "name": "Medellín, Aeropuerto Int. José María Córdova (MDE)"
+  },
+  "MDL": {
+    "code": "MDL",
+    "name": "Mandalay,Aeropuerto Int. de Mandalay (MDL)"
+  },
+  "MDW": {
+    "code": "MDW",
+    "name": "Chicago, Aeropuerto Int. De Midway (MDW)"
+  },
+  "MDZ": {
+    "code": "MDZ",
+    "name": "Mendoza, Aeropuerto Int. El Plumerillo (MDZ)"
+  },
+  "MEL": {
+    "code": "MEL",
+    "name": "Melbourne, Aeropuerto Int. Tullamarine (MEL)"
+  },
+  "MEM": {
+    "code": "MEM",
+    "name": "Memphis, Aeropuerto Int. de Memphis (MEM)"
+  },
+  "MES": {
+    "code": "MES",
+    "name": "Medan, Aeropuerto Int. Polonia (MES)"
+  },
+  "MEX": {
+    "code": "MEX",
+    "name": "Mexico D.F., Aeropuerto Int. Benito Juárez (MEX)"
+  },
+  "MFM": {
+    "code": "MFM",
+    "name": "Macao, Aeropuerto Int. de Macao (MFM)"
+  },
+  "MGA": {
+    "code": "MGA",
+    "name": "Tipitapa, Aeropuerto Augusto C. Sandino (MGA)"
+  },
+  "MHP": {
+    "code": "MHP",
+    "name": "Minsk, Aeropuerto Int. de Minsk (MHP)"
+  },
+  "MIA": {
+    "code": "MIA",
+    "name": "Miami, Aeropuerto Int. de Miami (MIA)"
+  },
+  "MID": {
+    "code": "MID",
+    "name": "Mérida, Aeropuerto Int. Manuel Crescencio Rejón (MID)"
+  },
+  "MIR": {
+    "code": "MIR",
+    "name": "Monastir, Aeropuerto Int. De Habib Bourguiba (MIR)"
+  },
+  "MJT": {
+    "code": "MJT",
+    "name": "Lesbos, Aeropuerto Int. De Mytilene (MJT)"
+  },
+  "MJV": {
+    "code": "MJV",
+    "name": "Murcia, Aeropuerto De Murcia San Javier (MJV)"
+  },
+  "MKE": {
+    "code": "MKE",
+    "name": "Milwaukee, Aeropuerto Int. General Mitchell (MKE)"
+  },
+  "MLA": {
+    "code": "MLA",
+    "name": "Malta, Aeropuerto Int. de Malta (MLA)"
+  },
+  "MMT": {
+    "code": "MMT",
+    "name": "Macao, Ferry Terminal Macao (MMT)"
+  },
+  "MNL": {
+    "code": "MNL",
+    "name": "Manila, Aeropuerto Int. Ninoy Aquino (MNL)"
+  },
+  "MPH": {
+    "code": "MPH",
+    "name": "Caticlan, Aeropuerto Godofredo P.Ramos (MPH)"
+  },
+  "MPL": {
+    "code": "MPL",
+    "name": "MONTPELLIERS AIRPORT (MPL)"
+  },
+  "MQP": {
+    "code": "MQP",
+    "name": "Nelspruit, Aeropuerto Int. Kruger Mpumalanga (MQP)"
+  },
+  "MRS": {
+    "code": "MRS",
+    "name": "Marsella, Aeropuerto De Provenza (MRS)"
+  },
+  "MRU": {
+    "code": "MRU",
+    "name": "Port Louis, Ap. Int. Sir Seewoosagur Ramgoolam (MRU)"
+  },
+  "MSP": {
+    "code": "MSP",
+    "name": "Mineápolis, Aeropuerto Int. De Saint Paul (MSP)"
+  },
+  "MSQ": {
+    "code": "MSQ",
+    "name": "Minsk, Aeropuerto Internacional De Minsk-2 (MSQ)"
+  },
+  "MSY": {
+    "code": "MSY",
+    "name": "Nueva Orleans, Aeropuerto Int. De Louis Armstrong (MSY)"
+  },
+  "MTY": {
+    "code": "MTY",
+    "name": "Monterrey,Aeropuerto Int. General Mariano Escobedo (MTY)"
+  },
+  "MUC": {
+    "code": "MUC",
+    "name": "Munich, Aeropuerto De Franz Josef Strauss (MUC)"
+  },
+  "MVD": {
+    "code": "MVD",
+    "name": "Montevideo, Aeropuerto Int. De Carrasco (MVD)"
+  },
+  "MXP": {
+    "code": "MXP",
+    "name": "Milán, Aeropuerto De Malpensa (MXP)"
+  },
+  "MZL": {
+    "code": "MZL",
+    "name": "Manizales, Aeropuerto La Nubia (MZL)"
+  },
+  "MZT": {
+    "code": "MZT",
+    "name": "Mazatlan, Aeropuerto Int. General Rafael Buelna (MZT)"
+  },
+  "NAP": {
+    "code": "NAP",
+    "name": "Nápoles, Aeropuerto Int. Nápoles Capodichino (NAP)"
+  },
+  "NAS": {
+    "code": "NAS",
+    "name": "Nassau, Aeropuerto Int. Lynden Pindling (NAS)"
+  },
+  "NAV": {
+    "code": "NAV",
+    "name": "Nevsehir, Aeropuerto  Nevsehir Kapadokya (NAV)"
+  },
+  "NBE": {
+    "code": "NBE",
+    "name": "Enfidha, Aeropuerto Int. De Hammamet (NBE)"
+  },
+  "NBO": {
+    "code": "NBO",
+    "name": "Nairobi, Aeropuerto Int. De Jomo Kenyatta (NBO)"
+  },
+  "NCE": {
+    "code": "NCE",
+    "name": "Niza, Aeropuerto Int. De Côte D'Azur (NCE)"
+  },
+  "NCL": {
+    "code": "NCL",
+    "name": "NEWCASTLE, AEROPUERTO INT. DE NEWCASTLE (NCL)"
+  },
+  "NGO": {
+    "code": "NGO",
+    "name": "Nagoya, Aeropuerto Int. Chubu Centrair (NGO)"
+  },
+  "NKG": {
+    "code": "NKG",
+    "name": "Nanjing, Aeropuerto Int. De Lukou Nankin (NKG)"
+  },
+  "NOL": {
+    "code": "NOL",
+    "name": "Nueva Orleans, Estación De Tren (NOL)"
+  },
+  "NQY": {
+    "code": "NQY",
+    "name": "Newquay, Aeropuerto Newquay Cornwall (NQY)"
+  },
+  "NRT": {
+    "code": "NRT",
+    "name": "Narita, Aeropuerto Int. de Narita (NRT)"
+  },
+  "NTE": {
+    "code": "NTE",
+    "name": "NANTES AIRPORT (NTE)"
+  },
+  "NUE": {
+    "code": "NUE",
+    "name": "Nuremberg, Aeropuerto de Nuremberg (NUE)"
+  },
+  "NYO": {
+    "code": "NYO",
+    "name": "Estocolmo, Aeropuerto de Estocolmo Skavsta (NYO)"
+  },
+  "NYU": {
+    "code": "NYU",
+    "name": "Bagan, Aeropuerto De Nyaung U (NYU)"
+  },
+  "OAK": {
+    "code": "OAK",
+    "name": "Oakland, Aeropuerto Int. de Oakland (OAK)"
+  },
+  "OAX": {
+    "code": "OAX",
+    "name": "Oaxaca, Aeropuerto Int. Xoxocotlan (OAX)"
+  },
+  "ODB": {
+    "code": "ODB",
+    "name": "Cordoba, Aeropuerto (ODB)"
+  },
+  "ODE": {
+    "code": "ODE",
+    "name": "Odense, Aeropuerto de Odense (ODE)"
+  },
+  "ODS": {
+    "code": "ODS",
+    "name": "Odesa, Aeropuerto Int. de Odesa (ODS)"
+  },
+  "OGG": {
+    "code": "OGG",
+    "name": "Kahului, Aeropuerto de Kahului (OGG)"
+  },
+  "OHD": {
+    "code": "OHD",
+    "name": "Ohrid, Aeropuerto De San Pablo Apóstol (OHD)"
+  },
+  "OKA": {
+    "code": "OKA",
+    "name": "Okinawa, Aeropuerto De Naha (OKA)"
+  },
+  "OLB": {
+    "code": "OLB",
+    "name": "Olbia, Aeropuerto De Costa Smeralda (OLB)"
+  },
+  "OMS": {
+    "code": "OMS",
+    "name": "Omsk, Aeropuerto Central de Omsk (OMS)"
+  },
+  "OOL": {
+    "code": "OOL",
+    "name": "Gold Coast, Aeropuerto Coolangatta (OOL)"
+  },
+  "OPO": {
+    "code": "OPO",
+    "name": "Oporto, Aeropuerto De Francisco Sá Carneiro (OPO)"
+  },
+  "ORD": {
+    "code": "ORD",
+    "name": "Chicago, Aeropuerto Int. De O'Hare (ORD)"
+  },
+  "ORY": {
+    "code": "ORY",
+    "name": "Paris, Aeropuerto De Paris Orly (ORY)"
+  },
+  "OSL": {
+    "code": "OSL",
+    "name": "Gardermoen, Aeropuerto De Oslo (OSL)"
+  },
+  "OTP": {
+    "code": "OTP",
+    "name": "Bucarest, Aeropuerto Int. De Henri Coandă (OTP)"
+  },
+  "OUD": {
+    "code": "OUD",
+    "name": "Oujda, Aeropuerto De Les Angades (OUD)"
+  },
+  "OVB": {
+    "code": "OVB",
+    "name": "Novosibirsk, Aeropuerto Tolmachevo (OVB)"
+  },
+  "OVD": {
+    "code": "OVD",
+    "name": "Asturias, Aeropuerto de Asturias (OVD)"
+  },
+  "OZZ": {
+    "code": "OZZ",
+    "name": "OUARZAZATE AEROPUERTO (OZZ)"
+  },
+  "PDL": {
+    "code": "PDL",
+    "name": "Ponta Delgada Azores, Aeropuerto De Juan Pablo II (PDL)"
+  },
+  "PDM": {
+    "code": "PDM",
+    "name": "Montevideo, Puerto de Montevideo (PDM)"
+  },
+  "PDP": {
+    "code": "PDP",
+    "name": "Maldonado, Aeropuerto Int. De Punta Del Este (PDP)"
+  },
+  "PDV": {
+    "code": "PDV",
+    "name": "Plovdiv, Aeropuerto de Plovdiv (PDV)"
+  },
+  "PEE": {
+    "code": "PEE",
+    "name": "Perm, Aeropuerto Bolshoye Savino (PEE)"
+  },
+  "PEI": {
+    "code": "PEI",
+    "name": "Pereira, Aeropuerto Int. de Matecaña (PEI)"
+  },
+  "PEK": {
+    "code": "PEK",
+    "name": "Pekin, Aeropuerto Int. Capital (PEK)"
+  },
+  "PEN": {
+    "code": "PEN",
+    "name": "Penang, Aeropuerto Int. De Penang (PEN)"
+  },
+  "PER": {
+    "code": "PER",
+    "name": "Guildford, Aeropuerto Int. de Perth (PER)"
+  },
+  "PES": {
+    "code": "PES",
+    "name": "Petrozavodsk, Aeropuerto de Petrozavodsk (PES)"
+  },
+  "PFO": {
+    "code": "PFO",
+    "name": "Paphos, Aeropuerto Int. De Paphos (PFO)"
+  },
+  "PGT": {
+    "code": "PGT",
+    "name": "Paris, Estación De Tren Este (PGT)"
+  },
+  "PHL": {
+    "code": "PHL",
+    "name": "Filadelfia, Aeropuerto Int. De Filadelfia (PHL)"
+  },
+  "PHS": {
+    "code": "PHS",
+    "name": "Phitsanulok, Aeropuerto  Phitsanulok (PHS)"
+  },
+  "PHX": {
+    "code": "PHX",
+    "name": "Phoenix, Aeropuerto Int. De Sky Harbor (PHX)"
+  },
+  "PIT": {
+    "code": "PIT",
+    "name": "Pittsburgh, Aeropuerto Int. De Pittsburgh (PIT)"
+  },
+  "PIX": {
+    "code": "PIX",
+    "name": "Isla Pico, Aeropuerto Isla Pico (PIX)"
+  },
+  "PLS": {
+    "code": "PLS",
+    "name": "Providenciales, Aeropuerto Int. Providenciales (PLS)"
+  },
+  "PLZ": {
+    "code": "PLZ",
+    "name": "Puerto Elizabeth, Aeropuerto Port Elizabeth (PLZ)"
+  },
+  "PMC": {
+    "code": "PMC",
+    "name": "Puerto Montt, Aeropuerto Int. De El Tepual (PMC)"
+  },
+  "PMI": {
+    "code": "PMI",
+    "name": "Palma De Mallorca, Aeropuerto De Son Sant Joan (PMI)"
+  },
+  "PMO": {
+    "code": "PMO",
+    "name": "Palermo, Aeropuerto De Punta Raisi (PMO)"
+  },
+  "PMP": {
+    "code": "PMP",
+    "name": "Trang, Puerto De Pak Meng (PMP)"
+  },
+  "PMV": {
+    "code": "PMV",
+    "name": "Porlamar, Aeropuerto Int. Caribe Santiago Mariño (PMV)"
+  },
+  "PNA": {
+    "code": "PNA",
+    "name": "Pamplona, Aeropuerto  de Pamplona (PNA)"
+  },
+  "PNH": {
+    "code": "PNH",
+    "name": "Phnom Penh, Aeropuerto Int. Phnom Penh (PNH)"
+  },
+  "POA": {
+    "code": "POA",
+    "name": "Porto Alegro, Aeropuerto Int. De Salgado Filho (POA)"
+  },
+  "POP": {
+    "code": "POP",
+    "name": "Puerto Plata, Aeropuerto Int. Gregorio Luperón (POP)"
+  },
+  "POS": {
+    "code": "POS",
+    "name": "Puerto España, Aeropuerto Int. De Piarco (POS)"
+  },
+  "POZ": {
+    "code": "POZ",
+    "name": "Poznań, Aeropuerto de Poznan Lawica (POZ)"
+  },
+  "PPR": {
+    "code": "PPR",
+    "name": "Atenas, Puerto De El Pireo (PPR)"
+  },
+  "PPS": {
+    "code": "PPS",
+    "name": "Puerto Princesa, Aeropuerto Int. Puerto Princesa (PPS)"
+  },
+  "PRG": {
+    "code": "PRG",
+    "name": "Praga, Aeropuerto Int. Praga Václav Havel (PRG)"
+  },
+  "PRI": {
+    "code": "PRI",
+    "name": "Isla Praslin, Aeropuerto Isla de Praslin (PRI)"
+  },
+  "PSA": {
+    "code": "PSA",
+    "name": "Pisa, Aeropuerto Int. De Galileo Galilei (PSA)"
+  },
+  "PTY": {
+    "code": "PTY",
+    "name": "Panama, Aeropuerto Int. De Tocumen (PTY)"
+  },
+  "PUJ": {
+    "code": "PUJ",
+    "name": "Punta Cana, Aeropuerto Int. Punta Cana (PUJ)"
+  },
+  "PUQ": {
+    "code": "PUQ",
+    "name": "Punta Arenas, Ap. Presidente C. Ibáñez Del Campo (PUQ)"
+  },
+  "PUY": {
+    "code": "PUY",
+    "name": "Pula, Aeropuerto de Pula (PUY)"
+  },
+  "PVG": {
+    "code": "PVG",
+    "name": "Shanghai, Aeropuerto Int. De Shangai Pudong (PVG)"
+  },
+  "PVK": {
+    "code": "PVK",
+    "name": "Preveza Lefkada, Aeropuerto Nacional De Aktion (PVK)"
+  },
+  "PVR": {
+    "code": "PVR",
+    "name": "Puerto Vallarta, Ap. Int. Licenciado G. Diaz Ordaz (PVR)"
+  },
+  "PXO": {
+    "code": "PXO",
+    "name": "Porto Santo, Aeropuerto de Porto Santo (PXO)"
+  },
+  "QGZ": {
+    "code": "QGZ",
+    "name": "La Gomera, Aeropuerto de la Gomera (QGZ)"
+  },
+  "RAI": {
+    "code": "RAI",
+    "name": "Santiago, Aeropuerto Int. De Praia (RAI)"
+  },
+  "RAK": {
+    "code": "RAK",
+    "name": "Marrakech, Aeropuerto De Marrakech Menara (RAK)"
+  },
+  "RAY": {
+    "code": "RAY",
+    "name": "Koh Samet, Puerto de Ban Phe (RAY)"
+  },
+  "RBA": {
+    "code": "RBA",
+    "name": "Rabat, Aeropuerto De Rabat Salé (RBA)"
+  },
+  "REC": {
+    "code": "REC",
+    "name": "Recife, Aeropuerto Int. De Gilberto Freyre (REC)"
+  },
+  "REN": {
+    "code": "REN",
+    "name": "Orenburg, Aeropuerto Central de Orenburg (REN)"
+  },
+  "REP": {
+    "code": "REP",
+    "name": "Siem Reap, Aeropuerto Int. De Angkor (REP)"
+  },
+  "REU": {
+    "code": "REU",
+    "name": "Tarragona, Aeropuerto De Reus (REU)"
+  },
+  "RGN": {
+    "code": "RGN",
+    "name": "Yangon, Aeropuerto Int. Rangún (RGN)"
+  },
+  "RGS": {
+    "code": "RGS",
+    "name": "Burgos, Aeropuerto de Burgos (RGS)"
+  },
+  "RIH": {
+    "code": "RIH",
+    "name": "Río Hato, Aeropuerto Internacional Scarlett Martin (RIH)"
+  },
+  "RIX": {
+    "code": "RIX",
+    "name": "Riga, Aeropuerto Int. De Riga (RIX)"
+  },
+  "RJK": {
+    "code": "RJK",
+    "name": "Rijeka, Aeropuerto de Rijeka (RJK)"
+  },
+  "RJL": {
+    "code": "RJL",
+    "name": "Logroño, Aeropuerto De Logroño Agoncillo (RJL)"
+  },
+  "RLG": {
+    "code": "RLG",
+    "name": "ROSTOCK–LAAGE AIRPORT (RLG)"
+  },
+  "RMF": {
+    "code": "RMF",
+    "name": "Marsa Alam, Aeropuerto Int. De Marsa Alam (RMF)"
+  },
+  "ROS": {
+    "code": "ROS",
+    "name": "Rosario, Aeropuerto Int. Rosario Islas Malvinas (ROS)"
+  },
+  "ROT": {
+    "code": "ROT",
+    "name": "Rotorua, Aerouperto de Rotorua (ROT)"
+  },
+  "ROV": {
+    "code": "ROV",
+    "name": "Rostov-on-Don, Aeropuerto Rostov-na-Donu (ROV)"
+  },
+  "RTM": {
+    "code": "RTM",
+    "name": "ROTTHERDAM AIRPORT (RTM)"
+  },
+  "RTW": {
+    "code": "RTW",
+    "name": "Saratov, Aeropuerto Central de Saratov (RTW)"
+  },
+  "SAN": {
+    "code": "SAN",
+    "name": "San Diego, Aeropuerto Int. De San Diego (SAN)"
+  },
+  "SAW": {
+    "code": "SAW",
+    "name": "Estambul, Aeropuerto Int. Sabiha Gökçen (SAW)"
+  },
+  "SBZ": {
+    "code": "SBZ",
+    "name": "Sibiu, Aeropuerto Int. De Sibiu (SBZ)"
+  },
+  "SCJ": {
+    "code": "SCJ",
+    "name": "Seattle, Terminal De Cruceros Smith Cove (SCJ)"
+  },
+  "SCL": {
+    "code": "SCL",
+    "name": "Santiago, Aerouerto Arturo Merino Benítez (SCL)"
+  },
+  "SCO": {
+    "code": "SCO",
+    "name": "Aktau, Aeropuerto de Aktau (SCO)"
+  },
+  "SCQ": {
+    "code": "SCQ",
+    "name": "Santiago De Compostela, Ap. Santiago de Compostela (SCQ)"
+  },
+  "SCU": {
+    "code": "SCU",
+    "name": "Santiago De Cuba, Aeropuerto Int. Antonio Maceo (SCU)"
+  },
+  "SDQ": {
+    "code": "SDQ",
+    "name": "Santo Domingo, Aeropuerto Int. Las Américas (SDQ)"
+  },
+  "SDR": {
+    "code": "SDR",
+    "name": "Santander, Aeropuerto De Santander Parayas (SDR)"
+  },
+  "SDU": {
+    "code": "SDU",
+    "name": "Río De Janerio, Aeropuerto Santos Dumont (SDU)"
+  },
+  "SEA": {
+    "code": "SEA",
+    "name": "Seattle Tacoma, Aeropuerto Int. Tacoma (SEA)"
+  },
+  "SEZ": {
+    "code": "SEZ",
+    "name": "Seychelles Victoria, Aeropuerto Int. De Seychelles (SEZ)"
+  },
+  "SFB": {
+    "code": "SFB",
+    "name": "Orlando, Aeropuerto Int. De Sanford (SFB)"
+  },
+  "SFG": {
+    "code": "SFG",
+    "name": "St.Martin Grand Case, Aeropuerto De Espérance (SFG)"
+  },
+  "SFO": {
+    "code": "SFO",
+    "name": "San Francisco, Aeropuerto Int.  de San Francisco (SFO)"
+  },
+  "SGC": {
+    "code": "SGC",
+    "name": "Surgut, Aeropuerto de Surgut (SGC)"
+  },
+  "SGN": {
+    "code": "SGN",
+    "name": "Ho Chi Minh, Aeropuerto Int. Tan Son Nhat (SGN)"
+  },
+  "SHA": {
+    "code": "SHA",
+    "name": "Shanghai, Aeropuerto Int. De Hongqiao (SHA)"
+  },
+  "SID": {
+    "code": "SID",
+    "name": "Sal Espargos, Aeropuerto Int. Amílcar Cabral (SID)"
+  },
+  "SIN": {
+    "code": "SIN",
+    "name": "Singapur, Aeropuerto Int. De Changi (SIN)"
+  },
+  "SJD": {
+    "code": "SJD",
+    "name": "Los Cabos, Aeropuerto Int. Los Cabos (SJD)"
+  },
+  "SJJ": {
+    "code": "SJJ",
+    "name": "Sarajevo, Aeropuerto Int. Sarajevo (SJJ)"
+  },
+  "SJO": {
+    "code": "SJO",
+    "name": "San José, Aeropuerto Int. Juan Santamaría (SJO)"
+  },
+  "SJU": {
+    "code": "SJU",
+    "name": "San Juan, Aeropuerto Int. De Luis Muñoz Marin (SJU)"
+  },
+  "SJZ": {
+    "code": "SJZ",
+    "name": "Isla De São Jorge, Aeropuerto de São Jorge (SJZ)"
+  },
+  "SKG": {
+    "code": "SKG",
+    "name": "Tesalónica, Aeropuerto Int. Tesalónica Macedonia (SKG)"
+  },
+  "SKP": {
+    "code": "SKP",
+    "name": "Skopje, Aeropuerto De Alejandro Magno (SKP)"
+  },
+  "SLA": {
+    "code": "SLA",
+    "name": "Salta, Aeropuerto Int. Martín Miguel De Güemes (SLA)"
+  },
+  "SLC": {
+    "code": "SLC",
+    "name": "Salt Lake City, Aeropuerto Int. Salt Lake City (SLC)"
+  },
+  "SLM": {
+    "code": "SLM",
+    "name": "Salamanca, Aeropuerto De Salamanca Matacán (SLM)"
+  },
+  "SLU": {
+    "code": "SLU",
+    "name": "Castries, Aeropuerto De George F. L. Charles (SLU)"
+  },
+  "SLZ": {
+    "code": "SLZ",
+    "name": "San Luis, Aeropuerto Int. Marechal Cunha Machado (SLZ)"
+  },
+  "SMA": {
+    "code": "SMA",
+    "name": "Isla De Santa Maria, Aeropuerto de Santa María (SMA)"
+  },
+  "SMF": {
+    "code": "SMF",
+    "name": "Sacramento, Aeropuerto Int. Sacramento (SMF)"
+  },
+  "SMI": {
+    "code": "SMI",
+    "name": "Samos, Aeropuerto de Samos (SMI)"
+  },
+  "SMR": {
+    "code": "SMR",
+    "name": "Santa Marta, Aeropuerto Int. Simón Bolívar (SMR)"
+  },
+  "SNA": {
+    "code": "SNA",
+    "name": "Condado de Orange, Aeropuerto De John Wayne (SNA)"
+  },
+  "SOF": {
+    "code": "SOF",
+    "name": "Sofía, Aeropuerto Int. De Sofia (SOF)"
+  },
+  "SPC": {
+    "code": "SPC",
+    "name": "La Palma, Aeropuerto de la Palma (SPC)"
+  },
+  "SPU": {
+    "code": "SPU",
+    "name": "Split, Aeropuerto de Split (SPU)"
+  },
+  "SSA": {
+    "code": "SSA",
+    "name": "Salvador De Bahía, Ap. Int. Dep. Luís E. Magalhaes (SSA)"
+  },
+  "SSH": {
+    "code": "SSH",
+    "name": "Sharm El Sheikh, Aeropuerto Int. Sharm El Sheik (SSH)"
+  },
+  "STA": {
+    "code": "STA",
+    "name": "Estrasburgo, Estación De Tren (STA)"
+  },
+  "STI": {
+    "code": "STI",
+    "name": "Santiago De Los Caballeros, Aeropuerto Internac. (STI)"
+  },
+  "STL": {
+    "code": "STL",
+    "name": "San Luis, Aeropuerto Int. De Sant Louis Lambert (STL)"
+  },
+  "STN": {
+    "code": "STN",
+    "name": "Londres, Aeropuerto de Stansted (STN)"
+  },
+  "STR": {
+    "code": "STR",
+    "name": "Stuttgart, Aerouerto de Stuttgart (STR)"
+  },
+  "STT": {
+    "code": "STT",
+    "name": "Santo Tomás, Aeropuerto Int. Cyril E. King (STT)"
+  },
+  "STW": {
+    "code": "STW",
+    "name": "Stavropol, Aeropuerto Stavropol Shpakovskoye (STW)"
+  },
+  "SUF": {
+    "code": "SUF",
+    "name": "Lamezia, Aeropuerto Int. de Lamezia Terme (SUF)"
+  },
+  "SVO": {
+    "code": "SVO",
+    "name": "Moscú, Aeropuerto Int. De Moscú Sheremetievo (SVO)"
+  },
+  "SVQ": {
+    "code": "SVQ",
+    "name": "Sevilla, Aeropuerto De Sevilla San Pablo (SVQ)"
+  },
+  "SXB": {
+    "code": "SXB",
+    "name": "Estrasburgo Entzheim,Ap. Int. Estrasburgo Entzheim (SXB)"
+  },
+  "SXF": {
+    "code": "SXF",
+    "name": "Berlin, Aeropuerto De Berlin Schönefeld (SXF)"
+  },
+  "SXM": {
+    "code": "SXM",
+    "name": "Sint Maarten, Aeropuerto Int. Princesa Juliana (SXM)"
+  },
+  "SYD": {
+    "code": "SYD",
+    "name": "Sydney, Aeropuerto Int. Kingsford Smith (SYD)"
+  },
+  "SYX": {
+    "code": "SYX",
+    "name": "Sanya, Aeropuerto Int. Phoenix (SYX)"
+  },
+  "SZB": {
+    "code": "SZB",
+    "name": "Subang, Aeropuerto De Sultan Abdul Aziz Shah (SZB)"
+  },
+  "SZG": {
+    "code": "SZG",
+    "name": "Salzburgo, Aeropuerto De Wolfgang Amadeus Mozart (SZG)"
+  },
+  "SZX": {
+    "code": "SZX",
+    "name": "Shenzhen, Aeropuerto Int. De Bao'an (SZX)"
+  },
+  "TAB": {
+    "code": "TAB",
+    "name": "Tobago, Aeropuerto Int. A.N.R. Robinson (TAB)"
+  },
+  "TAO": {
+    "code": "TAO",
+    "name": "Qingdao, Aeropuerto Int. De Liuting (TAO)"
+  },
+  "TBJ": {
+    "code": "TBJ",
+    "name": "Tabarka, Aeropuerto Int. De Ain Draham (TBJ)"
+  },
+  "TBS": {
+    "code": "TBS",
+    "name": "Aeropuerto Internacional De Tblisi (TBS)"
+  },
+  "TDX": {
+    "code": "TDX",
+    "name": "Trat, Aeropuerto Trat (TDX)"
+  },
+  "TER": {
+    "code": "TER",
+    "name": "Isla Terceira, Aeropuerto De Lajes (TER)"
+  },
+  "TFN": {
+    "code": "TFN",
+    "name": "Tenerife, Aeropuerto De Tenerife Norte (TFN)"
+  },
+  "TFS": {
+    "code": "TFS",
+    "name": "Tenerife, Aeropuerto De Tenerife Sur (TFS)"
+  },
+  "TGD": {
+    "code": "TGD",
+    "name": "Podgorica, Aeropuerto de Podgorica (TGD)"
+  },
+  "TGG": {
+    "code": "TGG",
+    "name": "Terengganu, Aeropuerto De Sultan Mahmud (TGG)"
+  },
+  "TGZ": {
+    "code": "TGZ",
+    "name": "Tuxtla Gutiérrez, Ap. Int. Ángel Albino Corzo (TGZ)"
+  },
+  "TIJ": {
+    "code": "TIJ",
+    "name": "Tijuana, Aeropuero Internacional General Abelardo (TIJ)"
+  },
+  "TIV": {
+    "code": "TIV",
+    "name": "Tivat, Aeropuerto Tivat (TIV)"
+  },
+  "TJM": {
+    "code": "TJM",
+    "name": "Tyumen, Aeropuerto Internacional Roshchino (TJM)"
+  },
+  "TLL": {
+    "code": "TLL",
+    "name": "Tallin, Aeropuerto de Tallin (TLL)"
+  },
+  "TLS": {
+    "code": "TLS",
+    "name": "Toulouse, Aeropuerto Toulouse Blagnac (TLS)"
+  },
+  "TLV": {
+    "code": "TLV",
+    "name": "Tel Aviv, Aeropuerto Int. Ben Gurión (TLV)"
+  },
+  "TNG": {
+    "code": "TNG",
+    "name": "Tánger, Aeropuerto Int. De Tanger Ibn Batouta (TNG)"
+  },
+  "TOF": {
+    "code": "TOF",
+    "name": "Tomsk, Aeropuerto Bogashevo (TOF)"
+  },
+  "TOR": {
+    "code": "TOR",
+    "name": "Toronto, Aeropuerto International Pearson (TOR)"
+  },
+  "TPA": {
+    "code": "TPA",
+    "name": "Tampa, Aeropuerto Int. De Tampa (TPA)"
+  },
+  "TPE": {
+    "code": "TPE",
+    "name": "Taipei, Aeropuerto Int. De Taiwan Taoyuan (TPE)"
+  },
+  "TRN": {
+    "code": "TRN",
+    "name": "Turín, Aeropuerto De Caselle (TRN)"
+  },
+  "TRU": {
+    "code": "TRU",
+    "name": "Trujillo, Aeropuerto Int. Carlos Martinez (TRU)"
+  },
+  "TRV": {
+    "code": "TRV",
+    "name": "Thiruvananthapuram, Aeropuerto Int. Thiruvananthap (TRV)"
+  },
+  "TSE": {
+    "code": "TSE",
+    "name": "Astana, Aeropuerto Internacional de Astana (TSE)"
+  },
+  "TSN": {
+    "code": "TSN",
+    "name": "Tianjin, Aeropuerto Int. De Binhai (TSN)"
+  },
+  "TSR": {
+    "code": "TSR",
+    "name": "Timisoara, Aeropuerto De Traian Vuia (TSR)"
+  },
+  "TUN": {
+    "code": "TUN",
+    "name": "Túnez Cartago, Aeropuerto Int. Tunez Cartago (TUN)"
+  },
+  "TXL": {
+    "code": "TXL",
+    "name": "Berlin, Aeropuerto De Berlin Tegel (TXL)"
+  },
+  "TZX": {
+    "code": "TZX",
+    "name": "Trabzon, Aeropuerto Trabzon (TZX)"
+  },
+  "UFA": {
+    "code": "UFA",
+    "name": "Ufa, Aeropuerto Internacional de Ufa (UFA)"
+  },
+  "UIO": {
+    "code": "UIO",
+    "name": "Quito, Aeropuerto Int. De Mariscal Sucre (UIO)"
+  },
+  "ULY": {
+    "code": "ULY",
+    "name": "Ulyanovsk, Aeropuerto Este de Ulyanovsk (ULY)"
+  },
+  "URT": {
+    "code": "URT",
+    "name": "Surat Thani, Aeropuerto Surat Thani (URT)"
+  },
+  "USH": {
+    "code": "USH",
+    "name": "Ushuaia, Aeropuerto Int. Malvinas Argentinas (USH)"
+  },
+  "USM": {
+    "code": "USM",
+    "name": "Koh Samui, Aeropuerto Int. Koh Samui (USM)"
+  },
+  "UTP": {
+    "code": "UTP",
+    "name": "Utapao, Aeropuerto Rayong Pattaya Intl (UTP)"
+  },
+  "UUD": {
+    "code": "UUD",
+    "name": "Ulan Ude, Aeropuerto de Ulan-Ude (Mukhino) (UUD)"
+  },
+  "UVF": {
+    "code": "UVF",
+    "name": "Vieux Fort, Aeropuerto Int. De Hewanorra (UVF)"
+  },
+  "VAR": {
+    "code": "VAR",
+    "name": "Varna, Aeropuerto  de Varna (VAR)"
+  },
+  "VCE": {
+    "code": "VCE",
+    "name": "Venecia, Aeropuerto Int. De Marco Polo (VCE)"
+  },
+  "VER": {
+    "code": "VER",
+    "name": "Veracruz, Aeropuerto Int. General Heriberto Jara (VER)"
+  },
+  "VGO": {
+    "code": "VGO",
+    "name": "Vigo, Aeropuerto de Vigo (VGO)"
+  },
+  "VIC": {
+    "code": "VIC",
+    "name": "Londres, Estación De Tren London Victoria (VIC)"
+  },
+  "VIE": {
+    "code": "VIE",
+    "name": "Viena, Aeropuerto Int. De Schwechat (VIE)"
+  },
+  "VIT": {
+    "code": "VIT",
+    "name": "Vitoria, Aeropuerto Vitoria (VIT)"
+  },
+  "VKO": {
+    "code": "VKO",
+    "name": "Moscow, Vnukovo Int. Airport (VKO)"
+  },
+  "VLC": {
+    "code": "VLC",
+    "name": "Valencia, Aeropuerto de Manises (VLC)"
+  },
+  "VLL": {
+    "code": "VLL",
+    "name": "Valladolid, Aeropuerto de Valladolid (VLL)"
+  },
+  "VNO": {
+    "code": "VNO",
+    "name": "Vilna, Aeropuerto Int. De Vilna (VNO)"
+  },
+  "VOG": {
+    "code": "VOG",
+    "name": "Volgograd, Aeropuerto Internacional de Volgograd (VOG)"
+  },
+  "VOZ": {
+    "code": "VOZ",
+    "name": "Voronezh, Aeropuerto Internacional de Voronezh (VOZ)"
+  },
+  "VRA": {
+    "code": "VRA",
+    "name": "Varadero, Aeropuerto Int. Juan Gualberto Gómez (VRA)"
+  },
+  "VRN": {
+    "code": "VRN",
+    "name": "Verona, Aeropuerto Verona Villafranca (VRN)"
+  },
+  "VSA": {
+    "code": "VSA",
+    "name": "Villahermosa,Aeropuerto Int. Carlos Rovirosa Perez (VSA)"
+  },
+  "VST": {
+    "code": "VST",
+    "name": "Vasteras, Aeropuerto de Estocolmo Vasteras (VST)"
+  },
+  "VTE": {
+    "code": "VTE",
+    "name": "Vientián, Aeropuerto Int. De Wattay (VTE)"
+  },
+  "VVI": {
+    "code": "VVI",
+    "name": "Santa Cruz, Aeropuerto Int. De Viru Viru (VVI)"
+  },
+  "VVO": {
+    "code": "VVO",
+    "name": "Vladivostok, Aeropuerto Internacional de Vladivost (VVO)"
+  },
+  "VXE": {
+    "code": "VXE",
+    "name": "São Vicente, Aeropuerto De São Pedro (VXE)"
+  },
+  "WAW": {
+    "code": "WAW",
+    "name": "Varsovia, Aeropuerto De Frederic Chopin (WAW)"
+  },
+  "WDH": {
+    "code": "WDH",
+    "name": "Windhoek, Aeropuerto Int. De Hosea Kutako (WDH)"
+  },
+  "WIT": {
+    "code": "WIT",
+    "name": "Londres, Estación De Tren Waterloo (WIT)"
+  },
+  "WLG": {
+    "code": "WLG",
+    "name": "Wellington, Aeropuerto de Wellington (WLG)"
+  },
+  "WMI": {
+    "code": "WMI",
+    "name": "Varsovia, Aeropuerto de Modlin (WMI)"
+  },
+  "WRO": {
+    "code": "WRO",
+    "name": "Breslavia, Aeropuerto De Nicolaus Copérnico (WRO)"
+  },
+  "WUX": {
+    "code": "WUX",
+    "name": "WUXI, AEROPUERTO INT. SUNAN SHUOFANG (WUX)"
+  },
+  "WVB": {
+    "code": "WVB",
+    "name": "Walvis Bay, Aeropuerto Rooikop (WVB)"
+  },
+  "XIY": {
+    "code": "XIY",
+    "name": "Xi An, Aeropuerto Int. De Xianyang (XIY)"
+  },
+  "XKL": {
+    "code": "XKL",
+    "name": "Kuala Lumpur, Estación De Tren Central (XKL)"
+  },
+  "XMN": {
+    "code": "XMN",
+    "name": "Xiamen, Aeropuerto Int. De Gaoqi (XMN)"
+  },
+  "XQP": {
+    "code": "XQP",
+    "name": "Quepos, Aeropuerto La Managua (XQP)"
+  },
+  "XRY": {
+    "code": "XRY",
+    "name": "Jerez de la Frontera, Aeropuerto De Jerez (XRY)"
+  },
+  "XYD": {
+    "code": "XYD",
+    "name": "Lyon, Estación De Tren (XYD)"
+  },
+  "YOW": {
+    "code": "YOW",
+    "name": "Ottawa, Aeropuerto Int. De McDonald Cartier (YOW)"
+  },
+  "YQB": {
+    "code": "YQB",
+    "name": "Quebec, Aeropuerto Int. De Jean Lesage (YQB)"
+  },
+  "YTY": {
+    "code": "YTY",
+    "name": "Yangzhou, Aeropuerto Yangzhou Taizhou (YTY)"
+  },
+  "YUL": {
+    "code": "YUL",
+    "name": "Montreal, Aeropuerto Int. Pierre Elliott Trudeau (YUL)"
+  },
+  "YVR": {
+    "code": "YVR",
+    "name": "Vancouver, Aeropuerto Int. De Vancouver (YVR)"
+  },
+  "YYC": {
+    "code": "YYC",
+    "name": "Calgary, Aeropuerto Int. Calgary (YYC)"
+  },
+  "ZAD": {
+    "code": "ZAD",
+    "name": "Zadar, Aeropuerto de Zadar (ZAD)"
+  },
+  "ZAG": {
+    "code": "ZAG",
+    "name": "Zagreb, Aeropuerto de Zagreb (ZAG)"
+  },
+  "ZAZ": {
+    "code": "ZAZ",
+    "name": "Zaragoza, Aeropuerto de Zaragoza (ZAZ)"
+  },
+  "ZFJ": {
+    "code": "ZFJ",
+    "name": "Rennes, Rennes Estación de Tren (ZFJ)"
+  },
+  "ZIG": {
+    "code": "ZIG",
+    "name": "Ziguinchor, Aeropuerto Ziguinchor (ZIG)"
+  },
+  "ZIH": {
+    "code": "ZIH",
+    "name": "Ixtapa Zihuatanejo, Ap. Int. Ixtapa Zihuatanejo (ZIH)"
+  },
+  "ZLO": {
+    "code": "ZLO",
+    "name": "Manzanillo, Aeropuerto Int. De Playa De Oro (ZLO)"
+  },
+  "ZNZ": {
+    "code": "ZNZ",
+    "name": "Zanzibar, Aeropuerto Int. De Zanzibar (ZNZ)"
+  },
+  "ZQN": {
+    "code": "ZQN",
+    "name": "Queenstown, Aeropuerto de Queenstown (ZQN)"
+  },
+  "ZRH": {
+    "code": "ZRH",
+    "name": "Zurich, Aeropuerto de Kloten (ZRH)"
+  },
+  "ZTH": {
+    "code": "ZTH",
+    "name": "Zakynthos, Aeropuerto Int. De Dionysios Solomos (ZTH)"
+  }
+}

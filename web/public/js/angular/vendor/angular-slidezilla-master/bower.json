@@ -1,0 +1,24 @@
+{
+    "name": "angular-slidezilla",
+    "main": [
+        "dist/angular-slidezilla.min.js",
+        "dist/angular-slidezilla.min.js.map",
+        "src/angular-slidezilla.css"
+    ],
+    "ignore": [
+        "source",
+        "spec",
+        ".bowerrc",
+        ".gitignore",
+        ".jshintignore",
+        ".jshintrc",
+        "bower.json",
+        "gruntfile.js",
+        "package.json",
+        "README.md",
+        "build.sh"
+    ],
+    "dependencies": {
+        "angular": "~1.2.13"
+    }
+}

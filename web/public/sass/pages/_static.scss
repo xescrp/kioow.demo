@@ -1,0 +1,257 @@
+
+//lifting 
+.topbar-lifted {
+	padding-bottom: 55px; padding-top: 15px;
+	.st-img {
+		margin-bottom: 0!important;
+	}
+}
+.static-lifted {position: relative; top: -70px;}
+
+
+//categories
+.topbar-pagcat {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 300px;
+
+	article {
+		margin-top: 45px;
+		@extend .bg-darkblue-half;
+
+	}
+}
+
+
+//generic
+.static-content {
+	color: $gray;
+	header {
+		h1 {@extend .text-alternate; font-size: $font-size-xl;}
+		@extend .mb-xxl; 
+		p {font-size: $font-size-large;}
+	}
+	article {
+		@extend .col-md-8;
+		@extend .col-md-offset-2;
+		@extend .col-sm-10;
+		@extend .col-sm-offset-1;
+		padding: 0 25px 20px;
+	}
+	@extend .mb-zero;
+}
+.static-thumb, .static-item-list {
+	.st-description {
+		//h4 {@extend .mb-l;}
+		@media (max-width: $screen-xs-max) {margin: 0;}
+	}
+	&.light {
+		@extend .invert-text;
+	}
+}
+.static-item-list {
+	@extend .mt-l;
+	@extend .mb-l;
+	&.sm {
+		.st-img {
+			@extend .col-md-2;
+			@extend .col-xs-2;
+			@extend .mb-xl;
+			@media (max-width: $screen-sm-max) {img {margin-right: auto; margin-left: auto;}}
+		}
+		.st-description {
+			@extend .col-md-10;
+			@extend .col-xs-10;
+		}
+	}
+}
+.static-thumb{
+	@extend .mt-xxl;
+	@extend .mb-xxl;
+	@extend .padded-l;
+	&.sm {
+		.st-img {
+			@extend .col-md-2;
+			@extend .col-xs-12;
+			@extend .mb-xl;
+			@media (max-width: $screen-sm-max) {img {margin-right: auto; margin-left: auto;}}
+		}
+		.st-description {
+			@extend .col-md-10;
+			@extend .col-xs-12;
+			@extend .mobile-centered;
+			h4 {margin-bottom: 3px;}
+		}
+	}
+}
+.st-img {
+	@extend .col-md-5;
+	@extend .col-xs-5;
+}
+.st-description {
+	@extend .col-md-7;
+	@extend .col-xs-7;
+}
+
+// hero defaults
+.hero{
+	position: relative;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+/*---------------------------------------------------------------------------------*/
+/*  Cases
+/*---------------------------------------------------------------------------------*/
+
+//transition delayed effect
+.garantias-static, .ventajas-static, .dmc-ventajas-static, .shopping-prebooking-page, .confirmation-page {
+	.static-thumb {@include delayedIn(7);}
+}
+
+.static-affiliate {
+	.static-affiliate-wrap{
+		h1{
+			margin-top: 190px;
+		}
+	}
+	.header-danger{
+		background-color: $brand-danger;
+		color: $light;
+	}
+	.header-info{
+		background-color: $brand-info;
+		color: $light;
+	}
+	.header-alternate{
+		background-color: $brand-alternate;
+		color: $light;
+	}
+	.header-warning{
+		background-color: $brand-warning;
+		color: $light;
+	}
+	@media (max-width: $screen-xs-max) {
+		#map {display: none;}
+	}
+	.header-default {
+		color: $light;
+		@extend .hero;
+		min-height: 250px;
+		background-color: $brand-alternate;
+	}
+	.bullet{
+		@extend .pull-left;
+	}
+	.text-bullet{
+		@extend .pull-left;
+		@extend .pl-b;
+		width: 90%
+	}
+	
+	@media (max-width: $screen-sm-max) {
+		.static-item-list {
+			clear: both;
+		}
+	}
+
+} 
+
+//general confirmations
+.confirmation-page {
+	article {padding-bottom: 0;}
+	.confirmation-short {
+		.static-content {margin-bottom: $padding-xs-vertical;}
+	}
+}
+
+//ventajas page
+.ventajas-static {
+	.ventajas-wrap {background-color: $brand-alternate; color: $light; border: 1px solid $brand-alternate;}
+	.st-img { @extend .padded-l; }
+	.icon-alt-moneybox {color: $brand-danger;}
+	.icon-alt-time {color: $brand-primary;}
+	.icon-alt-info {color: $brand-alternate;}
+	.icon-alt-handshake {color: $brand-warning;}
+}
+
+//dmc-ventajas page
+.dmc-ventajas-static {
+	.dmc-ventajas-wrap {background-color: $brand-danger; color: $light;}
+	.st-img {color: $brand-danger;}
+}
+
+//signup confirmation
+.thanks-signup {
+	min-height: 220px;
+	@media(max-width: $screen-sm-max) {min-height: 150px;}
+	.thanks-box {
+		@extend .padded-xxl;
+	}
+	.thanks-icoblock {
+		@extend .text-center;
+		@include delayedIn(4);
+	}
+	.fa {
+		color: $gray-light-mid;
+	}
+	.fa-3x {@media(max-width: $screen-sm-max) {font-size: 2em;}}
+	.fa-5x {@media(max-width: $screen-sm-max) {font-size: 4em;}}
+	.icon-bar {
+		display: inline-block;
+		width: 140px;
+		height: 10px;
+		background-color: $gray-light-mid;
+		margin-bottom: 10px;
+		@media(max-width: $screen-sm-max) {
+			width: 90px;
+			height: 7px;
+			margin-bottom: 5px;
+		}
+	}
+}
+.flights {
+	.static-content {margin-bottom: 30px;}
+	background-color: $brand-info;
+	@include invert-text;
+}
+.insurance {
+	.static-content {margin-bottom: 30px;}
+	background-color: $brand-primary;
+	@include invert-text;
+}
+
+//faq
+.faqs {
+	iframe {width: 100%;}
+}
+.faqlist{font-size: $font-size-mid;}
+.faqhero {
+	@extend .hero;
+	min-height: 300px;
+	background-image: url(http://res.cloudinary.com/open-market-travel/image/upload/c_fill,h_400,w_1900,q_70/assets/faqmap.jpg);
+}
+.overhero {
+	position: absolute;
+	bottom: 40px;
+	width: 100%;
+}
+
+
+//PROMOTION PAGE
+.arrow-prod-down {
+    width: 0; 
+    height: 0; 
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;   
+    border-top: 45px solid $brand-primary;
+    margin: 0 auto;
+}
+.promo-head {
+	// .static-content {margin-bottom: 50px;}
+	background-color: $brand-primary;
+	@include invert-text;
+}
+

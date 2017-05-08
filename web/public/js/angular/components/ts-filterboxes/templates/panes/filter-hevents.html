@@ -1,0 +1,105 @@
+﻿<div class="booking-search mb-xxl bg-light padded-xl well pull-right col-md-12 col-sm-12" ng-controller="filterHevents">
+    <div class="row">
+        <div class="col-md-12">
+            <small class="pull-right mb-l">
+                <a href="" ng-click="cleanandrefresh()">
+                    limpiar filtros
+                </a>
+            </small>
+        </div>
+    </div>
+    <div class="row">
+        <!--datebooking COL -->
+        <div class="col-md-3 col-sm-3 line-right">
+            <form name="datebooking">
+                <div class="form-group mb-l" ng-class="{'has-error' : !datebooking.bookingdatestart.$pristine && !datebooking.bookingdatestart.$valid && datebooking.bookingdatestart.$viewValue != '' && datebooking.bookingdatestart.$touched}">
+                    <label class="control-label" for="bookingdatestart">Fecha de creación <strong>desde</strong></label>
+                    <div class="input-group">
+                        <input type="text"
+                               class="form-control"
+                               id="bookingdatestart"
+                               name="bookingdatestart"
+                               uib-datepicker-popup="{{format}}"
+                               ng-model="bookingdatestart"
+                               is-open="opened1"
+                               ng-change="filterchanged()"
+                               show-button-bar="false"
+                               ng-required="true"
+                               close-text="cerrar"
+                               title="Fecha de creación desde"
+                               max-date="bookingdateend"
+                               placeholder="dd-mm-aaaa"
+                               starting-day="1" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" ng-click="open($event, 'opened1')"><i class="fa fa-calendar"></i></button>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group mb-l" ng-class="{'has-error' : !datebooking.bookingdateend.$pristine && !datebooking.bookingdateend.$valid && datebooking.bookingdateend.$viewValue != '' && datebooking.bookingdateend.$touched}">
+                    <label class="control-label" for="bookingdateend">Fecha de creación <strong>hasta</strong></label>
+                    <div class="input-group">
+                        <input type="text"
+                               class="form-control"
+                               id="bookingdateend"
+                               name="bookingdateend"
+                               uib-datepicker-popup="{{format}}"
+                               ng-model="bookingdateend"
+                               is-open="opened2"
+                               show-button-bar="false"
+                               ng-required="true"
+                               close-text="cerrar"
+                               title=">Fecha de creación hasta"
+                               ng-change="filterchanged()"
+                               init-date="bookingdatestart"
+                               min-date="bookingdatestart"
+                               placeholder="dd-mm-aaaa"
+                               starting-day="1" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" ng-click="open($event, 'opened2')"><i class="fa fa-calendar"></i></button>
+                        </span>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- datebooking col ends -->
+        <!--datetour COL -->
+        <div class="col-md-3 col-sm-3 line-right">
+            <label class="control-label" for=""><strong>Subjects</strong></label>
+            <div id="filtersubjects" class="collapse in" style="max-height: 148px; overflow-y: scroll;">
+                <div class="checkbox" ng-repeat="subject in selectedFilters.subjects">
+                    <label>
+                        <input title="" type="checkbox"
+                               checklist-model="selectedFilters.selectedsubjects"
+                               checklist-value="subject" ,
+                               ng-click="filterchanged()"
+                               value="{{ subject }}"> {{ subject }}
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-3 line-right">
+            <label class="control-label" for=""><strong>Actions</strong></label>
+            <div id="filteractions" class="collapse in" style="max-height: 148px; overflow-y: scroll;">
+                <div class="checkbox" ng-repeat="action in selectedFilters.actions">
+                    <label>
+                        <input title="" type="checkbox"
+                               checklist-model="selectedFilters.selectedactions"
+                               checklist-value="action" ,
+                               ng-click="filterchanged()"
+                               value="{{ action }}"> {{ action }}
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- datetour col ends -->
+
+        <div class="col-md-3 col-sm-12">
+            <div class="input-group mb-l full-width">
+                <label class="control-label" for="arrivaldate">Búsqueda de texto</label>
+                <input class="form-control" id="arrivaldate" ng-model="textSearch" type="text" value="">
+            </div>
+            <p class="help-block mt-xs mb-xs">Busca por: localizador yourttoo, tu expediente, pasajero/s o destino.</p>
+            <button type="button" class="btn bnt-block mt-b btn-primary full-width" ng-click="textsearch()"><i class="fa fa-search"></i> buscar</button>
+        </div>
+    </div>
+</div>

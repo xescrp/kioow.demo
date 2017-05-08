@@ -1,0 +1,63 @@
+/* Vendor Dependencies */
+@import "themes/omt/_omt-variables";
+@import "bootstrap";
+$pathfont : '';
+@import "fonts/vendors/fontawesome/font-awesome";
+@import "fonts/inspiration";
+
+/* helpers */
+//@import "helpers/_variables";
+//@import "base/_normalize";
+//@import "base/_reset";
+
+/* Components */
+//@import "components/buttons";
+//@import "components/tabs";
+//@import "components/modals"; 
+
+/* layout */
+@import "layout/header";
+@import "layout/body";
+@import "layout/sidebar";
+@import "layout/footer";
+
+/* Pages */
+//user-front
+@import "pages/client-home";
+@import "pages/client-account";
+@import "pages/client-dmc-profile";
+@import "pages/client-product";
+@import "pages/client-results";
+@import "pages/client-shopping-payflow";
+@import "pages/client-request-flow";
+@import "pages/static";
+@import "pages/dmc-landing";
+@import "pages/press-room";
+
+
+//admin-dmc
+@import "pages/dmc-dashboard";
+@import "pages/dmc-load-program";
+@import "pages/dmc-msg-quote";
+@import "pages/dmc-requests";
+@import "pages/dmc-quoted";
+@import "pages/product-view";
+@import "pages/dmc-account";
+@import "pages/dmc-sell-booking";
+@import "pages/contact";
+
+/* Themes */
+@import "themes/admin-dmc";
+@import "themes/user-front";
+@import "themes/pdf-print";
+
+/* Animations */
+@import "animations/base";
+
+/* Vendors CSS */
+@import "components/vendor/bootstrap-slider-master/slider";
+@import "components/vendor/rzslider/rzslider";
+
+/* Shame */
+@import "shame";
+

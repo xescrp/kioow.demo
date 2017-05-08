@@ -1,0 +1,15 @@
+<div class="col-md-12">
+ <div class="alert alert-danger mt-l mb-zero">
+    <h5 class="bold mt-zero"><i class="fa fa-times-circle"></i> Este circuito no incluye los siguientes vuelos internos:</h5>
+    
+    <ol class="list-unstyled">
+        <li ng-repeat="day in dmcproduct.itinerary track by $index">
+       <span ng-show="day.needflights" ng-repeat="fly in day.flights">
+        <strong>Day {{day.daynumber}}:</strong> &nbsp;&nbsp;{{fly.departure.label}}&nbsp;&nbsp; <i class="fa fa-arrow-circle-right"></i> &nbsp;&nbsp;{{fly.arrival.label}} 
+        <span ng-show="fly.recommendedflight != ''">| <em>vuelo recomendado: {{fly.recommendedflight}}</em></span>
+        </span>
+        </li>
+    </ol>
+    <p><em>Recuerda que debes reservar estos vuelos por tu cuenta</em></p>
+ </div>
+</div>

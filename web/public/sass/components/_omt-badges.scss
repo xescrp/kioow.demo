@@ -1,0 +1,28 @@
+// badge notification
+
+.badge.notify{
+  color: $badge-notify-color;
+  background-color: $badge-notify-bg;
+  @include transition(all .5s ease);
+  &.off {opacity: 0;}
+  &.on {opacity: 1;}
+}
+
+.badge.tutorial{
+  color: $badge-notify-color;
+  background-color: $badge-tutorial-bg;
+  @include transition(all .5s ease);
+  padding: 7px 14px;
+  font-size: $font-size-h2;
+  border-radius: 30px;
+}
+
+
+
+// put over icon notify
+
+.item-icon .notify{
+    position: relative;
+    left: -8px;
+    top: -8px;
+}

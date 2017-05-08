@@ -1,0 +1,30 @@
+{
+	"user":{
+		"_id": "5454bf38c92218044a4a01f5",
+		"username": "juando003",
+		"email": "demouser@hotmail.com",
+		"isDMC": false,
+		"isTraveler": true,
+		"active": true,
+		"isLocal": true,
+		"isFacebookLinked": false,
+		"isTwitterLinked": false,
+		"isGoogleLinked": false,
+		"__v": 0,
+		"updatedOn": "2014-11-01T11:08:40.998Z",
+		"createdOn": "2014-11-01T11:08:40.404Z",
+		"roles": [
+		"53d11933159705402588a154"
+		]
+	},
+	"reviews":[
+		{
+			"title": "Mi viaje a medida a Croacia",
+			"time" : "5 días en agosto de 2013",
+			"rating" : 4,
+			"description" : "Nulla eget luctus nunc. Duis mollis quam vel sem scelerisque eleifend. Nunc quis lacus dui. Nulla felis ex, tincidunt auctor vehicula id, efficitur commodo quam. Ut ut justo vehicula, tincidunt tellus a, venenatis lorem. Aliquam pretium, metus vel aliquam pulvinar, sapien quam consectetur sapien, sed dignissim ipsum velit quis felis.",
+			"best" : "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris justo odio, ultrices vel ipsum sed.",
+			"worst" : "Aliquam pretium, metus vel aliquam pulvinar, sapien quam consectetur sapien, sed dignissim ipsum velit quis felis."
+		}
+	]
+}

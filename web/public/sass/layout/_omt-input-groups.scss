@@ -1,0 +1,18 @@
+
+
+// Button input groups
+// -------------------------
+.input-group-btn {
+  // Negative margin for spacing, position for bringing hovered/focused/actived
+  // element above the siblings.
+  > .btn {
+    top: 1px;
+  }
+}
+
+.no-select {
+	@include user-select(none);
+}
+.form-control.datefilter{
+	max-width : 115px;
+}

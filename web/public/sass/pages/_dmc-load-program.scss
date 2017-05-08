@@ -1,0 +1,306 @@
+.load-product{
+	@extend .col-md-12;
+	.day{
+		@extend .row;
+		margin-bottom: $padding-large-vertical; 
+	}
+	.trans-cities-opt hr{
+		margin-bottom: 0;
+		margin-top: 0;
+	}
+	.activ-item{
+	}
+	.activ-group-box{
+		@extend .well;
+		@extend .well-sm;
+		label{
+			margin-right: $padding-base-horizontal;
+		}
+	}
+	.activ-extras{
+		@extend .form-inline;
+		select.form-control{
+			min-width: 190px;
+			margin-left: $padding-base-horizontal;
+		}
+
+	}
+	.close-day{
+		@extend .clearfix;
+		@extend .well;
+		@extend .well-sm;
+		button{
+			margin-left: $padding-large-horizontal;
+		}
+	}
+	.tit-day-desc{
+		@extend .clearfix;
+		.label{
+			@extend .pull-left;
+		}
+		h3{
+			@extend .pull-left;
+			position: relative;
+			top: -13px;
+			left: 25px;
+			font-weight: bold;
+		}
+	}
+	.meals{
+		select.form-control{
+			width: 100px;
+		}
+		.checkbox.drink{
+			margin-top: 2em;
+		}
+	}
+
+	.form-control {
+		&.select-city {width: 300px;}
+	}	
+	
+}
+.load-product.request{
+	margin-top: $padding-large-vertical;
+}
+.panel-load-request{
+	@extend .panel-scaffolding;
+	@include panel-variant($panel-default-border, $panel-default-text, $panel-default-heading-bg, $panel-default-border);
+	position: relative;
+}
+.arrow-load-request{
+	margin-top: 2em;
+	&:after{
+		content: "";
+		position: absolute;
+		top: -24px;
+		border-style: solid;
+		border-width: 0 50px 25px 50px;
+		border-color: transparent transparent #ffffff transparent;
+		display: block;
+		width: 0;
+		z-index: 1;
+	}
+	&:before{
+		content: "";
+		position: absolute;
+		top: -25px;
+		border-style: solid;
+		border-width: 0 50px 25px 50px;
+		border-color: transparent transparent #dddddd transparent;
+		display: block;
+		width: 0;
+		z-index: 0;
+	}
+}
+.new-program{
+	@extend .panel-load-request;
+		&:after{
+			left: 15px;
+		}
+		&:before{
+			left: 15px;
+		}
+};
+.omt-request{
+	@extend .panel-load-request;
+}
+.new-holiday{
+	@extend .panel-load-request;
+	@extend .arrow-load-request;
+		&:after{
+			left: 220px;
+		}
+		&:before{
+			left: 220px;
+		}
+};
+.open-saved{
+	@extend .panel-load-request;
+	@extend .arrow-load-request;
+		&:after{
+			left: 490px;
+		}
+		&:before{
+			left: 490px;
+		}
+};
+.request-tour{
+	@extend .panel-load-request;
+	@extend .arrow-load-request;
+		&:after{
+			left: 20px;
+		}
+		&:before{
+			left: 20px;
+		}
+};
+.request-holiday{
+	@extend .panel-load-request;
+	@extend .arrow-load-request;
+		&:after{
+			left: 210px;
+		}
+		&:before{
+			left: 210px;
+		}
+};
+
+.request-saved{
+	@extend .panel-load-request;
+	@extend .arrow-load-request;
+		&:after{  
+			left: 470px;
+		}
+		&:before{
+			left: 470px;
+		}
+};
+.arrival-date{
+	@extend .form-group;
+	@extend .clearfix;
+	.btn{
+		margin-right: 2em;
+		margin-left: 0.5em;
+	}
+}
+.step-load{
+	padding: 0 1.2em 1em 2.2em;
+	@extend .clearfix;
+		.bg-warning{
+			padding: 1.2em;
+		}
+}
+.step-load > h2, .step-load > .h2, form h3, form .h3, .tpv-frame h3, .tpv-frame .h3{ 
+	color: $gray-light;
+	font-weight: 300;
+}
+.step-load > h2, .step-load > .h2{
+	margin-bottom: 20px;
+	margin-left: -41px;
+	border-left: 5px solid transparent;
+	padding-left: 0.3em;
+	border-color: $gray-light-mid;
+
+	span{
+		color: $gray-light-mid;
+	}
+}
+.active{
+	h2, .h2{
+		border-color: $brand-success;
+		span{
+			color: $brand-success;	
+		}
+	}
+}
+hr.hr{
+	margin: 0 1.2em 1em 2.2em;
+}
+.detail{
+	h3{
+		font-size: $font-size-mid;
+		margin: 0.5em auto;
+	}
+	h4{
+		display: inline-block;
+	}
+	.link-header{
+		margin-left: 1em;
+	}
+	.item-body{
+		//margin-left: 3.7em;
+		min-height: 4em;
+	}
+	.status{
+		clear: both;
+		width: 100%;
+		padding: $padding-base-vertical 0;
+		li{
+			@extend .pull-left;
+		}
+		li:last-child{
+			@extend .pull-right;
+		}
+		.label-item{
+			font-size: $font-size-base;
+		}
+	}
+	&.new .status{
+		background: $brand-warning;
+	}
+	&.quoted .status{
+		background: $gray-light;
+	}
+	&.change .status{
+		background: $brand-danger;
+	}
+	&.booking .status{
+		background: $brand-success;
+	}
+	&.cancelled .status, &.lost .status{
+		background: $light;
+	}
+}
+.original-req{
+	//@extend .alert;
+	color: $gray-dark;
+	//background-color: $light;
+	margin-bottom: 2.5em;
+	padding-bottom: 0;
+	ul{
+		margin-top: $padding-base-vertical;
+		// margin-bottom: $padding-base-vertical;
+		li{
+			color: $gray;
+			font-size: $font-size-base;
+			padding: 0.3em 0.7em 0.3em 0;
+		}
+	}
+	.destinations{
+		strong{
+			font-size: ceil(($font-size-base*1.1));
+		}
+	}
+}
+.original-panel{
+	padding-bottom: 10px;
+}
+.price-text{
+	@extend .text-center;
+	padding: ($padding-large-vertical*2);
+	color: $gray-dark;
+	.pax{
+		font-style: italic;
+		display: block;
+		color: $gray;
+	}
+	strong{
+		font-size: $font-size-h2;
+		display: block;
+	}
+}
+.price-box{
+	@extend .price-text;
+	@extend .bg-price;
+	border: 1px solid $state-price-border;
+}
+.panel-hotel{
+	margin-top: $padding-large-vertical;
+}
+.main-des-item button.btn, .day-desc-item button.btn{
+	margin-top: 1em;
+}
+
+.request-price-setter {
+	font-size: $font-size-h2;
+	margin-top: 5px;
+	height: 50px;
+	font-weight: bold!important;
+	max-width: 130px;
+	@extend .iblock;
+	@extend .mt-xl;
+}
+.request-price-currency {
+	display: inline-block!important;
+}

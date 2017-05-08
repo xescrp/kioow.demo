@@ -1,0 +1,164 @@
+hr.col-md-12 {
+  padding: 0;
+}
+
+.company-name {
+  padding-top: 18px;
+}
+
+.wl-buscador-destino-wrap {
+  position:relative;
+  width: 100%;
+  z-index: 999;
+  margin-top: 56px;
+}
+
+.buscador-destino-wrap {
+
+  width: 100%;
+  z-index: 999;
+  margin-top: 56px;
+}
+
+/*main >.relative {
+  padding-bottom: 100px;
+}*/
+
+/*.relative >.buscador-destino-wrap{
+    position: fixed;
+}*/
+
+.inspiration-wrap {
+
+  .well {background-color: $light; }
+  .inspiration-box {
+    @media (max-width: $screen-xs-max) {margin-bottom: $padding-xl-horizontal;}
+    text-align: center;
+    margin-top: 25px;
+    @media (max-width: $screen-md-max) {margin-top: 22px;}
+    input[type="radio"] {display: none;}
+    input[type="radio"]+label {
+      @include triangle (down, $brand-danger, 20px, 11px, 1);
+      height: 40px;
+      width: 40px;
+      border: 1px solid $brand-danger;
+      font-size: 25px;
+      color: $brand-danger;
+      @extend .no-select;
+    }
+    input[type="radio"]:checked + label {
+      @include triangle (down, $brand-danger-dark, 20px, 11px, 1);
+      color: $light;
+      background-color: $brand-danger;
+    }
+  }
+  .inspiration-label {
+    position: relative; display: inline-block;
+    &:hover {cursor: pointer;}
+    &:before {margin-top: 6px;display: block;}
+  }
+
+  .inspiration-results {
+    position: relative;
+    .col-md-3 {text-align: center;}
+    .blue-shade {
+      position: absolute;
+      right: 0; bottom: 0;
+      min-width: 123px;
+      min-height: 150px;
+      background-color: rgba($brand-primary, 0.7);
+    }
+    &.empty {
+      margin-top: 0px;
+      .preloader {margin-top: 263px;}
+    }
+  }
+
+  .inspiration-result {
+    display: inline-block;
+    position: relative;
+    text-align: left;
+    @media(min-width: $screen-md-min) {width: 100%;}
+    @extend .mt-xl;
+    &:hover {
+      .inspiration-summary {
+        right: 35px;
+        @include triangle(down, darken($brand-alternate, 4%), 88px, 17px, 1);
+      }
+      .inspiration-summary-box {background-color: rgba($brand-primary, 0.85);}
+    }
+    img {
+      width: 270px; height: 270px;
+      @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+        width: 203px; height: 203px;
+      }
+    }
+  }
+  .inspiration-summary {
+    @extend .invert-text;
+    @include transition(all .2s ease-out);
+    &:after {@include transition(all .2s ease-out);}
+    position: absolute;
+    bottom: 17px;
+    right: 25px;
+    width: 65%;
+    z-index: 10;
+    @include triangle(down, $brand-alternate, 98px, 17px, 1);
+    .label-danger {
+      display: inline-block;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+  }
+  .inspiration-summary-box {
+    background-color: rgba($brand-alternate, 0.8);
+    padding: $padding-base-vertical $padding-base-horizontal;
+    h2 {font-size: $font-size-title-mobile;}
+    strong {font-size: $font-size-h3;}
+    .price {
+      em {
+        font-size: $font-size-h3;
+      }
+      strong {
+        overflow: hidden;
+        font-size: $font-size-h2;
+      }
+      .inspiration-action {
+        font-size: $font-size-h2;
+        position: absolute;
+        right: $padding-base-horizontal;
+        bottom: 8px;
+        @extend .invert-text;
+      }
+    }
+  }
+
+  .inspiration-empty-result {
+
+
+    .inspiration-empty-summary {
+      @extend .bg-light;
+      @extend .padded-l;
+      position: absolute;
+      bottom: 17px;
+      right: 25px;
+      width: 65%;
+      z-index: 10;
+    }
+
+    .placeholding-block {
+      background-color: $almost-light;
+      @extend .block;
+      @extend .mb-xl;
+      &.over-label {position: absolute; top: -20px; left: 0; @extend .bg-light; width: 40%; height: 10px;}
+      &.large {height: 35px; width: 90%;}
+      &.small {height: 10px; @extend .mb-l;width: 100%;}
+      &.first {width: 70%;}
+      &.last {width: 40%;}
+    }
+
+  }
+
+
+
+}

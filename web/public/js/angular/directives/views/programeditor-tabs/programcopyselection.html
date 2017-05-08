@@ -1,0 +1,117 @@
+﻿
+<h2>Program Copy</h2>
+<p>Select a program to copy.</p>
+<div ng-show="dmc == null">
+    <h4>No DMC selected yet</h4>
+    <p>Please select a DMC on the previous step</p>
+</div>
+
+<div ng-hide="dmc == null">
+    <label class="control-label" for="bookingdatestart">Programs from DMC: Finded: {{copyprograms.length}}</label>
+    <table style="background-color: transparent;">
+        <tr>
+            <td>
+                <img class="img-circle img-responsive id-user-img avatarl70"
+                     ng-src="{{getimage(dmc.images.logo.url, 'avatarl70')}}" data-src2x="{{getimage(dmc.images.logo.url,   'avatarb36retina')}}" alt="{{dmc.name}}" title="{{ dmc.name}}" />
+            </td>
+            <td><h2 class="ml-l">{{dmc.company.name}} ({{dmc.code}})</h2></td>
+        </tr>
+    </table>
+    <br />
+    <table style="background-color: transparent; width:100%;">
+        <tr>
+            <td style="padding-right: 2px;">
+
+                <div class="">
+                    <label class="" for="select-dmc-th">Find Program (by name)</label>
+                    <input type="text"
+                           class="form-control select-city"
+                           ng-model="programsearch"
+                           placeholder="Type Program name"
+                           id="select-dmc-th"
+                           uib-typeahead="selectprogram as selectprogram.name for selectprogram in copyprograms | filter: { name: $viewValue } | limitTo:20"
+                           typeahead-on-select="typeaheadPROGRAMselect($item, $model, $label)" />
+                </div>
+
+            </td>
+            <td>
+
+                <div class="">
+                    <label class="" for="select-dmc-th">Find Program (by destinations)</label>
+                    <input type="text"
+                           class="form-control select-city"
+                           ng-model="programsearch"
+                           placeholder="Type Program Destination"
+                           id="select-dmc-th"
+                           uib-typeahead="selectprogram as selectprogram.finddestinationshortcut for selectprogram in copyprograms | filter: { finddestinationshortcut: $viewValue } | limitTo:20"
+                           typeahead-on-select="typeaheadPROGRAMselect($item, $model, $label)" />
+                </div>
+
+            </td>
+        </tr>
+    </table>
+    <br />
+</div>
+
+<div style="color:black; height: 300px; overflow-y: auto; overflow-x:hidden;" ng-show="copyprograms.length > 0">
+
+    <table class="table table-striped table-hover table-results table-results-admin" style="color:black;">
+        <thead>
+            <tr style="font-weight:bold">
+                <td></td>
+                <td>Code</td>
+                <td>Saved as...</td>
+                <td>English title</td>
+                <td>Spanish title</td>
+                <td>Duration</td>
+            </tr>
+        </thead>
+        <tbody class="">
+            <tr class="pointer"
+                ng-repeat="program in copyprograms"
+                ng-click="selectprogramforcopy(program)">
+                <td>
+                    <img class="mb-xs" ng-src="{{imageproductstretchcustom(program.productimage.url, 30)}}" />
+                </td>
+                <td>{{ program.code }}</td>
+                <td>
+                    <span>{{ program.name }}</span>
+                </td>
+                <td>
+                    {{program.title}}
+                </td>
+                <td>
+                    {{ program.title_es }}
+                </td>
+                <td>
+                    {{program.itinerarylength}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="" ng-show="programtocopy != null" style="margin-top: 21px;"> <!-- col-md-4 col-sm-4 line-right -->
+    <div class="row">
+        <div class="col-md-12 middle">
+            <img class="mb-xs" ng-src="{{imageproductstretch(programtocopy.productimage.url)}}" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12"><h4>{{ programtocopy.title_es || programtocopy.title }}</h4></div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">{{programtocopy.code}}</div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h4>Categories:</h4>
+            <br />
+            <div class="row" ng-repeat="related in relatedprogramstocopy">
+                <div class="col-md-12">- <a>{{related.categoryname.label_es}}</a> with code {{related.code}}</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

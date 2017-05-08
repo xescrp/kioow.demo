@@ -1,0 +1,183 @@
+{
+"code": "SP398238",
+"name": "theuser.username",
+"company": {
+    "name": "Liberty Spain",
+    "legalname": "Liberty SL",
+    "constitutionyear": 1995,
+    "phone": "+34 871 870 296",
+    "emergencyphone" : "+34 871 870 296",
+    "website": "http://www.google.com",
+    "taxid" : "Y5485554",
+    "location": {
+        "fulladdress": "Calle de la diada 23",
+        "city": "Barcelona",
+        "stateorprovince": "Barcelona",
+        "pc": "05005",
+        "country": "Spain",
+        "countrycode": "SP",
+        "latitude": 0.0,
+        "longitude": 0.0
+    },
+    "operatein": [
+        {"operateLocation": {
+            "fulladdress": "",
+            "city": "Buenos Aires",
+            "stateorprovince": "Buenos Aires",
+            "pc": "1404",
+            "country": "Argentine",
+            "countrycode": "AR",
+            "latitude": 0.0,
+            "longitude": 0.0
+        }, "zone": "Pampa"},
+        {"operateLocation": {
+            "fulladdress": "",
+            "city": "Barcelona",
+            "stateorprovince": "Barcelona",
+            "pc": "05005",
+            "country": "Spain",
+            "countrycode": "SP",
+            "latitude": 0.0,
+            "longitude": 0.0
+        }, "zone": "playa barcelona"}
+    ]
+},
+"contact": {
+    "title": "Sr",
+    "name": "Juan Gomez",
+    "firstname": "Juan",
+    "lastname": "Gomez",
+    "email": "jgomes@mail.com",
+    "fax": "555555555",
+    "skype": "libertyskype",
+    "nif": "56464654H",
+    "position": "General Manager"
+},
+"bankinfo":{
+    "beneficiary" : "Nombre beneficiario",
+    "iban" : "ES39892398234983",
+    "accountnumber" : "65465456464654",
+    "bankname" : "Banco Santander Hispano",
+    "bic" : "yshrf67",
+    "routing" : "Lore",
+    "bankaddress" : "Calle tanto, lugar tanto, 23, 2do piso Madrid",
+    "bankzip" : "5465564",
+    "bankcity" : "Barcelona",
+    "bankcountry" : {"value" : "TUV", "label" : "Tuvalu"}
+    },
+"additionalinfo": {
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan, dui quis consectetur porta, nulla elit pharetra leo, vestibulum semper metus dui eget tellus. Ut sit amet purus nisi. Nam aliquet volutpat odio eget blandit. Morbi dui neque, mattis quis nulla ut, rutrum pellentesque arcu. Fusce pharetra, ipsum et vestibulum fringilla, lorem ex interdum nisi, fringilla luctus nunc magna sit amet ex. Aenean non mattis turpis, eget convallis ante. Nunc id dictum erat. In placerat at odio vitae pharetra. In sed mi tristique, vestibulum felis suscipit, tempor tellus. Praesent ultrices orci non urna mollis elementum eu quis enim. Etiam eget tristique odio. Proin rhoncus mi non viverra egestas. Morbi vulputate pellentesque tellus vel ultricies. Pellentesque eget lectus sem. Donec pulvinar risus non posuere facilisis.",
+    "recomenders":[
+        {"name":"tripadvisor", "url": "http://www.tripadvisor.es/Hotels-g187493-Salamanca_Province_of_Salamanca_Castile_and_Leon-Hotels.html"},
+        {"name":"google", "url": "http://www.tripadvisor.es/Hotels-g187493-Salamanca_Province_of_Salamanca_Castile_and_Leon-Hotels.html"}
+    ],
+    "associations": [
+        {"name":"DECODE", "imageUrl": "http://lorempixel.com/g/150/150"},
+        {"name":"OMT", "imageUrl": "http://lorempixel.com/g/150/150"}
+    ],
+    "registration": {
+        "url":"http://google.com"
+        },
+    "insurancepolicy":{
+        "url":"http://www.yahoo.com"
+        },
+    "businessLicense": true,
+    "notpunished": true,
+    "paymenttaxes": true
+},
+"membership" : {
+    "b2bchannel" : true,
+    "b2cchannel" : true,
+    "commission" : 11,
+    "acceptterms" : true,
+    "membershipDate" : null,
+    "registervalid" : true,
+    "publicprofilecomplete" : true,
+    "companyimagescomplete" : true,
+    "companycomplete" : true,
+    "paymentcomplete" : true,
+    "averagecomplete" : true,
+    "companytaxid" : true,
+    "emergencycomplete" : true,
+    "requestdelete" : true,
+    "toursmultidays" : true,
+    "tailormade" : true,
+    "groups" : true,
+    "payagreement" : "",
+    "cancelpolicy" : {
+        "_en" : "tuynrurdr<br>\neau oñ iduyt",
+        "_es" : "udcu<br>\nfjhdu"
+    },
+    "paymentoption" : {
+        "_en" : "Last day of the trip",
+        "_es" : "Día de vuelta del cliente del destino",
+        "slug" : "departure"
+    },
+    "confirmterms" : true,
+    "autopublish" : false
+},
+"images":
+    {
+    "photo": {
+        "url": "http://lorempixel.com/g/260/150"
+        },
+    "logo": {
+        "url": "http://res.cloudinary.com/open-market-travel/image/upload/w_100,h_100,c_fill,g_face,q_90/id_liberty.png"
+        },
+    "splash": {
+        "url": "http://lorempixel.com/g/400/200"
+        }
+    },
+"user": "theuser.user",
+"admin": "theuser.admin",
+"contactuser": "theuser.contact",
+"tourEscorts":[
+        {
+            "fullname":"David Admiral",
+            "biography" : "Esta es la biografia de David de ejemplo.",
+            "imageUrl": "http://lorempixel.com/g/100/100",
+            "languages" :[
+                {"label":"English", "value":"en"},
+                {"label":"Spanish", "value":"sp"}
+            ]
+        }
+    ],
+"tags":[
+    {"value" : "four-wheel", "label" :"4x4"},
+    {"value" : "lgtb", "label" :"lgtb"},
+    {"value" : "architecture", "label" :"Architecture"},
+    {"value" : "birdwatching", "label" :"Birdwatching"},
+    {"value" : "art", "label" :"Art"},
+    {"value" : "backpackers", "label" :"Backpacking"}
+],
+"expenditure":[
+    {"label" : "2019", "months": [
+        {"id": 1, "label":"January", "value" : ""},
+        {"id": 2, "label":"February", "value" : ""},
+        {"id": 3, "label":"March", "value" : ""},
+        {"id": 4, "label":"April", "value" : ""},
+        {"id": 5, "label":"May", "value" : ""},
+        {"id": 6, "label":"Jun", "value" : ""},
+        {"id": 7, "label":"July", "value" : ""},
+        {"id": 8, "label":"August", "value" : ""},
+        {"id": 9, "label":"September", "value" : ""},
+        {"id": 10, "label":"October", "value" : ""},
+        {"id": 11, "label":"November", "value" : ""},
+        {"id": 12, "label":"December", "value" : ""}
+    ]},
+     {"label" : "2020", "months": [
+        {"id": 1, "label":"January", "value" : ""},
+        {"id": 2, "label":"February", "value" : ""},
+        {"id": 3, "label":"March", "value" : ""},
+        {"id": 4, "label":"April", "value" : ""},
+        {"id": 5, "label":"May", "value" : ""},
+        {"id": 6, "label":"Jun", "value" : ""},
+        {"id": 7, "label":"July", "value" : ""},
+        {"id": 8, "label":"August", "value" : ""},
+        {"id": 9, "label":"September", "value" : ""},
+        {"id": 10, "label":"October", "value" : ""},
+        {"id": 11, "label":"November", "value" : ""},
+        {"id": 12, "label":"December", "value" : ""}
+    ]}
+]
+}

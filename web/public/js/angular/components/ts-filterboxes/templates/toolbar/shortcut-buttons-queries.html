@@ -1,0 +1,37 @@
+﻿<nav class="subnav col-md-12" ng-controller="filtertoolbar" >
+    <div class="main" ng-if="rolename=='admin'">
+        <a href="" class="btn btn-invert" ng-click="refresh()">
+            <i class="fa fa-refresh"></i>
+        </a>
+        <a href="" class="btn" ng-class="{ 'btn-success' : activebuttons.environment.b2b, 'btn-invert': !activebuttons.environment.b2b }" 
+           ng-click="toggleenvironment('b2b')">
+            <i class="fa fa-list"></i> yourttoo
+        </a>
+        <a href="" class="btn" ng-class="{ 'btn-success' : activebuttons.environment.b2c, 'btn-invert': !activebuttons.environment.b2c }" 
+           ng-click="toggleenvironment('b2c')">
+            <i class="fa fa-check"></i> omt
+        </a>
+    </div>
+    <div class="side">
+        <a href="" class="btn" ng-class="{ 'btn-success' : activebuttons.status.all, 'btn-invert': !activebuttons.status.all }" 
+           ng-click="togglestatusfilter('all')">
+            <i class="fa fa-list"></i> todas
+        </a>
+        <a href="" ng-hide="$scope.rolename != 'admin'" class="btn" ng-class="{ 'btn-success' : activebuttons.status.new, 'btn-invert': !activebuttons.status.new }" 
+           ng-click="togglestatusfilter('new')">
+            <i class="fa fa-check"></i> nuevas
+        </a>
+        <a href="" class="btn" ng-class="{ 'btn-success' : activebuttons.status.cancelled, 'btn-invert': !activebuttons.status.cancelled }"
+           ng-click="togglestatusfilter('cancelled')">
+            <i class="fa fa-times-circle"></i> canceladas
+        </a>
+        <a href="" class="btn" ng-class="{ 'btn-success' : activebuttons.status.onprocess, 'btn-invert': !activebuttons.status.onprocess }"
+           ng-click="togglestatusfilter('onprocess')">
+            <i class="fa fa-times-circle"></i> en proceso
+        </a>
+        <a href="" ng-hide="$scope.rolename != 'admin'" class="btn" ng-class="{ 'btn-success' : activebuttons.status.waitinguser, 'btn-invert': !activebuttons.status.waitinguser }"
+           ng-click="togglestatusfilter('waitinguser')">
+            <i class="fa fa-times-circle"></i> p. usuario
+        </a>
+    </div>
+</nav>

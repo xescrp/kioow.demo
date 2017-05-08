@@ -1,0 +1,124 @@
+[
+    {
+        "id":"id-producto",
+        "title" : "Magic Italy",
+        "title_es" : "Italia Mágica",
+   		"description_es" : "Lorem ipsum dolor sit amet, elit adipiscing consectetur. Donec molestie eros congue libero tempus, en pharetra nisi convallis. Vivamus Mauris justo, pretium sit amet Odio en, condimentum placerat sem. Etiam nisi dúos, Tristique en semper sit amet, ipsum ncp commodo. Quam Identificación congue Vestibulum Morbi ac felis. Proin en ligula luctus. Nulla iaculis lacinia tempus. Mauris en Velit Elementum, sit amet sollicitudin nunc. Nulla vehicula sapien quis vehicula accumsan. Morbi maximus orci tempor ipsum maximus sollicitudin. Pellentesque nunc no ligula. Pellentesque dictum imperdiet venenatis. Proin Ornare Identificación metus aliquam pharetra Dolor.",
+        "keys" : [ 
+	        {
+	            "title" : "Italia",
+	            "description" : "",
+	            "_id" : "ObjectId('5416f6034270ae6025b2f1b1')"
+	        }, 
+	        {
+	            "title" : "Roma",
+	            "description" : "",
+	            "_id" : "ObjectId('5416f6034270ae6025b2f1b1')"
+	        }, 
+	        {
+	            "title" : "Architecture",
+	            "description" : "",
+	            "_id" : "ObjectId('5416f6034270ae6025b2f1b1')"
+	        }, 
+	        {
+	            "title" : "City Sites",
+	            "description" : "",
+	            "_id" : "ObjectId('5416f6034270ae6025b2f1b1')"
+	        }
+    	],
+    	"productimage" : {
+	        "public_id" : "dx8liocu7xvcnvo9cis5",
+	        "version" : 1410790823,
+	        "signature" : "6ba99def3961a432173630d8e26cb4315172a421",
+	        "width" : 2000,
+	        "height" : 1333,
+	        "format" : "jpg",
+	        "resource_type" : "image",
+	        "url" : "http://lorempixel.com/680/480/city/",
+	        "secure_url" : "https://res.cloudinary.com/openmarket-travel/image/upload/v1410790823/dx8liocu7xvcnvo9cis5.jpg"
+    	},
+    	"days" : 3,
+    	"destinations" : ["Roma", "Florencia", "Venecia", "Verona"],
+    	"hotelcat" : "4*, 3*",
+    	"dmc" : {
+    		"company" : {
+    			"name" : "Liberty Italy"
+    		},
+    		"url" : "/dmc/liberty-italy",
+    		"rating" : 5,
+    		"images" : {
+			    "photo": {
+			        "url": "http://lorempixel.com/g/260/150"
+			        },
+			    "logo": {
+			        "url": "http://lorempixel.com/g/42/42"
+			        },
+			    "splash": {
+			        "url": "http://lorempixel.com/g/400/200"
+			        }
+		    }
+
+    	} 
+    },
+    {
+        "id":"id-producto",
+        "title" : "Magic Italy",
+        "title_es" : "Italia Mágica",
+   		"description_es" : "Lorem ipsum dolor sit amet, elit adipiscing consectetur. Donec molestie eros congue libero tempus, en pharetra nisi convallis. Vivamus Mauris justo, pretium sit amet Odio en, condimentum placerat sem. Etiam nisi dúos, Tristique en semper sit amet, ipsum ncp commodo. Quam Identificación congue Vestibulum Morbi ac felis. Proin en ligula luctus. Nulla iaculis lacinia tempus. Mauris en Velit Elementum, sit amet sollicitudin nunc. Nulla vehicula sapien quis vehicula accumsan. Morbi maximus orci tempor ipsum maximus sollicitudin. Pellentesque nunc no ligula. Pellentesque dictum imperdiet venenatis. Proin Ornare Identificación metus aliquam pharetra Dolor.",
+        "keys" : [ 
+	        {
+	            "title" : "Italia",
+	            "description" : "",
+	            "_id" : "ObjectId('5416f6034270ae6025b2f1b1')"
+	        }, 
+	        {
+	            "title" : "Roma",
+	            "description" : "",
+	            "_id" : "ObjectId('5416f6034270ae6025b2f1b1')"
+	        }, 
+	        {
+	            "title" : "Architecture",
+	            "description" : "",
+	            "_id" : "ObjectId('5416f6034270ae6025b2f1b1')"
+	        }, 
+	        {
+	            "title" : "City Sites",
+	            "description" : "",
+	            "_id" : "ObjectId('5416f6034270ae6025b2f1b1')"
+	        }
+    	],
+    	"productimage" : {
+	        "public_id" : "dx8liocu7xvcnvo9cis5",
+	        "version" : 1410790823,
+	        "signature" : "6ba99def3961a432173630d8e26cb4315172a421",
+	        "width" : 2000,
+	        "height" : 1333,
+	        "format" : "jpg",
+	        "resource_type" : "image",
+	        "url" : "http://lorempixel.com/680/480/city/",
+	        "secure_url" : "https://res.cloudinary.com/openmarket-travel/image/upload/v1410790823/dx8liocu7xvcnvo9cis5.jpg"
+    	},
+    	"days" : 3,
+    	"destinations" : ["Roma", "Florencia", "Madrid", "Venecia", "Verona"],
+    	"hotelcat" : "4*, 3*",
+    	"dmc" : {
+    		"company" : {
+    			"name" : "Liberty Italy"
+    		},
+    		"url" : "/dmc/liberty-italy",
+    		"rating" : 5,
+    		"images" : {
+			    "photo": {
+			        "url": "http://lorempixel.com/g/260/150"
+			        },
+			    "logo": {
+			        "url": "http://lorempixel.com/g/42/42"
+			        },
+			    "splash": {
+			        "url": "http://lorempixel.com/g/400/200"
+			        }
+		    }
+
+    	} 
+    }
+]

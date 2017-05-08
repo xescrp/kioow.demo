@@ -1,0 +1,266 @@
+@font-face {
+	font-family: 'inspiration';
+	src:url('fonts/inspiration.eot?hgyf1k');
+	src:url('fonts/inspiration.eot?hgyf1k#iefix') format('embedded-opentype'),
+		url('fonts/inspiration.ttf?hgyf1k') format('truetype'),
+		url('fonts/inspiration.woff?hgyf1k') format('woff'),
+		url('fonts/inspiration.svg?hgyf1k#inspiration') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'inspiration';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-yto-like:before {
+	content: "\e904";
+}
+.icon-yto-supplier:before {
+	content: "\e905";
+}
+.icon-yto-signs:before {
+	content: "\e900";
+}
+.icon-yto-africa-world:before {
+	content: "\e901";
+}
+.icon-yto-suppliers:before {
+	content: "\e902";
+}
+.icon-yto-world-plane:before {
+	content: "\e903";
+}
+.icon-alt-brokenbulb:before {
+	content: "\e800";
+}
+.icon-alt-brokengear:before {
+	content: "\e801";
+}
+.icon-alt-filter:before {
+	content: "\e802";
+}
+.icon-alt-handshake:before {
+	content: "\e803";
+}
+.icon-alt-home:before {
+	content: "\e804";
+}
+.icon-alt-info:before {
+	content: "\e805";
+}
+.icon-alt-moneybox:before {
+	content: "\e806";
+}
+.icon-alt-offer:before {
+	content: "\e807";
+}
+.icon-alt-safety:before {
+	content: "\e808";
+}
+.icon-alt-star:before {
+	content: "\e809";
+}
+.icon-alt-time:before {
+	content: "\e80a";
+}
+.icon-architecture:before {
+	content: "\e80b";
+}
+.icon-art:before {
+	content: "\e80c";
+}
+.icon-backpackers:before {
+	content: "\e80d";
+}
+.icon-beach:before {
+	content: "\e80e";
+}
+.icon-birdwatching:before {
+	content: "\e80f";
+}
+.icon-boat-rental:before {
+	content: "\e810";
+}
+.icon-camping:before {
+	content: "\e811";
+}
+.icon-city-sights:before {
+	content: "\e812";
+}
+.icon-climbing:before {
+	content: "\e813";
+}
+.icon-community-base:before {
+	content: "\e814";
+}
+.icon-cruises:before {
+	content: "\e815";
+}
+.icon-culture-history-old:before {
+	content: "\e816";
+}
+.icon-culture-history:before {
+	content: "\e817";
+}
+.icon-cycling:before {
+	content: "\e818";
+}
+.icon-diving:before {
+	content: "\e819";
+}
+.icon-ecotourism:before {
+	content: "\e81a";
+}
+.icon-education:before {
+	content: "\e81b";
+}
+.icon-enology:before {
+	content: "\e81c";
+}
+.icon-extreme:before {
+	content: "\e81d";
+}
+.icon-festivals-old:before {
+	content: "\e81e";
+}
+.icon-festivals:before {
+	content: "\e81f";
+}
+.icon-fishing:before {
+	content: "\e820";
+}
+.icon-food:before {
+	content: "\e821";
+}
+.icon-four-wheel:before {
+	content: "\e822";
+}
+.icon-golf:before {
+	content: "\e823";
+}
+.icon-heritage:before {
+	content: "\e824";
+}
+.icon-honeymoons:before {
+	content: "\e825";
+}
+.icon-horseback-riding:before {
+	content: "\e826";
+}
+.icon-kayak-canoe:before {
+	content: "\e827";
+}
+.icon-kids:before {
+	content: "\e828";
+}
+.icon-language:before {
+	content: "\e829";
+}
+.icon-lgtb:before {
+	content: "\e82a";
+}
+.icon-luxury:before {
+	content: "\e82b";
+}
+.icon-motorcycle:before {
+	content: "\e82c";
+}
+.icon-museums:before {
+	content: "\e82d";
+}
+.icon-national-parks:before {
+	content: "\e82e";
+}
+.icon-off-the-road:before {
+	content: "\e82f";
+}
+.icon-party:before {
+	content: "\e830";
+}
+.icon-photography:before {
+	content: "\e831";
+}
+.icon-rafting:before {
+	content: "\e832";
+}
+.icon-religion:before {
+	content: "\e833";
+}
+.icon-safari:before {
+	content: "\e834";
+}
+.icon-sailing:before {
+	content: "\e835";
+}
+.icon-self-drive:before {
+	content: "\e836";
+}
+.icon-self-guided:before {
+	content: "\e837";
+}
+.icon-shopping:before {
+	content: "\e838";
+}
+.icon-singles:before {
+	content: "\e839";
+}
+.icon-spa-wellness:before {
+	content: "\e83a";
+}
+.icon-spiritual:before {
+	content: "\e83b";
+}
+.icon-surf:before {
+	content: "\e83c";
+}
+.icon-sustainable:before {
+	content: "\e83d";
+}
+.icon-team-building:before {
+	content: "\e83e";
+}
+.icon-teenagers-old:before {
+	content: "\e83f";
+}
+.icon-teenagers:before {
+	content: "\e840";
+}
+.icon-train:before {
+	content: "\e841";
+}
+.icon-trekking-hiking:before {
+	content: "\e842";
+}
+.icon-volunteer:before {
+	content: "\e843";
+}
+.icon-walking:before {
+	content: "\e844";
+}
+.icon-water-sports:before {
+	content: "\e845";
+}
+.icon-weekend:before {
+	content: "\e846";
+}
+.icon-wildlife:before {
+	content: "\e847";
+}
+.icon-windsurfing-kitesurfing:before {
+	content: "\e848";
+}
+.icon-winter-sports:before {
+	content: "\e849";
+}
+

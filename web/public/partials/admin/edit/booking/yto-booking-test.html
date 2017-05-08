@@ -1,0 +1,158 @@
+<div class="well">
+    <h4>test booking helpers</h4>
+    <p>
+    _findcounty ('ES')<br>
+    // devuelve el nombre en spanish del pais dado su codigo
+    <pre>{{_findcounty('ES') | json}}</pre>
+    </p>
+    <hr>
+    <p>
+    findCountryByCode ('ES')<br>
+    // devuelve el nombre en spanish  del pais dado su codigo 
+    <pre>{{findCountryByCode('ES') | json}}</pre>
+    </p>
+    <hr>
+    <p>
+    _get_age ({{borntest | date :'dd-MM-yyyy'}} / {{nowtest | date :'dd-MM-yyyy'}}) <br>
+    // devuleve la edad del pasajero en años<br>
+    // requiere fecha de nac  <br>
+    <pre>{{_get_age(borntest,nowtest) | json}}</pre>
+    </p>
+    <hr>
+    <p>
+    addHoursDate({{nowtest | date :'dd-MM-yyyy' }}, 72)<br>
+    // return date + hours<br>
+    <pre>{{addHoursDate(nowtest, 72) | date :'dd-MM-yyyy hh:mm' | json}}</pre>
+    </p>
+    <p>
+    verifiedPay (booking) <br>
+    // devuelve true si tiene todos los pagos<br>
+    // verificados (tpv o transferencia verficada)<br>
+    <pre>{{verifiedPay(booking) | json}}</pre>
+    </p>
+    <hr>
+    <p>
+    productNeedFlights(dmcproduct.itinerary)<br>
+    // devuelve true si el producto tiene vuelos internos<br>
+    <pre>{{productNeedFlights(dmcproduct.itinerary) | json}}</pre>
+    </p>
+    <hr>
+    <p>
+    getTotalPaid(booking)<br>
+    /**<br>
+     * funcion que devuelve el porcentaje pagado<br>
+     */<br>
+    <pre>{{getTotalPaid(booking) | json}}</pre>
+    </p>
+    <hr>
+    <p>
+    getRestForPaid(booking)<br>
+    /**<br>
+     * funcion que devuelve el resto que queda por pagar<br>
+     */<br>
+    <pre>{{getRestForPaid(booking) | json}}</pre>
+    </p>
+    <hr>
+    <p>
+    isOldBooking(booking)<br>
+    /**<br>
+     * funcion que devolvera si una reserva esta ya disfrutada<br>
+     *</br>
+    <pre>{{isOldBooking(booking) | json}}</pre>
+    </p>
+    <hr>    
+    <p>
+    getTotal(booking.payStatus)<br>
+    /**<br>
+     * funcion que suma el total de los pagos recibidos<br>
+     */<br>
+    <pre>{{getTotal(booking.payStatus) | json}}</pre>
+    </p>
+    <hr>
+    <p>
+    getDistributionRoom(booking.roomDistribution[0], true)<br>
+    /**<br>
+     * funcion que devovlera la composicion de una habitaicon indicada<br>
+     * devolvera el numero de adultos y la edad de cada uno en una cadena de texto
+     * <br>
+     * @return "2 adultos  30 años, 30 años"<br>
+     */<br>
+     <pre>{{getDistributionRoom(booking.roomDistribution[0], true) | json}}</pre>
+    </p>
+    <hr>
+    <p>
+    getTotalPax(booking)<br>
+    /**<br>
+     * funcion que devuelve el total de pax de la reserva con el formato:<br>
+     * they are 2 pax: 2 adults<br>
+     */<br>
+    <pre>{{getTotalPax(booking) | json}}</pre>
+    </p>
+    <hr>
+    <p>
+    getPricePerson()<br>
+    /**<br>
+     * obtiene el precio por persona<br>
+     */<br>
+    <pre>{{getPricePerson() | json}}</pre>
+    </p>
+    <hr>
+    <p>
+    getPaxNumber()<br>
+    /**<br>
+     * obtiene la cantidad total de pax<br>
+     */<br>
+    <pre>{{getPaxNumber() | json}}</pre>
+    </p>
+    <hr>
+    <p>
+    getPaxInRoom('double')<br>
+    /**<br>
+     * obtiene la cantidad total de pax en una habitación<br>
+     */<br>
+    <pre>{{getPaxInRoom('double') | json}}</pre>
+    </p>
+    <hr>
+    <p>
+    getPvpPerson()<br>
+    /**<br>
+     * obtiene el pvp final por persona<br>
+     */<br>
+     <span class="text-red">FALLA</span><pre>{/{getPvpPerson() | json}}</pre>
+    </p>
+    <hr>
+    <p>
+    getPvpTotal()<br>
+    /**<br>
+     * obtiene el precio por persona (de la divisa del usuario exchange)<br>
+     */<br>
+    <pre>{{getPvpTotal() | json}}</pre>
+    </p>
+    <hr>
+    <p>
+    getPricePersonDay()<br>
+    /**<br>
+     * obtiene el precio por persona y por dia<br>
+     */<br>
+    <pre>{{getPricePersonDay() | json}}</pre>
+    </p>
+    <hr>
+    <p>
+    getActualProfit(booking)<br>
+    /***<br>
+     * funcion que obtiene el fee actual (no rescatado de affiliate.fees, si no del valor obtenido del pvp y netoagencia de la booking)<br>
+     * para ser 100 exacto<br>
+     * la formula es (100*pvp/neto) - 100<br>
+     */<br>
+    <pre>{{getActualProfit(booking) | json}}</pre>
+    </p>
+    <hr>
+    <p>
+     showRoomNameSpanish ('double')<br>
+    /**<br>
+     * devuelve el nombre en espanol de las habiticiones<br>
+     */<br>
+
+    <pre>{{showRoomNameSpanish('double') | json}}</pre>
+    </p>    
+</div>

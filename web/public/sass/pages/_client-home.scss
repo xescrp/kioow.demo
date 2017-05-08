@@ -1,0 +1,375 @@
+.headline-wrap {
+	position: absolute;
+	top: 50px;
+	width: 100%;
+	@media (max-width: $screen-sm-max) {
+		position: relative;
+		min-height: 370px;
+		background-image: url("http://res.cloudinary.com/open-market-travel/image/upload/q_70/v1436195981/assets/australia.jpg");
+		background-position: center center;
+		padding-bottom: 50px;
+		top: 0;
+		.container {max-width: 500px; min-width: 300px;}
+	}
+}
+.loading-slider-home .headline-wrap {
+		position: relative;
+		min-height: 370px;
+		background-image: url("http://res.cloudinary.com/open-market-travel/image/upload/q_70/v1436195981/assets/australia.jpg");
+		background-position: center center;
+		padding-bottom: 50px;
+		top: 0;
+}
+.slider-loading{
+	top: 150px !important;
+}
+.headline {
+	background-color: $brand-alternate;
+	@extend .invert-text;
+	margin-top: 55px;
+	@media (max-width: $screen-md-max) {margin-top: 30px;}
+	@media (max-width: $screen-sm-max) {margin-top: 60px;}
+	padding: $padding-xl-vertical $padding-xl-horizontal;
+	h3 {font-size: $font-size-h3; font-weight: 500; line-height: 1.4;}
+}
+
+.featured-banner {
+	margin-top: 30px;
+	h3 {@extend .marged-zero;}
+	p {
+		// min-height: 24px;
+		margin: 0 0 $padding-base-vertical 0;
+		.fa-stack {float: left; margin-right: 4px;}
+		span {display: inline-block; vertical-align: bottom; color: $gray-light;}
+	}
+	.text-detail {color: $gray-light;}
+	.part {
+		background-color: $light;
+		margin-bottom: 3px;
+	}
+	.price {
+		position: relative;
+		color: $brand-danger;
+		padding: $padding-base-vertical $padding-xl-horizontal;
+		em {font-size: $font-size-h4; }
+		strong {font-size: $font-size-h2; line-height: 0.8;}
+		button {margin: 7px 0;}
+	}
+	.price, .request-landing & .details {
+		@include triangle($color: $gray-light-mid, $width: 145px, $height: 25px, $z-index: 3);
+	}
+	@media (max-width: $screen-sm-max) {margin-top: $padding-xl-vertical;}
+}
+
+
+.info-block {
+	@extend .bg-light;
+	@include triangle;
+	position: relative;
+	@media (max-width: $screen-sm-max) {text-align: center;}
+	//round fa icons into info blocks
+	.info-fa-icon {
+		font-size: $font-size-h2;
+		color: $brand-danger;
+		margin-top: $padding-large-vertical;
+	}
+	//backgrounds
+	.info-icon {
+		height: 70px;
+		width: 70px;
+		border-radius: 180px;
+		background-color: $almost-light;
+		background-position: center center;
+		background-repeat: no-repeat;
+		@include center-block;
+
+		&.compass {
+			background-image: url("http://res.cloudinary.com/open-market-travel/image/upload/assets/infoicon-compass.png");
+			background-size: 55px;
+			-webkit-background-size: 55px;
+		}
+		&.card {
+			background-image: url("http://res.cloudinary.com/open-market-travel/image/upload/assets/infoicon-card.png");
+			background-size: 45px 28px;
+			-webkit-background-size: 45px 28px;
+		}
+		&.local-ops {
+			background-image: url("http://res.cloudinary.com/open-market-travel/image/upload/assets/infoicon-local-ops.png");
+			background-size: 38px;
+			-webkit-background-size: 38px;
+		}
+		&.newsletter {
+			background-image: url("http://res.cloudinary.com/open-market-travel/image/upload/assets/infoicon-newsletter.png");
+			background-size: 45px;
+			-webkit-background-size: 45px;
+		}
+		&.visas {
+			background-image: url("http://res.cloudinary.com/open-market-travel/image/upload/assets/infoicon-visas.png");
+			background-size: 50px;
+			-webkit-background-size: 50px;
+		}
+		&.flight {
+			background-image: url("http://res.cloudinary.com/open-market-travel/image/upload/assets/infoicon-flight.png");
+			background-size: 55px;
+			-webkit-background-size: 55px;
+		}
+		&.umbrella {
+			background-image: url("http://res.cloudinary.com/open-market-travel/image/upload/assets/infoicon-umbrella.png");
+			background-size: 45px;
+			-webkit-background-size: 45px;
+		}
+	}
+}
+
+.home {
+	.info-block {
+		// custom arrow
+		.fa-arrow-circle-right {
+			color: $brand-primary;
+			font-size: $font-size-h2;
+			margin-right: 10px;
+			@extend .trans-b;
+			&:hover {color: $brand-alternate;}
+		}
+		&:hover {
+			.fa-arrow-circle-right {
+				margin-right: 0;
+			}	
+		}
+	}
+}
+
+.inspiration-wrap {
+	.well {background-color: $light; }
+	.inspiration-box {
+		@media (max-width: $screen-xs-max) {margin-bottom: $padding-xl-horizontal;}
+		text-align: center;
+		margin-top: 25px;
+		@media (max-width: $screen-md-max) {margin-top: 22px;}
+		input[type="radio"] {display: none;}
+		input[type="radio"]+label {    
+		    	@include triangle (down, $brand-danger, 20px, 11px, 1);
+		    	height: 40px;
+			width: 40px;
+			border: 1px solid $brand-danger;
+			font-size: 25px;
+			color: $brand-danger;
+			@extend .no-select;
+		}
+		input[type="radio"]:checked + label {
+		    	@include triangle (down, $brand-danger-dark, 20px, 11px, 1);
+		    	color: $light;
+		    	background-color: $brand-danger;
+		}
+	}
+	.inspiration-label {
+		position: relative; display: inline-block;
+		&:hover {cursor: pointer;}
+		&:before {margin-top: 6px;display: block;}
+	}
+
+	.inspiration-results {
+		position: relative;
+		.col-md-3 {text-align: center;}
+		.blue-shade {
+			position: absolute;
+			right: 0; bottom: 0;
+			min-width: 123px;
+			min-height: 150px;
+			background-color: rgba($brand-primary, 0.7);
+		}
+		&.empty {
+			margin-top: 0px;
+			.preloader {margin-top: 263px;}
+		}
+	}
+
+	.inspiration-result {
+		display: inline-block;
+		position: relative;
+		text-align: left;
+		@media(min-width: $screen-md-min) {width: 100%;}
+		@extend .mt-xl;
+		&:hover {
+			.inspiration-summary {
+				right: 35px; 
+				@include triangle(down, darken($brand-alternate, 4%), 88px, 17px, 1);
+			}
+			.inspiration-summary-box {background-color: rgba($brand-primary, 0.85);}
+		}
+		img {
+			width: 270px; height: 270px;
+			@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+				width: 203px; height: 203px;
+			}			
+		}
+	}
+	.inspiration-summary {
+		@extend .invert-text;
+		@include transition(all .2s ease-out);
+		&:after {@include transition(all .2s ease-out);}
+		position: absolute;
+		bottom: 17px;
+		right: 25px;
+		width: 65%;
+		z-index: 10;
+		@include triangle(down, $brand-alternate, 98px, 17px, 1);
+		.label-danger {
+			display: inline-block; 
+			text-transform: uppercase; 
+			margin-bottom: 4px;
+		}
+	}
+	.inspiration-summary-box {
+		background-color: rgba($brand-alternate, 0.8); 
+		padding: $padding-base-vertical $padding-base-horizontal;
+		h2 {font-size: $font-size-title-mobile;}
+		strong {font-size: $font-size-h3;}
+		.price {
+			em {
+				font-size: $font-size-h3;
+			}
+			strong {
+				overflow: hidden;
+				font-size: $font-size-h2;
+			}
+			.inspiration-action {
+				font-size: $font-size-h2;
+				position: absolute;
+				right: $padding-base-horizontal;
+				bottom: 8px;
+				@extend .invert-text;
+			}
+		}
+	}
+
+	.inspiration-empty-result {
+
+
+		.inspiration-empty-summary {
+			@extend .bg-light;
+			@extend .padded-l;
+			position: absolute;
+			bottom: 17px;
+			right: 25px;
+			width: 65%;
+			z-index: 10;
+		}
+
+		.placeholding-block {
+			background-color: $almost-light;
+			@extend .block;
+			@extend .mb-xl;
+			&.over-label {position: absolute; top: -20px; left: 0; @extend .bg-light; width: 40%; height: 10px;}
+			&.large {height: 35px; width: 90%;}
+			&.small {height: 10px; @extend .mb-l;width: 100%;}
+			&.first {width: 70%;}
+			&.last {width: 40%;}
+		}
+	
+	}
+
+
+
+}
+
+.garantias-wrap {
+	border-color: $brand-primary;
+	background-color: $brand-primary;
+	@extend .invert-text;
+	.popover {color: $gray-dark;}
+	h4 {
+		display: inline-block; 
+		margin: $padding-xl-horizontal $padding-xl-vertical;
+		i {
+			font-size: $font-size-h2;
+			vertical-align: sub;
+			margin-right: 4px;
+		}
+	}
+}
+
+.ventajas-wrap {
+	.well {background-color: $light;}
+	h2 {margin-bottom: 35px;}
+	.ventajas-box {
+		padding: 0 20px;
+		@media (max-width: $screen-sm-max) {margin-bottom: $padding-xl-horizontal;}
+	}
+	.ventajas-text {
+		padding:35px 25px; 
+		h4 {font-size: $font-size-h3;}
+		@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {min-height: 260px;}
+	}
+	.ventajas-icon {
+		display: inline-block;
+		padding:$padding-xl-horizontal;
+		position: relative;
+		text-align: center;
+		@extend .invert-text;
+		i {font-size: $font-size-h2;}
+		
+		&.moneybox {
+			background-color: $brand-danger;
+			@include triangle(down, $brand-danger-dark, 39px, 15px, 1);
+		}
+		&.time {
+			background-color: $brand-primary;
+			@include triangle(down, $brand-alternate, 39px, 15px, 1);
+		}
+		&.info {
+			background-color: $brand-alternate;
+			@include triangle(down, $brand-alternate-dark, 39px, 15px, 1);
+		}
+		&.handshake {
+			background-color: $brand-warning;
+			@include triangle(down, $brand-warning-dark, 39px, 15px, 1);
+		}
+	}
+}
+
+.dmc-signup-wrap {
+	border-color: $brand-alternate;
+	@extend .invert-text;
+	background-color: $brand-alternate;
+	.btn {
+		margin: $padding-xl-horizontal;
+		padding-left: 30px; padding-right: 30px;
+	}
+}
+
+.countryselect-modal {
+	.closer {
+		top: 15px;
+		right: 15px;
+		z-index: 1;
+		button {
+			opacity: 1;
+			color: $light;
+		}
+		
+	}
+	.modal-body {
+		padding: 0;
+	}
+	.country-zone {
+		height: 120px;
+		@media (max-width: $screen-xs-max) {height: 80px;}
+		overflow: hidden;
+		background-position: bottom right;
+		background-repeat: no-repeat;
+		&:hover {
+			.country-zone-img {opacity: 1;}
+		} 
+	}
+	.country-zone-img {
+		@extend .trans-xs;
+		@extend .absolute;
+		bottom: 0;
+		right: 0;
+		opacity: .4;
+		&.opac-full {opacity: 1;}
+		@media (max-width: $screen-xs-max) {width: 360px;}
+	}
+	.country-bread:before {content: ""; padding: 0;}
+}

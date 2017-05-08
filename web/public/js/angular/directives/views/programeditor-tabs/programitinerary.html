@@ -1,0 +1,150 @@
+﻿<style>
+    .selected-dnd{
+        background-color: #949499;
+        cursor: pointer;
+    }
+
+    ul[dnd-list] .dndPlaceholder {
+        background-color: #ddd;
+        display: block;
+        min-height: 38px;
+    }
+
+    .itemlist li:hover{
+        background-color: #949499;
+        cursor: pointer;
+    }
+
+</style>
+<h2 class="mb-l">Itinerary (Selected category: {{programs[selectedindexcategory].categoryname.label_es || programs[selectedindexcategory].categoryname.label_en }})</h2>
+<div class="row">
+    <div class="col-md-4">
+        <div class="container-element box box-blue">
+            <!--
+                on list:
+                dnd-dragover="ItinerarydragoverCallback(index, external, type)"
+                dnd-drop="ItinerarydropCallback(index, item, external, type)"
+                dnd-inserted="ItinerarylogListEvent('inserted at', index, external, type)" 
+
+                item:
+                dnd-dragstart="itinerarylogEvent('Started to drag an item')"
+                    dnd-dragend="itinerarylogEvent('Drag operation ended. Drop effect: ' + dropEffect)"
+                --><!--.itinerary.splice($index, 1)-->
+
+            <ul dnd-list="programs[selectedindexcategory].itinerary"
+                dnd-horizontal-list="true" style="list-style-type:none; overflow-y: scroll; overflow-x: hidden; height: 478px;"
+                dnd-drop="ItinerarydropCallback(index, item, external, type)" 
+                dnd-inserted="logListEvent('inserted at', index, external, type)" 
+                class="itemlist">
+                <li ng-repeat="item in programs[selectedindexcategory].itinerary" style="margin:5px; cursor:pointer;"
+                    ng-class="{'selected-dnd': programs[selectedindexcategory].itinerary[selecteditineraryday] === item}"
+                    dnd-draggable="item"
+                    dnd-effect-allowed="move"
+                    dnd-moved="deletemoved($index, programs[selectedindexcategory])" 
+                    dnd-inserted=""
+                    dnd-selected="selectday($index, item)">
+                    <div class="row">
+                        <div class="col-md-2"><img style="width: 32px; height:32px;" ng-src="{{imageproductstretch(item.image.url)}}" /></div>
+                        <div class="col-md-10">{{$index + 1}}. {{showCities(item, $index, programs[selectedindexcategory].itinerary)}}</div>
+                    </div>
+                </li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="col-md-8" ng-show="daybydayedit">
+        <div ng-include="itinerarydaytemplateurl" class="admincontent"></div>
+    </div>
+    <div class="col-md-8" ng-show="!daybydayedit">
+        <h4 ng-show="copyprogramday == null">Copy days from other programs </h4>
+        <h4 ng-show="copyprogramday != null">Copy days from {{copyprogramday.title_es || copyprogramday.title}} ({{copyprogramday.code}})</h4>
+        <div class="row">
+            <div class="col-md-12 admincontent" >
+                <uib-tabset active="active">
+                    <uib-tab index="0" heading="Program List" style="padding-left: 0px;">
+                        <button type="button" ng-show="copyprograms == null || copyprograms.length == 0" ng-click="selectdmc(dmc)"
+                                class="ml-l mt-l btn btn-danger add-city notranslate">
+                            Recover programs from this DMC: <strong>{{dmc.company.name}}</strong>
+                        </button>
+
+                        <div style="color:black; height: 300px; overflow-y: auto; overflow-x:hidden;" ng-show="copyprograms.length > 0">
+
+                            <table class="table table-striped table-hover table-results table-results-admin" style="color:black;">
+                                <thead>
+                                    <tr style="font-weight:bold">
+                                        <td></td>
+                                        <td>Code</td>
+                                        <td>Saved as...</td>
+                                        <td>English title</td>
+                                        <td>Spanish title</td>
+                                        <td>Duration</td>
+                                    </tr>
+                                </thead>
+                                <tbody class="">
+                                    <tr class="pointer"
+                                        ng-repeat="program in copyprograms"
+                                        ng-click="copydaysprogramcode.code = program.code; findprogram()">
+                                        <td>
+                                            <img class="mb-xs" ng-src="{{imageproductstretchcustom(program.productimage.url, 30)}}" />
+                                        </td>
+                                        <td>{{ program.code }}</td>
+                                        <td>
+                                            <span>{{ program.name }}</span>
+                                        </td>
+                                        <td>
+                                            {{program.title}}
+                                        </td>
+                                        <td>
+                                            {{ program.title_es }}
+                                        </td>
+                                        <td>
+                                            {{program.itinerarylength}}
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </uib-tab>
+                    <uib-tab index="1" heading="Program Days" >
+                        <ul dnd-list="copyprogramday.itinerary"
+                            dnd-horizontal-list="true" style="list-style-type:none; overflow-y: scroll; overflow-x: hidden; height: 380px;" id="copydaysource"
+                            class="itemlist">
+                            <li ng-repeat="item in copyprogramday.itinerary" style="margin:5px;"
+                                dnd-draggable="item"
+                                dnd-type="'copyfromanotherprogram'"
+                                dnd-moved="test(index, item, external, type)"
+                                dnd-effect-allowed="copyMove">
+                                <div class="row">
+                                    <div class="col-md-2"><img style="width: 32px; height:32px;" ng-src="{{imageproductstretch(item.image.url)}}" /></div>
+                                    <div class="col-md-10">{{$index + 1}}. {{showCities(item, $index, copyprogramday.itinerary)}} </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </uib-tab>
+                </uib-tabset>
+                
+            </div>
+        </div>
+    </div>
+</div>
+ <!-- close first day -->
+<div class="close-day">
+    <div class="item-icon padded-l ml-xl" dnd-list="[]" style="list-style-type:none;"  >
+        <a href="" style="font-size: 60px;" uib-tooltip="Drop here the days from the list to delete them" >
+            <i class="fa fa-trash-o"></i>
+        </a>
+
+        <!--<ul dnd-list="[]">
+            <li><a href="" style="font-size: 60px;"><i class="fa fa-trash-o"></i></a></li>
+        </ul>-->
+
+    </div>
+</div>
+<div class="close-day">
+    <button type="button" tooltip-placement="top" uib-tooltip="Add days to your itinerary" ng-click="additineraryday()" class="btn btn-primary btn-lg">Add Day</button>
+    <p class="help-block">Once you've got days, click on each one to get the detail information boxes</p>
+    <button type="button" tooltip-placement="top" uib-tooltip="Switch the view of Editing Days (day by day) or Copy Days from other already loaded program" ng-click="daybydayedit = !daybydayedit" class="btn btn-warning btn-lg">{{ daybydayedit ? 'Copy Days' : 'Edit Days' }}</button>
+    <p ng-show="daybydayedit" class="help-block">From another program already uploaded</p>
+    <p ng-hide="daybydayedit" class="help-block">Switch to get back to the detail information boxes</p>
+</div>

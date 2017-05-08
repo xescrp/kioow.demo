@@ -1,0 +1,34 @@
+{
+  "code": "",
+  "name": "",
+  "company": {
+    "name": "viajes mundiales",
+    "legalname": "viajes legales",
+    "constitutionyear": "1545",
+    "phone": "654646544",
+    "website": "",
+    "taxid": "&5644646",
+    "location": {
+      "fulladdress": "Carrer Doctor Gómez Ullà, 19, 07420 Sa Pobla, Illes Balears, España",
+      "cp": "07420",
+      "city": "Sa Pobla",
+      "country": "España",
+      "countrycode": "ES",
+      "stateorprovince": "Illes Balears",
+      "latitude": 39.7694554,
+      "longitude": 3.028844499999991,
+      "route": "Carrer Doctor Gómez Ullà"
+    }
+  },
+  "contact": {
+    "firstname": "juan",
+    "lastname": "gomez",
+    "email": "test@gmail.com",
+    "position": "director",
+    "skype": "lkj"
+  },
+  "membership" : {
+    "acceptterms": true
+  },
+  "user": {}
+}

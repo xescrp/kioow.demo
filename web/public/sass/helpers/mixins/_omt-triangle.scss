@@ -1,0 +1,74 @@
+@mixin triangle ($direction:"down" , $color: $gray-lighter-low, $width: 185px, $height: 71px, $z-index: -1, $hover: "off") {
+    &:after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            z-index: $z-index;
+            border-style: solid;
+            //anti aliasing
+            -webkit-transform:rotate(360deg);
+
+
+            @if $direction == "up" {
+                //preventing poor triangle rendering in firefox            
+                border-color:  rgba(255,255,255,0) rgba(255,255,255,0)  rgba(255,255,255,0) $color;
+                border-color:  transparent transparent transparent $color;
+                border-width: $height 0 0 $width;
+                left: 0;
+                top: -$height;
+            }
+
+            @if $direction == "down" {
+                //preventing poor triangle rendering in firefox        
+                border-color: $color rgba(255,255,255,0) rgba(255,255,255,0) rgba(255,255,255,0);
+                border-color: $color transparent transparent transparent;
+                border-width: $height $width 0 0;
+                right: 0;
+                bottom: -$height;
+            }
+
+            @if $direction == "left" {
+                //preventing poor triangle rendering in firefox            
+                border-color:  rgba(255,255,255,0) rgba(255,255,255,0) $color rgba(255,255,255,0);
+                border-color:  transparent transparent $color transparent;
+                border-width: 0 0 $width $height;
+                top: 0;
+                left: -$height;
+            }
+
+            @if $direction == "right" {
+                //preventing poor triangle rendering in firefox
+                border-color:  rgba(255,255,255,0) rgba(255,255,255,0) rgba(255,255,255,0) $color;
+                border-color:  transparent  transparent transparent $color;
+                border-width: $width 0 0 $height;
+                top: 0;
+                right: -$height;
+            }
+
+            @if $direction == "isosdownshadow"{
+                //preventing poor triangle rendering in firefox
+                border-color: $color rgba(255,255,255,0) rgba(255,255,255,0) rgba(255,255,255,0);
+                border-color: $color transparent transparent transparent;
+                border-width: $height $width 0 $width;
+                left: 0;
+                bottom: -$height;
+                // $shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 5px rgba(0,0,0,.075);
+                // @include box-shadow($shadow);
+                // border-color: $color rgba(255,255,255,0) rgba(255,255,255,0) rgba(255,255,255,0);
+                // border-color: $color transparent transparent transparent;
+                // border-width: $height $width 0 $width;
+                // right: 0;
+                // bottom: -$height;
+            }
+
+        }
+    // @if $direction == "isosdownshadow"{
+    //   width: 180px;
+    //   height: 40px;
+    //   position: relative;
+    //   overflow: hidden;
+    //   $shadow: inset 0 3px 0 rgba(255,255,255,.15), 0 1px 5px rgba(0,0,0,.075);
+    //   @include box-shadow($shadow);
+    // }
+}

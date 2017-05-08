@@ -1,0 +1,250 @@
+  <!--Spanish -->
+  <div id="messageBox" ng-show="lang=='ES' && ( chat.messages.length > 0 || showempty != 'false'  )">
+    <h3><small ng-show="newMessages">{{newMessages}} nuevos</small></h3>
+
+    <h3 ng-hide="chat.messages.length > 0" class="h4-sized thin mt-l">
+        <i class="fa fa-comments-o"></i> Envía un mensaje 
+        <span ng-show="to.type=='dmc'">al operador local</span>
+        <span ng-show="to.type=='traveler'">al viajero</span>
+        <span ng-show="to.type=='affiliate'">a la Agencia de Viajes</span>
+      </h3>
+    <section class="relative panel panel-default message" ng-class="{'msg-ellipsis' : haveHiddenMesgs}">
+      <div class="preloader-partial in" ng-class="{in : showLoadChat}" style=""><div class="preloader"><span></span><span></span><span></span></div></div>
+      <a ng-show="haveHiddenMesgs"
+      ng-click="showMessages()"
+      href=""
+      class="btn-ellipsis">
+        <span ng-show="txtHaveHidden"><i class="fa fa-lg fa-ellipsis-h"></i> {{hiddenMsgs}} mensajes antiguos</span>
+        <span ng-hide="txtHaveHidden">ocultar mensajes antiguos</span>
+      </a>
+
+       <ul class="list-group">
+        <li class="list-group-item"
+          ng-repeat="msg in chat.messages"
+          ng-show="$index >= hiddenMsgs" ng-if="msg.from.id == from.id && msg.to.id == to.id || msg.to.id == from.id && msg.from.id == to.id" >
+
+  		    <!-- origen -->
+          <div ng-if="msg.from.id == from.id && msg.to.id == to.id" class="{{msg.from.status}}">
+          
+            <span ng-if="from.type == 'admin'">
+              <img src="http://res.cloudinary.com/open-market-travel/image/upload/c_scale,h_36/v1441697527/yourttoo.com/favicon.png"  data-src2x="http://res.cloudinary.com/open-market-travel/image/upload/c_scale,h_36/v1441697527/yourttoo.com/favicon.png" class="id-user-img img-circle" />
+            </span>
+            <span ng-if="from.type != 'admin'">
+              <img ng-src="{{getimage(from.avatar, 'avatarb36')}}"  data-src2x="{{getimage(from.avatar, 'avatarb36retina')}}" class="id-user-img img-circle" />
+            </span>
+            <p class="mb-zero">
+              <span ng-show="usertype !='omt'">
+                <strong>Tú </strong> {{msg.date | date : 'dd-MM-yyyy'}} - {{msg.date | date : 'shortTime'}} |
+              </span>
+              <span ng-show="usertype =='omt'">
+                <strong>
+                  <span ng-if="from.type == 'dmc'">[DMC]</span>
+                  <span ng-if="from.type == 'affiliate'">[Agencia]</span>
+                  {{from.name}}
+                </strong> {{msg.date | date : 'dd-MM-yyyy'}} - {{msg.date | date : 'shortTime'}} |
+              </span>
+              <em class="text-xs status">
+              <span ng-if="msg.from.status == 'sending'">enviando...</span>
+              <span ng-if="msg.from.status == 'sent'">enviado</span>
+              <span ng-if="msg.from.status == 'new'">nuevo</span>
+              <span ng-if="msg.from.status == 'read'">leido</span>
+              <span ng-if="msg.from.status == 'error'">error</span>
+              <span class="hidden">{{msg.from.status}}</span>
+              </em>
+              <br>
+              {{msg.message}}      
+              </p>
+          </div>
+          
+          <!-- destino -->
+          <div ng-if="msg.to.id == from.id && msg.from.id == to.id" class="{{msg.to.status}}">
+            <span ng-if="to.type == 'admin'">
+              <img src="http://res.cloudinary.com/open-market-travel/image/upload/c_scale,h_36/v1441697527/yourttoo.com/favicon.png"  data-src2x="http://res.cloudinary.com/open-market-travel/image/upload/c_scale,h_36/v1441697527/yourttoo.com/favicon.png" class="id-user-img img-circle" />
+            </span>
+            <span ng-if="to.type != 'admin'">
+              <img ng-src="{{getimage(to.avatar, 'avatarb36')}}"  data-src2x="{{getimage(to.avatar, 'avatarb36retina')}}" class="id-user-img img-circle" />
+            </span>
+
+            <p class="mb-zero" ng-init="msg.showTranslation = false">
+              <span ng-show="usertype !='omt'">
+              de <strong>{{to.name}}</strong> {{msg.date | date : 'dd-MM-yyyy'}} - {{msg.date | date : 'shortTime'}} |
+              </span>
+              <span ng-show="usertype =='omt'">
+              <strong>
+                <span ng-if="msg.from.type == 'traveler'">[Viajero]</span>
+                <span ng-if="msg.from.type == 'affiliate'">[Agencia]</span>
+               {{msg.from.name}}</strong> {{msg.date | date : 'dd-MM-yyyy'}} - {{msg.date | date : 'shortTime'}} |
+              </span>
+              
+              <em class="text-xs status">
+              <span ng-if="msg.to.status == 'sending'">enviando...</span>
+              <span ng-if="msg.to.status == 'sent'">enviado</span>
+              <span ng-if="msg.to.status == 'new'">nuevo</span>
+              <span ng-if="msg.to.status == 'read'">leido</span>
+              <span ng-if="msg.to.status == 'error'">error</span>
+              <span class="hidden">{{msg.to.status}}</span>
+              </em>
+
+              <br>
+              <em ng-hide="msg.showTranslation">
+                  {{msg.message}} <span ng-show="to.type != 'affiliate' && to.type != 'admin'"><a ng-href="#" ng-click="translate('EN', 'ES', msg.message, msg)"><i class="fa fa-language"></i> translate</a></span>
+                </em>
+                <em ng-show="msg.showTranslation">
+                  {{msg.translation}}
+                  <span>
+                    <i class="fa fa-language"></i> power by google translator <a href="" ng-click="msg.showTranslation = false">mostrar original</a>
+                  </span>
+                </em>
+
+            </p>
+          </div>
+        </li>
+        
+  	  <!-- enviar mensaje -->
+        <li class="list-group-item" ng-show="usertype !='omt' ">
+        <span ng-if="from.type == 'admin'">
+          <img src="http://res.cloudinary.com/open-market-travel/image/upload/c_scale,h_36/v1441697527/yourttoo.com/favicon.png"  data-src2x="http://res.cloudinary.com/open-market-travel/image/upload/c_scale,h_36/v1441697527/yourttoo.com/favicon.png" class="id-user-img img-circle mt-b" />
+        </span>
+        <span ng-if="from.type != 'admin'">
+          <img ng-src="{{getimage(from.avatar, 'avatarb36')}}"  data-src2x="{{getimage(from.avatar, 'avatarb36retina')}}" class="id-user-img img-circle mt-b" />
+        </span>
+            <form class="sendmessageform" id="sendmessagees" name="sendmessagees" novalidate>
+            <div class="form-group">
+             <label for="message" class="control-label sr-only">Mensaje</label>
+                 <textarea tabindex="1"
+                    class="form-control"
+                    ng-model="txtmessage_es"
+                    id="message_es"
+                    placeholder="{{placeholder()}}"
+                    ng-minlength="2"
+                    rows="2"
+                    required></textarea>
+                   <button type="submit" tabindex="2" class="btn btn-alt pull-right btn-chat-submit" ng-click="sendMessage()" ng-disabled="sendmessagees.message_es.$invalid" type="button">enviar</button>
+             </div>
+           </form>
+           </li>
+      </ul>
+    </section>
+  </div>
+
+
+  <!--English -->
+  <!--   <pre>chat : {{chat | json}}</pre> -->
+
+  <div ng-show="lang == 'EN' && ( chat.messages.length > 0 || showempty != 'false' )">
+  <h3>Messages from/to
+  <span ng-show="to.type=='traveler'">client</span>
+  <span ng-show="to.type=='dmc'">dmc</span>
+  <span ng-show="to.type=='affiliate'">Travel Agency</span>
+   <small ng-show="newMessages">{{newMessages}} new</small></h3>
+      
+    <section class="relative panel panel-default message"
+    ng-class="{'msg-ellipsis' : haveHiddenMesgs && hiddenMsgs != 0}">
+      <div class="preloader-partial in" ng-class="{in : showLoadChat}" style=""><div class="preloader"><span></span><span></span><span></span></div></div>
+      <h4 ng-hide="chat.messages.length > 0"
+      class="h4-sized thin mt-xl mb-zero text-center">
+        <i class="fa fa-comments-o"></i> Send a message to 
+        <span ng-show="to.type=='dmc'">the DMC</span>
+        <span ng-show="to.type=='traveler'">the Traveler</span>
+        <span ng-show="to.type=='affiliate'">the Travel Agency</span>
+      </h4>
+      <a ng-show="haveHiddenMesgs && hiddenMsgs != 0"
+      ng-click="showMessages()"
+      href=""
+      class="btn-ellipsis">
+        <span ng-show="txtHaveHidden">
+          <i class="fa fa-lg fa-ellipsis-h"></i> {{hiddenMsgs}} old message/s
+        </span>
+        <span ng-hide="txtHaveHidden">
+          hidde old messages
+        </span>
+      </a>
+
+
+       <ul class="list-group">
+        <li class="list-group-item"
+        ng-repeat="msg in chat.messages"
+        ng-show="$index >= hiddenMsgs">
+
+          <div ng-if="msg.from.id == from.id" class="{{msg.from.status}}">
+            <img ng-show="from.type == 'dmc'" class="id-user-img img-circle" ng-src="{{getimage(from.avatar, 'avatarb36')}}"  data-src2x="{{getimage(from.avatar, 'avatarb36retina')}}" />
+            <p class="mb-zero">
+            
+              <span ng-show="usertype !='omt'">
+                <strong>You</strong> on {{msg.date | date : 'mediumDate'}} - {{msg.date | date : 'shortTime'}}
+               | </span>
+               <span ng-show="usertype =='omt'">
+                <strong>[DMC] {{from.name}}</strong> {{msg.date | date : 'mediumDate'}} - {{msg.date | date : 'shortTime'}} |
+              </span>
+              <em class="text-xs status">{{msg.from.status}} <a class="ml-b" ng-show="msg.from.status == 'error'" href="" ng-click="resendMsg($index)">try again</a></em>
+             <!--<a class="text-xs" href="#editmsg"><i class="ml-b fa fa-pencil"></i> edit</a>-->
+              
+             <br>
+              {{msg.message}}
+            </p>
+          </div>
+          <div ng-if="msg.from.id != from.id" class="{{msg.to.status}}">
+           <span ng-if="msg.from.type == 'affiliate'">
+              <img src="http://res.cloudinary.com/open-market-travel/image/upload/cs_no_cmyk/w_36,h_36,c_fill,g_face,q_90/avatar.jpg" data-src2x="http://res.cloudinary.com/open-market-travel/image/upload/cs_no_cmyk/w_72,h_72,c_fill,g_face,q_90/avatar.jpg" class="id-user-img img-circle" />
+            </span>
+            <span ng-if="msg.from.type == 'traveler'">
+              <img ng-src="{{getimage(to.avatar, 'avatarb36')}}" data-src2x="{{getimage(to.avatar, 'avatarb36retina')}}" class="id-user-img img-circle" />
+            </span>
+
+            <p class="mb-zero" ng-init="msg.showTranslation = false">
+              <span ng-show="usertype !='omt'">
+                from 
+                <span ng-if="msg.from.type == 'traveler'">
+                  <strong>{{to.name}}</strong>
+                </span>
+                <span ng-if="msg.from.type == 'affiliate'">
+                  <strong>Travel Agency</strong>
+                </span>
+                 on {{msg.date | date : 'mediumDate'}} - {{msg.date | date : 'shortTime'}} | 
+              </span>
+              <span ng-show="usertype =='omt'">
+                <strong>
+                <span ng-if="msg.from.type == 'traveler'">[Viajero]</span>
+                <span ng-if="msg.from.type == 'affiliate'">[Agencia]</span>
+                {{to.name}}</strong> on {{msg.date | date : 'mediumDate'}} - {{msg.date | date : 'shortTime'}} | 
+              </span>
+              <em class="text-xs status">{{msg.to.status}}</em>
+               
+              <br>
+            
+              <em ng-hide="msg.showTranslation">{{msg.message}} <span><a ng-href="#" ng-click="translate('ES', 'EN', msg.message, msg)"><i class="fa fa-language"></i> translate</a></span></em>
+              <em ng-show="msg.showTranslation">
+                {{msg.translation}}
+                <span>
+                  <i class="fa fa-language"></i> power by google translator <a href="" ng-click="msg.showTranslation = false">show original</a>
+                </span>
+              </em>
+            </p>
+          </div>
+        </li>
+        
+        <li class="list-group-item mb-zero" ng-show="usertype !='omt'">
+        <img ng-show="from.type == 'dmc'" ng-src="{{getimage(from.avatar, 'avatarb36')}}"  data-src2x="{{getimage(from.avatar, 'avatarb36retina')}}" class="id-user-img img-circle mt-b" />
+            <form class="sendmessageform mb-zero" id="sendmessageen" name="sendmessageen" novalidate>
+            <div class="form-group">
+             <label for="message" class="control-label sr-only">Message</label>
+                 <textarea tabindex="1"
+                 class="form-control"
+                 ng-model="txtmessage_en"
+                 id="message_en"
+                 name="message_en"
+                 placeholder="{{placeholder()}}"
+                 ng-minlength="2"
+                 rows="2" 
+                 required></textarea>
+   
+                <span class="input-group-btn">
+                    <button type="submit" tabindex="2" ng-disabled="sendmessageen.message_en.$invalid" class="btn btn-alt pull-right btn-chat-submit" ng-click="sendMessage()" type="button">send</button>
+                </span>
+
+             </div>
+           </form>
+           </li>
+      </ul>
+    </section>
+  </div>

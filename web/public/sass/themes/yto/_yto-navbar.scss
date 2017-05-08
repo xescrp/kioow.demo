@@ -1,0 +1,262 @@
+.navbar {
+	border: none;
+	background-color: darken($light, 5%) !important;
+}
+/// var logos 
+/// 
+$brand-logo-height : 42px;
+$brand-logo-width : 228px;
+// xs movile header
+$brand-logo-height-xs : $brand-logo-height / 1.5;
+$brand-logo-width-xs : $brand-logo-width / 1.5;
+// @warn #{$brand-logo-height-xs};
+// @warn #{$brand-logo-width-xs};
+//Logos
+
+.brand-logo {
+	display: block;
+	height: $brand-logo-height; 
+	width: $brand-logo-width; 
+	margin: 7px 15px;
+	//fix nav-bar bootstrap default
+	margin-left: 10px !important;
+	background-position: center center;
+	background-repeat: no-repeat;
+	span {display: none;}
+}
+//logo cases
+.user-front {
+	.brand-logo {
+		background-image: url($logo-header-url);
+		//@include image-2x($logo-header-urlx2, 198px, 32px);
+		@include image-2x($logo-header-urlx2, $brand-logo-width, $brand-logo-height);
+		@media(max-width: $screen-xs-max) {
+			margin: 12px 15px;
+			height: $brand-logo-height-xs;
+			width: $brand-logo-width-xs;
+			background-image: url($logo-footer-url);
+			background-size: $brand-logo-width-xs;
+			@include image-2x($logo-footer-urlx2, $brand-logo-width-xs, $brand-logo-height-xs);
+		}
+	}
+}
+.admin-affiliate {
+	.brand-logo {
+		background-image: url($logo-header-url);	
+		@include image-2x($logo-header-urlx2, $brand-logo-width, $brand-logo-height);
+		@media(max-width: $screen-xs-max) {
+			margin: 12px 15px;
+			height: $brand-logo-height-xs;
+			width: $brand-logo-width-xs;
+			background-image: url($logo-header-url);
+			background-size: $brand-logo-width-xs;
+			@include image-2x($logo-header-urlx2, $brand-logo-width-xs, $brand-logo-height-xs);
+		}		
+	}
+	.nav-phone, .h3-padded-nav {
+		color: $light;
+		a {
+			color: $light;
+			&:hover {
+				color: darken($light, 10%);
+			}
+		}
+	}
+}
+// Default navbar
+.navbar-default {
+	background-color: $light;
+	box-shadow: 0px 1px 5px $gray-dark;
+	.dropdown.open {background-color: $almost-light;}
+}
+.navbar-default .navbar-nav>li>a{
+	font-weight: 800;
+}
+
+//hover userfront nav dropdowns
+.user-front .navbar-header {
+	width : 100%;
+	.dropdown .nav-dd {
+		color: $gray;
+		@extend .trans-xs;
+		&:hover {background-color: $light!important;}
+	}
+	.dropdown.open {background-color: darken($light, 5%)!important;}	
+}
+
+.navbar-main-navigation, .navbar-public-navigation{
+	.nav-phone {
+		@media(max-width: $screen-xs-max) {
+			padding: 13px;
+			font-size: 19px;
+		}
+		@media(min-width: $screen-sm-min) {
+			padding: 10px 0 10px 15px;
+  			line-height: 30px;
+		}
+	}
+}
+.navbar-main-navigation{
+	background-color: $light;
+	.dropdown-menu li>a{
+		padding-top: 5px;
+		padding-bottom: 5px;
+		&:active, &:hover, &:focus{
+			text-decoration: none;
+		}
+		&:hover, &:focus{
+			background-color: $brand-alternate;
+			color: $light;
+		}
+	}
+}
+.navbar-public-navigation{
+	@include linear-gradient($brand-alternate, lighten($brand-alternate, 10%));
+	///background-color: $brand-alternate;
+	.navbar-nav > li > a{
+  		color: $light;
+  		&:hover {
+			color: $brand-alternate;
+		}
+  	}
+	
+}
+
+.admin-affiliate .navbar-header {
+	.dropdown .nav-dd {
+		color: $light;
+		&:hover {color: $almost-light!important; background-color: $brand-alternate-dark!important;}
+	}
+	.dropdown.open {background-color: $brand-alternate-dark!important;}	
+}
+
+// Inverse navbar
+.navbar-inverse {
+	box-shadow: none;
+}
+
+.navbar-brand {
+	img {@media (max-width: $screen-xs-max) {width: 120px!important;}}
+}
+
+//adapting toggle button to both styles
+.navbar-default {
+	.navbar-toggle {
+		border: none;
+		background-color: transparent!important;
+		span {background-color: $brand-primary!important;}
+		&:hover {
+			span {background-color: $brand-alternate!important;}
+		}
+	}
+}
+
+.admin-affiliate {
+	.navbar-toggle {span {background-color: $light!important;}
+		&:hover {span {background-color: $gray-lighter-low!important;}}
+	}
+	.nav li {
+		@media (max-width: $screen-sm-max) {@include border(bottom, $brand-alternate-dark);}
+	}
+}
+
+.user-related {
+
+	@media (max-width: $screen-md) {margin-right: 0!important;}
+	&.duplicate {@media (max-width: $screen-sm-max) {padding-right: $padding-large-horizontal;}}
+}
+
+//border radius for avatar img
+.navbar-right {
+	.item-image img {border-radius: 30px;}
+}
+
+//navbarlink padding
+.navbar-link {
+	margin-right: $padding-large-horizontal;
+}
+
+.reg-link{
+	cursor : pointer !important;
+}
+
+//popover must have smallest font
+.nav {
+	.popover-content {
+		font-size: $font-size-xs!important;	
+	}
+}
+.navbar-nav > li.link-admin{
+	& > a {
+  		color: darken($brand-warning, 15%);
+  		&:hover {
+			color: darken($brand-warning, 30%);
+		}
+  	}
+}
+
+//navbar dropdowns for notifications and user purposes
+.navbar > .container {position: relative;}
+.navbar-dropdowns {
+	.nav-dd {
+		display: inline-block;
+		min-height: $navbar-height;
+		min-width: $navbar-height;
+		margin: 0!important;
+		padding: 6px;
+		text-align: center;
+		img {
+			border-radius: 42px;
+			@extend .avatarm42;
+		}
+		&.nots {
+			padding: 12px 14px;
+			font-size: $font-size-h3;
+			.badge {position: absolute; top: 10px; right: 10px;}
+		}
+	}
+	//not a dropdown, pero como si lo fuera
+	@media (min-width: $screen-sm-max) {
+		position: absolute;
+		right: 0; top: 0;
+	}
+}
+
+.showsubmenu {
+    display: block;
+    margin-top: 0; // remove the gap so it doesn't close
+}
+
+// columns dropdown
+// 
+.dropdown-menu {
+	background-color: darken($light, 5%) !important;
+	.row{
+		width: 510px;
+	}
+	ul>li>a {
+		display: block;
+		padding: 3px 20px;
+		clear: both;
+		font-weight: normal;
+		line-height: $line-height-computed;
+		color: $dropdown-link-color;
+		white-space: nowrap;
+		&:hover{
+			color: $dropdown-link-hover-color;
+			text-decoration: none;
+			background-color: $dropdown-link-hover-bg;
+		}
+	}
+
+}
+.navbar-dropdown-user{
+	a{
+		text-decoration: none;
+	}
+}
+//mobile nav separators and margin
+@media (max-width: $screen-md) {
+	.navbar-nav {margin: 0 -15px;}
+	.nav li {border-bottom: 1px solid $gray-lighter-low;}
+}

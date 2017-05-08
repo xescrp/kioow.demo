@@ -1,0 +1,367 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "",
+    "description": "",
+    "version": "2.0.0"
+  },
+  "securityDefinitions" : {
+    "Bearer": {
+      "type": "apiKey",
+      "name": "accesstoken",
+      "in": "header"
+    },
+    "userid": {
+      "type": "apiKey",
+      "name": "userid",
+      "in": "header"
+    }
+  },
+  "host": "apitest.yourttoo.com",
+  "basePath": "/apiv2",
+  "schemes": [
+    "https"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/auth": {
+      "post": {
+        "summary": "",
+        "description": "",
+        "tags": [
+          "Auth"
+        ],
+        "parameters": [
+          {
+            "name": "credenciales",
+            "in": "body",
+            "description": "Tu email y password",
+            "schema": {
+              "$ref": "#/definitions/Auth"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "El token de autenticación"
+          }
+        }
+      }
+    },
+    "/find": {
+      "post": {
+        "summary": "",
+        "description": "",
+        "tags": [
+          "Find"
+        ],
+        "parameters": [
+          {
+            "name": "Tipo de recurso",
+            "in": "body",
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Find"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "El recurso solicitado"
+          }
+        }
+      }
+    },
+    "/fetch": {
+      "post": {
+        "summary": "",
+        "description": "",
+        "tags": [
+          "Fetch"
+        ],
+        "parameters": [
+          {
+            "name": "Tipo de recurso",
+            "in": "body",
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Fetch"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "El recurso solicitado"
+          }
+        }
+      }
+    },
+    "/search": {
+      "post": {
+        "summary": "",
+        "description": "",
+        "tags": [
+          "Search"
+        ],
+        "parameters": [
+          {
+            "name": "Tipo de recurso",
+            "in": "body",
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Search"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "El recurso solicitado"
+          }
+        }
+      }
+    },
+    "/book": {
+      "post": {
+        "summary": "",
+        "description": "",
+        "tags": [
+          "Booking"
+        ],
+        "parameters": [
+          {
+            "name": "Tipo de recurso",
+            "in": "body",
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Booking"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "El recurso solicitado"
+          }
+        }
+      }
+    },
+    "/budget": {
+      "post": {
+        "summary": "",
+        "description": "",
+        "tags": [
+          "Budget"
+        ],
+        "parameters": [
+          {
+            "name": "Tipo de recurso",
+            "in": "body",
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Booking"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "El recurso solicitado"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Auth": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      }
+    },
+    "Find": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "default": "countries"
+        }
+      }
+    },
+    "Fetch": {
+      "type": "object",
+      "properties": {
+        "programcode": {
+          "type": "string",
+          "default": "OMT27030"
+        }
+      }
+    },
+    "Search": {
+      "type": "object",
+      "properties": {
+        "filter": {
+          "type": "object",
+          "properties": {
+            "countries": {
+              "type": "array",
+              "default": ["TH"]
+            },
+            "mindays": {
+              "type": "int32",
+              "default": 1
+            },
+            "maxdays": {
+              "type": "int32",
+              "default": 50
+            },
+            "maxresults": {
+              "type": "int32",
+              "default": 12
+            },
+            "sort": {
+              "type": "string",
+              "default": "asc"
+            },
+            "page": {
+              "type": "int32",
+              "default": 0
+            }
+          }
+        }
+      }
+    },
+    "Booking": {
+      "type": "object",
+      "properties": {
+        "programcode": {
+          "type": "string",
+          "default": "OMT27030"
+        },
+        "date": {
+          "type": "object",
+          "properties": {
+            "day": {
+              "type": "integer",
+              "default": 23
+            },
+            "month": {
+              "type": "integer",
+              "default": 1
+            },
+            "year": {
+              "type": "integer",
+              "default": 2017
+            }
+          },
+          "required": [
+            "day",
+            "month",
+            "year"
+          ]
+        },
+        "roomdistribution": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "default": "room double 1"
+              },
+              "roomcode": {
+                "type": "string",
+                "default": "double"
+              },
+              "paxlist": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "default": "test.name.2"
+                    },
+                    "lastname": {
+                      "type": "string",
+                      "default": "test.lastname.2"
+                    },
+                    "documentnumber": {
+                      "type": "string",
+                      "default": "3345666636-cx"
+                    },
+                    "documenttype": {
+                      "type": "string",
+                      "default": "passport"
+                    },
+                    "documentexpeditioncountry": {
+                      "type": "string",
+                      "default": "ES"
+                    },
+                    "birthdate": {
+                      "type": "string",
+                      "default": "1984-12-31T23:00:00.000Z"
+                    },
+                    "country": {
+                      "type": "string",
+                      "default": "ES"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "lastname",
+                    "documentnumber",
+                    "documenttype",
+                    "documentexpeditioncountry",
+                    "birthdate",
+                    "country"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "name",
+              "roomcode",
+              "paxlist"
+            ]
+          }
+        },
+        "bookingreference": {
+          "type": "string",
+          "default": "test-my-booking reference code/number/id/criteria"
+        },
+        "agentid": {
+          "type": "string",
+          "default": "test agent name"
+        },
+        "meetingdata": {
+          "type": "string",
+          "default": "A meeting data text of example"
+        },
+        "observations": {
+          "type": "string",
+          "default": "An observations data text of example"
+        }
+      },
+      "required": [
+        "programcode",
+        "date",
+        "roomdistribution",
+        "bookingreference",
+        "agentid",
+        "meetingdata",
+        "observations"
+      ]
+    }
+  }
+}

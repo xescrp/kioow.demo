@@ -1,0 +1,33 @@
+{
+    "code": "OMT93",
+    "firstrname": "Juan Domingo",
+    "lastname": "Perón Lobos",
+    "slug": "",
+    "phone": "+34 4564465454",
+    "email": "demouser@hotmail.com",
+    "skype": "pocho",
+    "dateofbirth": "1979-06-30T11:08:40.404Z",
+    "location": {
+        "fulladdress": "Carrer d'Aragó, 35, 07005 Palma de Mallorca, Balearic Islands, Spain",
+        "city": "Palma de Mallorca",
+        "stateorprovince":"Balearic Islands",
+        "cp": "07005",
+        "country": "Spain",
+        "countrycode": "ES",
+        "continent": "",
+        "latitude": 39.5756799,
+        "longitude": 2.659040799999957
+    },
+    "cif": "Y65464654456",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non iure laborum voluptas, corporis quisquam at odit harum libero odio provident unde, est, totam natus ipsam. Laborum adipisci omnis, qui aut.",
+    "membershipDate": "2014-11-01T11:08:40.404Z",
+    "images":
+    {
+        "photo": { "url" :"http://res.cloudinary.com/open-market-travel/image/upload/v1412587999/avatar.jpg" },
+        "logo":  { "url" :"http://res.cloudinary.com/open-market-travel/image/upload/v1412587999/avatar.jpg"},
+        "splash":  { "url" :"http://res.cloudinary.com/open-market-travel/image/upload/v1412587999/avatar.jpg"}
+    },
+    "user": "5454bf38c92218044a4a01f5",
+    "timeZone": {"timeZoneId" : "21", "gmtAdjustment" : "GMT-03:30", "useDaylightTime" : "1", "value" : "-3.5", "label" : "(GMT-03:30) Newfoundland"},
+    "currency": {"label":"Euro", "symbol":"€", "value":"EUR"}
+}

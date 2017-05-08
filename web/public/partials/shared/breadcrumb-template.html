@@ -1,0 +1,6 @@
+<ol class="breadcrumb mt-xl mb-xs" vocab="http://schema.org/" typeof="BreadcrumbList">
+	<li ng-repeat="bread in bredCrumbArray track by $index" property="itemListElement" typeof="ListItem">
+		<a target="_self" property="item" typeof="WebPage" href="{{ bread.url }}"><span property="name">{{ bread.label }}</span></a>
+	  <meta property="position" content="{{ $index }}">
+	</li>
+</ol>

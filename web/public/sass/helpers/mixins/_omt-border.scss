@@ -1,0 +1,3 @@
+@mixin border($position, $color: $gray) {
+	border-#{$position}: 1px solid $color;
+}

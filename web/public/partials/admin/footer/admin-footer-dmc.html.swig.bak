@@ -1,0 +1,75 @@
+<footer id="footer" class="no-print">
+  <div class="container">
+    <div class="row">
+      <div class="footer-content">
+        <div class="brand">
+          <a href="/">
+            <img class="logo" src="http://res.cloudinary.com/open-market-travel/image/upload/c_scale,w_160/brand/openmarketlogo_plenoblanco-x2.png" 
+                 data-src2x="http://res.cloudinary.com/open-market-travel/image/upload/brand/openmarketlogo_plenoblanco-x2.png" alt="openmarket.travel Logo" width="160" />
+          </a>
+        </div>
+        <ul class="col-footer">
+          <li>
+            <a href="/page/about-us" target="_self">About Us</a>
+          </li>
+          <li>
+            <a href="/page/how-does-it-work" target="_self">How does it work?</a>
+          </li>
+          <li>
+            <a href="/faqs" target="_self">
+              <abbr title="Frequently Asked Questions">FAQ</abbr>
+            </a>
+          </li>
+        </ul>
+        <ul class="col-footer">
+          <li>
+            <a href="/page/contact-us" target="_self">Contact</a>
+          </li>
+          <li>
+            <a href="/suppliers" target="_self">Supliers</a>
+          </li>
+          <li>
+            <a href="http://blog.openmarket.travel/professional/" target="_blank">Blog</a>
+          </li>
+        </ul>
+        <ul class="col-footer">
+          <li>
+            <a href="/page/cookies-policy" target="_self">Cookies Policy</a>
+          </li>
+          <li>
+            <a href="/page/privacy-policy" target="_self">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="/page/terms-conditions" target="_self">Terms and Conditions</a>
+          </li>
+        </ul>
+        <div class="socialfooter">
+          <hr>
+            <h4>FOLLOW US:</h4>
+            <ul class="social-icons">
+              <li>
+                <a href="https://www.linkedin.com/company/openmarket-travel" target="_blank" title="Perfil openmarket.travel en linkedin">
+                  <i class="fa fa-linkedin"></i>
+                  <span>linkedin</span>
+                </a>
+              </li>
+              <li>
+                <a href="http://blog.openmarket.travel/professional/" target="_blank" title="openmarket.travel blog">
+                  <i class="fa fa-rss"></i>
+                  <span>blog</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://plus.google.com/115389939855445224936?prsrc=3" rel="publisher" target="_blank" title="openmarket.travel google plus profile">
+                  <i class="fa fa-google-plus"></i>
+                  <span>google plus</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+      </div>
+    </div>
+  </div>
+
+</footer>
+{% include "../../widgets/yto-olark.html.swig" %}

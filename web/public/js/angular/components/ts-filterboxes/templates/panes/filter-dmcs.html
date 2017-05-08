@@ -1,0 +1,87 @@
+﻿<div class="booking-search mb-xxl bg-light padded-xl well pull-right col-md-12 col-sm-12" ng-controller="filterDMCs">
+    <div class="row">
+        <!--datebooking COL -->
+        <div class="col-md-2 col-sm-2 line-right">
+            <label class="control-label" for="bookingdatestart"><strong>Status</strong></label>
+            <div id="filterStatus" class="collapse in">
+                <div class="checkbox">
+                    <label>
+                        <input ng-change="filterchanged()" type="checkbox" ng-model="selectedFilters.status.valid"> Valid 
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input ng-change="filterchanged()" type="checkbox" ng-model="selectedFilters.status.confirmed"> Confirmed 
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input ng-change="filterchanged()" type="checkbox" ng-model="selectedFilters.status.waiting"> Waiting 
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- datebooking col ends -->
+        <!--datetour COL -->
+        <div class="col-md-1 col-sm-1 line-right">
+            <label class="control-label" for="bookingdatestart"><strong>Channels</strong></label>
+            <div id="filterChannels" class="collapse in">
+                <div class="checkbox">
+                    <label>
+                        <input ng-change="filterchanged()" type="checkbox" ng-model="selectedFilters.channels.b2bchannel"> B2B 
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input ng-change="filterchanged()" type="checkbox" ng-model="selectedFilters.channels.b2cchannel"> B2C 
+                    </label>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-2 line-right">
+            <label class="control-label" for="bookingdatestart"><strong>Segments</strong></label>
+            <div id="filterSegments" class="collapse in">
+                <div class="checkbox">
+                    <label>
+                        <input ng-change="filterchanged()" type="checkbox" ng-model="selectedFilters.segments.toursmultidays"> Tours multidays 
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input ng-change="filterchanged()" type="checkbox" ng-model="selectedFilters.segments.tailormade"> Tailor Made 
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input ng-change="filterchanged()" type="checkbox" ng-model="selectedFilters.segments.groups"> Groups 
+                    </label>
+                </div>
+
+            </div>
+        </div>
+        <!-- datetour col ends -->
+        <div class="col-md-3 col-sm-3 line-right" style="">
+            <label class="control-label" for="bookingdatestart"><strong>Operation country</strong></label>
+            <div id="filterCountries" class="collapse in" style="max-height: 148px; overflow-y: scroll;">
+                <div class="checkbox" ng-repeat="country in selectedFilters.countries">
+                    <label>
+                        <input title="" type="checkbox" 
+                               checklist-model="selectedFilters.selectedcountries" 
+                               checklist-value="country",
+                               ng-click="filterchanged()" 
+                               value="{{ country.countrycode }}"> {{ country.country }} 
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+            <div class="input-group mb-l full-width">
+                <label class="control-label" for="arrivaldate">Búsqueda de texto</label>
+                <input class="form-control" id="arrivaldate" ng-model="textSearch" type="text" value="">
+            </div>
+            <p class="help-block mt-xs mb-xs">Busca por: dmc, pais, codigo.</p>
+            <button type="button" class="btn bnt-block mt-b btn-primary full-width" ng-click="textsearch()"><i class="fa fa-search"></i> buscar</button>
+        </div>
+    </div>
+</div>

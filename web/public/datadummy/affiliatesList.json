@@ -1,0 +1,337 @@
+[{
+    "code": "AFI23",
+    "name": "theuser.username",
+    "company": {
+        "name": "Travel Company",
+        "legalname": "Travel Company SL",
+        "constitutionyear": 1995,
+        "phone": "+34 871 870 296",
+        "website": "http://www.google.com",
+        "taxid" : "Y5485554",
+        "location": {
+          "fulladdress": "Carrer Doctor Gómez Ullà, 19, 07420 Sa Pobla, Illes Balears, España",
+          "cp": "07420",
+          "city": "Sa Pobla",
+          "country": "España",
+          "countrycode": "ES",
+          "stateorprovince": "Illes Balears",
+          "latitude": 39.7694554,
+          "longitude": 3.028844499999991,
+          "route": "Carrer Doctor Gómez Ullà"
+        }
+    },
+    "contact": {
+        "firstname": "Juan",
+        "lastname": "Gomez",
+        "email": "jgomes@mail.com",
+        "skype": "libertyskype",
+        "position": "General Manager",
+        "bookingContact" : {
+            "email" : "test@gmail.com"
+        },
+        "marketingContact" : {
+            "email" : "test@gmail.com"
+        },
+        "paymentContact" : {
+            "email" : "test@gmail.com"
+        }
+    },
+    "currency": {
+        "label": "Euro",
+        "symbol": "€",
+        "value": "EUR"
+    },
+    "membership" : {
+        "acceptterms": true,
+        "membershipDate": "15/05/2014",
+        "omtmargin" : 3.2,
+        "registervalid" : true,
+        "requestdelete" : false
+    },
+    "fees":{
+        "unique" : null,
+        "groups" : 11,
+        "tailormade" : 12,
+        "flights" : 14
+    },
+    "images":
+        {
+        "photo": {
+            "url": "http://res.cloudinary.com/open-market-travel/image/upload/v1441039542/travel-logo_c_roujtc.jpg"
+            },
+        "logo": {
+            "url": "http://res.cloudinary.com/open-market-travel/image/upload/v1441039542/travel-logo_c_roujtc.jpg"
+            },
+        "splash": {
+            "url": "http://res.cloudinary.com/open-market-travel/image/upload/v1441039542/travel-logo_c_roujtc.jpg"
+            }
+        },
+    "user": {
+        "username": "travel company",
+        "email": "info@travelcompany.com",
+        "code": "AFI23",
+        "phone": "649-044-541",
+        "photo": {
+            "url": "http://res.cloudinary.com/open-market-travel/image/upload/v1441039542/travel-logo_c_roujtc.jpg"
+            },
+        "password": "password123",
+        "isDMC": false,
+        "isTraveler": false,
+        "isAffiliate" : true,
+        "active": true,
+        "isLocal": true,
+        "timeZone": {"timeZoneId" : "21", "gmtAdjustment" : "GMT-03:30", "useDaylightTime" : "1", "value" : "-3.5", "label" : "(GMT-03:30) Newfoundland"}
+    }
+},{
+    "code": "AFI23",
+    "name": "theuser.username",
+    "company": {
+        "name": "Travel Company",
+        "legalname": "Travel Company SL",
+        "constitutionyear": 1995,
+        "phone": "+34 871 870 296",
+        "website": "http://www.google.com",
+        "taxid" : "Y5485554",
+        "location": {
+          "fulladdress": "Carrer Doctor Gómez Ullà, 19, 07420 Sa Pobla, Illes Balears, España",
+          "cp": "07420",
+          "city": "Sa Pobla",
+          "country": "España",
+          "countrycode": "ES",
+          "stateorprovince": "Illes Balears",
+          "latitude": 39.7694554,
+          "longitude": 3.028844499999991,
+          "route": "Carrer Doctor Gómez Ullà"
+        }
+    },
+    "contact": {
+        "firstname": "Juan",
+        "lastname": "Gomez",
+        "email": "jgomes@mail.com",
+        "skype": "libertyskype",
+        "position": "General Manager",
+        "bookingContact" : {
+            "email" : "test@gmail.com"
+        },
+        "marketingContact" : {
+            "email" : "test@gmail.com"
+        },
+        "paymentContact" : {
+            "email" : "test@gmail.com"
+        }
+    },
+    "currency": {
+        "label": "Euro",
+        "symbol": "€",
+        "value": "EUR"
+    },
+    "membership" : {
+        "acceptterms": true,
+        "membershipDate": "15/05/2014",
+        "omtmargin" : 3.2,
+        "registervalid" : true,
+        "requestdelete" : false
+    },
+    "fees":{
+        "unique" : null,
+        "groups" : 11,
+        "tailormade" : 12,
+        "flights" : 14
+    },
+    "images":
+        {
+        "photo": {
+            "url": "http://res.cloudinary.com/open-market-travel/image/upload/v1441039542/travel-logo_c_roujtc.jpg"
+            },
+        "logo": {
+            "url": "http://res.cloudinary.com/open-market-travel/image/upload/v1441039542/travel-logo_c_roujtc.jpg"
+            },
+        "splash": {
+            "url": "http://res.cloudinary.com/open-market-travel/image/upload/v1441039542/travel-logo_c_roujtc.jpg"
+            }
+        },
+    "user": {
+        "username": "travel company",
+        "email": "info@travelcompany.com",
+        "code": "AFI23",
+        "phone": "649-044-541",
+        "photo": {
+            "url": "http://res.cloudinary.com/open-market-travel/image/upload/v1441039542/travel-logo_c_roujtc.jpg"
+            },
+        "password": "password123",
+        "isDMC": false,
+        "isTraveler": false,
+        "isAffiliate" : true,
+        "active": true,
+        "isLocal": true,
+        "timeZone": {"timeZoneId" : "21", "gmtAdjustment" : "GMT-03:30", "useDaylightTime" : "1", "value" : "-3.5", "label" : "(GMT-03:30) Newfoundland"}
+    }
+},{
+    "code": "AFI23",
+    "name": "theuser.username",
+    "company": {
+        "name": "Travel Company",
+        "legalname": "Travel Company SL",
+        "constitutionyear": 1995,
+        "phone": "+34 871 870 296",
+        "website": "http://www.google.com",
+        "taxid" : "Y5485554",
+        "location": {
+          "fulladdress": "Carrer Doctor Gómez Ullà, 19, 07420 Sa Pobla, Illes Balears, España",
+          "cp": "07420",
+          "city": "Sa Pobla",
+          "country": "España",
+          "countrycode": "ES",
+          "stateorprovince": "Illes Balears",
+          "latitude": 39.7694554,
+          "longitude": 3.028844499999991,
+          "route": "Carrer Doctor Gómez Ullà"
+        }
+    },
+    "contact": {
+        "firstname": "Juan",
+        "lastname": "Gomez",
+        "email": "jgomes@mail.com",
+        "skype": "libertyskype",
+        "position": "General Manager",
+        "bookingContact" : {
+            "email" : "test@gmail.com"
+        },
+        "marketingContact" : {
+            "email" : "test@gmail.com"
+        },
+        "paymentContact" : {
+            "email" : "test@gmail.com"
+        }
+    },
+    "currency": {
+        "label": "Euro",
+        "symbol": "€",
+        "value": "EUR"
+    },
+    "membership" : {
+        "acceptterms": true,
+        "membershipDate": "15/05/2014",
+        "omtmargin" : 3.2,
+        "registervalid" : true,
+        "requestdelete" : false
+    },
+    "fees":{
+        "unique" : null,
+        "groups" : 11,
+        "tailormade" : 12,
+        "flights" : 14
+    },
+    "images":
+        {
+        "photo": {
+            "url": "http://res.cloudinary.com/open-market-travel/image/upload/v1441039542/travel-logo_c_roujtc.jpg"
+            },
+        "logo": {
+            "url": "http://res.cloudinary.com/open-market-travel/image/upload/v1441039542/travel-logo_c_roujtc.jpg"
+            },
+        "splash": {
+            "url": "http://res.cloudinary.com/open-market-travel/image/upload/v1441039542/travel-logo_c_roujtc.jpg"
+            }
+        },
+    "user": {
+        "username": "travel company",
+        "email": "info@travelcompany.com",
+        "code": "AFI23",
+        "phone": "649-044-541",
+        "photo": {
+            "url": "http://res.cloudinary.com/open-market-travel/image/upload/v1441039542/travel-logo_c_roujtc.jpg"
+            },
+        "password": "password123",
+        "isDMC": false,
+        "isTraveler": false,
+        "isAffiliate" : true,
+        "active": true,
+        "isLocal": true,
+        "timeZone": {"timeZoneId" : "21", "gmtAdjustment" : "GMT-03:30", "useDaylightTime" : "1", "value" : "-3.5", "label" : "(GMT-03:30) Newfoundland"}
+    }
+},{
+    "code": "AFI23",
+    "name": "theuser.username",
+    "company": {
+        "name": "Travel Company",
+        "legalname": "Travel Company SL",
+        "constitutionyear": 1995,
+        "phone": "+34 871 870 296",
+        "website": "http://www.google.com",
+        "taxid" : "Y5485554",
+        "location": {
+          "fulladdress": "Carrer Doctor Gómez Ullà, 19, 07420 Sa Pobla, Illes Balears, España",
+          "cp": "07420",
+          "city": "Sa Pobla",
+          "country": "España",
+          "countrycode": "ES",
+          "stateorprovince": "Illes Balears",
+          "latitude": 39.7694554,
+          "longitude": 3.028844499999991,
+          "route": "Carrer Doctor Gómez Ullà"
+        }
+    },
+    "contact": {
+        "firstname": "Juan",
+        "lastname": "Gomez",
+        "email": "jgomes@mail.com",
+        "skype": "libertyskype",
+        "position": "General Manager",
+        "bookingContact" : {
+            "email" : "test@gmail.com"
+        },
+        "marketingContact" : {
+            "email" : "test@gmail.com"
+        },
+        "paymentContact" : {
+            "email" : "test@gmail.com"
+        }
+    },
+    "currency": {
+        "label": "Euro",
+        "symbol": "€",
+        "value": "EUR"
+    },
+    "membership" : {
+        "acceptterms": true,
+        "membershipDate": "15/05/2014",
+        "omtmargin" : 3.2,
+        "registervalid" : true,
+        "requestdelete" : false
+    },
+    "fees":{
+        "unique" : null,
+        "groups" : 11,
+        "tailormade" : 12,
+        "flights" : 14
+    },
+    "images":
+        {
+        "photo": {
+            "url": "http://res.cloudinary.com/open-market-travel/image/upload/v1441039542/travel-logo_c_roujtc.jpg"
+            },
+        "logo": {
+            "url": "http://res.cloudinary.com/open-market-travel/image/upload/v1441039542/travel-logo_c_roujtc.jpg"
+            },
+        "splash": {
+            "url": "http://res.cloudinary.com/open-market-travel/image/upload/v1441039542/travel-logo_c_roujtc.jpg"
+            }
+        },
+    "user": {
+        "username": "travel company",
+        "email": "info@travelcompany.com",
+        "code": "AFI23",
+        "phone": "649-044-541",
+        "photo": {
+            "url": "http://res.cloudinary.com/open-market-travel/image/upload/v1441039542/travel-logo_c_roujtc.jpg"
+            },
+        "password": "password123",
+        "isDMC": false,
+        "isTraveler": false,
+        "isAffiliate" : true,
+        "active": true,
+        "isLocal": true,
+        "timeZone": {"timeZoneId" : "21", "gmtAdjustment" : "GMT-03:30", "useDaylightTime" : "1", "value" : "-3.5", "label" : "(GMT-03:30) Newfoundland"}
+    }
+}]

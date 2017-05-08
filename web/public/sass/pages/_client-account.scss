@@ -1,0 +1,64 @@
+.uf-header {
+	//upload picture hover
+	.clientacc-mainavatar {
+		img, i {
+			@extend .trans-xs;
+		}
+		i {
+			opacity: 0; 
+			display: inline-block;
+			height: 30px;
+			@extend .text-center;
+		}
+		&:hover, &:visited, &:active, &:link {
+			img {opacity: .14;}
+			i {opacity: 1;}
+		}
+	}
+
+	@extend .clearfix;
+	@extend .page-header;
+	h1{
+		margin: ($line-height-computed*0.7) 0; 
+		span{ color: $gray; font-weight: 300; }
+	}
+}
+
+.account-nav {
+	@extend .col-md-3;
+	@extend .col-sm-12;
+	@extend .col-xs-12;
+	.fa-facebook.color {color: $facebook;}
+	.fa-twitter.color {color: $twitter;}
+	.fa-google-plus.color {color: $gplus;}
+}
+.account-details {
+	@extend .col-md-9;
+	@extend .col-sm-12;
+	@extend .col-xs-12;
+	h2 {
+		@extend .h3;
+		@extend .mt-zero;
+	}
+}
+
+.verified-box {
+	@extend .mb-l;
+	strong {display: block;}
+	.verified-text {padding-left: 25px;}	
+	i.item{
+		font-size: $font-size-h3; 
+		@extend .pt-b;		
+	}
+	i.success {
+		color: $brand-success;
+	}
+	i.error {
+		color: $brand-danger;
+	}
+}
+
+.user-review {
+	header {margin-left: 85px;}
+	.ur-text {padding-left: 85px;}
+}

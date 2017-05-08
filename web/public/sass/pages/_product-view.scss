@@ -1,0 +1,354 @@
+.user-front {
+	.product-detail, .dmc-profile, .itinerary {background: $light;}
+	.itinerary hr {border-color: $gray-lighter;}
+	.incl-or-not {border-right: none; border-left: none;}
+	section.main-description {border: none;}
+}
+
+.admin-dmc {
+	.product-detail, .product-resume {
+		border: 1px solid $gray-lighter;
+	} 
+}
+
+// .wrap-program-product {
+// 	header {
+// 		.summary {
+// 			@include triangle (down, $gray-lighter-low, 98px, 17px, 1);
+// 		}
+// 	}
+// }
+
+.itinerary{
+	padding: 1px $padding-base-horizontal $padding-base-horizontal;
+	hr{
+		border-top: 1px solid $light;
+		margin: $padding-large-vertical 0;
+	}
+	.path{
+		margin: $padding-base-vertical 0;
+	}
+	h3{
+		font-weight: bold;
+	}
+}
+.itinerary, .itinerary-load{
+	ul{
+		li{
+			font-size: $font-size-base;
+		}
+	}
+	.list-activities{
+		padding-left: 1.3em;
+		li{
+			font-style: italic;
+			color: $gray;
+		}
+	}
+	.day-tit{
+		margin: $padding-base-vertical 0;
+		font-weight: bold;
+		color: $gray-dark;
+		span{
+			font-weight: 400;
+		}
+	}
+	.day-item{
+		@extend .row;
+	}
+	.day-thumb{
+		@extend .col-xs-12;
+		@extend .col-sm-3;
+		@extend .col-md-2;
+		@extend .text-center;
+		img{padding: 1em 0;}
+		text-align: left;
+		@media (max-width: $screen-xs-max) {
+			img {display: none;}
+		}
+		@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+			.fa-calendar-o {display: none;}
+		}
+ 	}
+	.day-desc{
+		@extend .col-xs-12;
+		@extend .col-sm-9;
+		@extend .col-md-10;
+		
+		@media (max-width: $screen-sm-max) {padding-left: 15px; padding-right: 15px;}
+		
+		h4{
+			color: $brand-alternate;
+			font-size: $font-size-base;
+			margin: $padding-base-horizontal 0 ceil(($padding-base-vertical*0.5)) 0;
+		}
+	}
+	time{
+		@extend .text-center;
+		margin-top: $padding-large-vertical;
+		font-size: $font-size-small;
+		color: $gray;
+		display: block;
+	}
+}
+.product-detail {
+	section.price{
+		@extend .bg-price;
+		border: 1px solid $state-price-border;
+		.price-box{
+			border: 0;
+			padding: 0;
+		}
+	}
+}
+
+.product-head{
+	position: relative;
+	// min-height: 390px;
+	//background-image: url("http://res.cloudinary.com/open-market-travel/image/upload/assets/omtempty.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	@media(max-width: $screen-md-max) {
+		background-image: none;
+	}
+
+	header{
+		@media (max-width: $screen-xs-max) {padding: 0;}
+		.summary{
+			background: rgba(255,255,255,0.9);
+			// padding-bottom: 0;
+			border: 1px solid $gray-lighter;
+			position: relative;
+			@extend .padded-b;
+			// @extend .mt-xl;
+		}
+		h1{
+			font-size: $font-size-h2;
+			margin: $padding-base-vertical 0;
+			color: $brand-alternate;
+			@media (max-width: $screen-xs-max) {font-size: $font-size-title-mobile;}
+		}
+		h3{
+			font-size: $font-size-base;
+			color: $gray;
+			font-weight: 700;
+			.fa-stack {font-size: $font-size-base;}
+		}
+		ul{
+			color: $gray;
+		}
+	}
+	.call-action{
+			@extend .clearfix;
+			@extend .row;
+			background: $light;
+			padding-top: $padding-base-vertical;
+			padding-bottom: $padding-base-vertical;
+			margin: 0;
+			.btn-holder{
+				@extend .col-md-9;
+				@extend .col-xs-9;
+				margin-top: 0.8em;
+			}
+		}
+	.price{
+		@extend .col-md-3;
+		@extend .col-xs-3;
+		color: $brand-danger;
+		text-align: center;
+		padding-bottom: $padding-large-vertical;
+		em{
+			font-size: $font-size-small;
+		}
+		strong{
+			font-size: $font-size-price;
+			font-weight: 400;
+			line-height: 0.8;
+			@media screen and (max-width: $screen-md-min) {
+				font-size: ceil(($font-size-price*0.8));
+			}
+
+		}
+	}
+}
+header.load-product{
+	position: absolute;
+	right: 0;
+	width: 60%;
+	.summary{margin-bottom: 1px;}
+	
+	@media (max-width: $screen-sm-max) {
+		position: relative; right: auto; width: auto;
+		.list-inline {
+			li {display: block; }
+		}
+		.summary {
+			margin: 0;
+			border: none;
+			&:after {content: none; }
+		}
+		.dmc-profile-widget { margin-top: 20px; margin-bottom: 10px; }
+	}
+}
+section.main-description, section.incl-or-not, section.price{
+	padding: 0 $padding-base-horizontal $padding-base-vertical;
+}
+
+.incl-or-not{
+	padding-bottom: ($padding-large-vertical*2);
+	.include, .not-include{
+		@extend .col-md-6;
+		h4{
+			padding-bottom: 0.5em;
+		}
+		ul{
+			padding-left: 0;
+		}
+	}
+	.include{
+		color: $brand-success;
+		h4{
+			color: $brand-success;
+		}
+	}
+	.not-include{
+		@extend .col-md-6;
+		color: $brand-danger;
+		h4{
+			color: $brand-danger;
+		}
+	}
+
+}
+
+.price-total {
+	.the-price {
+		color: $price-color;
+		strong {font-size: $font-size-h1;}
+	}
+}
+
+.dmc-profile{
+	padding: $padding-base-horizontal;
+	@include border(top, $light);
+}
+
+.dmc-profile-widget{
+	@extend .clearfix;
+	img{
+		@extend .pull-left;
+	}
+	.dmc-text{
+		@extend .pull-left;
+		max-width: 75%;
+		padding: ceil(($padding-base-vertical*0.5)) ceil(($padding-base-horizontal*0.75));
+		padding-top: 10px;
+	}
+}
+.product-resume{
+	header{
+		position: relative;
+		@extend .text-center;
+		border: 1px solid $gray-lighter;
+		padding: $padding-base-vertical $padding-base-horizontal;
+		.number-quote{
+			position: absolute;
+			left: 0;
+			top: 0;
+			border-left: solid 3px $gray;
+			padding-left: 5px;
+		}
+		h1{
+			@extend .h4;
+			color: $brand-alternate;
+		}
+	}
+	.list-head{
+		@extend .list-inline;
+	}
+	.date-valid{
+		text-align: center;
+		font-style: italic;
+		color: $brand-danger;
+		font-size: $font-size-small;
+		padding-top: $padding-base-vertical;
+	}
+	.itinerary{
+		h2 {@extend .thin;}
+		h5{
+			background-image: url("http://res.cloudinary.com/open-market-travel/image/upload/assets/marker-small.png");
+			background-position: 0% 4px;
+			background-repeat: no-repeat;
+			padding: $padding-base-vertical 0 $padding-base-vertical 1.2em;
+			margin-bottom: 0;
+		}
+		ul{
+			margin-left: 0;
+			padding-left: 0;
+		}
+		ul ul{
+			padding-left: 1.3em;
+		}
+		ul ul li{
+			font-size: $font-size-h6;
+		}
+	}
+	.meals{
+		@extend .text-center;
+		font-size: $font-size-small;
+	}
+}
+
+.resume-blocks {@media (min-width: $screen-sm-max) {margin-top: 85px;}}
+
+.in-line{
+	white-space: nowrap;
+}
+.link-download-pdf{
+	display: block;
+  	text-decoration: none;
+	&:hover,
+	&:focus {text-decoration: none;}
+	&:focus {outline: none;}
+	span{ top: 3px; }
+}
+
+// for prints pdfs
+.pdf-day-thumb{
+	@extend .col-xs-2;
+	@extend .text-center;
+	img{padding: 1em 0;}
+	text-align: left;
+}
+.pdf-day-desc{
+	@extend .col-xs-10;	
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.pdf-incl-or-not{
+	padding-bottom: ($padding-large-vertical*2);
+	.include, .not-include{
+		@extend .col-xs-6;
+		h4{
+			padding-bottom: 0.5em;
+		}
+		ul{
+			padding-left: 0;
+		}
+	}
+	.include{
+		color: $brand-success;
+		h4{
+			color: $brand-success;
+		}
+	}
+	.not-include{
+		@extend .col-xs-6;
+		color: $brand-danger;
+		h4{
+			color: $brand-danger;
+		}
+	}
+
+}

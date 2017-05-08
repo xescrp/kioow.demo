@@ -1,0 +1,49 @@
+﻿<div class="row">
+    <div class="col-md-4 col-sm-4 line-right" ng-class="{'col-md-12' : onlydmc }" ng-show="rolename!='dmc'">
+        <label class="control-label" for="bookingdatestart"><strong>DMCs</strong></label>
+        <div id="NPfilterDMCS" class="collapse in" style="max-height: 448px; overflow-y: scroll; overflow-x: hidden;">
+            <div class="checkbox" ng-repeat="dmc in selectionfilters.dmcs">
+                <label ng-if="!onlydmc">
+                    <input title="" type="checkbox" 
+                           checklist-model="selectionfilters.selecteddmcs"
+                           checklist-value="dmc"
+                           ng-click="filterchanged()"
+                           value="{{ dmc._id }}" /> {{ dmc.company.name || dmc.name }}
+                </label>
+                <div ng-if="onlydmc" class="row list-group-item item bordered">
+                    <div class="col-xs-6"><span class="ml-l"><strong>{{ dmc.company.name || dmc.name }}</strong> ({{dmc.code}})</span></div>
+                    <div class="col-xs-2"><button class="btn btn-xs btn-primary" ng-click="newprogram(dmc.code)"> Nuevo programa</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8 col-sm-8 line-right" ng-class="{'col-md-12' : rolename == 'dmc' }" ng-show="!onlydmc">
+        <label class="control-label" for="bookingdatestart"><strong>Programs</strong></label>
+        <div id="NPfilterPrograms" class="collapse in" style="max-height: 448px; overflow-y: scroll; overflow-x: hidden;">
+            <div class="row list-group-item item" ng-repeat="program in selectionfilters.programs">
+                <div class="col-md-2">
+                    <img class="mb-xs" ng-src="{{imageproductstretch(program.productimage.url)}}" /> 
+                    <button  class="btn btn-xs btn-success" ng-click="copyprogram(program.code)"> Copiar</button>
+                </div>
+                <div class="col-md-10">
+                    <ul class="product-list text-help">
+                        <li><strong>{{ program.title_es || program.title }}</strong>
+                            <span ng-if="program.categoryname != null">{{program.categoryname.label_es || program.categoryname.label_en }}</span></li>
+                        <li>{{ program.code }}</li>
+                        <li><span class="label label-primary">{{ program.dmc.company.name || program.dmc.name }}</span></li>
+                        <li><i class="help-block mt-xs mb-xs"> #saved as... {{ program.name }}</i></li>
+                        <li><i class="fa fa-clock-o"></i> {{program.itinerarylength}} dias || <i class="fa fa-money"></i> desde {{program.pvp.b2cperday * program.itinerarylength}} {{program.pvp.currency.symbol}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<br />
+<div class="row mt-xxl">
+    <div class="col-md-12 col-sm-12" >
+        <h4>Save As...</h4>
+        <input ng-model="saveas" class="form-control" placeholder="save as name..."/>
+    </div>
+</div>

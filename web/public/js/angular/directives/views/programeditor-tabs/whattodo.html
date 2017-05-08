@@ -1,0 +1,28 @@
+﻿
+<h2>Welcome to the Program Loader</h2>
+<h4>Select your action</h4>
+<hr />
+
+<div class="mt-l">
+    <div class="col-md-6 text-center" ng-show="quote == null">
+        <button uib-tooltip="Load a new program" 
+                tooltip-placement="right" class="btn btn-warning btn-lg" ng-click="processaction('newprogram')">New Program</button>
+    </div>
+    <div class="col-md-6 text-center" ng-class="{ 'col-md-12' : quote != null }">
+        <button uib-tooltip="Copy a currently loaded program" 
+                tooltip-placement="right" class="btn btn-danger btn-lg" ng-click="processaction('copyprogram')">Copy a program</button>
+    </div>
+</div>
+<div class="row mt-xxl">
+    <div class="col-md-12 padded-xxl">
+        <div class="bg-light padded-l text-gray text-center" >
+            After you have completed all the details, submit your product. TraveleSense will review your product, and
+            following approval, your product will be published
+        </div>
+    </div>
+</div>
+<div class="row" ng-show="currentaction != null">
+    <div class="col-md-12">You are currently: <b>{{availableactionsliterals[currentaction]}}</b> <br />
+    current program: {{programs[selectedindexcategory].title_es || programs[selectedindexcategory].title_es }} - {{programs[selectedindexcategory].code}}</div>
+</div>
+

@@ -1,0 +1,389 @@
+﻿
+<h2>Included / Not included</h2>
+<p>If the service is not selected, client will see it as not included.</p>
+<div class="row" style="height:84px;">
+    <div class="col-md-6">
+        <p>Kind of trip </p>
+        <fieldset>
+            <label class="radio-inline notranslate">
+                <input ng-change="changeincludedtypetrip()" ng-model="programs[selectedindexcategory].included.trip.grouptrip" type="radio" name="kind-trip" id="group-trip" value="group"> Group
+            </label>
+            <label class="radio-inline notranslate">
+                <input ng-change="changeincludedtypetrip()" ng-model="programs[selectedindexcategory].included.trip.privatetrip" type="radio" name="kind-trip" id="private-trip" value="private"> Private
+            </label>
+        </fieldset>
+    </div>
+    <div class="col-md-6">
+        <p>Minimun to operate </p>
+        <fieldset>
+            <div class="form-group mb-zero" ng-init="minpaxvalues=[1,2]"> 
+                <select class="form-control datefilter iblock" name="minpaxoperate" ng-model="programs[selectedindexcategory].included.trip.minpaxoperate" 
+                        ng-options="value as value for value in minpaxvalues">
+                </select>
+                <label class="sr-only" for="minpaxoperate">Minimun to operate</label>
+                <span class="form-control-static iblock ml-l">pax</span>
+            </div>
+        </fieldset>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>Click only if the service is included</h2>
+        <h4>Arrival</h4>
+    </div>
+</div>
+<div class="row" style="margin-top: -86px;">
+    <div class="col-md-6">
+        <!-- AIRPORT -->
+
+        <div class="checkbox">
+            <label>
+                <input ng-model="programs[selectedindexcategory].included.arrivaltransfer" type="checkbox" value="arr-trans">
+                Arrival transfer from Airport
+            </label>
+        </div>
+        <div class="checkbox" ng-show="programs[selectedindexcategory].included.arrivaltransfer">
+            <label>
+                <input ng-model="programs[selectedindexcategory].included.arrivalassistance" type="checkbox" value="arr-assis">
+                Arrival assistance (from airport)
+            </label>
+        </div>
+        <div class="checkbox col-md-4" ng-show="programs[selectedindexcategory].included.arrivalassistance">
+            <label class="checkbox">
+                <input ng-model="programs[selectedindexcategory].included.arrivallanguage.spanish" type="checkbox" id="lang-tour-esc-es" value="spanish"> Spanish
+            </label>
+            <label class="checkbox">
+                <input ng-model="programs[selectedindexcategory].included.arrivallanguage.english" type="checkbox" id="lang-tour-esc-en" value="english"> English
+            </label>
+            <label class="checkbox">
+                <input ng-model="programs[selectedindexcategory].included.arrivallanguage.french" type="checkbox" id="lang-tour-esc-fr" value="french"> French
+            </label>
+            <label class="checkbox">
+                <input ng-model="programs[selectedindexcategory].included.arrivallanguage.german" type="checkbox" id="lang-tour-esc-ge" value="german"> German
+            </label>
+            <label class="checkbox">
+                <input ng-model="programs[selectedindexcategory].included.arrivallanguage.italian" type="checkbox" id="lang-tour-esc-it" value="italian"> Italian
+            </label>
+            <label class="checkbox">
+                <input ng-model="programs[selectedindexcategory].included.arrivallanguage.portuguese" type="checkbox" id="lang-tour-esc-it" value="portuguese"> Portuguese
+            </label>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <!-- HOTELS -->
+
+        <div class="checkbox">
+            <label>
+                <input ng-model="programs[selectedindexcategory].included.arrivalhoteltransfer" type="checkbox" value="arr-trans">
+                Transfer from Hotel
+            </label>
+        </div>
+        <div class="checkbox" ng-show="programs[selectedindexcategory].included.arrivalhoteltransfer">
+            <label>
+                <input ng-model="programs[selectedindexcategory].included.arrivalhotelassistance" type="checkbox" value="arr-assis">
+                Assistance
+            </label>
+        </div>
+        <div class="checkbox col-md-4" ng-show="programs[selectedindexcategory].included.arrivalhotelassistance">
+            <label class="checkbox">
+                <input ng-model="programs[selectedindexcategory].included.arrivalhotellanguage.spanish" type="checkbox" id="lang-tour-esc-es" value="spanish"> Spanish
+            </label>
+            <label class="checkbox">
+                <input ng-model="programs[selectedindexcategory].included.arrivalhotellanguage.english" type="checkbox" id="lang-tour-esc-en" value="english"> English
+            </label>
+            <label class="checkbox">
+                <input ng-model="programs[selectedindexcategory].included.arrivalhotellanguage.french" type="checkbox" id="lang-tour-esc-fr" value="french"> French
+            </label>
+            <label class="checkbox">
+                <input ng-model="programs[selectedindexcategory].included.arrivalhotellanguage.german" type="checkbox" id="lang-tour-esc-ge" value="german"> German
+            </label>
+            <label class="checkbox">
+                <input ng-model="programs[selectedindexcategory].included.arrivalhotellanguage.italian" type="checkbox" id="lang-tour-esc-it" value="italian"> Italian
+            </label>
+            <label class="checkbox">
+                <input ng-model="programs[selectedindexcategory].included.arrivalhotellanguage.portuguese" type="checkbox" id="lang-tour-esc-it" value="portuguese"> Portuguese
+            </label>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <h4>Departure</h4>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <!-- AIRPORT -->
+
+        <div class="checkbox">
+            <label>
+                <input ng-model="programs[selectedindexcategory].included.departuretransfer" type="checkbox" value="depa-assi">
+                 Departure transfer from Airport
+            </label>
+        </div>
+        <div class="checkbox" ng-show="programs[selectedindexcategory].included.departuretransfer">
+            <label>
+                <input ng-model="programs[selectedindexcategory].included.departureassistance" type="checkbox" value="depa-assi">
+                Deparute Assistance (from airport)
+            </label>
+        </div>
+        <div class="col-md-4 checkbox" ng-show="programs[selectedindexcategory].included.departureassistance">
+            <label class="checkbox">
+                <input ng-model="programs[selectedindexcategory].included.departurelanguage.spanish" type="checkbox" id="lang-tour-esc-es" value="spanish"> Spanish
+            </label>
+            <label class="checkbox">
+                <input ng-model="programs[selectedindexcategory].included.departurelanguage.english" type="checkbox" id="lang-tour-esc-en" value="english"> English
+            </label>
+            <label class="checkbox">
+                <input ng-model="programs[selectedindexcategory].included.departurelanguage.french" type="checkbox" id="lang-tour-esc-fr" value="french"> French
+            </label>
+            <label class="checkbox">
+                <input ng-model="programs[selectedindexcategory].included.departurelanguage.german" type="checkbox" id="lang-tour-esc-ge" value="german"> German
+            </label>
+            <label class="checkbox">
+                <input ng-model="programs[selectedindexcategory].included.departurelanguage.italian" type="checkbox" id="lang-tour-esc-it" value="italian"> Italian
+            </label>
+            <label class="checkbox">
+                <input ng-model="programs[selectedindexcategory].included.departurelanguage.portuguese" type="checkbox" id="lang-tour-esc-it" value="portuguese"> Portuguese
+            </label>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <!-- HOTEL -->
+
+        <div class="checkbox">
+            <label>
+                <input ng-model="programs[selectedindexcategory].included.departurehoteltransfer" type="checkbox" value="depa-assi">
+                 Transfer to hotel
+            </label>
+        </div>
+        <div class="checkbox" ng-show="programs[selectedindexcategory].included.departurehoteltransfer">
+            <label>
+                <input ng-model="programs[selectedindexcategory].included.departurehotelassistance" type="checkbox" value="depa-assi">
+                Assistance
+            </label>
+        </div>
+        <div class="checkbox col-md-4" ng-show="programs[selectedindexcategory].included.departurehotelassistance">
+            <label class="checkbox">
+                <input ng-model="programs[selectedindexcategory].included.departurehotellanguage.spanish" type="checkbox" id="lang-tour-esc-es" value="spanish"> Spanish
+            </label>
+            <label class="checkbox">
+                <input ng-model="programs[selectedindexcategory].included.departurehotellanguage.english" type="checkbox" id="lang-tour-esc-en" value="english"> English
+            </label>
+            <label class="checkbox">
+                <input ng-model="programs[selectedindexcategory].included.departurehotellanguage.french" type="checkbox" id="lang-tour-esc-fr" value="french"> French
+            </label>
+            <label class="checkbox">
+                <input ng-model="programs[selectedindexcategory].included.departurehotellanguage.german" type="checkbox" id="lang-tour-esc-ge" value="german"> German
+            </label>
+            <label class="checkbox">
+                <input ng-model="programs[selectedindexcategory].included.departurehotellanguage.italian" type="checkbox" id="lang-tour-esc-it" value="italian"> Italian
+            </label>
+            <label class="checkbox">
+                <input ng-model="programs[selectedindexcategory].included.departurehotellanguage.portuguese" type="checkbox" id="lang-tour-esc-it" value="portuguese"> Portuguese
+            </label>
+        </div>
+    </div>
+</div>
+
+<br />
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="checkbox">
+            <label>
+                <input ng-model="programs[selectedindexcategory].included.tourescort.included" type="checkbox" value="tour-escort">
+                Tour Escort
+            </label>
+        </div>
+        <div class="checkbox col-md-4" ng-show="programs[selectedindexcategory].included.tourescort.included">
+            <label class="checkbox">
+                <input ng-model="programs[selectedindexcategory].included.tourescort.language.spanish" type="checkbox" id="lang-tour-esc-es" value="spanish"> Spanish
+            </label>
+            <label class="checkbox">
+                <input ng-model="programs[selectedindexcategory].included.tourescort.language.english" type="checkbox" id="lang-tour-esc-en" value="english"> English
+            </label>
+            <label class="checkbox">
+                <input ng-model="programs[selectedindexcategory].included.tourescort.language.french" type="checkbox" id="lang-tour-esc-fr" value="french"> French
+            </label>
+            <label class="checkbox">
+                <input ng-model="programs[selectedindexcategory].included.tourescort.language.german" type="checkbox" id="lang-tour-esc-ge" value="german"> German
+            </label>
+            <label class="checkbox">
+                <input ng-model="programs[selectedindexcategory].included.tourescort.language.italian" type="checkbox" id="lang-tour-esc-it" value="italian"> Italian
+            </label>
+            <label class="checkbox">
+                <input ng-model="programs[selectedindexcategory].included.tourescort.language.portuguese" type="checkbox" id="lang-tour-esc-it" value="portuguese"> Portuguese
+            </label>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="checkbox">
+            <label>
+                <input ng-model="programs[selectedindexcategory].included.driveguide.included" type="checkbox" value="drive-guide">
+                Driver/Guide
+            </label>
+        </div>
+
+        <div class="checkbox col-md-4" ng-show="programs[selectedindexcategory].included.driveguide.included">
+            <label class="checkbox">
+                <input ng-model="programs[selectedindexcategory].included.driveguide.language.spanish" type="checkbox" id="lang-guide-esc-es" value="spanish"> Spanish
+            </label>
+            <label class="checkbox">
+                <input ng-model="programs[selectedindexcategory].included.driveguide.language.english" type="checkbox" id="lang-guide-esc-en" value="english"> English
+            </label>
+            <label class="checkbox">
+                <input ng-model="programs[selectedindexcategory].included.driveguide.language.french" type="checkbox" id="lang-guide-esc-fr" value="french"> French
+            </label>
+            <label class="checkbox">
+                <input ng-model="programs[selectedindexcategory].included.driveguide.language.german" type="checkbox" id="lang-guide-esc-ge" value="german"> German
+            </label>
+            <label class="checkbox">
+                <input ng-model="programs[selectedindexcategory].included.driveguide.language.italian" type="checkbox" id="lang-guide-esc-it" value="italian"> Italian
+            </label>
+            <label class="checkbox">
+                <input ng-model="programs[selectedindexcategory].included.driveguide.language.portuguese" type="checkbox" id="lang-guide-esc-it" value="portuguese"> Portuguese
+            </label>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="checkbox">
+            <label>
+                <input ng-model="programs[selectedindexcategory].included.localguidesincluded" type="checkbox" value="drive-guide">
+                Local Guides
+            </label>
+        </div>
+        <div class="col-md-9 checkbox" ng-show="programs[selectedindexcategory].included.localguidesincluded">
+            <input type="radio" ng-model="programs[selectedindexcategory].included.localguides" ng-value="'everyday'" /> At every visit <br />
+            <input type="radio" ng-model="programs[selectedindexcategory].included.localguides" ng-value="'specific'" /> Only at visits specified at the day by day itinerary
+        </div>
+    </div>
+</div>
+
+<br />
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="checkbox">
+            <label>
+                <input ng-model="programs[selectedindexcategory].included.transportbetweencities.included" type="checkbox" value="trans-cities">
+                Transportation between cities
+            </label>
+        </div>
+
+        <div class="col-md-9 checkbox" ng-show="programs[selectedindexcategory].included.transportbetweencities.included">
+            <label class="checkbox">
+                <input ng-model="programs[selectedindexcategory].included.transportbetweencities.bus" type="checkbox" id="trans-city-bus" value="bus"> Bus
+            </label>
+            <label class="checkbox">
+                <input ng-model="programs[selectedindexcategory].included.transportbetweencities.fourxfour" type="checkbox" id="trans-city-4x4" value="4x4"> 4x4
+            </label>
+
+            <label class="checkbox">
+                <input ng-model="programs[selectedindexcategory].included.transportbetweencities.domesticflight" type="checkbox" id="trans-city-fly" ng-change="removeflights(programs[selectedindexcategory].included.transportbetweencities.domesticflight)" value="domestic-fly"> <span class="notranslate">Domestic Flight</span>
+            </label>
+
+            <label class="checkbox">
+                <input ng-model="programs[selectedindexcategory].included.transportbetweencities.train" type="checkbox" id="trans-city-train" value="train"> Railway
+            </label>
+
+            <label class="checkbox">
+                <input ng-model="programs[selectedindexcategory].included.transportbetweencities.boat" type="checkbox" id="trans-city-boat" value="boat"> Boat/Ferry
+            </label>
+
+            <label class="checkbox">
+                <input ng-model="programs[selectedindexcategory].included.transportbetweencities.van" type="checkbox" id="trans-city-van" value="van"> Van/Minivan
+            </label>
+
+            <label class="checkbox">
+                <input ng-model="programs[selectedindexcategory].included.transportbetweencities.truck" type="checkbox" id="trans-city-truck" value="truck"> Truck
+            </label>
+            <label class="checkbox">
+                <input ng-model="programs[selectedindexcategory].included.transportbetweencities.privatecarwithdriver" type="checkbox" id="trans-city-driver" value="car-driver"> Car + driver
+            </label>
+            <label class="checkbox">
+                <input ng-model="programs[selectedindexcategory].included.transportbetweencities.other" type="checkbox" id="trans-city-other" value="other"> Other
+            </label>
+            <div class="form-group" ng-show="programs[selectedindexcategory].included.transportbetweencities.other">
+                <label class="control-label sr-only" for="other-trans">Other Transportation</label>
+                <input ng-model="programs[selectedindexcategory].included.transportbetweencities.otherdescription" class="form-control" id="other-trans" type="text" value="" placeholder="please, add the other transportation name here...">
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--  close trans-cities-opt -->
+<br />
+<div class="row">
+    <div class="col-md-3">
+        <div class="checkbox">
+            <label class="notranslate">
+                <input ng-model="programs[selectedindexcategory].included.taxesinthecountry" type="checkbox" id="country-taxes" value="country-taxes"> Country Taxes
+            </label>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="checkbox">
+            <label class="notranslate">
+                <input ng-model="programs[selectedindexcategory].included.airporttaxes" type="checkbox" id="air-taxes" value="air-taxes"> Airport Taxes
+            </label>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="checkbox">
+            <label class="notranslate">
+                <input ng-model="programs[selectedindexcategory].included.tips" type="checkbox" id="tips" value="tips"><span class="notranslate"> Tips</span>
+            </label>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="checkbox">
+            <label>
+                <input ng-model="programs[selectedindexcategory].included.baggagehandlingfees" type="checkbox" id="baggage" value="baggage"> Baggage handling
+            </label>
+        </div>
+    </div>
+</div>
+
+<!--<div class="form-group">
+    <span class="help-block">Included Texts.</span>
+    <div class="add-tag-control">
+        <div class="search">
+            <label class="control-label" for="tag-tour">Type the included text  (English)<b>*</b></label>
+            <input uib-typeahead="included as included.label_en for included in includedtags | filter:$viewValue | limitTo:10"
+                   ng-model="includedtoadd" type="text" class="form-control select-tag"
+                   placeholder="Search included text" id="includedsenglish" uib-typeahead-template-url="tagTemplate.html" />
+        </div>
+        <div class="action">
+            <button ng-click="addIncluded()" type="button" class="btn btn-primary"><i class="fa fa-plus"></i> Add</button>
+        </div>
+        <div class="result ml-xs">
+            <h3 class="text-ligth"><i class="fa fa-tags"></i> Included: <span class="bold" ng-repeat="tag in programs[selectedindexcategory].includedtags | filter : {state:'published'}"><span ng-show="!$first">,</span> {{tag.label_en}}</span></h3>
+        </div>
+    </div>
+</div>-->
+
+    <!-- important notes for traveler -->
+    <hr class="mb-xxl" />
+    <div class="mt-xxl">
+        <div class="">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class=""><strong>Important Notes For Travelers:</strong></p>
+                    <div class="form-group pb-xxl" ng-show="programs[selectedindexcategory].languages.english">
+                        <label for="important_txt_en" class="control-label">Important Information for travelers (english) </label>
+                        <a ng-show="programs[selectedindexcategory].languages.english &amp;&amp; programs[selectedindexcategory].languages.spanish" href="" ng-click="translateimportantenotes(programs[selectedindexcategory].important_txt_es)" class="pull-right trans"><i class="fa fa-language"></i> get translation</a>
+                        <textarea ng-model="programs[selectedindexcategory].important_txt_en" class="form-control " rows="4" id="important_txt_en" placeholder="Please, add information that travelers should know (if visa is needed and you can provide it, which is the best airport to arrive, if domestic flights are not included, which ones should clients book by themselves, etc... )"></textarea>
+                        <span class="help-block pull-right">(optional)</span>
+                    </div>
+                    <div class="form-group" ng-show="programs[selectedindexcategory].languages.spanish">
+                        <label for="important_txt_es" class="control-label">Important Information for travelers (spanish) </label>
+                        <a ng-show="programs[selectedindexcategory].languages.english &amp;&amp; programs[selectedindexcategory].languages.spanish" href="" ng-click="translateimportantenotes_es(programs[selectedindexcategory].important_txt_en)" class="pull-right trans"><i class="fa fa-language"></i> get translation</a>
+                        <textarea ng-model="programs[selectedindexcategory].important_txt_es" class="form-control " rows="4" id="important_txt_es" placeholder="Por favor, agrega información que debe conocer el viajero (visas, vuelos domésticos incluidos o no ...)"></textarea>
+                        <span class="help-block pull-right">(optional)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

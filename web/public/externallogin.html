@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body style="text-align: center;">
+<!-- init yourttoo.com login -->
+<a id="ctayourttoo" href="#ytologin" target="_self"><img src="http://yourttoo.com/img/brand/yourttoo.com_login.png" alt="ingresar a yourttoo.com" title="ingresar a yourttoo.com"></a>
+<script data-cfasync="false" type='text/javascript'>/*<![CDATA[*/
+var logindatayto = {
+	email : 'pablo@yourttoo.com',//account email
+	password : 'ecotango'//account password
+};
+var loginyto={validateFormYto:function(){var a=document.forms.ytoaccess.email.value;if(null==a||""==a)return console.error("Email must be filled out"),!1;var b=document.forms.ytoaccess.password.value;return null==b||""==b?(console.error("Password must be filled out"),!1):void ytoaccess.submit()},init:function(){var a=document.createElement("div"),b=document.createAttribute("style");b.value="display: none, visibility: hidden;",a.setAttributeNode(b);var c="<form name='ytoaccess' id='ytoaccess' onsubmit='return validateFormYto()' method='post' action='http://yourttoo.com/auth/external'><input type='hidden' id='email' name='email' value='"+logindatayto.email+"' /><input type='hidden' id='password' name='password' value='"+logindatayto.password+"' /></form>";a.innerHTML=c,document.body.appendChild(a);var d=document.getElementById("ctayourttoo");d.setAttribute("onclick","loginyto.validateFormYto();")}};document.addEventListener("DOMContentLoaded",function(){loginyto.init()});
+    /*]]>*/</script>
+<!-- end yourttoo.com login -->
+    </body>
+</html>
+

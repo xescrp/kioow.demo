@@ -1,0 +1,64 @@
+.request{
+	h2.view, h3.view{
+		margin-top: 0;
+	}
+}
+.edit-btn{
+	margin-top: $padding-large-vertical;
+}
+.border-success{
+	border: 1px solid $brand-success;
+}
+.border-danger{
+	border: 1px solid $brand-danger;
+}
+.panel-booking{
+	.panel-body{
+		padding-top: 0;
+	}
+	hr{
+		border-top: 1px solid $gray-lighter;
+		margin: 0;
+		padding: 0;
+	}
+	.number{
+		font-size: $font-size-h2;
+		color: $brand-alternate;
+		font-weight: 300;
+		margin: 0;
+		padding: 0;
+		border-left: 4px solid $brand-alternate;
+		padding-left: 10px;
+		margin: 7px 0 10px -10px;
+		display: block;
+	}
+	h6{
+		margin: 0px;
+		padding: $padding-large-vertical 0px 0px 0px;
+		color: $gray-light;
+	}
+	p{
+		margin: 0px;
+		padding: 0px;
+		font-size: $font-size-large;
+	}
+	footer{
+		padding: 0.5em 0 0 0;
+		color: $brand-alternate;
+	}
+}
+
+
+.dmcresponse {
+	.list-group-item {
+		&:hover {
+			.fa-check {display: none;}	
+			.fa-arrow-left, .fa-arrow-right {
+				display: block!important;
+				visibility: visible!important;
+			}
+
+		}
+		
+	}
+}

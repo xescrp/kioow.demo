@@ -1,0 +1,35 @@
+﻿
+<div class="navbar-dropdown-user dropdown item-image pull-left" uib-dropdown>
+    <a href="#" id="currencydrop" class="nav-dd nots" uib-dropdown-toggle>
+        <i class="fa fa-money"></i>
+    </a>
+    <ul class="dropdown-menu uib-dropdown-menu padded-xxl" >
+        <li>
+            <div class="row">
+                <div class="col-xs-2 bold">CC</div>
+                <div class="col-xs-5 bold">Divisa</div>
+                <div class="col-xs-1 bold"> </div>
+                <div class="col-xs-2 bold">Cambio</div>
+            </div>
+            <hr style="margin:3px;" />
+            <div class="row mb-l mt-s"><div class="col-xs-12">Base: <strong>{{exchanges.base}}</strong></div></div>
+        </li>
+        <li style="overflow-y: scroll; overflow-x: hidden; height: 500px;">
+            <div class="row" ng-repeat="curr in exchanges.currencies" ng-init="toggleedition=false">
+                <div class="col-xs-2">{{ curr.code }}</div>
+                <div class="col-xs-5">{{ curr.name }}</div>
+                <div class="col-xs-1"><strong>{{ curr.symbol }}</strong></div>
+                <div class="col-xs-2" ng-show="!toggleedition" ng-click="toggleedition=true">{{ curr.rate }}</div>
+                <div class="col-xs-2" ng-show="toggleedition"><input type="number" style="width: 100px;" ng-model="curr.rate" /></div>
+            </div>
+        </li>
+        <li>
+            <div class="row">
+                <div class="col-xs-12">
+                    <a class="mb-l btn btn-success btn-xs pull-right" ng-click="save()" title="guardar cambios (on prototype)">guardar</a>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+

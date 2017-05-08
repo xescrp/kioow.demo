@@ -1,0 +1,108 @@
+{% extends '../admin-layout.html.swig' %}
+{% block body %}
+<tr>
+    <td align="center" valign="top">
+        <!-- BEGIN HEADER // -->
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateHeader">
+            <tr>
+                <td valign="top" class="headerContainer">
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock">
+                        <tbody class="mcnTextBlockOuter">
+                            <tr>
+                                <td valign="top" class="mcnTextBlockInner">
+                                    <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextContentContainer">
+                                        <tbody>
+                                            <tr>
+                                            <td valign="top" class="mcnTextContent" style="padding: 9px 18px; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                                                &nbsp;
+                                                <h1>Nueva Petición a Medida</h1>
+                                            </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    <!-- // END HEADER -->
+    </td>
+</tr>
+<tr>
+    <td align="center" valign="top">
+        <!-- BEGIN BODY // -->
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateBody">
+            <tr>
+                <td valign="top" class="bodyContainer">
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock">
+                        <tbody class="mcnTextBlockOuter">
+                            <tr>
+                                <td valign="top" class="mcnTextBlockInner">
+                                    
+                                    <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextContentContainer">
+                                        <tbody><tr>
+                                            
+                                            <td valign="top" class="mcnTextContent" style="padding-top:9px; padding-right: 18px; padding-bottom: 9px; padding-left: 18px;">
+                                                Nueva solicitud enviada por <strong>{{request.traveler.firstname}} {{request.traveler.lastname}}</strong> el <strong>{{request.publishedDate|date('d/m/Y',-120,'(GMT+2)')}}</strong> a las <strong>{{request.publishedDate|date('G:i',-120,'(GMT+2)')}} hs</strong>.<br><br>
+                                                <h3 class="null" style="line-height: 20.7999992370605px;">REQUEST ID: <a href="" target="_blank">{{ request.code }}</a></h3>
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+                                    
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- BEGIN request // -->
+                    {% include "../partials/tailor-made-details.es.html.swig" %}
+                    <!-- // END request -->
+
+                    <!-- BEGIN Call to action -->
+                    {% if ca == null || ca == undefined || ca == ''%}
+                        {% set ca = {txt : 'VER SOLICITUDES', url : 'http://www.openmarket.travel/omt-list/requests'}; %}
+                    {% endif %}
+                    {% include "../partials/call-to-action.html.swig" %}
+                    <!-- END Call to action -->
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnBoxedTextBlock">
+                        <tbody class="mcnBoxedTextBlockOuter">
+                            <tr>
+                                <td valign="top" class="mcnBoxedTextBlockInner">
+                                    <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnBoxedTextContentContainer">
+                                        <tbody>
+                                            <tr>
+                                            <td style="padding-top:9px; padding-left:18px; padding-bottom:9px; padding-right:18px;">
+                                                <table border="0" cellpadding="18" cellspacing="0" class="mcnTextContentContainer" width="100%">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td valign="top" class="mcnTextContent">
+<h2>Cliente:</h2>
+<br>
+Nombre: <strong>{{request.traveler.firstname}}</strong><br>
+Apellido: <strong>{{request.traveler.lastname}}</strong><br>
+Email: <a href="mailto:{{request.traveler.email}}" target="_blank"><strong>{{request.traveler.email}}</strong></a><br>
+{% if request.traveler.phone %}
+Teléfono: <strong>{{request.traveler.phone}}</strong>
+{% endif %}
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>                               
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <!-- // END BODY -->
+    </td>
+</tr>
+{% endblock %}

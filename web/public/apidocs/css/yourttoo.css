@@ -1,0 +1,16 @@
+.brand-logo {
+    display: block;
+    height: 42px;
+    width: 228px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.swagger-section #header {
+    height: 30px;
+    background-color: #f2f2f2 !important;
+}
+
+#api_selector {
+    margin-top: -40px;
+}

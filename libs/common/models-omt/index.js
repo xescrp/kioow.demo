@@ -1,0 +1,33 @@
+﻿module.exports = function (core, dbname) {
+    require('./wlcustomization')(core, dbname);
+    require('./affiliate')(core, dbname);
+    require('./signinregister')(core, dbname);
+    require('./bookings')(core, dbname);
+    require('./bookings2')(core, dbname);
+    require('./chat')(core, dbname);
+    require('./destinationcountryzones')(core, dbname);
+    require('./destinationcountry')(core, dbname);
+    require('./destinationcity')(core, dbname);
+    require('./dmcproduct')(core, dbname);
+    require('./bookedproduct')(core, dbname);
+    require('./dmcproductremoved')(core, dbname);
+    require('./dmc')(core, dbname);
+    require('./mail')(core, dbname);
+    require('./migrationproduct')(core, dbname);
+    require('./omtrequests')(core, dbname);
+    require('./permissions')(core, dbname);
+    require('./quotes')(core, dbname);
+    require('./roles')(core, dbname);
+    require('./sequence')(core, dbname);
+    require('./internals')(core, dbname);
+    require('./stories')(core, dbname);
+    require('./payment')(core, dbname);
+    require('./invoice')(core, dbname);
+    require('./hevents')(core, dbname);
+    require('./subscriptionmessages')(core, dbname);
+    require('./traveler')(core, dbname);
+    require('./userquery')(core, dbname);
+    require('./admin')(core, dbname);
+    require('./flight')(core, dbname);
+    require('./users')(core, dbname);
+}

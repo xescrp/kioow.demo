@@ -1,0 +1,180 @@
+{
+  "Key": "ProductCountriesCACHE",
+  "Date": "2015-01-16T12:16:23.176Z",
+  "Item": [
+    {
+      "name": "",
+      "countrycode": "",
+      "cities": [
+        ""
+      ]
+    },
+    {
+      "name": "Turkey",
+      "countrycode": "TR",
+      "cities": [
+        "İstanbul",
+        "Bursa",
+        "Nicaea",
+        "İzmir",
+        "Bergama",
+        "Efes Harabeleri",
+        "Pamukkale",
+        "Akhisar",
+        "Sart",
+        "Konya",
+        "Eskihisar",
+        "Ürgüp",
+        "Göreme",
+        "Uçhisar",
+        "Pasabag",
+        "Mersin Province",
+        "Tarsus",
+        "Antakya"
+      ]
+    },
+    {
+      "name": "Slovenia",
+      "countrycode": "SI",
+      "cities": [
+        "Ljubljana"
+      ]
+    },
+    {
+      "name": "Spain",
+      "countrycode": "ES",
+      "cities": [
+        "Bayona",
+        "Arcade",
+        "Caldas de Reis",
+        "Santiago de Compostela"
+      ]
+    },
+    {
+      "name": "Portugal",
+      "countrycode": "PT",
+      "cities": [
+        "Porto",
+        "Esposende",
+        "Caminha",
+        "Pinhão",
+        "São João da Pesqueira",
+        "Penedono",
+        "Marialva",
+        "Vila Nova de Foz Côa",
+        "Pocinho"
+      ]
+    },
+    {
+      "name": "Tanzania",
+      "countrycode": "TZ",
+      "cities": [
+        "Moshi Urban"
+      ]
+    },
+    {
+      "name": "Mexico",
+      "countrycode": "MX",
+      "cities": [
+        "Magdalena Bay",
+        "La Paz"
+      ]
+    },
+    {
+      "name": "Bhutan",
+      "countrycode": "BT",
+      "cities": [
+        "Thimphu",
+        "Punakha",
+        "Paro"
+      ]
+    },
+    {
+      "name": "Chile",
+      "countrycode": "CL",
+      "cities": [
+        "San Pedro de Atacama",
+        "El Loa Airport",
+        "Malalcahuello",
+        "Pucón",
+        "Reserva Huilo-huilo",
+        "Puerto Varas",
+        "Conguillío National Park",
+        "Puyehue National Park",
+        "Easter Island",
+        "Osorno",
+        "Colchagua",
+        "Santa Cruz"
+      ]
+    },
+    {
+      "name": "Egypt",
+      "countrycode": "EG",
+      "cities": [
+        "Cairo",
+        "Luxor",
+        "Aswan"
+      ]
+    },
+    {
+      "name": "Thailand",
+      "countrycode": "TH",
+      "cities": [
+        "Phuket",
+        "Bangkok"
+      ]
+    },
+    {
+      "name": "Cambodia",
+      "countrycode": "KH",
+      "cities": [
+        "Phnom Penh",
+        "Siem Reap",
+        "Angkor Thom"
+      ]
+    },
+    {
+      "name": "Laos",
+      "countrycode": "LA",
+      "cities": [
+        "Louangphabang"
+      ]
+    },
+    {
+      "name": "Vietnam",
+      "countrycode": "VN",
+      "cities": [
+        "Hanoi",
+        "tp. Lào Cai",
+        "tt. Sa Pa",
+        "Cat Cat",
+        "Lao Chải",
+        "Tả Van Chư",
+        "Hạ Long Bay",
+        "tp. Huế",
+        "tp. Hội An",
+        "Da Nang",
+        "Mỹ Sơn",
+        "Ho Chi Minh City",
+        "Củ Chi",
+        "Cao Đài Giáo lý viện",
+        "Can Tho",
+        "tt. Cái Bè",
+        "Vĩnh Long",
+        "Cái Răng District",
+        "Ba Be National Park",
+        "Cao Bang",
+        "Lang Son Province",
+        "Phong Nha-Ke Bang National Park",
+        "Lao Cai",
+        "Tràng An",
+        "Tả Phìn",
+        "Huế",
+        "Nha Trang",
+        "Tây Ninh Province",
+        "tp. Châu Đốc",
+        "Giao Xuân"
+      ]
+    }
+  ]
+}

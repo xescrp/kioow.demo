@@ -1,0 +1,113 @@
+﻿<div itemscope itemtype="http://data-vocabulary.org/Product">
+<span class="hidden" itemprop="identifier" content="{{ result.code }}">{{ result.code }}</span>
+
+<a href="{{getUrl()}}/{{ result.slug_es }}/{{ querystring }}" target="_self" class="link-wrapper no-select whole-result-link">
+        <div class="info-block result well padded-zero mb-xxl">
+            <div class="overflower-wrap">
+                <div class="result-img-listview hidden-viewblocks relative">
+                    <img itemprop="image" class="img-responsive iblock"
+                     ng-src="{{ getUrlCloudinary(result.productimage.url, 'searchresult') }}"
+                     data-src2x="{{ getUrlCloudinary(result.productimage.url, 'searchresultretina') }}"
+                     alt="{{ result.title }}"
+                     title="{{ result.title }}">
+                    <div class="result-toptags hidden-viewblocks" >
+                        <span ng-repeat="tag in printTagsArray()" class="white" tooltip-trigger="mouseenter" tooltip-placement="bottom" uib-tooltip="{{tag.label}}" tooltip-animation="false">
+                            <i class="icon-{{tag.slug}}"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="result-img">
+                    <div class="result-cta invisible">
+                        <button class="hidden-viewblocks block mb-l mt-b"><i class="fa fa-map-marker"></i> Ver mapa</button>
+                    </div>
+                    <div class="result-price" itemscope itemtype="http://data-vocabulary.org/Offer">
+                    <em><span>PVP</span> desde</em><br />
+                        <strong class="h2 bold iblock marged-zero">
+                            <span itemprop="price"> {{ getPrice(result) | number : 0 }}</span><small class="currency"> {{ result.pvp.currency.symbol }}<span class="hidden" itemprop="currency">{{result.pvp.currency.value}}</span></small>
+                        </strong>
+                    </div>
+                    <div class="result-cta">
+                        <button class="btn btn-empty">Ver Más</button>
+                    </div>
+                    <img itemprop="image" class="img-responsive iblock hidden-viewlist"
+                         ng-src="{{ getUrlCloudinary(result.productimage.url, 'resultimage') }}"
+                         data-src2x="{{ getUrlCloudinary(result.productimage.url, 'resultimageretina') }}"
+                         alt="{{ result.title }}"
+                         title="{{ result.title }}">
+                    <div class="result-maintitle-wrap">
+                        <h3 class="result-maintitle absolute hidden-viewlist" itemprop="name">{{ result.title_es }}</h3>
+                    </div>
+                </div>
+                <div class="result-text-effect text-gray padded-l pb-zero">
+                    <h3 class="result-maintitle-listview hidden-viewblocks" itemprop="name">{{ result.title_es }}</h3>
+                    <div class="text-detail hidden-viewlist">
+                        <i class="fa fa-globe pull-left mr-four mt-b text-gray-light-base"></i>
+                        <p>
+                            <strong>
+                                {{ printCities() }}
+                            </strong>
+                        </p>
+                    </div>
+                    <div class="text-detail hidden-viewblocks">
+                        <p class="mb-b">Noches en: <span class="bold">{{ printCities() }}</span></p>
+                    </div>
+                    <div ng-show="printStops()" class="text-detail hidden-viewblocks">
+                        <p class="mb-b">Visitando: <span class="bold">{{ printStops() }}</span></p>
+                    </div>
+                    <div class="text-detail text-detail-inlinelist">
+                        <i class="fa fa-clock-o pull-left mr-four mt-b text-gray-light-base"></i>
+                        <p ng-show="result.itinerary.length == 1">{{ result.itinerary.length }} día</p>
+                        <p ng-show="result.itinerary.length > 1">{{ result.itinerary.length }} días</p>
+                    </div>
+
+                    <div class="text-detail text-detail-inlinelist">
+                        <i class="fa fa-bed pull-left mr-four mt-b text-gray-light-base"></i>
+                        <p>
+                            {{ printHotelCats() }}
+                        </p>
+                    </div>
+
+                    <div class="text-detail text-detail-inlinelist" ng-if="printMeals()">
+                        <i class="fa fa-cutlery pull-left mr-four mt-b text-gray-light-base"></i>
+                        <p>
+                            {{ printMeals() }}
+                        </p>
+                    </div>
+
+                    <div class="text-detail result-tags hidden-viewlist" ng-if="printTags()">
+                        <i class="fa fa-tags pull-left mr-four mt-b text-gray-light-base"></i>
+                        <p itemprop="category">
+                            {{ printTags() }}
+                        </p>
+                    </div>
+                </div>
+                <div ng-if="isWhiteLabel == false" class="result-dmc-profile padded-xs mb-zero pr-b pl-b text-light">
+                    <img class="pull-left mr-b img-circle avatarb36 mb-zero"
+                         ng-src="{{ getUrlCloudinary(result.dmc.images.logo.url, 'avatarb36') }}"
+                         data-src2x="{{ getUrlCloudinary(result.dmc.images.logo.url, 'avatarb36retina') }}"
+                         alt="{{ result.title }}"
+                         title="{{ result.title }}">
+                    <p class="dmc-text mb-zero">
+                        <strong class="text-gray"><small itemprop="brand">{{ result.dmc.company.name }}</small></strong><br>
+                    </p>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </a>
+    <div class="result-comparecheck hidden-xs">
+      <input class="hidden" type="checkbox" class="compare-checkbox" id="compare-{{result.slug_es}}" ng-click="$emit('addtocompare', result.code)" ng-model="result.itemcheckboo" value="{{ result.slug_es }}">
+      <label ng-if="!result.itemcheckboo" ng-mouseenter="comparethis = true" ng-mouseleave="comparethis = false" for="compare-{{result.slug_es}}">
+        <div ng-show="comparethis" class="comparecheck-popover bold text-left absolute block padded-xs text-light">Comparar este viaje</div>
+      </label>
+      <label ng-if="result.itemcheckboo" ng-mouseenter="comparethis = true" ng-mouseleave="comparethis = false" for="compare-{{result.slug_es}}">
+        <div ng-show="comparethis" class="comparecheck-popover bold text-left absolute block padded-xs text-light">Dejar de comparar</div>
+      </label>
+    </div>
+    <a ng-click="showGallery(result.code)" target="_self" href="" class="result-firegallery block hidden-viewblocks hidden-xs pt-b" ng-mouseenter="seegallery = true" ng-mouseleave="seegallery = false">
+      <i class="fa fa-picture-o"></i>
+      <div ng-show="seegallery" class="firegallery-popover bold text-left absolute block padded-xs text-light">Ver Galería</div>
+    </a>
+    <span class="hidden-viewblocks result-firemap pointer block mb-l mt-b" ng-click="opensupermapModal('lg', result)" ><i class="fa fa-map-marker"></i> Ver mapa</span>
+
+</div>

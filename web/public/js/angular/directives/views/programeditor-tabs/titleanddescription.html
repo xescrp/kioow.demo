@@ -1,0 +1,82 @@
+﻿<h2>Languages</h2>
+<div class="mb-l">
+    <p>Choose languages for this program</p>
+    <fieldset>
+        <label class="checkbox-inline">
+            <input ng-model="programs[selectedindexcategory].languages.english" type="checkbox" id="lang-tour-en" value="english" /> English
+        </label><label class="checkbox-inline">
+            <input ng-model="programs[selectedindexcategory].languages.spanish" type="checkbox" id="lang-tour-es" value="spanish" /> Spanish
+        </label>
+    </fieldset>
+    <p class="help-block">
+        Some steps allow you to write in spanish also, or to use the automatic translation. If you make use of the translator, our Product Department will review texts before publishing.
+    </p>
+</div>
+<h2>Tour name & Description</h2>
+<div class="form-group" ng-class="{ 'has-error': titleisempty }" ng-show="programs[selectedindexcategory].languages.english">
+    <label class="control-label" for="tourname">Tour name (english)</label> <a ng-show="programs[selectedindexcategory].languages.english && programs[selectedindexcategory].languages.spanish" href="" ng-click="translatetitle_es(programs[selectedindexcategory].title_es)" class="pull-right trans"><i class="fa fa-language"></i> get translation</a>
+    <input ng-model="programs[selectedindexcategory].title" class="form-control" id="tourname" type="text" value="" placeholder="please, add the tour name here..." />
+</div>
+<div class="form-group" ng-class="{ 'has-error': titleisempty }" ng-show="programs[selectedindexcategory].languages.spanish">
+    <label class="control-label" for="tourname">Tour name (spanish)</label> <a ng-show="programs[selectedindexcategory].languages.english && programs[selectedindexcategory].languages.spanish" href="" ng-click="translatetitle(programs[selectedindexcategory].title)" class="pull-right trans"><i class="fa fa-language"></i> get translation</a>
+    <input ng-model="programs[selectedindexcategory].title_es" class="form-control" id="tourname" type="text" value="" placeholder="please, add the tour name here..." />
+</div>
+<p class="help-block" style="margin-top: -9px;">
+    You do not need to specify days in the title. It will be requested in the following steps.
+</p>
+<br />
+<fieldset class="main-des-item">
+    <div class="form-group pb-xxl" ng-show="programs[selectedindexcategory].languages.english">
+        <label for="main_description_en" class="control-label">Brief Description (english) </label> <a ng-show="programs[selectedindexcategory].languages.english && programs[selectedindexcategory].languages.spanish" href="" ng-click="translatemaindescription_es(programs[selectedindexcategory].description_es)" class="pull-right trans"><i class="fa fa-language"></i> get translation</a>
+        <textarea ng-model="programs[selectedindexcategory].description_en" class="form-control" rows="7" id="main_description_en" placeholder="Please, this box is only for a turistical brief descrition of this trip..."></textarea>
+        <span class="help-block pull-right">(Max 250 char)</span>
+    </div>
+    <div class="form-group" ng-show="programs[selectedindexcategory].languages.spanish">
+        <label for="main_description_es" class="control-label">Brief Description (spanish) </label> <a ng-show="programs[selectedindexcategory].languages.english && programs[selectedindexcategory].languages.spanish" href="" ng-click="translatemaindescription(programs[selectedindexcategory].description_en)" class="pull-right trans"><i class="fa fa-language"></i> get translation</a>
+        <textarea ng-model="programs[selectedindexcategory].description_es" class="form-control" rows="7" id="main_description_es" placeholder="Por favor, esta caja es solo para una breve descripción turística del viaje..."></textarea>
+        <span class="help-block pull-right">(Max 250 char)</span>
+    </div>
+
+    <br />
+    <label class="control-label" for="save-as">Save as </label>
+    <input ng-model="programs[selectedindexcategory].name" class="form-control" id="save-as" type="text" value="" placeholder="" />
+
+    <br />
+    <div class="row">
+        <div class="col-xs-4">
+            <label>Main image</label>
+            <div ng-show="mainimageprogress" id="prev-main" class="mainwaitimage">
+                <div class="row">
+                    <div class="col-xs-2">
+                        <div class="preloader solo in">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="main-image-container">
+                <img ng-src="{{getimage(programs[selectedindexcategory].productimage.url, 'mainproductimage')}}" 
+                     data-src2x="{{getimage(programs[selectedindexcategory].productimage.url, 'mainproductimageretina')}}" class="img-responsive" alt="{{programs[selectedindexcategory].title}}" title="{{programs[selectedindexcategory].title}}" />
+                <label class="btn btn-primary btn-upload mt-xl" ng-show="!showmainimage">
+                    <i class="fa fa-cloud-upload"></i>
+                    <span>upload image</span>
+                    <input type="file" ng-hideid="main-image-container" ng-waitingid="prev-main" class="uploadfilebutton btn btn-primary mt-xl" ng-file-select ng-model="programs[selectedindexcategory].productimage" />
+                </label>
+                <label class="btn btn-primary btn-upload mt-xl" ng-show="showmainimage">
+                    <i class="fa fa-cloud-upload"></i>
+                    <span>replace image</span>
+                    <input type="file" ng-hideid="main-image-container" ng-waitingid="prev-main" class="replacefilebutton btn btn-danger mt-xl" ng-file-select ng-model="programs[selectedindexcategory].productimage" />
+                </label>
+                <span class="help-block">
+                    Min size: 1200x800px - Format: .jpg .gif .png<br />
+                    (can't upload an image?, try a lower one.)
+                </span>
+            </div>
+        </div>
+        <div class="col-xs-8">
+        </div>
+    </div>
+</fieldset>

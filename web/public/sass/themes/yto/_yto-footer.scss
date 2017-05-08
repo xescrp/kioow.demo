@@ -1,0 +1,10 @@
+@media (min-width: $screen-md-min) and (min-height: 400px) {
+	.affiliate-session, .no-session {
+		margin: 0 0 $footer-height; /* bottom = footer height */ 
+		#footer {height: $footer-height;}
+	}
+}
+body>footer{
+	padding: 1.5em 0;
+	background-color: darken($light, 5%);
+}

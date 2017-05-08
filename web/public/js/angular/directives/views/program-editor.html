@@ -1,0 +1,79 @@
+﻿<style>
+    .quoteedition {
+        right:0px;
+        top: 785px !important;
+    }
+</style>
+<div>
+    <section>
+        <div class="hidden-sm hidden-xs" id="map" style="height: 2000px;"></div> <!-- rendering map -->
+
+        <div class="headline-wrap" ng-class="{ 'quoteedition' : quote != null}">
+            <!-- fixing it away from the top and full-width -->
+            <div class="container">
+                <div class="row">
+                    <div class="request-form mt-xxl" style="width:100% !important;">
+                        <ul class="nav flow-tabs pull-left" role="tablist" id="request-flow-tabs" style="width:197px;">
+                            <li tooltip-placement="left" ng-show="edittab.visible" uib-tooltip="{{edittab.title}}"  ng-repeat="edittab in tabs" class="act-tab" ng-class="{ active: tab.isSet(edittab.name), 'completed pointer' : tab.show(edittab.name)}">
+                                <a style="text-align: left;" ng-href="" ng-click="tab.setTab(edittab.name)" role="tab" data-toggle="tab">
+                                    <i class="{{edittab.icon}}" style="margin-right: 2px;"></i> <span style="font-size: 15px;"> {{edittab['label' + rolename]}}</span>
+                                </a> 
+                            </li>
+                        </ul>
+
+                        <form name="programeditionform" id="programeditionform" class="tab-content" style="padding-left: 198px;" novalidate>
+                            <!-- 0 OWNER -->
+                            <div ng-repeat="edittab in tabs" class="tab-pane padded-l" id="destino" ng-class="{ active : tab.isSet(edittab.name) }">
+                                <div ng-include="edittab.templateurl"></div>
+                                <p class="help-block invert"></p>
+
+                                <footer class="mt-b" ng-show="!tab.isSet('adminfeatures')">
+                                    <button stop-event ng-click="triggerTabEvent(edittab.name)" ng-show="edittab.nextisvisible" type="button" class="btn btn-danger btn-lg pull-right">
+                                        {{ edittab.nexttext || 'Next' }}
+                                    </button>
+                                    <a class="pull-right btn mt-xs mr-xxl" ng-show="edittab.laterisvisible" href="" ng-click="savedraft()"> Complete this later</a>
+                                </footer>
+                                <footer class="mt-b" ng-show="tab.isSet('adminfeatures')">
+                                    <button stop-event ng-click="triggerTabEvent(edittab.name)" ng-show="edittab.nextisvisible" type="button" class="btn btn-danger btn-lg pull-right">
+                                        {{ edittab.nexttext || 'Publish' }}
+                                    </button>
+                                    <button stop-event class="pull-right btn btn-warning btn-lg mr-xxl" href="" ng-click="savedasraft()"> Save as DRAFT</button>
+                                </footer>
+                            </div>
+
+                            <div class="tab-pane mt-l padded-l active" id="categoryeditselection" ng-show="showcategoryselector" style="height: 400px;">
+                                <h4>Select the category for edition: </h4>
+                                <hr />
+                                <div class="col-md-6 text-center">
+                                    <b>You are editing category: </b>
+                                    <select class="form-control notranslate mt-l" ng-model="selectedindexcategory" ng-change="changecategory()"
+                                            ng-options="getcategoryindex(program.categoryname.label_es) as program.categoryname.label_es for program in programs"></select>
+                                </div>
+                                <div class="col-md-6 text-center mt-l">
+                                    <b>Current Publish Status:</b> 
+                                    <h2 class="mt-l">{{programs[selectedindexcategory].publishState}}</h2>
+                                </div>
+                                <div class="col-md-6 text-center mt-l">
+                                    <b>Last update: </b>
+                                    <h2 class="mt-l">{{ printDate(programs[selectedindexcategory].updatedOn, 'updatedon') }}</h2>
+                                </div>
+                                <div class="col-md-6 text-center mt-l">
+                                    <b>Update by:</b>
+                                    <h2 class="mt-l">{{programs[selectedindexcategory].updatedOnUser || '-'}}</h2>
+                                </div>
+                                <div class="col-md-6 text-center mt-l">
+                                    <b>Min price:</b>
+                                    <h2 class="mt-l">{{programs[selectedindexcategory].pvp.b2b}} {{programs[selectedindexcategory].pvp.currency.symbol}}</h2>
+                                </div>
+                                <div class="col-md-6 text-center mt-l">
+                                    <b>Available until:</b>
+                                    <h2 class="mt-l">{{ printDate(programs[selectedindexcategory].availabilitytill, 'avail till...') }}</h2>
+                                </div>
+                            </div>
+                        </form> <!-- .tab-content ends -->
+                    </div> 
+                </div> <!-- .row ends -->
+            </div> <!-- .container ends -->
+        </div>  <!-- .headline-wrap ends -->
+    </section> <!-- .home-hero ends -->
+</div>

@@ -1,0 +1,16 @@
+footer {
+  margin-top: 20px;
+}
+
+body>footer{
+  padding: 1.5em 0;
+  background-color: darken($light, 5%);
+}
+
+.pre-footer {
+  margin-top: 10px;
+}
+
+.pre-footer>div>ul {
+  list-style: none;
+}

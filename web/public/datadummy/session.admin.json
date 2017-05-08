@@ -1,0 +1,103 @@
+{
+  "key": "3fb7ae85-615f-4232-aea7-7722833bfd75",
+  "date": "2015-09-08T16:40:27.203Z",
+  "user": {
+    "_id": "547f0080260ed5c409def5f4",
+    "username": "Pablo",
+    "email": "pablo@openmarket.travel",
+    "code": "OMTADM04",
+    "phone": "",
+    "password": "$2a$10$o0pRM4qF.JykIdlDoU8Dte4VCqVzbpJ6zjlnhFwf/.o46GbRaVnYK",
+    "isDMC": false,
+    "isTraveler": false,
+    "isAdmin": true,
+    "active": true,
+    "isLocal": true,
+    "isFacebookLinked": false,
+    "isTwitterLinked": false,
+    "isGoogleLinked": false,
+    "__v": 0,
+    "updatedOn": "2014-12-03T12:22:24.904Z",
+    "createdOn": "2014-12-03T12:22:24.310Z",
+    "roles": [
+      {
+        "_id": "53d11933159709402588a154",
+        "slug": "admin",
+        "title": "Admin",
+        "publishedDate": "2014-07-24T14:33:23.575Z",
+        "description": "Rol de Administrador OpenMarket.travel",
+        "__v": 0,
+        "updatedOn": "2014-07-24T14:33:23.578Z",
+        "createdOn": "2014-07-24T14:33:23.576Z",
+        "permissions": [
+          "53abf79aaa017f60178d5eb5"
+        ]
+      }
+    ],
+    "photo": {
+      "url": "http://res.cloudinary.com/open-market-travel/image/upload/v1412587999/avatar.jpg"
+    }
+  },
+  "dmc": null,
+  "traveler": null,
+  "admin": {
+    "_id": "547f0080260ed5c409def5f5",
+    "slug": "omtadm04",
+    "code": "OMTADM04",
+    "name": "Pablo",
+    "email": "pablo@openmarket.travel",
+    "skype": "",
+    "description": "",
+    "membershipDate": "2014-12-03T12:22:24.904Z",
+    "user": {
+      "_id": "547f0080260ed5c409def5f4",
+      "username": "Pablo",
+      "email": "pablo@openmarket.travel",
+      "code": "OMTADM04",
+      "phone": "",
+      "password": "$2a$10$o0pRM4qF.JykIdlDoU8Dte4VCqVzbpJ6zjlnhFwf/.o46GbRaVnYK",
+      "isDMC": false,
+      "isTraveler": false,
+      "isAdmin": true,
+      "active": true,
+      "isLocal": true,
+      "isFacebookLinked": false,
+      "isTwitterLinked": false,
+      "isGoogleLinked": false,
+      "__v": 0,
+      "updatedOn": "2014-12-03T12:22:24.904Z",
+      "createdOn": "2014-12-03T12:22:24.310Z",
+      "roles": [
+        "53d11933159709402588a154"
+      ],
+      "photo": {
+        "url": "http://res.cloudinary.com/open-market-travel/image/upload/v1412587999/avatar.jpg"
+      }
+    },
+    "__v": 0,
+    "updatedOn": "2014-12-03T12:22:24.919Z",
+    "createdOn": "2014-12-03T12:22:24.904Z",
+    "images": {
+      "splash": {
+        "url": "http://res.cloudinary.com/open-market-travel/image/upload/v1412587999/avatar.jpg"
+      },
+      "logo": {
+        "url": "http://res.cloudinary.com/open-market-travel/image/upload/v1412587999/avatar.jpg"
+      },
+      "photo": {
+        "url": "http://res.cloudinary.com/open-market-travel/image/upload/v1412587999/avatar.jpg"
+      }
+    },
+    "location": {
+      "fulladdress": "",
+      "city": "",
+      "stateorprovince": "",
+      "cp": "",
+      "country": "",
+      "countrycode": "",
+      "continent": "",
+      "latitude": 0,
+      "longitude": 0
+    }
+  }
+}

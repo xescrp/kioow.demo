@@ -1,0 +1,167 @@
+.headline-wrap {
+	position: absolute;
+	top: 100px;
+	width: 100%;
+	@media (max-width: $screen-sm-max) {
+		position: relative;
+		min-height: 370px;
+		background-image: url("http://res.cloudinary.com/open-market-travel/image/upload/q_70/v1436195981/assets/australia.jpg");
+		background-position: center center;
+		padding-bottom: 50px;
+		top: 0;
+		.container {max-width: 500px; min-width: 300px;}
+	}
+}
+.loading-slider-home .headline-wrap {
+		position: relative;
+		min-height: 370px;
+		background-image: url("http://res.cloudinary.com/open-market-travel/image/upload/q_70/v1436195981/assets/australia.jpg");
+		background-position: center center;
+		padding-bottom: 50px;
+		top: 0;
+}
+.slider-loading{
+	top: 150px !important;
+}
+.headline {
+	//background-color: $brand-alternate;
+	@extend .invert-text;
+	margin-top: 55px;
+	@media (max-width: $screen-md-max) {margin-top: 30px;}
+	@media (max-width: $screen-sm-max) {margin-top: 60px;}
+	padding: $padding-xl-vertical $padding-xl-horizontal;
+	h3 {font-size: $font-size-h3; font-weight: 500; line-height: 1.4;}
+}
+.main-claim{
+	background-color: $brand-primary;
+	@include linear-gradient(darken($brand-primary, 10%), lighten($brand-primary, 5%));
+	@extend .invert-text;
+	@media (max-width: $screen-md-max){
+		h2{
+			font-size: $font-size-h3;
+		}
+	};
+}
+.info-block {
+	@extend .bg-light;
+	position: relative;
+	@media (max-width: $screen-sm-max) {text-align: center;}
+	//round fa icons into info blocks
+	.info-fa-icon {
+		font-size: $font-size-h2;
+		color: $brand-danger;
+		margin-top: $padding-large-vertical;
+	}
+	//backgrounds
+	.info-icon {
+		height: 70px;
+		width: 70px;
+		border-radius: 180px;
+		background-color: $almost-light;
+		background-position: center center;
+		background-repeat: no-repeat;
+		@include center-block;
+	}
+}
+
+
+.garantias-wrap {
+	border-color: $brand-primary;
+	background-color: $brand-primary;
+	@extend .invert-text;
+	.popover {color: $gray-dark;}
+	h4 {
+		display: inline-block; 
+		margin: $padding-xl-horizontal $padding-xl-vertical;
+		i {
+			font-size: $font-size-h2;
+			vertical-align: sub;
+			margin-right: 4px;
+		}
+	}
+}
+
+.ventajas-wrap {
+	h2 {margin-bottom: 35px;}
+	.ventajas-box {
+		min-height: 300px;
+		padding: 0 20px;
+		@media (max-width: $screen-sm-max) {margin-bottom: $padding-xl-horizontal;}
+		@extend .trans-b;
+		&:hover{
+			background-color: $light;
+		}
+	}
+	.ventajas-text {
+		padding: $padding-xl-vertical $padding-xl-horizontal;
+		h4 {font-size: $font-size-h4;}
+		@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {min-height: 260px;}
+	}
+	.ventajas-icon {
+		display: inline-block;
+		padding: 0 $padding-xl-horizontal $padding-xl-horizontal $padding-xl-horizontal;
+		text-align: center;
+		@extend .invert-text;
+		i {font-size: $font-size-base*7;}
+		
+		&.agency {
+			color: $brand-alternate;
+		}
+		&.tours {
+			//color: darken($brand-warning, 20%);
+			color: $brand-primary;
+		}
+		&.tailor {
+			color: $brand-alternate;
+		}
+		&.suppliers {
+			//color: darken($brand-warning, 20%);
+			color: $brand-primary;
+		}
+	}
+}
+
+.dmc-signup-wrap {
+	border-color: $brand-alternate;
+	@extend .invert-text;
+	background-color: $brand-alternate;
+	.btn {
+		margin: $padding-xl-horizontal;
+		padding-left: 30px; padding-right: 30px;
+	}
+}
+
+.countryselect-modal {
+	.closer {
+		top: 0;
+		right: 0;
+		z-index: 1;
+		button {
+			width: 30px;
+			height: 30px;
+			background-color: $brand-danger;
+			opacity: 1;
+			color: $light;
+		}
+	}
+	.zone-link{
+		color: $gray-dark;
+		@extend .trans-b;
+		a{
+			width: 100%;
+			display: block;
+			height: 100%;
+			color: $gray-dark;
+		}
+		&:hover{
+			background-color: $brand-alternate;
+			a{
+				color: $light;
+			}
+		}
+	}
+	.modal-body {
+		padding: 0;
+	}
+	.country-bread:before {content: ""; padding: 0;}
+}

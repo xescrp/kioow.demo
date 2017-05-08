@@ -1,0 +1,16 @@
+@mixin inspiration($icon) {
+    font-family: 'inspiration';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    position: relative;
+    
+    &:before {
+    	@extend .icon-#{$icon};
+            margin-top: 6px;
+            display: block;
+    }
+  }

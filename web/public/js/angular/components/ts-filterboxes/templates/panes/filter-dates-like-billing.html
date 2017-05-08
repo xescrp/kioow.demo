@@ -1,0 +1,228 @@
+﻿<div class="booking-search mb-xxl bg-light padded-xl well pull-right col-md-12 col-sm-12" ng-controller="filterDatesAndLikeSelector">
+    <div class="row">
+        <div class="col-md-12">
+            <small class="pull-right mb-l">
+                <a href="" ng-click="cleanandrefresh()">
+                    limpiar filtros
+                </a>
+            </small>
+        </div>
+    </div>
+    <div class="row">
+        <!--datebooking COL -->
+        <div class="col-md-2 col-sm-3 line-right">
+            <form name="datebooking">
+                <div class="form-group mb-l" ng-class="{'has-error' : !datebooking.bookingdatestart.$pristine && !datebooking.bookingdatestart.$valid && datebooking.bookingdatestart.$viewValue != '' && datebooking.bookingdatestart.$touched}">
+                    <label class="control-label" for="bookingdatestart">Fecha de creación <strong>desde</strong></label>
+                    <div class="input-group">
+                        <input type="text"
+                               class="form-control"
+                               id="bookingdatestart"
+                               name="bookingdatestart"
+                               uib-datepicker-popup="{{format}}"
+                               ng-model="bookingdatestart"
+                               is-open="opened1"
+                               ng-change="dateSearchBooking()"
+                               show-button-bar="false"
+                               ng-required="true"
+                               close-text="cerrar"
+                               title="Fecha de creación desde"
+                               max-date="bookingdateend"
+                               placeholder="dd-mm-aaaa"
+                               starting-day="1" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" ng-click="open($event, 'opened1')"><i class="fa fa-calendar"></i></button>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group mb-l" ng-class="{'has-error' : !datebooking.bookingdateend.$pristine && !datebooking.bookingdateend.$valid && datebooking.bookingdateend.$viewValue != '' && datebooking.bookingdateend.$touched}">
+                    <label class="control-label" for="bookingdateend">Fecha de creación <strong>hasta</strong></label>
+                    <div class="input-group">
+                        <input type="text"
+                               class="form-control"
+                               id="bookingdateend"
+                               name="bookingdateend"
+                               uib-datepicker-popup="{{format}}"
+                               ng-model="bookingdateend"
+                               is-open="opened2"
+                               show-button-bar="false"
+                               ng-required="true"
+                               close-text="cerrar"
+                               title=">Fecha de creación hasta"
+                               ng-change="dateSearchBooking()"
+                               init-date="bookingdatestart"
+                               min-date="bookingdatestart"
+                               placeholder="dd-mm-aaaa"
+                               starting-day="1" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" ng-click="open($event, 'opened2')"><i class="fa fa-calendar"></i></button>
+                        </span>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- datebooking col ends -->
+        <!--datetour COL -->
+        <div class="col-md-2 col-sm-3 line-right">
+            <form name="datetour">
+                <div class="form-group mb-l" ng-class="{'has-error' : !datetour.tourdatestart.$pristine && !datetour.tourdatestart.$valid && datetour.tourdatestart.$viewValue != '' && datetour.tourdatestart.$touched}">
+                    <label class="control-label" for="tourdatestart">Fecha de salida <strong>desde</strong></label>
+                    <div class="input-group">
+                        <input type="text"
+                               class="form-control"
+                               id="tourdatestart"
+                               name="tourdatestart"
+                               uib-datepicker-popup="{{format}}"
+                               ng-model="tourdatestart"
+                               is-open="opened3"
+                               ng-change="dateSearchTour()"
+                               show-button-bar="false"
+                               ng-required="true"
+                               close-text="cerrar"
+                               title="Fecha de salida desde"
+                               placeholder="dd-mm-aaaa"
+                               starting-day="1" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" ng-click="open($event, 'opened3')"><i class="fa fa-calendar"></i></button>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group mb-l" ng-class="{'has-error' : !datetour.tourdateend.$pristine && !datetour.tourdateend.$valid && datetour.tourdateend.$viewValue != '' && datetour.tourdateend.$touched}">
+                    <label class="control-label" for="tourdateend">Fecha salida <strong>hasta</strong></label>
+                    <div class="input-group">
+                        <input type="text"
+                               class="form-control"
+                               id="tourdateend"
+                               name="tourdateend"
+                               uib-datepicker-popup="{{format}}"
+                               ng-model="tourdateend"
+                               is-open="opened4"
+                               show-button-bar="false"
+                               ng-required="true"
+                               close-text="cerrar"
+                               title="Fecha salida hasta"
+                               ng-change="dateSearchTour()"
+                               init-date="tourdatestart"
+                               min-date="tourdatestart"
+                               placeholder="dd-mm-aaaa"
+                               starting-day="1" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" ng-click="open($event, 'opened4')"><i class="fa fa-calendar"></i></button>
+                        </span>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- datetour col ends -->
+        <div class="col-md-2 col-sm-3 line-right">
+            <form name="datepay">
+                <div class="form-group mb-l" ng-class="{'has-error' : !datepay.bookingpaystart.$pristine && !datepay.bookingpaystart.$valid && datepay.bookingpaystart.$viewValue != '' && datepay.bookingpaystart.$touched}">
+                    <label class="control-label" for="tourdatestart">Fecha de pago <strong>desde</strong></label>
+                    <div class="input-group">
+                        <input type="text"
+                               class="form-control"
+                               id="bookingpaystart"
+                               name="bookingpaystart"
+                               uib-datepicker-popup="{{format}}"
+                               ng-model="bookingpaystart"
+                               is-open="opened5"
+                               ng-change="dateSearchPay()"
+                               show-button-bar="false"
+                               ng-required="true"
+                               close-text="cerrar"
+                               title="Fecha de salida desde"
+                               placeholder="dd-mm-aaaa"
+                               starting-day="1" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" ng-click="open($event, 'opened5')"><i class="fa fa-calendar"></i></button>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group mb-l" ng-class="{'has-error' : !datepay.bookingpayend.$pristine && !datepay.bookingpayend.$valid && datepay.bookingpayend.$viewValue != '' && datepay.bookingpayend.$touched}">
+                    <label class="control-label" for="tourdateend">Fecha pago <strong>hasta</strong></label>
+                    <div class="input-group">
+                        <input type="text"
+                               class="form-control"
+                               id="bookingpayend"
+                               name="bookingpayend"
+                               uib-datepicker-popup="{{format}}"
+                               ng-model="bookingpayend"
+                               is-open="opened6"
+                               show-button-bar="false"
+                               ng-required="true"
+                               close-text="cerrar"
+                               title="Fecha salida hasta"
+                               ng-change="dateSearchPay()"
+                               init-date="bookingpaystart"
+                               min-date="bookingpaystart"
+                               placeholder="dd-mm-aaaa"
+                               starting-day="1" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" ng-click="open($event, 'opened6')"><i class="fa fa-calendar"></i></button>
+                        </span>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-md-2 col-sm-3 line-right">
+            <form name="datecharge">
+                <div class="form-group mb-l" ng-class="{'has-error' : !datecharge.bookingchargestart.$pristine && !datecharge.bookingchargestart.$valid && datecharge.bookingchargestart.$viewValue != '' && datecharge.bookingchargestart.$touched}">
+                    <label class="control-label" for="tourdatestart">Fecha de cobro <strong>desde</strong></label>
+                    <div class="input-group">
+                        <input type="text"
+                               class="form-control"
+                               id="bookingchargestart"
+                               name="bookingchargestart"
+                               uib-datepicker-popup="{{format}}"
+                               ng-model="bookingchargestart"
+                               is-open="opened7"
+                               ng-change="dateSearchCharge()"
+                               show-button-bar="false"
+                               ng-required="true"
+                               close-text="cerrar"
+                               title="Fecha de cobro desde"
+                               placeholder="dd-mm-aaaa"
+                               starting-day="1" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" ng-click="open($event, 'opened7')"><i class="fa fa-calendar"></i></button>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group mb-l" ng-class="{'has-error' : !datecharge.bookingchargeend.$pristine && !datecharge.bookingchargeend.$valid && datecharge.bookingchargeend.$viewValue != '' && datecharge.bookingchargeend.$touched}">
+                    <label class="control-label" for="tourdateend">Fecha cobro <strong>hasta</strong></label>
+                    <div class="input-group">
+                        <input type="text"
+                               class="form-control"
+                               id="bookingchargeend"
+                               name="bookingchargeend"
+                               uib-datepicker-popup="{{format}}"
+                               ng-model="bookingchargeend"
+                               is-open="opened8"
+                               show-button-bar="false"
+                               ng-required="true"
+                               close-text="cerrar"
+                               title="Fecha cobro hasta"
+                               ng-change="dateSearchCharge()"
+                               init-date="bookingchargestart"
+                               min-date="bookingchargestart"
+                               placeholder="dd-mm-aaaa"
+                               starting-day="1" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" ng-click="open($event, 'opened8')"><i class="fa fa-calendar"></i></button>
+                        </span>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+        <div class="col-md-4 col-sm-12">
+            <div class="input-group mb-l full-width">
+                <label class="control-label" for="arrivaldate">Búsqueda de texto</label>
+                <input class="form-control" id="arrivaldate" ng-model="textSearch" type="text" value="">
+            </div>
+            <p class="help-block mt-xs mb-xs">Busca por: localizador yourttoo, tu expediente, pasajero/s o destino.</p>
+            <button type="button" class="btn bnt-block mt-b btn-primary full-width" ng-click="textsearch()"><i class="fa fa-search"></i> buscar</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+﻿
+<h2>Categories</h2>
+<p>Manage the categories of this program.</p>
+
+<table class="table" style="background: rgba(73,53,81,0.85);">
+    <tr>
+        <td><strong>code</strong></td>
+        <td><strong>category name (spanish)</strong></td>
+        <td><strong>category name (english)</strong></td>
+        <td><strong></strong></td>
+        <td><strong></strong></td>
+    </tr>
+    <tr ng-hide="programs != null && programs.length > 0">
+        <td colspan="4" class="middle">
+            No se ha cargado ningun programa
+        </td>
+    </tr>
+    <tr ng-repeat="program in programs track by $index" ng-show="programs != null && programs.length > 0">
+        <td><strong>{{program.code}}</strong></td>
+        <td><strong><input ng-model="program.categoryname.label_es" class="form-control" type="text" value="" placeholder="Write the category name (spanish).." /></strong></td>
+        <td><strong><input ng-model="program.categoryname.label_en" class="form-control" type="text" value="" placeholder="Write the category name (english).." /></strong></td>
+        <td><button class="btn btn-danger" ng-click="copycategory(program, $index)">copy</button></td>
+        <td ng-show="programs.length > 1"><button class="btn btn-danger" ng-click="removecategory(program, $index)">delete</button></td>
+    </tr>
+</table>
+<div class="row">
+    <div class="col-md-12">
+        <h4>Select items to copy from each itinerary category</h4>
+        <div class="checkbox col-md-4">
+            <label class="checkbox">
+                <input ng-model="categorycopy.copyactivities" type="checkbox" id="lang-tour-esc-es" value="spanish" class="ng-pristine ng-untouched ng-valid"> Activities
+            </label>
+            <label class="checkbox">
+                <input ng-model="categorycopy.copyhotels" type="checkbox" id="lang-tour-esc-es" value="spanish" class="ng-pristine ng-untouched ng-valid"> Hotels
+            </label>
+            <label class="checkbox">
+                <input ng-model="categorycopy.copymeals" type="checkbox" id="lang-tour-esc-es" value="spanish" class="ng-pristine ng-untouched ng-valid"> Meal Basis
+            </label>
+            <!--<label class="checkbox">
+                <input ng-model="categorycopy.copydescription" type="checkbox" id="lang-tour-esc-es" value="spanish" class="ng-pristine ng-untouched ng-valid"> Descriptions and images
+            </label>-->
+        </div>        
+    </div>
+</div>
+<!--<div class="row">
+    <div class="col-md-12"><button class="btn btn-primary" ng-click="addcategory()">Add Category</button></div>
+</div>-->

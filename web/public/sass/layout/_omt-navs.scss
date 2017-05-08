@@ -1,0 +1,65 @@
+
+// Tabs
+// -------------------------
+
+// Give the tabs something to sit on
+.nav-tabs {
+
+  > li {
+
+    // Actual tabs (as links)
+    > a {
+      @extend .bold;
+      @extend .pointer;
+      &:hover {
+        //border-color: 
+      }
+    }
+
+    // Active state, and its :hover to override normal :hover
+    &.active > a {
+      border-top: 2px $gray solid;
+      &,
+      &:hover,
+      &:focus {
+        color: $gray;
+        background-color: $light;
+        border-top: 2px $gray solid;
+        @extend .pl-xl;
+        @extend .pr-xl;
+      }
+    }
+  }
+  // pulling this in mainly for less shorthand
+  &.nav-justified {
+
+  }
+}
+
+
+.nav-tabs.related-product{
+    > li {
+
+      &.active > a {
+        
+        &,
+        &:hover,
+        &:focus {
+          border-top: none;
+          @include triangle(down ,$color: $brand-alternate-dark, $width: 50px, $height: 20px, $z-index: 10);
+          color: $light;
+          background-color: $brand-alternate;
+        }
+      }
+    }
+    @media (min-width: $screen-sm-min) {
+      > li {
+        border: none;
+        }
+      }
+    &.nav-justified {
+      &.active > a {
+        border: none;
+      }
+    }
+}

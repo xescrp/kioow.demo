@@ -1,0 +1,6 @@
+﻿
+<td ng-if="column.roles.indexOf(rolename) >= 0" style="{{column.style}}" ng-click="column.deleteaction($event, item, queryservice)"
+    ng-repeat="column in columns" title="{{column.html == null || column.html == false ? column.value(item) : '' }}" >
+    <span class="{{column.badge ? 'badge' : null }}" ng-if="(column.html==null || column.html==false)">{{column.value(item).substring(0, 30)}}</span>
+    <span class="{{column.badge ? 'badge' : null }}" ng-bind-html="column.value(item)" ng-if="(column.html==true)">{{column.value(item)}}</span>
+</td>
